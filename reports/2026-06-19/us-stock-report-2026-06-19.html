@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美股收盤日報｜2026-06-18</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg2: #161b22;
+    --bg3: #21262d;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text2: #8b949e;
+    --text3: #f0f6fc;
+    --green: #3fb950;
+    --green-bg: rgba(63,185,80,0.15);
+    --red: #f85149;
+    --red-bg: rgba(248,81,73,0.15);
+    --yellow: #d29922;
+    --yellow-bg: rgba(210,153,34,0.15);
+    --blue: #388bfd;
+    --blue-bg: rgba(56,139,253,0.15);
+    --purple: #bc8cff;
+    --accent: #388bfd;
+  }
+  .light-mode {
+    --bg: #ffffff;
+    --bg2: #f6f8fa;
+    --bg3: #eaeef2;
+    --border: #d0d7de;
+    --text: #1f2328;
+    --text2: #636c76;
+    --text3: #1f2328;
+    --green: #1a7f37;
+    --green-bg: rgba(26,127,55,0.12);
+    --red: #d1242f;
+    --red-bg: rgba(209,36,47,0.12);
+    --yellow: #9a6700;
+    --yellow-bg: rgba(154,103,0,0.12);
+    --blue: #0969da;
+    --blue-bg: rgba(9,105,218,0.12);
+    --purple: #8250df;
+    --accent: #0969da;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 999;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+  .theme-toggle:hover { background: var(--bg2); }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1e3a5f 0%, #0d1117 100%);
+    border: 1px solid #1a4a7a;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .light-mode .header { background: linear-gradient(135deg, #dbeafe 0%, #f6f8fa 100%); border-color: #93c5fd; }
+  .header .flag { font-size: 36px; margin-bottom: 8px; }
+  .header h1 { font-size: 26px; font-weight: 700; color: var(--text3); margin-bottom: 6px; }
+  .header .sub { color: var(--text2); font-size: 13px; margin-bottom: 16px; }
+  .header .summary-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .light-mode .header .summary-box { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.1); }
+  .header .summary-box .label {
+    font-weight: 700;
+    color: var(--blue);
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+  .header .status-tag {
+    display: inline-block;
+    background: var(--blue-bg);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 12px;
+  }
+
+  /* Section */
+  .section {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text3);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title .num {
+    background: var(--accent);
+    color: #fff;
+    border-radius: 5px;
+    padding: 1px 7px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    background: var(--bg3);
+    color: var(--text2);
+    font-weight: 600;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--bg3); }
+  .up { color: var(--green); font-weight: 600; }
+  .down { color: var(--red); font-weight: 600; }
+  .neutral { color: var(--text2); }
+  .badge { display: inline-block; border-radius: 4px; padding: 1px 6px; font-size: 11px; font-weight: 600; }
+  .badge-green { background: var(--green-bg); color: var(--green); }
+  .badge-red { background: var(--red-bg); color: var(--red); }
+  .badge-yellow { background: var(--yellow-bg); color: var(--yellow); }
+  .badge-blue { background: var(--blue-bg); color: var(--blue); }
+
+  /* Index cards */
+  .index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .index-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+  }
+  .index-card .name { font-size: 11px; color: var(--text2); margin-bottom: 4px; }
+  .index-card .price { font-size: 18px; font-weight: 700; color: var(--text3); margin-bottom: 3px; }
+  .index-card .change { font-size: 13px; font-weight: 600; }
+  .index-card.up-card { border-color: rgba(63,185,80,0.4); }
+  .index-card.down-card { border-color: rgba(248,81,73,0.4); }
+
+  /* Heatmap */
+  .heatmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 12px 0; }
+  .heat-cell {
+    border-radius: 6px;
+    padding: 10px 8px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .heat-cell .h-name { font-size: 12px; margin-bottom: 4px; }
+  .heat-cell .h-val { font-size: 15px; font-weight: 700; }
+
+  /* Bar chart */
+  .bar-chart { margin: 12px 0; }
+  .bar-row { display: flex; align-items: center; margin-bottom: 6px; gap: 8px; }
+  .bar-label { width: 80px; font-size: 12px; color: var(--text2); text-align: right; flex-shrink: 0; }
+  .bar-track { flex: 1; background: var(--bg3); border-radius: 4px; height: 20px; position: relative; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s; display: flex; align-items: center; padding: 0 6px; font-size: 11px; font-weight: 600; color: #fff; white-space: nowrap; }
+  .bar-fill.pos { background: linear-gradient(90deg, #238636, #3fb950); }
+  .bar-fill.neg { background: linear-gradient(90deg, #da3633, #f85149); justify-content: flex-end; }
+  .bar-pct { font-size: 11px; font-weight: 600; width: 50px; flex-shrink: 0; }
+
+  /* Radar / Risk chart */
+  .risk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .risk-item {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .risk-item .r-name { font-size: 12px; color: var(--text2); margin-bottom: 6px; }
+  .risk-item .r-status { font-size: 13px; color: var(--text); margin-bottom: 6px; }
+  .risk-bar { height: 6px; background: var(--bg2); border-radius: 3px; overflow: hidden; }
+  .risk-bar-fill { height: 100%; border-radius: 3px; }
+  .risk-low { background: var(--green); }
+  .risk-mid { background: var(--yellow); }
+  .risk-high { background: var(--red); }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 20px; }
+  .timeline::before { content: ''; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+  .tl-item { position: relative; margin-bottom: 16px; }
+  .tl-dot { position: absolute; left: -17px; top: 4px; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; border: 2px solid var(--bg2); }
+  .tl-time { font-size: 11px; color: var(--text2); margin-bottom: 3px; }
+  .tl-content { color: var(--text); font-size: 13px; line-height: 1.6; }
+
+  /* Mega7 visual */
+  .mag7-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; }
+  .mag7-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 8px;
+    text-align: center;
+  }
+  .mag7-card .ticker { font-size: 14px; font-weight: 700; color: var(--text3); margin-bottom: 4px; }
+  .mag7-card .mag-pct { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .mag7-card .mag-note { font-size: 10px; color: var(--text2); }
+  .mag7-card.up-card { border-color: rgba(63,185,80,0.4); background: rgba(63,185,80,0.05); }
+  .mag7-card.down-card { border-color: rgba(248,81,73,0.4); background: rgba(248,81,73,0.05); }
+
+  /* Chips grid */
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .chip {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .chip .c-ticker { font-weight: 700; color: var(--text3); }
+  .chip .c-pct { font-weight: 600; }
+
+  /* Source */
+  .source { font-size: 11px; color: var(--text2); margin-top: 8px; }
+  .source a { color: var(--blue); text-decoration: none; }
+  .source a:hover { text-decoration: underline; }
+
+  /* Attribution */
+  .attribution {
+    text-align: center;
+    padding: 20px;
+    color: var(--text2);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+
+  /* Sub section */
+  .sub-title { font-size: 14px; font-weight: 700; color: var(--text3); margin: 16px 0 10px; }
+
+  /* Info box */
+  .info-box {
+    background: var(--bg3);
+    border-left: 3px solid var(--blue);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  .warn-box {
+    background: var(--yellow-bg);
+    border-left: 3px solid var(--yellow);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  .alert-box {
+    background: var(--red-bg);
+    border-left: 3px solid var(--red);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  .success-box {
+    background: var(--green-bg);
+    border-left: 3px solid var(--green);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+
+  @media (max-width: 600px) {
+    .heatmap { grid-template-columns: repeat(2, 1fr); }
+    .index-grid { grid-template-columns: repeat(2, 1fr); }
+    .mag7-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+<button class="theme-toggle" onclick="document.body.classList.toggle('light-mode')">☀️ 日間模式</button>
+
+<div class="container">
+
+<!-- ===== SECTION 1: COVER ===== -->
+<div id="s1-cover" class="header">
+  <div class="flag">🇺🇸</div>
+  <h1>美股收盤日報｜2026-06-18（週四）</h1>
+  <div class="sub">報告生成時間：北京時間 08:00｜數據覆蓋：2026年6月18日美股收盤｜明日休市（Juneteenth）</div>
+  <div class="sub" style="margin-bottom:14px">資料來源：TheStreet、CNBC、Reuters、MarketWatch、Yahoo Finance、ETF Trends</div>
+  <div class="summary-box">
+    <span class="label">📌 今日一句話總結</span>
+    <strong>科技股領漲反彈、美股全線收紅，「川普-英特爾-蘋果」芯片協議與美伊和平備忘錄是雙核心驅動，但 Fed 鷹派立場壓制樂觀情緒，能源股隨油價下滑拖後腿，市場整體呈現「科技強、能源弱、宽度尚可」格局。</strong>
+    <br><br>
+    美股在 Fed 按兵不動但暗示年底可能升息後的恐慌性暴跌（週三）翌日順利反彈：半導體板塊藉英特爾芯片消息衝高主導上行；美伊和平 MOU 正式簽署、美軍解除霍爾木茲海峽封鎖，拖低油價並令能源股獨自走低；小盤股（Russell 2000 +2.12%）跑贏大盤，宽度略有改善；本週五為 Juneteenth 假日，市場提前收尾，流動性偏薄。
+    <div class="status-tag">📊 市場狀態：AI硬體反彈主導 ｜ Risk-On 偏強 ｜ 能源逆向 ｜ 宽度略擴散</div>
+  </div>
+</div>
+
+<!-- ===== SECTION 2: INDEX ===== -->
+<div id="s2-index" class="section">
+  <div class="section-title"><span class="num">二</span>大盤表現總覽</div>
+
+  <div class="index-grid">
+    <div class="index-card up-card">
+      <div class="name">S&P 500</div>
+      <div class="price">7,500.58</div>
+      <div class="change up">+1.08%</div>
+    </div>
+    <div class="index-card up-card">
+      <div class="name">Nasdaq Comp.</div>
+      <div class="price">26,517.93</div>
+      <div class="change up">+1.91%</div>
+    </div>
+    <div class="index-card up-card">
+      <div class="name">Dow Jones</div>
+      <div class="price">51,564.70</div>
+      <div class="change up">+0.14%</div>
+    </div>
+    <div class="index-card up-card">
+      <div class="name">Russell 2000</div>
+      <div class="price">2,979.77</div>
+      <div class="change up">+2.12%</div>
+    </div>
+    <div class="index-card up-card">
+      <div class="name">SOX 半導體</div>
+      <div class="price">~+4.5%</div>
+      <div class="change up">領漲板塊</div>
+    </div>
+    <div class="index-card">
+      <div class="name">VIX 恐慌指數</div>
+      <div class="price">18.44</div>
+      <div class="change down">▼ 緩和</div>
+    </div>
+  </div>
+
+  <!-- Index Heatmap -->
+  <div class="heatmap">
+    <div class="heat-cell" style="background: linear-gradient(135deg,#238636,#2ea043); grid-column: span 2;">
+      <div class="h-name">S&P 500</div>
+      <div class="h-val">+1.08%</div>
+      <div style="font-size:11px;margin-top:3px;">7,500.58</div>
+    </div>
+    <div class="heat-cell" style="background: linear-gradient(135deg,#1a6b27,#238636); grid-column: span 2;">
+      <div class="h-name">Nasdaq Composite</div>
+      <div class="h-val">+1.91%</div>
+      <div style="font-size:11px;margin-top:3px;">26,517.93</div>
+    </div>
+    <div class="heat-cell" style="background: #2d7e35;">
+      <div class="h-name">Dow Jones</div>
+      <div class="h-val">+0.14%</div>
+      <div style="font-size:11px;margin-top:3px;">51,564.70</div>
+    </div>
+    <div class="heat-cell" style="background: linear-gradient(135deg,#1a6b27,#238636);">
+      <div class="h-name">Russell 2000</div>
+      <div class="h-val">+2.12%</div>
+      <div style="font-size:11px;margin-top:3px;">2,979.77</div>
+    </div>
+    <div class="heat-cell" style="background: #3fb950;">
+      <div class="h-name">SOX 半導體</div>
+      <div class="h-val">~+4.5%</div>
+    </div>
+    <div class="heat-cell" style="background: #6b4226;">
+      <div class="h-name">VIX</div>
+      <div class="h-val">18.44</div>
+      <div style="font-size:10px;margin-top:3px;">緩和中</div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>指數</th>
+        <th>收盤點位</th>
+        <th>漲跌幅</th>
+        <th>技術狀態</th>
+        <th>重點觀察</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Dow Jones</strong></td>
+        <td>51,564.70</td>
+        <td class="up">+0.14%</td>
+        <td><span class="badge badge-blue">中性偏強</span></td>
+        <td>道指漲幅最小，能源/傳統藍籌拖累</td>
+      </tr>
+      <tr>
+        <td><strong>S&P 500</strong></td>
+        <td>7,500.58</td>
+        <td class="up">+1.08%</td>
+        <td><span class="badge badge-green">強勢回彈</span></td>
+        <td>科技與半導體主導，14/20 最強個股來自科技</td>
+      </tr>
+      <tr>
+        <td><strong>Nasdaq Composite</strong></td>
+        <td>26,517.93</td>
+        <td class="up">+1.91%</td>
+        <td><span class="badge badge-green">明顯強於標普</span></td>
+        <td>半導體/AI 驅動，週三 Fed 恐慌後最強反彈</td>
+      </tr>
+      <tr>
+        <td><strong>Russell 2000</strong></td>
+        <td>2,979.77</td>
+        <td class="up">+2.12%</td>
+        <td><span class="badge badge-green">跑贏大盤</span></td>
+        <td>小盤領漲，受益債券收益率微幅回落</td>
+      </tr>
+      <tr>
+        <td><strong>SOX 半導體</strong></td>
+        <td>約 +4.5%</td>
+        <td class="up">★ 最強板塊</td>
+        <td><span class="badge badge-green">領漲</span></td>
+        <td>INTC +11.45%、MRVL +12.12%、SNDK +11.63%</td>
+      </tr>
+      <tr>
+        <td><strong>VIX 恐慌指數</strong></td>
+        <td>18.44</td>
+        <td class="neutral">↓ 緩和</td>
+        <td><span class="badge badge-blue">中性區間</span></td>
+        <td>20以下屬正常水位，市場風險偏好回升</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="source">來源：<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-18-2026" target="_blank">TheStreet (June 18, 2026)</a></div>
+</div>
+
+<!-- ===== SECTION 3: INTRADAY ===== -->
+<div id="s3-intraday" class="section">
+  <div class="section-title"><span class="num">三</span>盤中走勢復盤</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">🌅 盤前（Pre-Market）</div>
+      <div class="tl-content">
+        川普在 Truth Social 發文宣布「Apple 同意與 Intel 合作在美國設計並製造芯片」，Intel 盤前暴漲 9.8%，帶動 AMD、MU、AVGO 等半導體全線拉升，SOX 期貨盤前大漲 4.6%。美伊和平 MOU 在凡爾賽宮正式簽署，WTI 原油下跌逾 2%，能源期貨承壓。美股期貨高開。初請失業金22.6萬（略高於預期22.5萬）。
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">🔔 開盤（09:30 ET）</div>
+      <div class="tl-content">
+        S&P 500 開盤即漲 1.15%，Nasdaq 漲 1.5%，道指漲 0.80%，Russell 2000 早盤走弱 -0.72%（後轉強）。半導體板塊帶領科技股衝高，Intel、Marvell、SanDisk 開盤即跳空上漲。Accenture 開盤暴跌 19%，創公司史上最慘單日跌幅（後收斂至 -17.43%）。
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">⬆️ 午盤（12:00-13:00 ET）</div>
+      <div class="tl-content">
+        S&P 500 維持 +1% 左右，科技仍領漲。Butterfly Network +40.89%、ChronoScale +14.51%、Penguin Solutions +13.95% 等小型股竄升。SpaceX 延續 IPO 後跌勢，盤中一度 -10%，逼近「熊市」定義。美軍 CENTCOM 正式宣布解除霍爾木茲海峽封鎖，油輪開始過境。S&P 500 前 20 大漲幅股中有 14 家來自科技板塊。
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">📉 下午（14:00-15:30 ET）</div>
+      <div class="tl-content">
+        S&P 500 從日高小幅回落至 +0.99%，但未明顯破位。全市場 293 家上漲、3 家持平、其餘下跌，宽度不算全面但科技佔主導。能源股持續走弱，Kroger（超市）因財報後下跌 8.19%。Russell 2000 轉頭走強，由跌轉漲。
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">🔔 收盤（16:00 ET）</div>
+      <div class="tl-content">
+        S&P 500 最終收 +1.08% / 7,500.58，Nasdaq +1.91% / 26,517.93，Dow +0.14% / 51,564.70，Russell 2000 大漲 +2.12% / 2,979.77。市場成功消化 Fed 鷹派衝擊，完成週度收尾。
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-time">🌙 盤後重點</div>
+      <div class="tl-content">
+        明日（6/19）Juneteenth 聯邦假日，美股、美債市場全日休市。Bitcoin 早盤 -1.37% 至 $64,326，加密市場跟隨風險情緒小幅震盪。Gas 均價已跌至 $3.999/加侖（3月以來首度破 $4）。
+      </div>
+    </div>
+  </div>
+  <div class="warn-box">⚠️ <strong>核心驅動分析：</strong>今日上漲並非單純 Fed 後反彈，而是「川普AI製造業政策」（INTC+AAPL芯片合作宣告）+ 「地緣緩和」（美伊和平 MOU）雙重驅動共振，資金重新進入成長股，但缺乏宽度支撐——中小型股只有部分跟上，防禦性板塊幾乎原地踏步。</div>
+</div>
+
+<!-- ===== SECTION 4: MACRO ===== -->
+<div id="s4-macro" class="section">
+  <div class="section-title"><span class="num">四</span>宏觀環境</div>
+
+  <div class="sub-title">4.1 美債收益率</div>
+  <table>
+    <thead>
+      <tr><th>項目</th><th>最新水平</th><th>市場含義</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>2Y 美債收益率</strong></td>
+        <td>4.19%</td>
+        <td>反映市場預期短端偏鷹，Fed 短期不降息</td>
+      </tr>
+      <tr>
+        <td><strong>10Y 美債收益率</strong></td>
+        <td>4.46%</td>
+        <td>接近 4.5% 關鍵阻力位；高位對科技股估值有壓力</td>
+      </tr>
+      <tr>
+        <td><strong>2Y-10Y 利差</strong></td>
+        <td>+0.27%（正利差）</td>
+        <td>收益率曲線已轉正，衰退擔憂邊際降低</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="info-box">📌 10Y 收益率 4.46% 仍處高位，距 4.5% 關鍵壓力位僅一步之遙。若後續通脹數據（5月CPI年增 4.2%）持續高燒，市場可能進一步定價升息，對科技股高估值形成壓制。</div>
+
+  <div class="sub-title">4.2 Fed 政策預期</div>
+  <div class="success-box">
+    ✅ <strong>6月18日 FOMC 決議（Kevin Warsh 任主席後首次）：</strong>維持基準利率不變，區間 3.50%–3.75%（12-0 全票通過）。<br>
+    ⬇️ 下調 2026 年 GDP 增長預測，⬆️ 上調通脹預測，暗示年底前可能升息。
+  </div>
+  <table>
+    <thead><tr><th>項目</th><th>數值</th><th>解讀</th></tr></thead>
+    <tbody>
+      <tr><td>7月29日 FOMC 維持不變概率</td><td>~88.8%</td><td>下次會議市場普遍預期不動</td></tr>
+      <tr><td>年內升息概率</td><td>~46.9%–66%</td><td>顯著高於月前，市場已在定價升息</td></tr>
+      <tr><td>5月 CPI 年增率</td><td>4.2%（3年新高）</td><td>能源衝擊推升通脹，Fed 有充分理由偏鷹</td></tr>
+      <tr><td>Fed 主席</td><td>Kevin Warsh（新任）</td><td>市場測試新主席立場，週三（6/17）回應偏鷹</td></tr>
+    </tbody>
+  </table>
+  <div class="source">來源：<a href="https://growbeansprout.com/tools/fedwatch" target="_blank">CME FedWatch via GrowBeanSprout</a>｜<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-18-2026" target="_blank">TheStreet</a></div>
+
+  <div class="sub-title">4.3 大宗商品與風險資產</div>
+  <table>
+    <thead><tr><th>資產</th><th>最新價格</th><th>漲跌幅</th><th>含義</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>WTI 原油</strong></td>
+        <td>~$75.14/桶</td>
+        <td class="down">-2.15%</td>
+        <td>美伊和平 MOU 後油價急跌，創衝突爆發以來新低，較年內峰值 ~$100+ 大幅回落</td>
+      </tr>
+      <tr>
+        <td><strong>Brent 原油</strong></td>
+        <td>~$78.34/桶</td>
+        <td class="down">-1.52%</td>
+        <td>霍爾木茲重開，三艘沙特超大油輪已過境</td>
+      </tr>
+      <tr>
+        <td><strong>黃金 (XAUUSD)</strong></td>
+        <td>$4,210/盎司</td>
+        <td class="down">-1.16%</td>
+        <td>地緣緩和削弱避險需求，金價回落；中央銀行仍維持紀錄性買金</td>
+      </tr>
+      <tr>
+        <td><strong>比特幣 (BTC)</strong></td>
+        <td>~$64,326</td>
+        <td class="down">-1.37%</td>
+        <td>加密市場跟隨避險資產小幅調整，未出現重大波動</td>
+      </tr>
+      <tr>
+        <td><strong>天然氣價格</strong></td>
+        <td>沙特油輪恢復</td>
+        <td class="down">下跌</td>
+        <td>伊朗石油供應有望解凍，中期能源供給改善預期</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title">4.4 重要經濟數據</div>
+  <table>
+    <thead><tr><th>數據</th><th>實際值</th><th>預期值</th><th>前值</th><th>解讀</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>初請失業金人數</strong>（6月13日當週）</td>
+        <td>226,000</td>
+        <td>225,000</td>
+        <td>230,000</td>
+        <td>略高於預期但持續回落，勞動市場仍具韌性；失業率維持 4.3% 達 3 個月</td>
+      </tr>
+      <tr>
+        <td><strong>美國汽油均價</strong></td>
+        <td>$3.999/加侖</td>
+        <td>—</td>
+        <td>$4.56（峰值）</td>
+        <td>3月以來首次跌破 $4，較戰前水平仍高 34%，通脹壓力邊際緩解</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="source">來源：<a href="https://www.reuters.com/business/us-weekly-jobless-claims-fall-amid-low-layoffs-2026-06-18/" target="_blank">Reuters (初請失業金)</a>｜<a href="https://www.nbcnews.com/business/consumer/gas-prices-below-4-dollars-rcna350673" target="_blank">NBC News (油價)</a></div>
+</div>
+
+<!-- ===== SECTION 5: SECTOR ===== -->
+<div id="s5-sector" class="section">
+  <div class="section-title"><span class="num">五</span>板塊表現</div>
+
+  <!-- Sector Bar Chart -->
+  <div class="bar-chart">
+    <div class="bar-row">
+      <div class="bar-label">半導體 SOXX</div>
+      <div class="bar-track"><div class="bar-fill pos" style="width:90%">~+4.5%</div></div>
+      <div class="bar-pct up">~+4.5%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">科技 XLK</div>
+      <div class="bar-track"><div class="bar-fill pos" style="width:65%">~+2.5%</div></div>
+      <div class="bar-pct up">~+2.5%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">通信 XLC</div>
+      <div class="bar-track"><div class="bar-fill pos" style="width:45%">~+1.5%</div></div>
+      <div class="bar-pct up">~+1.5%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">小盤 IWM</div>
+      <div class="bar-track"><div class="bar-fill pos" style="width:55%">+2.12%</div></div>
+      <div class="bar-pct up">+2.12%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">可選消費 XLY</div>
+      <div class="bar-track"><div class="bar-fill pos" style="width:35%">~+1.2%</div></div>
+      <div class="bar-pct up">~+1.2%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">工業 XLI</div>
+      <div class="bar-track"><div class="bar-fill pos" style="width:20%">~+0.6%</div></div>
+      <div class="bar-pct up">~+0.6%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">金融 XLF</div>
+      <div class="bar-track"><div class="bar-fill pos" style="width:15%">~+0.4%</div></div>
+      <div class="bar-pct up">~+0.4%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">必需消費 XLP</div>
+      <div class="bar-track"><div class="bar-fill pos" style="width:5%">~+0.1%</div></div>
+      <div class="bar-pct neutral">~+0.1%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">公用事業 XLU</div>
+      <div class="bar-track"><div class="bar-fill neg" style="width:5%">-0.2%</div></div>
+      <div class="bar-pct down">~-0.2%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">能源 XLE</div>
+      <div class="bar-track"><div class="bar-fill neg" style="width:50%">~-2.5%</div></div>
+      <div class="bar-pct down">~-2.5%</div>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--text2);margin-bottom:12px;">* 半導體/XLK/XLC/XLY 板塊數據為基於個股加權估算，部分數據標注「~」；能源板塊受油價 -2.15% 拖累估算。</p>
+
+  <table>
+    <thead>
+      <tr><th>排名</th><th>板塊</th><th>ETF</th><th>當日表現</th><th>主要驅動</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>🥇 1</td><td>半導體</td><td>SOXX/SMH</td><td class="up">~+4.5%</td><td>Intel+Apple芯片協議、MRVL+12%、SNDK+12%、SMCI+10%</td></tr>
+      <tr><td>🥈 2</td><td>信息技術</td><td>XLK</td><td class="up">~+2.5%</td><td>科技股普漲，AI 硬體帶動</td></tr>
+      <tr><td>🥉 3</td><td>通信服務</td><td>XLC</td><td class="up">~+1.5%</td><td>Google/Meta 跟漲</td></tr>
+      <tr><td>4</td><td>可選消費</td><td>XLY</td><td class="up">~+1.2%</td><td>CarMax +10.37%（財報佳）；TSLA 跟漲</td></tr>
+      <tr><td>5</td><td>工業</td><td>XLI</td><td class="up">~+0.6%</td><td>中性跟漲，AI 電力基礎設施維持強勢</td></tr>
+      <tr><td>6</td><td>金融</td><td>XLF</td><td class="up">~+0.4%</td><td>收益率高位溫和收益，銀行類小幅上漲</td></tr>
+      <tr><td>7</td><td>必需消費</td><td>XLP</td><td class="neutral">~+0.1%</td><td>Kroger -8% 拖累；整體防禦板塊無亮點</td></tr>
+      <tr><td>8</td><td>醫療保健</td><td>XLV</td><td class="neutral">~+0.2%</td><td>輕微反彈，NovoCure -18.8% 拖累</td></tr>
+      <tr><td>9</td><td>公用事業</td><td>XLU</td><td class="down">~-0.2%</td><td>Risk-on 資金外流防禦板塊</td></tr>
+      <tr><td>10</td><td>能源</td><td>XLE</td><td class="down">★ ~-2.5%</td><td>WTI -2.15%，美伊和平協議，霍爾木茲重開</td></tr>
+    </tbody>
+  </table>
+
+  <div class="warn-box">⚠️ <strong>板塊判斷：</strong>今日是典型「科技強、能源弱、防禦中性」格局。成長股大幅跑贏價值股，半導體主線維持，資金從能源撤出轉向 AI 硬體。小盤 Russell 2000 +2.12% 跑贏標普，顯示輕微宽度擴散，但此刻仍以科技主導為主。</div>
+</div>
+
+<!-- ===== SECTION 6: THEME ===== -->
+<div id="s6-theme" class="section">
+  <div class="section-title"><span class="num">六</span>主題與風格表現</div>
+  <table>
+    <thead><tr><th>主題/風格</th><th>代表ETF</th><th>當日表現</th><th>解讀</th></tr></thead>
+    <tbody>
+      <tr><td><strong>半導體</strong></td><td>SMH/SOXX</td><td class="up">~+4.5% ★</td><td>Intel+Apple 消息引爆，持續主線地位</td></tr>
+      <tr><td><strong>AI/自動化</strong></td><td>AIQ/BOTZ</td><td class="up">~+2%+</td><td>跟隨半導體上漲，AI 主線健康</td></tr>
+      <tr><td><strong>大盤成長</strong></td><td>QQQ/SCHG</td><td class="up">+1.9%</td><td>Nasdaq 代表，成長風格主導日</td></tr>
+      <tr><td><strong>小盤成長</strong></td><td>IWO</td><td class="up">~+2.5%</td><td>小盤成長強於大盤，宽度擴散信號</td></tr>
+      <tr><td><strong>等權標普</strong></td><td>RSP</td><td class="up">~+1.2%</td><td>略跑輸市值加權 S&P (+1.08%) — 仍由大型股主導</td></tr>
+      <tr><td><strong>軟體</strong></td><td>IGV</td><td class="neutral">~+0.5%</td><td>Accenture -17% 拖累；軟體整體尚未追上硬體</td></tr>
+      <tr><td><strong>網路安全</strong></td><td>CIBR</td><td class="up">~+0.8%</td><td>防禦性 IT 跟漲，無特殊催化</td></tr>
+      <tr><td><strong>大盤價值</strong></td><td>VTV</td><td class="neutral">~+0.3%</td><td>能源/金融混合，價值風格明顯落後成長</td></tr>
+    </tbody>
+  </table>
+  <div class="info-box">💡 <strong>重點判斷：</strong>AI 硬體（半導體）仍是主線且健康。軟體未能同步補漲（Accenture 衝擊）。小盤今日參與良好。等權指數微弱跑輸市值加權，顯示宽度改善但仍由大型科技驅動。</div>
+</div>
+
+<!-- ===== SECTION 7: MAG7 + AI HW ===== -->
+<div id="s7-mag7" class="section">
+  <div class="section-title"><span class="num">七</span>科技七巨頭 + AI 硬體</div>
+
+  <div class="sub-title">7.1 Magnificent 7 表現（估算）</div>
+  <div class="mag7-grid">
+    <div class="mag7-card up-card">
+      <div class="ticker">NVDA</div>
+      <div class="mag-pct up">$210.69</div>
+      <div class="mag-note">AI算力核心，小幅跟漲</div>
+    </div>
+    <div class="mag7-card up-card">
+      <div class="ticker">MSFT</div>
+      <div class="mag-pct up">~+1.2%</div>
+      <div class="mag-note">雲端+AI，跟隨反彈</div>
+    </div>
+    <div class="mag7-card up-card">
+      <div class="ticker">AAPL</div>
+      <div class="mag-pct up">~+1.5%</div>
+      <div class="mag-note">Intel芯片合作利多</div>
+    </div>
+    <div class="mag7-card up-card">
+      <div class="ticker">GOOGL</div>
+      <div class="mag-pct up">~+1.8%</div>
+      <div class="mag-note">AI廣告+雲端</div>
+    </div>
+    <div class="mag7-card up-card">
+      <div class="ticker">AMZN</div>
+      <div class="mag-pct up">~+1.5%</div>
+      <div class="mag-note">AWS+消費者反彈</div>
+    </div>
+    <div class="mag7-card up-card">
+      <div class="ticker">META</div>
+      <div class="mag-pct up">~+2.0%</div>
+      <div class="mag-note">AI廣告+平台</div>
+    </div>
+    <div class="mag7-card up-card">
+      <div class="ticker">TSLA</div>
+      <div class="mag-pct up">~+2.5%</div>
+      <div class="mag-note">Risk-on小盤/EV跟漲</div>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--text2);margin:8px 0 16px;">* Mag 7 漲跌幅為基於 MAGS ETF 及盤面情況之估算，部分數據待最終確認。</p>
+  <div class="success-box">✅ 七巨頭今日集體上漲，AAPL 受益 Intel 合作利多漲幅靠前，TSLA 跟隨小盤成長風格上漲，NVDA 小幅走高。七巨頭今日並非指數主要拉力，而是半導體中型股（INTC、MRVL）獨領風騷。</div>
+
+  <div class="sub-title">7.2 AI 硬體/半導體重點股</div>
+  <div class="chips">
+    <div class="chip"><span class="c-ticker">INTC</span><span class="c-pct up">+11.45%</span></div>
+    <div class="chip"><span class="c-ticker">MRVL</span><span class="c-pct up">+12.12%</span></div>
+    <div class="chip"><span class="c-ticker">SNDK</span><span class="c-pct up">+11.63%</span></div>
+    <div class="chip"><span class="c-ticker">SMCI</span><span class="c-pct up">+10.10%</span></div>
+    <div class="chip"><span class="c-ticker">WDC</span><span class="c-pct up">+10.3%</span></div>
+    <div class="chip"><span class="c-ticker">AVGO</span><span class="c-pct up">+4.30%</span></div>
+    <div class="chip"><span class="c-ticker">AMD</span><span class="c-pct up">+1.02%</span></div>
+    <div class="chip"><span class="c-ticker">MU</span><span class="c-pct up">+4.8%</span></div>
+    <div class="chip"><span class="c-ticker">NVDA</span><span class="c-pct neutral">$210.69</span></div>
+  </div>
+
+  <div class="alert-box">🔥 <strong>今日半導體最大亮點：Intel (+11.45%)</strong><br>
+  川普在 Truth Social 宣布「Apple 同意與 Intel 合作在美國設計及製造芯片」，此消息被市場解讀為 Intel 重返先進製程的政策背書。Intel 自去年獲政府 89 億美元補貼後，股價已累計上漲逾 400%。MRVL +12.12% 為今日大盤股最強表現，與 AI 數據中心互連需求相關。</div>
+  <div class="source">來源：<a href="https://www.cnbc.com/2026/06/18/trump-intel-apple-chip-design-deal.html" target="_blank">CNBC – Intel Apple Chip Deal</a>｜<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-18-2026" target="_blank">TheStreet</a></div>
+</div>
+
+<!-- ===== SECTION 8: SOFTWARE + EARNINGS ===== -->
+<div id="s8-software" class="section">
+  <div class="section-title"><span class="num">八</span>軟體個股 + 重大財報</div>
+
+  <div class="sub-title">8.1 Accenture (ACN) — 今日最大輸家</div>
+  <div class="alert-box">
+    🚨 <strong>Accenture (ACN) 盤中暴跌 19%（最終 -17.43%），創公司史上單日最差紀錄</strong><br><br>
+    <strong>Q3 FY2026 財報：</strong>EPS $3.80（beat 預期 $0.11）；營收 $18.7B（略低預期 $50M）<br>
+    <strong>致命傷：全年業績指引</strong> — 本財年營收成長率下調至 3%-4%（本幣），受美國聯邦政府業務下滑衝擊，政府業務對全年增速約有 -1% 拖累。<br>
+    股價年初以來已累計下跌 50%，當日創 52 周新低。<br>
+    <strong>市場解讀：</strong>AI 興起令傳統 IT 諮詢轉型壓力加大，市場「用腳投票」遠離舊軟體/諮詢模式。
+  </div>
+
+  <div class="sub-title">8.2 Kroger (KR) 財報</div>
+  <table>
+    <thead><tr><th>指標</th><th>Q1 FY2026 實際</th><th>解讀</th></tr></thead>
+    <tbody>
+      <tr><td>總銷售額</td><td>$46.1B（YoY +2.2%）</td><td>整體銷售成長</td></tr>
+      <tr><td>同店銷售（排除油）</td><td>+1.0%</td><td>同店成長疲弱，低於通脹水平</td></tr>
+      <tr><td>調整後 EPS</td><td>$1.58</td><td>符合市場水平</td></tr>
+      <tr><td>電商銷售</td><td>+19%</td><td>線上成長強勁</td></tr>
+      <tr><td>股價反應</td><td class="down">-8.19%</td><td>市場失望於同店銷售疲弱 + 能源成本壓力</td></tr>
+    </tbody>
+  </table>
+  <div class="source">來源：<a href="https://ir.kroger.com/news/news-details/2026/Kroger-Reports-First-Quarter-2026-Results/default.aspx" target="_blank">Kroger IR</a>｜<a href="https://newsroom.accenture.com/content/3qfy26-earnings/accenture-reports-third-quarter-fiscal-2026-results.pdf" target="_blank">Accenture IR</a></div>
+
+  <div class="sub-title">8.3 其他顯著異動個股</div>
+  <table>
+    <thead><tr><th>股票</th><th>漲跌幅</th><th>原因</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Butterfly Network (BFLY)</strong></td><td class="up">+40.89%</td><td>小型醫療設備股，具體催化待確認</td></tr>
+      <tr><td><strong>Penguin Solutions (PENG)</strong></td><td class="up">+13.95%</td><td>AI 硬體/伺服器相關，強勁異動</td></tr>
+      <tr><td><strong>CarMax (KMX)</strong></td><td class="up">+10.37%</td><td>Q1財報超預期，消費者韌性佐證</td></tr>
+      <tr><td><strong>SpaceX (SPCX)</strong></td><td class="down">-7.96%</td><td>IPO 後連續第二日下跌，市值仍超過 $2.3T，分析師估值擔憂浮現</td></tr>
+      <tr><td><strong>NovoCure (NVCR)</strong></td><td class="down">-18.8%</td><td>最差大型股之一，今日獨立利空</td></tr>
+      <tr><td><strong>Cognizant (CTSH)</strong></td><td class="down">-5.3%</td><td>連帶 Accenture 諮詢板塊殺跌</td></tr>
+      <tr><td><strong>Fortrea Holdings (FTRE)</strong></td><td class="up">+7.2%</td><td>CRO 板塊異動</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== SECTION 9: ROTATION ===== -->
+<div id="s9-rotation" class="section">
+  <div class="section-title"><span class="num">九</span>板塊輪動 + 明日關注清單</div>
+
+  <div class="sub-title">今日市場狀態判斷</div>
+  <div class="chips" style="margin-bottom:16px;">
+    <div class="chip" style="background:var(--green-bg);border-color:var(--green);"><span class="c-ticker" style="color:var(--green)">✅ AI硬體反彈</span></div>
+    <div class="chip" style="background:var(--blue-bg);border-color:var(--blue);"><span class="c-ticker" style="color:var(--blue)">✅ 宽度略擴散</span></div>
+    <div class="chip" style="background:var(--red-bg);border-color:var(--red);"><span class="c-ticker" style="color:var(--red)">⚠️ 能源逆向</span></div>
+    <div class="chip" style="background:var(--yellow-bg);border-color:var(--yellow);"><span class="c-ticker" style="color:var(--yellow)">⚠️ 軟體未補漲</span></div>
+  </div>
+
+  <table>
+    <thead><tr><th>問題</th><th>今日狀況</th></tr></thead>
+    <tbody>
+      <tr><td>資金主要流入</td><td class="up">半導體、AI硬體、小盤成長、可選消費（CarMax）</td></tr>
+      <tr><td>資金主要流出</td><td class="down">能源（油價下跌）、IT諮詢（Accenture）、傳統零售（Kroger）</td></tr>
+      <tr><td>AI 主線是否健康？</td><td class="up">✅ 是。Intel+Apple 協議帶來新催化，MRVL、SNDK 強烈跟進</td></tr>
+      <tr><td>半導體是否繼續領先？</td><td class="up">✅ 是，SOX 估計 +4.5%，遠強於大盤</td></tr>
+      <tr><td>軟體是否開始補漲？</td><td class="down">❌ 尚未，Accenture 崩塌令軟體/諮詢板塊受壓，IGV 僅小幅跟漲</td></tr>
+      <tr><td>小盤是否參與？</td><td class="up">✅ 是，Russell 2000 +2.12% 今日最強主要指數</td></tr>
+      <tr><td>防禦板塊是否異動？</td><td class="neutral">無特別異動，能源走弱但屬地緣驅動，公用事業輕微負</td></tr>
+      <tr><td>當前更像？</td><td class="up">📈 趨勢延續（但建立在事件驅動上，需確認可持續性）</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title" style="margin-top:16px;">明日（6/23，週一）關注清單</div>
+  <div class="warn-box">⚠️ 本週五（6/19）Juneteenth 假日休市，下一個交易日為 6月23日（週一）。週末消息流對週一開盤影響需留意。</div>
+  <table>
+    <thead><tr><th>維度</th><th>關注重點</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>宏觀</strong></td>
+        <td>10Y 收益率是否突破 4.5%？美元指數方向；油價在美伊和平後持續走勢；Fed 官員是否有進一步鷹派表態</td>
+      </tr>
+      <tr>
+        <td><strong>大盤技術</strong></td>
+        <td>S&P 500 7,500 是否守住？Nasdaq 能否繼續向 27,000 推進？Russell 2000 宽度擴散是否延續</td>
+      </tr>
+      <tr>
+        <td><strong>AI硬體</strong></td>
+        <td>Intel-Apple 合作細節追蹤；MRVL / AVGO 是否有跟進新聞；NVDA 是否重拾動能</td>
+      </tr>
+      <tr>
+        <td><strong>能源</strong></td>
+        <td>伊朗石油實際恢復輸出速度；油價是否持續低於 $75；能源板塊是否出現超跌反彈</td>
+      </tr>
+      <tr>
+        <td><strong>個股</strong></td>
+        <td>SpaceX 是否止跌回穩？軟體/諮詢板塊是否因 Accenture 連帶低迷？CarMax 強勢能否帶動零售板塊？</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title">重點個股觀察（週一追蹤）</div>
+  <table>
+    <thead><tr><th>股票</th><th>當日漲跌</th><th>趨勢</th><th>判斷標籤</th></tr></thead>
+    <tbody>
+      <tr><td><strong>NVDA</strong></td><td class="neutral">$210.69</td><td>主線持有</td><td><span class="badge badge-green">繼續強勢</span></td></tr>
+      <tr><td><strong>INTC</strong></td><td class="up">+11.45%</td><td>芯片政策驅動</td><td><span class="badge badge-yellow">短線過熱，等回調</span></td></tr>
+      <tr><td><strong>MRVL</strong></td><td class="up">+12.12%</td><td>AI互連主線</td><td><span class="badge badge-yellow">短線過熱，觀察持續性</span></td></tr>
+      <tr><td><strong>AVGO</strong></td><td class="up">+4.30%</td><td>AI ASIC主線</td><td><span class="badge badge-green">繼續強勢</span></td></tr>
+      <tr><td><strong>AMD</strong></td><td class="up">+1.02%</td><td>AI GPU跟進</td><td><span class="badge badge-blue">需要觀察（INTC上漲是否搶佔份額預期）</span></td></tr>
+      <tr><td><strong>SMCI</strong></td><td class="up">+10.10%</td><td>AI伺服器</td><td><span class="badge badge-yellow">短線過熱</span></td></tr>
+      <tr><td><strong>PLTR</strong></td><td class="neutral">估算跟漲</td><td>AI軟體/政府</td><td><span class="badge badge-blue">等待催化</span></td></tr>
+      <tr><td><strong>ACN</strong></td><td class="down">-17.43%</td><td>破位下跌</td><td><span class="badge badge-red">破位風險，謹慎</span></td></tr>
+      <tr><td><strong>SPCX (SpaceX)</strong></td><td class="down">-7.96%</td><td>IPO後回落</td><td><span class="badge badge-yellow">等待企穩</span></td></tr>
+      <tr><td><strong>VST/CEG</strong></td><td class="neutral">能源混合</td><td>AI電力</td><td><span class="badge badge-blue">油價跌衝擊，需要觀察</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== SECTION 10: CONCLUSION + RISK ===== -->
+<div id="s10-conclusion" class="section">
+  <div class="section-title"><span class="num">十</span>風險提示 + 最終結論</div>
+
+  <div class="sub-title">風險等級評估</div>
+  <div class="risk-grid">
+    <div class="risk-item">
+      <div class="r-name">📈 宏觀利率風險</div>
+      <div class="r-status">10Y 4.46%，Fed 暗示升息；通脹 CPI 4.2% 高燒</div>
+      <div class="risk-bar"><div class="risk-bar-fill risk-high" style="width:75%"></div></div>
+      <div style="margin-top:5px;font-size:12px;color:var(--red)">中高 🟠</div>
+    </div>
+    <div class="risk-item">
+      <div class="r-name">📊 市場宽度風險</div>
+      <div class="r-status">Russell 2000 今日表現佳，但整體仍集中在大型科技</div>
+      <div class="risk-bar"><div class="risk-bar-fill risk-mid" style="width:50%"></div></div>
+      <div style="margin-top:5px;font-size:12px;color:var(--yellow)">中 🟡</div>
+    </div>
+    <div class="risk-item">
+      <div class="r-name">🤖 AI 擁擠度風險</div>
+      <div class="r-status">INTC/MRVL 單日 +12%，短線擁擠明顯</div>
+      <div class="risk-bar"><div class="risk-bar-fill risk-high" style="width:70%"></div></div>
+      <div style="margin-top:5px;font-size:12px;color:var(--red)">中高 🟠</div>
+    </div>
+    <div class="risk-item">
+      <div class="r-name">📋 財報風險</div>
+      <div class="r-status">Accenture 巨跌示警，下週財報季延伸</div>
+      <div class="risk-bar"><div class="risk-bar-fill risk-mid" style="width:55%"></div></div>
+      <div style="margin-top:5px;font-size:12px;color:var(--yellow)">中 🟡</div>
+    </div>
+    <div class="risk-item">
+      <div class="r-name">🌍 地緣風險</div>
+      <div class="r-status">美伊 MOU 為初步框架，60 天談判仍有變數；以黎邊境持續緊張</div>
+      <div class="risk-bar"><div class="risk-bar-fill risk-mid" style="width:45%"></div></div>
+      <div style="margin-top:5px;font-size:12px;color:var(--yellow)">中 🟡</div>
+    </div>
+    <div class="risk-item">
+      <div class="r-name">📉 技術面風險</div>
+      <div class="r-status">VIX 18.44 正常，但指數距離均線已有距離</div>
+      <div class="risk-bar"><div class="risk-bar-fill risk-low" style="width:35%"></div></div>
+      <div style="margin-top:5px;font-size:12px;color:var(--green)">低-中 🟢</div>
+    </div>
+    <div class="risk-item">
+      <div class="r-name">💧 流動性風險</div>
+      <div class="r-status">Juneteenth 假日後週一市場重開；SpaceX IPO 資金效應消退</div>
+      <div class="risk-bar"><div class="risk-bar-fill risk-mid" style="width:40%"></div></div>
+      <div style="margin-top:5px;font-size:12px;color:var(--yellow)">中 🟡</div>
+    </div>
+  </div>
+
+  <div class="warn-box" style="margin-top:16px;">
+    ⚠️ <strong>當前最需警惕的 3 大風險：</strong><br>
+    1. <strong>Fed 升息預期持續升溫</strong>：年內升息概率已近 47-66%，若7月通脹數據不降溫，市場或被迫重估估值；<br>
+    2. <strong>AI 半導體短線擁擠</strong>：INTC、MRVL、SNDK 等單日漲 10-12%，若後續缺乏業績支撐，「sell the news」風險上升；<br>
+    3. <strong>美伊和平框架尚不穩固</strong>：MOU 為 60 天談判框架，以黎邊境仍有衝突，若局勢逆轉，油價可能急速反彈衝擊通脹預期。
+  </div>
+
+  <div class="sub-title" style="margin-top:20px;">最終結論</div>
+  <div class="success-box">
+    📈 <strong>今日市場結論：</strong>美股本週以 "Fed 鷹派震盪 → 快速消化 → 事件驅動反彈" 完美收尾。英特爾-蘋果芯片協議、美伊和平 MOU、氣油價下跌三大事件共振，帶動科技股和小盤股全面回升，科技巨頭和 AI 硬體主線地位依然穩固。市場消化鷹派 Fed 訊號的速度超預期，顯示整體多頭意志仍強。<br><br>
+    <strong>當前市場階段：</strong><span style="color:var(--green);font-weight:700">AI硬體主升浪 / 板塊輪動（少數有宽度擴散跡象）</span>
+  </div>
+
+  <div class="sub-title">操作傾向（中性觀察，不構成投資建議）</div>
+  <table>
+    <thead><tr><th>問題</th><th>觀察</th></tr></thead>
+    <tbody>
+      <tr><td>是否適合追高？</td><td>半導體板塊短線+10-12%後追高風險偏大，等回調確認支撐再佈局</td></tr>
+      <tr><td>是否適合逢低？</td><td>能源板塊逢低有機會，需確認美伊和談進展；軟體板塊（IGV）若繼續企穩可輕倉試探</td></tr>
+      <tr><td>是否應控制倉位？</td><td>Fed 升息風險期，建議保持適度謹慎，不過度追逐高位半導體</td></tr>
+      <tr><td>最值得關注板塊</td><td class="up">AI 硬體（AVGO/MRVL/NVDA 回調買入機會）、小盤成長（宽度擴散）、軟體補漲</td></tr>
+      <tr><td>需要謹慎的板塊</td><td class="down">傳統 IT 諮詢（Accenture 示警）、能源（和平框架不穩定）</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title">最值得關注的 5 個信號（週一觀察）</div>
+  <div class="info-box">
+    1️⃣ <strong>10Y 美債收益率能否穩守 4.5% 以下</strong> — 若突破，科技股面臨系統性估值壓力<br>
+    2️⃣ <strong>Intel-Apple 芯片合作實質性落地信號</strong> — 川普口頭宣告是否有官方確認，決定 INTC 是否持續<br>
+    3️⃣ <strong>美伊談判 60 天框架進展</strong> — 以黎邊境衝突若升級，油價可能急速反彈，打破目前通脹緩和敘事<br>
+    4️⃣ <strong>NVDA 能否站穩 $210 並向上突破</strong> — AI 算力核心股若走弱，整個 AI 主線受挑戰<br>
+    5️⃣ <strong>軟體板塊（IGV/NOW/CRM）能否從 Accenture 崩跌陰影中走出</strong> — 若軟體持續走弱，AI 主線的宽度擴散信號消失
+  </div>
+
+  <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px;margin-top:16px;font-size:12px;color:var(--text2);line-height:1.7;">
+    ⚠️ <strong>重要聲明</strong>：本報告所有數據均來自公開媒體及搜尋結果，部分板塊及個股數據（標注 ~ 者）為基於已知信息之估算，僅供參考，<strong>不構成任何投資建議</strong>。投資有風險，請自行評估。
+  </div>
+</div>
+
+<!-- Attribution -->
+<div class="attribution">
+  本報告由 <strong>超中毒(@oiiax88)</strong> 製作 | 如分享請註明出處<br>
+  <span style="color:var(--blue)">AI 輔助生成 × 數據驅動分析</span> | 生成時間：北京時間 2026-06-19 08:00
+  <br><br>
+  <strong>數據來源：</strong>
+  <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-18-2026" target="_blank">TheStreet</a> ·
+  <a href="https://www.etftrends.com/fixed-income-content-hub/treasury-yields-snapshot-june-18-2026/" target="_blank">ETF Trends</a> ·
+  <a href="https://www.cnbc.com/2026/06/18/trump-iran-deal-mou-nuclear-hormuz.html" target="_blank">CNBC</a> ·
+  <a href="https://www.reuters.com/business/us-weekly-jobless-claims-fall-amid-low-layoffs-2026-06-18/" target="_blank">Reuters</a> ·
+  <a href="https://ir.kroger.com/news/news-details/2026/Kroger-Reports-First-Quarter-2026-Results/default.aspx" target="_blank">Kroger IR</a> ·
+  <a href="https://newsroom.accenture.com/content/3qfy26-earnings/accenture-reports-third-quarter-fiscal-2026-results.pdf" target="_blank">Accenture IR</a>
+</div>
+
+</div><!-- /container -->
+</body>
+</html>
