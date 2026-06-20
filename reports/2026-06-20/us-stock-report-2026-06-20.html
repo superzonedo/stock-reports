@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>🇺🇸 美股收盤日報｜2026-06-18（休市前最後交易日）</title>
+<style>
+:root{
+  --bg:#0b0e14; --bg2:#11151f; --card:#161b27; --card2:#1c2230;
+  --text:#e6e9f0; --sub:#9aa3b5; --border:#262d3d;
+  --green:#28c76f; --red:#ea5455; --yellow:#ffd166; --blue:#4ea1ff; --purple:#b18cff;
+  --accent:#4ea1ff;
+}
+[data-theme="light"]{
+  --bg:#f4f6fa; --bg2:#ffffff; --card:#ffffff; --card2:#eef1f6;
+  --text:#1b1f2a; --sub:#5b6475; --border:#dde2ea;
+  --green:#1f9d55; --red:#d6393c; --yellow:#b8860b; --blue:#1f6fd1; --purple:#7a4fd6;
+  --accent:#1f6fd1;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:-apple-system,"PingFang TC","Noto Sans TC",Segoe UI,Helvetica,Arial,sans-serif;
+  line-height:1.6; padding-bottom:60px; transition:background .2s,color .2s;
+}
+.wrap{max-width:980px; margin:0 auto; padding:0 18px;}
+.toggle-bar{position:sticky; top:0; z-index:50; background:var(--bg); border-bottom:1px solid var(--border); padding:8px 18px; display:flex; justify-content:flex-end; max-width:980px; margin:0 auto;}
+.toggle-btn{background:var(--card2); color:var(--text); border:1px solid var(--border); border-radius:20px; padding:6px 14px; font-size:13px; cursor:pointer;}
+section{padding:28px 0; border-bottom:1px solid var(--border);}
+section:last-child{border-bottom:none;}
+h1{font-size:26px; margin:6px 0 2px;}
+h2{font-size:20px; margin:0 0 16px; padding-left:10px; border-left:4px solid var(--accent); color:var(--text);}
+h3{font-size:16px; color:var(--accent); margin:18px 0 8px;}
+.meta{color:var(--sub); font-size:13px; margin-bottom:18px;}
+.badge{display:inline-block; background:var(--card2); border:1px solid var(--border); border-radius:6px; padding:3px 10px; font-size:12px; color:var(--sub); margin-right:6px;}
+.summary-box{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px 20px; margin-top:10px;}
+.status-tag{display:inline-block; margin-top:10px; background:linear-gradient(90deg,var(--blue),var(--purple)); color:#fff; padding:8px 16px; border-radius:8px; font-weight:600; font-size:14px;}
+table{width:100%; border-collapse:collapse; margin:12px 0 8px; font-size:13.5px;}
+th,td{padding:9px 10px; border-bottom:1px solid var(--border); text-align:center;}
+th{background:var(--card2); color:var(--sub); font-weight:600; font-size:12.5px;}
+td:first-child, th:first-child{text-align:left;}
+.up{color:var(--green); font-weight:600;}
+.down{color:var(--red); font-weight:600;}
+.flat{color:var(--sub);}
+.card-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:14px 0;}
+.mini-card{background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px 14px;}
+.mini-card .label{font-size:12px; color:var(--sub);}
+.mini-card .value{font-size:18px; font-weight:700; margin-top:4px;}
+.bar-row{display:flex; align-items:center; margin:6px 0; font-size:13px;}
+.bar-label{width:130px; flex-shrink:0; color:var(--text);}
+.bar-track{flex:1; background:var(--card2); border-radius:4px; height:18px; position:relative; overflow:hidden;}
+.bar-fill{height:100%; border-radius:4px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px; font-size:11px; color:#fff;}
+.bar-fill.neg{justify-content:flex-start; padding-left:6px;}
+.timeline{border-left:2px solid var(--border); margin-left:8px; padding-left:18px;}
+.tl-item{margin-bottom:16px; position:relative;}
+.tl-item::before{content:""; position:absolute; left:-23px; top:5px; width:9px; height:9px; border-radius:50%; background:var(--accent);}
+.tl-time{font-weight:700; color:var(--accent); font-size:13px;}
+.note{font-size:12.5px; color:var(--sub); margin-top:6px;}
+.src{font-size:11.5px; color:var(--sub); margin-top:4px;}
+.src a{color:var(--blue); text-decoration:none;}
+.tag-pill{display:inline-block; background:var(--card2); border:1px solid var(--border); border-radius:14px; padding:4px 12px; font-size:12.5px; margin:3px 4px 3px 0;}
+.tag-pill.active{background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600;}
+.risk-table td.level-low{color:var(--green); font-weight:600;}
+.risk-table td.level-mid{color:var(--yellow); font-weight:600;}
+.risk-table td.level-high{color:var(--red); font-weight:600;}
+.conclusion-box{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; margin-top:14px;}
+.footer-note{text-align:center; color:var(--sub); font-size:12px; margin-top:30px;}
+.disclaimer{font-size:11.5px; color:var(--sub); background:var(--card2); border-radius:8px; padding:10px 14px; margin-top:16px;}
+ol,ul{padding-left:22px;}
+.gauge-wrap{display:flex; flex-wrap:wrap; gap:12px; margin-top:10px;}
+.gauge{flex:1; min-width:120px; background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; text-align:center;}
+.gauge .dim{font-size:12px; color:var(--sub);}
+.gauge .lv{font-size:15px; font-weight:700; margin-top:4px;}
+</style>
+</head>
+<body data-theme="dark">
+<div class="toggle-bar">
+  <button class="toggle-btn" onclick="toggleTheme()">☀️ 切換日間模式</button>
+</div>
+<div class="wrap">
+
+<!-- ========== S1 COVER ========== -->
+<section id="s1-cover">
+  <span class="badge">美股收盤日報</span><span class="badge">繁體中文</span><span class="badge">數據驅動</span>
+  <h1>🇺🇸 美股收盤日報｜2026-06-18</h1>
+  <div class="meta">
+    報告生成時間：2026-06-20（北京時間）｜涵蓋最近一個交易日：2026年6月18日（週四）收盤數據。<br>
+    說明：美股 6/19（週五）因 Juneteenth 國定假日休市，6/20-21 為週末，故本日報覆蓋的「最近交易日」為 6/18 收盤數據。<br>
+    資料來源：CNBC、Reuters、TheStreet、Yahoo Finance、Bloomberg、Fortune、CME 等（詳見各段落來源標註）。
+  </div>
+
+  <h2 style="border:none; padding-left:0; font-size:17px; margin-top:8px;">一、今日一句話總結</h2>
+  <div class="summary-box">
+    美股三大指數週四集體收紅，標普500（+1.08%）、那斯達克綜合（+1.91%）雙雙改寫紀錄，小型股羅素2000（+2.12%）領漲，市場在「Fed鷹派意外」與「美伊和平協議簽署」兩條主線間消化波動。聯準會新任主席Warsh首次主持會議即維持利率3.50%-3.75%不變，但下修經濟成長並上修通膨預測，9位官員預期年底前可能再升息，殖利率與美元雙雙走高；同時美國與伊朗在凡爾賽簽署14點停火備忘錄、解除荷姆茲海峽封鎖，油價應聲下跌、汽油價格跌破4美元。資金風格偏向 risk-on，科技與半導體（Intel-Apple晶片合作消息推升英特爾、Marvell、SanDisk等）領漲，但Accenture財報慘崩（單日重挫近15-19%，創史上最大單日跌幅）與SpaceX連續第二日重挫顯示個股層面風險仍高。市場宽度當日改善（293/503家標普成分股上漲），但本週整體仍受FOMC鷹派意外干擾，內部結構仍偏脆弱。
+    <br><br>
+    <span class="status-tag">📌 今日市場狀態：指數創高、寬度回暖，但Fed鷹派轉向與個股財報雷區（Accenture、Kroger、SpaceX）警示短線擁擠度與估值風險上升</span>
+  </div>
+  <div class="src">來源：<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-18-2026" target="_blank">TheStreet Stock Market Today (6/18/2026)</a></div>
+  <div class="disclaimer">⚠️ 本報告僅為市場資訊整理與分析框架，不構成任何投資建議。所有數據已盡力標註來源，部分指標因公開資料有限標示為「暫無可靠數據」，請以官方/即時數據為準。</div>
+</section>
+
+<!-- ========== S2 INDEX ========== -->
+<section id="s2-index">
+  <h2>二、大盤表現總覽（2026-06-18 收盤）</h2>
+  <table>
+    <tr><th>指數</th><th>收盤點位</th><th>漲跌幅</th><th>日內表現</th><th>技術狀態</th></tr>
+    <tr><td>Dow Jones</td><td>51,564.70</td><td class="up">+0.14%（+72pt）</td><td>盤中由開盤+0.80%收斂至收盤+0.14%</td><td>本週創高後回吐，週內最弱指數</td></tr>
+    <tr><td>S&amp;P 500</td><td>7,500.58</td><td class="up">+1.08%</td><td>開盤+1.15%→午盤+0.99%→收盤+1.08%</td><td>站上機構年度目標位 7,500（JPM/UBS年度目標）</td></tr>
+    <tr><td>Nasdaq Composite</td><td>26,517.93</td><td class="up">+1.91%</td><td>開盤+1.5%全日走強</td><td>創歷史新高，科技股領漲</td></tr>
+    <tr><td>Nasdaq 100 / QQQ</td><td colspan="3">暫無可靠數據（公開來源未提供6/18精確收盤點位，僅可確認同步走強）</td></tr>
+    <tr><td>Russell 2000 / IWM</td><td>2,979.77</td><td class="up">+2.12%</td><td>開盤逆勢-0.72%後反轉走強，全天領漲四大指數</td><td>受惠殖利率回落，小盤股明顯跑贏大盤</td></tr>
+    <tr><td>SOX 半導體指數</td><td colspan="3">暫無可靠數據（指數收盤點位未取得；ETF SOXX 盤前+4.6%，個股普遍大漲，方向確定為強）</td></tr>
+    <tr><td>VIX</td><td>~18.4（另一來源顯示16.78，存在差異，採CBOE相關來源18.44為主）</td><td colspan="2">較前一交易日（FOMC鷹派意外當日）有所回落</td><td>波動率邊際降溫，但仍高於本月低點</td></tr>
+  </table>
+  <div class="src">來源：<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-18-2026" target="_blank">TheStreet</a>、<a href="https://www.cnbc.com/2025/11/10/the-sp-500-could-reach-7500-in-2026-ubs-says.html" target="_blank">CNBC/UBS S&amp;P500目標</a>、Yahoo Finance、Investing.com（VIX數據兩來源不一致，已標註）</div>
+  <h3>額外說明</h3>
+  <ul>
+    <li><b>標普/納指創高：</b>標普500收於7,500.58，正式站上多家大行（JPMorgan、UBS）年初設定的2026年底目標位；那斯達克綜合創歷史收盤新高。</li>
+    <li><b>納指強於標普：</b>是，納指+1.91% 顯著跑贏標普+1.08%，科技股是主要推力。</li>
+    <li><b>小盤股表現：</b>羅素2000 +2.12% 是四大指數中表現最強者，明顯跑贏大盤，主因殖利率邊際回落＋風險偏好回升。</li>
+    <li><b>半導體：</b>個股層面（Marvell、SanDisk、Western Digital等）全天強勢領漲，半導體仍是市場領先板塊之一，但精確指數收盤值暫無可靠來源。</li>
+    <li><b>VIX含義：</b>兩個來源數據存在差異（16.78 vs 18.44），方向上均顯示較FOMC公布當日（週三大跌session）有所降溫，顯示部分恐慌情緒緩解，但仍處於近期區間中性偏高水平。</li>
+  </ul>
+</section>
+
+<!-- ========== S3 INTRADAY ========== -->
+<section id="s3-intraday">
+  <h2>三、盤中走勢復盤</h2>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-time">盤前</div>美伊在法國凡爾賽簽署14點停火備忘錄（MOU），川普與伊朗總統佩澤希齊揚簽字；美國中央司令部宣布解除荷姆茲海峽軍事封鎖。同時川普宣布Intel將與Apple合作於美國本土設計/製造晶片，Intel盤前大漲逾9%，帶動Marvell、SanDisk、Western Digital等半導體供應鏈同步走高4%-11%。初請失業金人數26,000降至22.6萬（預期22.5萬）。比特幣盤前下跌約1.4%至約6.43萬美元。WTI原油盤前重挫逾2%至75.14美元，因荷姆茲海峽風險解除。</div>
+    <div class="tl-item"><div class="tl-time">開盤（09:30-10:00 ET）</div>標普500開盤即上漲1.15%，那斯達克+1.5%，道瓊+0.80%；羅素2000逆勢下跌0.72%（與其他指數背離，反映小盤股對利率敏感度不同）。市場呈現「Fed鷹派意外消化完畢＋地緣風險降溫」雙重利多開局。</div>
+    <div class="tl-item"><div class="tl-time">午盤（12:00-13:00 ET）</div>標普500動能略收斂至+0.99%，科技股貢獻標普成分股前20大表現者中14席，SanDisk（+11.63%）、Intel（+11.45%）、Super Micro（+10.10%）位居前列；同時SpaceX因連續第二日重挫近9-10%（脫離歷史高點225.64美元跌入熊市區間）及Accenture財報後崩跌成為市場焦點。Kroger因財報不如預期下跌逾8%。</div>
+    <div class="tl-item"><div class="tl-time">尾盤（15:30-16:00 ET）</div>羅素2000在殖利率回落帶動下反轉走強收漲2.12%，成為全天表現最佳指數；標普500、那斯達克收斂至+1.08%／+1.91%；道瓊因週期股權重較高且本週已創高，收斂至僅+0.14%。</div>
+    <div class="tl-item"><div class="tl-time">盤後（16:00+ ET）</div>美股因Juneteenth假期將連休至下週一（6/22）開盤。盤後焦點落在SpaceX擬發行200億美元債券消息、以及Accenture財報後續分析師評級調整上。</div>
+  </div>
+  <h3>核心驅動分析</h3>
+  <p>今日上漲的核心驅動是「地緣風險降溫＋AI硬體供應鏈題材（Intel-Apple晶片合作）」雙重催化，疊加殖利率在FOMC鷹派意外後出現技術性回落，緩解了利率敏感板塊（小盤股、成長股）的壓力。盤面呈現明顯的「buy the dip」特徵——週三因Fed鷹派暗示而重挫的跌勢，在週四被地緣利好與半導體題材迅速收復。同時也出現顯著的「個股雷區」效應：Accenture、Kroger、SpaceX等公司因財報或基本面疑慮遭遇恐慌性拋售，顯示指數強勢掩蓋了部分個股層面的脆弱性，呈現「指數強、個股分化」格局，而非全面普漲。</p>
+</section>
+
+<!-- ========== S4 MACRO ========== -->
+<section id="s4-macro">
+  <h2>四、宏觀環境</h2>
+
+  <h3>4.1 美債收益率</h3>
+  <table>
+    <tr><th>項目</th><th>最新水平</th><th>日變化</th><th>市場含義</th></tr>
+    <tr><td>2Y 美債收益率</td><td>約 4.18%</td><td>暫無精確日變化數據</td><td>反映市場對短期利率路徑的鷹派重新定價</td></tr>
+    <tr><td>10Y 美債收益率</td><td>約 4.44%-4.46%（兩來源略有差異）</td><td class="down">較前一交易日的鷹派意外（+5bp）部分回吐</td><td>長端利率邊際降溫，緩解成長股估值壓力</td></tr>
+    <tr><td>30Y 美債收益率</td><td colspan="2">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>2Y-10Y 利差</td><td colspan="2">暫無可靠數據（估算約+26bp，正利差）</td><td>殖利率曲線維持正斜率，尚未出現倒掛警訊</td></tr>
+    <tr><td>10Y-30Y 利差</td><td colspan="2">暫無可靠數據</td><td>—</td></tr>
+  </table>
+  <p class="note">重點：10Y殖利率目前在4.44%-4.46%區間，尚未觸及市場關注的4.5%/4.6%壓力位，但週三FOMC鷹派意外曾一度推升逾4.5%，顯示市場對「新任Fed主席Warsh是否真能推動降息」存在高度疑慮（Paul Tudor Jones公開表示「Warsh幾乎沒有機會推動降息」）。若10Y持續站穩4.5%以上，將對高估值成長股/科技股形成壓力。</p>
+
+  <h3>4.2 Fed 降息預期</h3>
+  <ul>
+    <li>FOMC 6/16-17會議結果：維持基準利率區間 3.50%-3.75% 不變，為新任主席 Kevin Warsh 上任後首次會議。</li>
+    <li>會議基調明顯偏鷹：聯準會下修今年經濟成長預測、上修通膨預測；19位官員中有9位預期年內至少再升息一次。</li>
+    <li>CME FedWatch 此前一度顯示36%機率6月降息25bp，但實際結果為「不降息、不升息」，市場最終對本次會議的降息/升息機率定價趨近於零。</li>
+    <li>與前一日相比：市場對「Warsh主導降息」的信心明顯下修，殖利率與美元指數同步走高，反映降息預期較會議前顯著降溫，甚至出現「年內可能升息」的尾部風險定價。</li>
+  </ul>
+
+  <h3>4.3 大宗商品與風險資產</h3>
+  <table>
+    <tr><th>資產</th><th>最新價格</th><th>漲跌幅</th><th>含義</th></tr>
+    <tr><td>DXY 美元指數</td><td>約100.7-101區間（創一年新高附近）</td><td class="up">走高</td><td>Fed鷹派意外推升美元至一年高點，對新興市場與商品形成壓力</td></tr>
+    <tr><td>黃金（XAUUSD）</td><td>約 $4,205-4,210/oz（6/18估算）</td><td class="down">隔日(6/19)續跌1.74%至$4,136.59</td><td>美元走強＋鷹派Fed壓抑黃金避險買盤</td></tr>
+    <tr><td>WTI 原油</td><td>$75.14/桶</td><td class="down">-2.15%</td><td>荷姆茲海峽封鎖解除，地緣風險溢價快速消退</td></tr>
+    <tr><td>Brent 原油</td><td>$78.34/桶</td><td class="down">-1.52%</td><td>同上，過去5日累跌約14%</td></tr>
+    <tr><td>比特幣</td><td>約$62,600-64,450區間（全日震盪走低）</td><td class="down">約-1.4%~-1.8%</td><td>風險資產對鷹派Fed反應偏negative，加密貨幣跟隨利率敏感資產走弱</td></tr>
+    <tr><td>以太坊</td><td colspan="2">暫無可靠數據</td><td>—</td></tr>
+  </table>
+
+  <h3>4.4 重要經濟數據</h3>
+  <table>
+    <tr><th>數據</th><th>實際值</th><th>預期值</th><th>前值</th><th>市場解讀</th></tr>
+    <tr><td>初請失業金人數（6/13週）</td><td>226,000</td><td>225,000</td><td>230,000</td><td>連續第三個月失業率穩定於4.3%，勞動市場降溫但未失速</td></tr>
+    <tr><td>全美平均汽油價格</td><td>$3.999/gal</td><td>—</td><td>本年高點$4.56</td><td>首次跌破4美元（自3月以來），但仍較衝突前高34%</td></tr>
+  </table>
+  <div class="src">來源：<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-18-2026" target="_blank">TheStreet</a>、<a href="https://www.cnbc.com/2026/06/17/fed-meeting-today-live-updates.html" target="_blank">CNBC Fed會議報導</a>、<a href="https://www.cnbc.com/2026/05/07/theres-no-chance-warsh-will-be-able-to-get-the-fed-to-cut-rates-paul-tudor-jones-says.html" target="_blank">CNBC/Paul Tudor Jones</a>、<a href="https://www.nbcnews.com/business/consumer/gas-prices-below-4-dollars-rcna350673" target="_blank">NBC News 汽油價格</a></div>
+</section>
+
+<!-- ========== S5 SECTOR ========== -->
+<section id="s5-sector">
+  <h2>五、板塊表現</h2>
+  <p class="note">說明：公開搜尋未能取得S&amp;P500十一大板塊在6/18當日精確漲跌幅數據（標示為「暫無可靠數據」），以下以可確認的市場敘事與個股表現方向性呈現；近期週度/月度脈絡顯示科技、工業、消費循環股偏強，能源、金融相對偏弱。</p>
+  <table>
+    <tr><th>排名</th><th>板塊</th><th>ETF</th><th>當日漲跌幅</th><th>近期脈絡</th><th>主要驅動</th></tr>
+    <tr><td>1（推估）</td><td>信息技術</td><td>XLK</td><td class="up">推估強於大盤</td><td>2026全年展望持續看多，AI硬體/軟體需求驅動</td><td>Intel-Apple晶片合作消息、半導體全面走強</td></tr>
+    <tr><td>2（推估）</td><td>非必需消費（可選消費）</td><td>XLY</td><td class="up">6月以來領漲板塊之一</td><td>近一月表現居前</td><td>消費復甦敘事＋汽油價格回落支撐消費力</td></tr>
+    <tr><td>3（推估）</td><td>工業</td><td>XLI</td><td class="up">6月以來領漲板塊之一</td><td>近一月表現居前</td><td>地緣風險降溫＋資本支出題材</td></tr>
+    <tr><td>—</td><td>通信服務</td><td>XLC</td><td colspan="2">暫無可靠數據</td><td>跟隨科技股表現</td></tr>
+    <tr><td>—</td><td>金融</td><td>XLF</td><td colspan="2">近週表現偏弱（落後板塊）</td><td>殖利率波動、鷹派Fed對淨利差預期影響不一</td></tr>
+    <tr><td>—</td><td>醫療保健</td><td>XLV</td><td colspan="2">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>—</td><td>必需消費</td><td>XLP</td><td colspan="2">暫無可靠數據</td><td>Kroger財報不佳，拖累板塊情緒</td></tr>
+    <tr><td>末位（推估）</td><td>能源</td><td>XLE</td><td class="down">推估偏弱</td><td>近週落後板塊</td><td>油價單日重挫2%+，荷姆茲海峽風險溢價消退</td></tr>
+    <tr><td>—</td><td>公用事業</td><td>XLU</td><td colspan="2">暫無可靠數據</td><td>2026展望偏中性（商品/估值逆風）</td></tr>
+    <tr><td>—</td><td>材料</td><td>XLB</td><td colspan="2">6月以來領漲板塊之一（近一月）</td><td>—</td></tr>
+    <tr><td>—</td><td>房地產</td><td>XLRE</td><td colspan="2">暫無可靠數據</td><td>對殖利率敏感，鷹派Fed意外構成壓力</td></tr>
+  </table>
+
+  <h3>板塊表現示意（方向性，非精確百分比）</h3>
+  <div class="bar-row"><div class="bar-label">信息技術 XLK</div><div class="bar-track"><div class="bar-fill" style="width:78%;background:var(--green);">領漲</div></div></div>
+  <div class="bar-row"><div class="bar-label">可選消費 XLY</div><div class="bar-track"><div class="bar-fill" style="width:65%;background:var(--green);">偏強</div></div></div>
+  <div class="bar-row"><div class="bar-label">工業 XLI</div><div class="bar-track"><div class="bar-fill" style="width:60%;background:var(--green);">偏強</div></div></div>
+  <div class="bar-row"><div class="bar-label">材料 XLB</div><div class="bar-track"><div class="bar-fill" style="width:55%;background:var(--green);">偏強</div></div></div>
+  <div class="bar-row"><div class="bar-label">通信服務 XLC</div><div class="bar-track"><div class="bar-fill" style="width:50%;background:var(--sub);">中性</div></div></div>
+  <div class="bar-row"><div class="bar-label">醫療保健 XLV</div><div class="bar-track"><div class="bar-fill" style="width:48%;background:var(--sub);">中性</div></div></div>
+  <div class="bar-row"><div class="bar-label">房地產 XLRE</div><div class="bar-track"><div class="bar-fill" style="width:42%;background:var(--yellow);">偏弱</div></div></div>
+  <div class="bar-row"><div class="bar-label">必需消費 XLP</div><div class="bar-track"><div class="bar-fill" style="width:40%;background:var(--yellow);">偏弱</div></div></div>
+  <div class="bar-row"><div class="bar-label">公用事業 XLU</div><div class="bar-track"><div class="bar-fill" style="width:38%;background:var(--yellow);">偏弱</div></div></div>
+  <div class="bar-row"><div class="bar-label">金融 XLF</div><div class="bar-track"><div class="bar-fill" style="width:33%;background:var(--red);">落後</div></div></div>
+  <div class="bar-row"><div class="bar-label">能源 XLE</div><div class="bar-track"><div class="bar-fill neg" style="width:28%;background:var(--red);">落後</div></div></div>
+
+  <h3>判斷</h3>
+  <p>最強板塊明顯集中在科技／半導體供應鏈（受Intel-Apple合作消息與AI硬體敘事驅動），最弱板塊為能源（油價單日重挫且荷姆茲海峽風險溢價快速消退）。成長股表現整體優於價值股；周期股（工業、材料）表現優於防禦股（公用事業、必需消費）。當日呈現「AI硬體供應鏈向更廣泛半導體個股（Marvell、SanDisk、西數）擴散」的高切低跡象，而非單純依賴NVDA/AMD等龍頭。</p>
+</section>
+
+<!-- ========== S6 THEME + BREADTH (also folds in technical 八) ========== -->
+<section id="s6-theme">
+  <h2>六、主題與風格表現</h2>
+  <table>
+    <tr><th>主題/風格</th><th>代表ETF</th><th>當日表現</th><th>解讀</th></tr>
+    <tr><td>半導體</td><td>SMH/SOXX</td><td class="up">盤前SOXX +4.6%，個股全天強勢</td><td>AI硬體供應鏈持續是市場主線，且擴散至記憶體/儲存（SanDisk、WDC）</td></tr>
+    <tr><td>軟體</td><td>IGV</td><td class="down">偏弱（PLTR、CRM等下跌）</td><td>軟體股當日表現落後半導體，未見補漲</td></tr>
+    <tr><td>網路安全</td><td>CIBR/HACK</td><td class="flat">PANW +2.00%逆勢走強，但板塊整體偏弱</td><td>個股分化，非全面性行情</td></tr>
+    <tr><td>雲端計算</td><td>WCLD</td><td colspan="2">暫無可靠數據</td></tr>
+    <tr><td>AI/自動化</td><td>BOTZ/AIQ</td><td colspan="2">暫無可靠數據，但AI硬體相關個股全天強勢</td></tr>
+    <tr><td>小盤成長</td><td>IWO</td><td class="up">推估隨羅素2000走強</td><td>小盤股+2.12%領漲四大指數</td></tr>
+    <tr><td>小盤價值</td><td>IWN</td><td colspan="2">暫無可靠數據</td></tr>
+    <tr><td>等權標普</td><td>RSP</td><td colspan="2">暫無可靠數據</td><td>標普成分股293家上漲/3家平盤，顯示寬度尚可，但仍需等權數據確認是否跑贏市值加權</td></tr>
+    <tr><td>大盤成長</td><td>QQQ/SCHG</td><td class="up">隨那斯達克+1.91%走強</td><td>大盤成長股是當日領漲風格</td></tr>
+    <tr><td>大盤價值</td><td>VTV</td><td colspan="2">暫無可靠數據</td></tr>
+  </table>
+  <h3>重點判斷</h3>
+  <ul>
+    <li><b>AI硬體仍是主線：</b>是，且當日呈現「擴散」特徵——不只NVDA/AMD/AVGO，記憶體與儲存股（SanDisk、Western Digital）漲幅甚至更大（+10%以上）。</li>
+    <li><b>軟體是否補漲：</b>否，PLTR跌破50日均線、CRM下跌逾1%，軟體股當日整體落後硬體股，呈現「硬體強、軟體弱」分化。</li>
+    <li><b>小盤股參與度：</b>高，羅素2000單日+2.12%領漲，顯示風險偏好回升下小盤股積極參與。</li>
+    <li><b>擴散行情判斷：</b>標普500成分股中293家上漲（約58%），顯示寬度尚可，但等權/市值加權對比數據暫缺，無法完全確認是否為「健康擴散」或「指數強、內部弱」。</li>
+  </ul>
+
+  <h2 style="margin-top:30px;">七、市場宽度與參與度</h2>
+  <h3>7.1 漲跌家數（標普500，6/18午盤數據）</h3>
+  <table>
+    <tr><th>指標</th><th>數值</th><th>解讀</th></tr>
+    <tr><td>標普500上漲家數</td><td>293</td><td>約58%成分股上漲，寬度溫和改善</td></tr>
+    <tr><td>標普500平盤家數</td><td>3</td><td>—</td></tr>
+    <tr><td>標普500下跌家數</td><td>約207</td><td>仍有四成以上個股下跌，分化明顯</td></tr>
+  </table>
+  <p class="note">註：NYSE/Nasdaq全市場漲跌家數、創52週新高/新低數量、均線參與度（>20/50/100/200日線比例）等細項數據暫無可靠公開來源，標示為「暫無可靠數據」。</p>
+
+  <h3>7.2 技術面速覽（方向性）</h3>
+  <table>
+    <tr><th>標的</th><th>當日表現</th><th>技術觀察</th></tr>
+    <tr><td>SPY（標普代理）</td><td class="up">+1.08%</td><td>站上機構年度目標位7,500，短線動能強但需留意鷹派Fed的估值壓力</td></tr>
+    <tr><td>QQQ（那指代理）</td><td class="up">+1.91%</td><td>創歷史新高，科技股動能最強</td></tr>
+    <tr><td>IWM（小盤代理）</td><td class="up">+2.12%</td><td>領漲但日內曾逆勢下跌0.72%，波動較大</td></tr>
+    <tr><td>SMH（半導體）</td><td class="up">偏強（個股驅動）</td><td>Intel/Marvell/SanDisk領漲，供應鏈擴散</td></tr>
+    <tr><td>IGV（軟體）</td><td class="down">偏弱</td><td>PLTR跌破50日均線，CRM下跌</td></tr>
+  </table>
+  <p class="note">註：各標的精確20/50/200日均線位置、RSI、MACD趨勢、具體支撐壓力位等暫無可靠公開數據來源，建議以使用者自有看盤軟體（TradingView/Bloomberg）確認後再行交易決策。</p>
+</section>
+
+<!-- ========== S7 MAG7 + AI HARDWARE ========== -->
+<section id="s7-mag7">
+  <h2>九、重點個股新聞與異動</h2>
+  <h3>9.1 科技七巨頭 (Magnificent 7)</h3>
+  <table>
+    <tr><th>股票</th><th>漲跌幅</th><th>原因</th><th>後續關注</th></tr>
+    <tr><td>NVDA</td><td class="up">+2.95%（收$210.69）</td><td>AI硬體supply chain整體走強，Intel-Apple合作消息帶動半導體情緒</td><td>後續財報前的供應鏈消息與資本支出指引</td></tr>
+    <tr><td>MSFT</td><td colspan="2">暫無可靠數據</td><td>關注雲端/AI Capex指引</td></tr>
+    <tr><td>AAPL</td><td class="up">+0.70%（收$297.89）</td><td>傳將與Intel合作於美國本土設計/製造晶片</td><td>後續Intel合作細節是否落地</td></tr>
+    <tr><td>GOOGL/GOOG</td><td class="down">-0.66%（收$365.04）</td><td>暫無明確單一驅動因素</td><td>關注雲端與AI Agent競爭動態</td></tr>
+    <tr><td>AMZN</td><td colspan="2">暫無可靠數據</td><td>關注SpaceX競爭動態（市值一度超越AMZN後回落）</td></tr>
+    <tr><td>META</td><td colspan="2">暫無可靠數據</td><td>關注其與CEG/VST等核電供應商的長期PPA執行進度</td></tr>
+    <tr><td>TSLA</td><td colspan="1">收約$400.49（日變化暫無可靠數據）</td><td>—</td><td>—</td></tr>
+  </table>
+  <p class="note">註：Roundhill七巨頭等權ETF（MAGS）盤前上漲0.43%至$64.86，顯示七巨頭整體情緒偏正向但漲幅溫和；2026上半年七巨頭整體（+5.4%）顯著落後標普500（+7.9%），顯示「七巨頭跑輸大盤」的風格輪動跡象在更長週期上已經出現。</p>
+
+  <h3>9.2 AI 硬體/半導體重點股</h3>
+  <table>
+    <tr><th>股票</th><th>當日表現</th><th>驅動因素</th></tr>
+    <tr><td>INTC</td><td class="up">+9%~+11.45%</td><td>川普宣布Apple將與Intel合作於美國設計/製造晶片；自去年美國政府入股89億美元以來股價已上漲400%+</td></tr>
+    <tr><td>MRVL</td><td class="up">+6.1%~+12.12%</td><td>半導體供應鏈情緒全面回升</td></tr>
+    <tr><td>SNDK（SanDisk）</td><td class="up">+11.1%~+11.63%</td><td>標普成分股當日表現最佳之一，記憶體需求敘事</td></tr>
+    <tr><td>WDC（Western Digital）</td><td class="up">+10.3%</td><td>同上，儲存板塊全面走強</td></tr>
+    <tr><td>SMCI</td><td class="up">+8.1%~+10.10%</td><td>AI伺服器需求題材延續</td></tr>
+    <tr><td>AVGO</td><td class="up">+3%~+4.30%（收約$392.90）</td><td>半導體大盤上漲帶動，AI ASIC敘事持續</td></tr>
+    <tr><td>AMD</td><td class="up">+1.02%~+3.9%（收約$512.48）</td><td>跟隨半導體整體情緒</td></tr>
+    <tr><td>MU、TSM、ASML、ARM、QCOM、DELL、ANET、VRT、COHR、LITE、AAOI</td><td colspan="2">暫無可靠數據</td></tr>
+  </table>
+  <h3>判斷</h3>
+  <p>AI硬體當日明確呈現「擴散而非單一龍頭驅動」的特徵——資金從NVDA/AMD等核心AI晶片股，擴散至記憶體（SanDisk、WDC）、晶圓代工設備（Intel受惠美國本土製造政策利好）等次級供應鏈。目前未見明顯的「sell the news」訊號，反而是政策利好（Intel-Apple合作）持續為板塊注入新動能；尚無明確證據顯示資金正系統性從GPU切向光通信/電力/軟體。</p>
+</section>
+
+<!-- ========== S8 SOFTWARE + EARNINGS ========== -->
+<section id="s8-software">
+  <h3>9.3 軟體/SaaS/AI應用重點股</h3>
+  <table>
+    <tr><th>股票</th><th>當日表現</th><th>驅動因素</th></tr>
+    <tr><td>PLTR</td><td class="down">跌破$128.70支撐及50日均線，收約$126.90，距本月高點$162已回落逾20%</td><td>軟體股估值修正壓力持續</td></tr>
+    <tr><td>CRM</td><td class="down">下跌逾1%</td><td>軟體股整體當日偏弱</td></tr>
+    <tr><td>PANW</td><td class="up">+2.00%（收$287.78）</td><td>網路安全股逆勢走強，個股分化案例</td></tr>
+    <tr><td>NOW、SNOW、ADBE、CRWD、DDOG、NET、MDB、APP、WDAY、INTU、SHOP、ORCL</td><td colspan="2">暫無可靠數據</td></tr>
+  </table>
+  <p class="note">判斷：軟體股當日整體跑輸大盤與半導體板塊，未見「AI應用補漲」訊號，呈現「硬體強、軟體弱」的板塊內分化格局。</p>
+
+  <h3>9.4 AI電力/數據中心/能源基礎設施</h3>
+  <p>當日無重大個股價格異動公開數據（標示「暫無可靠數據」），但中長期催化劑持續：Constellation Energy（CEG）已與Meta簽署20年期1.1GW核電供電協議（2025年6月，2027年起供電伊利諾州AI數據中心）；Vistra（VST）於2026年1月跟進與Meta簽署逾2.1GW核電長約（涵蓋Perry、Davis-Besse、Beaver Valley三座核電廠）；GE Vernova（GEV）受惠全球核電與SMR（小型模組化反應爐）需求動能；Oklo（OKLO）持續被視為數據中心電力解決方案概念股。整體而言，AI電力/數據中心基礎設施鏈仍是中長期主題，但當日並非市場焦點。</p>
+
+  <h3>9.5 其他顯著異動</h3>
+  <table>
+    <tr><th>股票</th><th>漲跌幅</th><th>原因</th></tr>
+    <tr><td>Accenture (ACN)</td><td class="down">-15%~-19%（公司史上最大單日跌幅，YTD-50%，創52週新低）</td><td>財報後重挫，市場對AI衝擊顧問/外包業務的疑慮加劇，"AI對軟體與顧問業恐懼交易"持續發酵</td></tr>
+    <tr><td>SpaceX (SPCX)</td><td class="down">-9%~-9.96%（連續第二日重挫，自高點$225.64跌至約$186，技術性進入熊市）</td><td>IPO後獲利回吐；同時傳擬發行200億美元債券；新增前Sequoia資本管理合夥人Roelof Botha為獨立董事</td></tr>
+    <tr><td>Kroger (KR)</td><td class="down">-6.9%~-8.19%</td><td>財報不如預期</td></tr>
+    <tr><td>CarMax (KMX)</td><td class="up">+10.37%</td><td>財報優於預期</td></tr>
+    <tr><td>Cognizant (CTSH)</td><td class="down">-5.3%~-6.6%</td><td>與Accenture同業情緒拖累，AI對IT服務業衝擊疑慮</td></tr>
+    <tr><td>Butterfly Network、ChronoScale、Penguin Solutions</td><td class="up">+13.95%~+40.89%</td><td>小型股當日表現最佳，具體驅動因素暫無可靠數據</td></tr>
+  </table>
+
+  <h2 style="margin-top:30px;">十、財報日曆與財報解讀</h2>
+  <h3>10.1 昨夜已公布財報的重點公司</h3>
+  <table>
+    <tr><th>公司</th><th>是否beat</th><th>盤後/當日反應</th><th>核心解讀</th></tr>
+    <tr><td>Accenture (ACN)</td><td class="down">未達預期，指引疲弱</td><td>單日重挫15%-19%，公司史上最大單日跌幅</td><td>市場對AI衝擊顧問/外包商業模式的疑慮顯著升溫，AI威脅敘事壓制服務業評價</td></tr>
+    <tr><td>Kroger (KR)</td><td class="down">未達預期</td><td>下跌6.9%-8.19%</td><td>零售業利潤率壓力延續</td></tr>
+    <tr><td>CarMax (KMX)</td><td class="up">優於預期</td><td>上漲10.37%</td><td>二手車需求穩健，消費力未顯著惡化</td></tr>
+  </table>
+  <h3>10.2 接下來 1-3 個交易日重要財報</h3>
+  <table>
+    <tr><th>日期</th><th>公司</th><th>市場關注點</th><th>可能影響板塊</th></tr>
+    <tr><td>6/23（週二）</td><td>FedEx (FDX)</td><td>全球貨運需求、關稅與貿易環境影響</td><td>工業、運輸板塊</td></tr>
+    <tr><td>6/24（週三）</td><td>Micron (MU)</td><td>記憶體/儲存晶片需求與AI伺服器拉貨力道，HBM定價</td><td>半導體板塊，尤其呼應當日SanDisk/WDC強勢表現</td></tr>
+  </table>
+  <p class="note">註：NVDA、AVGO、CRM、NOW、GOOGL、MSFT、AMZN、META等下一輪財報日期暫未落於未來1-3個交易日內，暫無可靠數據可列出精確日期，建議關注公司IR官網更新。</p>
+  <div class="src">來源：<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-18-2026" target="_blank">TheStreet</a>、Kiplinger 財報日曆、Zacks/Nasdaq 財報日曆</div>
+</section>
+
+<!-- ========== S9 ROTATION + WATCHLIST + INSTITUTIONAL VIEWS ========== -->
+<section id="s9-rotation">
+  <h2>十一、機構觀點與資金流</h2>
+  <table>
+    <tr><th>機構/來源</th><th>觀點</th><th>涉及資產</th></tr>
+    <tr><td>Paul Tudor Jones</td><td>"幾乎沒有機會"讓Warsh主導的Fed推動降息</td><td>整體利率市場、成長股估值</td></tr>
+    <tr><td>JPMorgan / UBS</td><td>2026年S&amp;P500目標位7,500，已於6/18當日達標</td><td>S&amp;P 500</td></tr>
+    <tr><td>Bank of America</td><td>估值上升、領漲股集中度收窄，市場可能愈發脆弱（報導見於Intel早盤相關報導配圖說明）</td><td>大盤、集中度風險</td></tr>
+  </table>
+  <p class="note">註：更細項的ETF資金流向、期權市場Put/Call異動、大宗交易/回購公告等暫無可靠公開數據來源。</p>
+
+  <h2 style="margin-top:30px;">十二、板塊輪動判斷</h2>
+  <div>
+    <span class="tag-pill active">AI硬體主升浪（擴散至記憶體/儲存）</span>
+    <span class="tag-pill">指數強、內部分化</span>
+    <span class="tag-pill">小盤股參與回升</span>
+    <span class="tag-pill">軟體相對走弱</span>
+  </div>
+  <p style="margin-top:14px;"><b>明確回答：</b></p>
+  <ul>
+    <li><b>資金主要流入：</b>半導體/AI硬體供應鏈（含記憶體儲存股）、工業、可選消費、小盤股。</li>
+    <li><b>資金主要流出：</b>能源（油價重挫）、部分軟體/顧問服務股（Accenture衝擊蔓延至Cognizant）。</li>
+    <li><b>AI主線是否健康：</b>整體健康，且呈現擴散特徵（非僅NVDA/AMD），但需留意"AI威脅傳統服務業"敘事（Accenture崩跌）可能是科技股內部分化的早期訊號。</li>
+    <li><b>半導體是否繼續領先：</b>是，當日表現最突出的板塊。</li>
+    <li><b>軟體是否相對走強：</b>否，PLTR、CRM等表現落後，呈現「硬體強、軟體弱」格局。</li>
+    <li><b>小盤是否參與：</b>是，羅素2000+2.12%領漲。</li>
+    <li><b>防禦板塊是否異動：</b>未見明顯異動（暫無可靠數據佐證公用事業/必需消費當日精確表現）。</li>
+    <li><b>當前更像：</b>趨勢延續中帶有結構性分化——指數層面的趨勢延續（標普站上年度目標位、那指創高），但個股/板塊內部已出現分化跡象（軟體轉弱、顧問服務業遭AI替代敘事衝擊），需留意是否演變為階段性頂部震盪的前兆。</li>
+  </ul>
+
+  <h2 style="margin-top:30px;">十三、重點關注股觀察</h2>
+  <table>
+    <tr><th>股票</th><th>當日表現</th><th>關鍵新聞</th><th>判斷標籤</th></tr>
+    <tr><td>NVDA</td><td class="up">+2.95%</td><td>半導體供應鏈情緒回升</td><td>繼續強勢</td></tr>
+    <tr><td>AMD</td><td class="up">+1.02%</td><td>跟隨板塊</td><td>高位震盪</td></tr>
+    <tr><td>AVGO</td><td class="up">+4.30%</td><td>AI ASIC敘事延續</td><td>繼續強勢</td></tr>
+    <tr><td>INTC</td><td class="up">+9%~+11.45%</td><td>Apple-Intel美國本土晶片合作</td><td>利好兌現，短線過熱風險上升</td></tr>
+    <tr><td>MRVL</td><td class="up">+6.1%~+12.12%</td><td>半導體板塊全面走強</td><td>短線過熱</td></tr>
+    <tr><td>GOOGL</td><td class="down">-0.66%</td><td>無明確單一催化</td><td>需要觀察</td></tr>
+    <tr><td>PLTR</td><td class="down">跌破50日均線</td><td>軟體股估值修正</td><td>回踩支撐/破位風險</td></tr>
+    <tr><td>CRM</td><td class="down">-1%+</td><td>軟體股整體偏弱</td><td>等財報催化</td></tr>
+    <tr><td>PANW</td><td class="up">+2.00%</td><td>網路安全逆勢走強</td><td>低位修復</td></tr>
+    <tr><td>SpaceX (SPCX)</td><td class="down">-9%~-9.96%</td><td>連續重挫、傳發債200億美元</td><td>破位風險，技術性熊市</td></tr>
+    <tr><td>Accenture (ACN)</td><td class="down">-15%~-19%</td><td>財報慘崩，史上最大單日跌幅</td><td>破位風險</td></tr>
+    <tr><td>CEG/VST/GEV/OKLO</td><td colspan="2">暫無當日精確數據，中長期核電PPA題材延續</td><td>等財報催化</td></tr>
+  </table>
+</section>
+
+<!-- ========== S10 RISK + CONCLUSION ========== -->
+<section id="s10-conclusion">
+  <h2>十四、明日（下週一 6/22）交易計畫/觀察清單</h2>
+  <h3>14.1 宏觀觀察</h3>
+  <ul>
+    <li>10Y美債殖利率是否重新測試4.5%關鍵壓力位</li>
+    <li>美元指數（DXY）是否延續一年新高的強勢</li>
+    <li>油價在荷姆茲海峽風險解除後是否止穩或延續跌勢</li>
+    <li>Fed官員（含新主席Warsh）後續講話對年內升息/降息路徑的進一步指引</li>
+  </ul>
+  <h3>14.2 大盤觀察</h3>
+  <ul>
+    <li>SPY能否站穩7,500關鍵心理位之上</li>
+    <li>QQQ創高後的延續性，留意鷹派利率環境下的估值壓力</li>
+    <li>半導體（SMH/SOXX）是否持續強於QQQ</li>
+    <li>軟體（IGV）能否止跌企穩，是否出現補漲訊號</li>
+    <li>羅素2000(IWM)能否延續本週領漲動能</li>
+  </ul>
+  <h3>14.3 板塊與個股觀察清單（10-15只重點關注）</h3>
+  <p>NVDA、AMD、AVGO、INTC（Apple合作後續細節）、MRVL、SNDK、WDC、SMCI（半導體供應鏈擴散是否延續）、PLTR、CRM（軟體股能否止穩）、ACN（崩跌後是否出現超跌反彈或評級下修潮）、SPCX（200億美元發債後續、是否止穩於$186附近）、KR（財報後續分析師反應）、MU（6/24財報前布局）、FDX（6/23財報，全球貨運景氣指標）。</p>
+
+  <h2 style="margin-top:30px;">十五、風險提示</h2>
+  <table class="risk-table">
+    <tr><th>風險維度</th><th>當前狀態</th><th>風險等級</th></tr>
+    <tr><td>宏觀利率</td><td>Fed鷹派意外，10Y殖利率逼近4.5%壓力位，年內升息尾部風險上升</td><td class="level-high">中高</td></tr>
+    <tr><td>市場宽度</td><td>標普成分股58%上漲，溫和改善但非全面普漲</td><td class="level-mid">中</td></tr>
+    <tr><td>AI 擁擠度</td><td>半導體供應鏈短線漲幅集中（多股單日漲逾10%），擁擠度上升</td><td class="level-high">中高</td></tr>
+    <tr><td>財報風險</td><td>Accenture單日重挫15-19%顯示"AI替代服務業"敘事衝擊，財報雷區風險不可忽視</td><td class="level-high">中高</td></tr>
+    <tr><td>地緣風險</td><td>美伊MOU簽署、荷姆茲海峽解封，但黎巴嫩仍有以色列空襲，伊朗保留若條件未達成重新封鎖的權利</td><td class="level-mid">中</td></tr>
+    <tr><td>技術面</td><td>標普/那指創高後追高風險上升，需留意鷹派利率環境下估值修正風險</td><td class="level-mid">中</td></tr>
+    <tr><td>流動性</td><td>暫無可靠數據佐證流動性緊張訊號</td><td class="level-low">低</td></tr>
+  </table>
+  <div class="gauge-wrap">
+    <div class="gauge"><div class="dim">宏觀利率</div><div class="lv" style="color:var(--red);">中高</div></div>
+    <div class="gauge"><div class="dim">市場宽度</div><div class="lv" style="color:var(--yellow);">中</div></div>
+    <div class="gauge"><div class="dim">AI擁擠度</div><div class="lv" style="color:var(--red);">中高</div></div>
+    <div class="gauge"><div class="dim">財報風險</div><div class="lv" style="color:var(--red);">中高</div></div>
+    <div class="gauge"><div class="dim">地緣風險</div><div class="lv" style="color:var(--yellow);">中</div></div>
+    <div class="gauge"><div class="dim">技術面</div><div class="lv" style="color:var(--yellow);">中</div></div>
+    <div class="gauge"><div class="dim">流動性</div><div class="lv" style="color:var(--green);">低</div></div>
+  </div>
+  <p><b>當前最需警惕的風險（前3項）：</b></p>
+  <ol>
+    <li>Fed鷹派轉向下殖利率／美元雙升，可能壓抑高估值成長股評價；</li>
+    <li>半導體供應鏈短線漲幅過於集中，擁擠度與獲利回吐風險上升；</li>
+    <li>"AI替代傳統服務業"敘事（Accenture案例）可能擴散至其他顧問/IT服務類股，引發板塊性重新評價。</li>
+  </ol>
+
+  <h2 style="margin-top:30px;">十六、最終結論</h2>
+  <div class="conclusion-box">
+    <p>美股在6/18以全面收紅收尾一週，標普500站上機構年度目標位7,500，那斯達克創歷史新高，地緣風險（美伊MOU、荷姆茲海峽解封）與AI硬體供應鏈擴散題材（Intel-Apple合作）是核心驅動。然而，新任Fed主席Warsh首次會議釋出的鷹派訊號（下修成長、上修通膨、9位官員預期年內升息）為市場埋下隱憂，10Y殖利率與美元雙雙走高；個股層面Accenture的史上最大單日崩跌及SpaceX連續重挫顯示，指數的強勢掩蓋了部分結構性風險。整體判斷市場仍處於趨勢延續格局，但內部分化（硬體強/軟體弱、半導體擁擠度上升）值得密切關注。</p>
+    <p><b>當前市場阶段：</b>趨勢延續中伴隨結構性分化（介於"強趨勢上漲"與"板塊輪動"之間）</p>
+    <p><b>我的操作傾向（中性觀察，不構成投資建議）：</b></p>
+    <ul>
+      <li>是否適合追高：半導體短線漲幅已大，追高需謹慎控制風險；</li>
+      <li>是否適合逢低：軟體股（PLTR、CRM）回落後可列入觀察名單，等待止穩訊號；</li>
+      <li>是否應該等待財報：MU（6/24）、FDX（6/23）財報前可適度觀望，作為下週景氣與AI硬體需求的關鍵驗證點；</li>
+      <li>是否應該控制倉位：鑑於Fed鷹派意外與殖利率上行風險，建議在指數創高後適度控制總體倉位與槓桿；</li>
+      <li>更值得關注的板塊：半導體供應鏈擴散（記憶體/儲存）、小盤股動能延續；</li>
+      <li>需謹慎的板塊：能源（油價趨勢轉弱）、與AI替代敘事相關的傳統IT服務/顧問類股。</li>
+    </ul>
+    <p><b>最值得關注的 5 個信號：</b></p>
+    <ol>
+      <li>10Y美債殖利率能否守住4.5%下方，決定成長股估值空間；</li>
+      <li>半導體供應鏈（INTC/MRVL/SNDK等）短線漲幅是否出現獲利回吐；</li>
+      <li>軟體股（PLTR/CRM）能否止穩，驗證"AI威脅傳統軟體/服務業"敘事是否持續擴散；</li>
+      <li>美伊MOU後續執行進度與黎巴嫩局勢是否影響地緣風險溢價重新計入油價；</li>
+      <li>6/23 FedEx、6/24 Micron財報是否驗證全球貨運景氣與AI伺服器需求的延續性。</li>
+    </ol>
+  </div>
+
+  <div class="footer-note">
+    此報告為「超中毒(@oiiax88)」製作，如分享請註明出處。<br>
+    本報告所有數據已盡力標註來源並核實，部分項目因公開資料有限標示為「暫無可靠數據」，請勿將本報告視為投資建議。
+  </div>
+</section>
+
+</div>
+
+<script>
+function toggleTheme(){
+  var body = document.body;
+  var btn = document.querySelector('.toggle-btn');
+  if(body.getAttribute('data-theme') === 'dark'){
+    body.setAttribute('data-theme','light');
+    btn.textContent = '🌙 切換夜間模式';
+  } else {
+    body.setAttribute('data-theme','dark');
+    btn.textContent = '☀️ 切換日間模式';
+  }
+}
+</script>
+</body>
+</html>
