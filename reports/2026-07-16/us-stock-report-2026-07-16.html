@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>美股收盤日報｜2026-07-16</title>
+<style>
+  :root{
+    --bg:#0b0e14; --panel:#131722; --panel2:#171c29; --border:#232838;
+    --text:#e6e9f0; --sub:#9aa4b8; --muted:#6b7688;
+    --red:#ff5b5b; --green:#2ecf7a; --amber:#f5b942; --blue:#5b9dff; --purple:#b18cff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--text); margin:0; padding:0;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",Segoe UI,Helvetica,Arial,sans-serif;
+    line-height:1.65; font-size:15px;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:32px 20px 80px;}
+  .cover{
+    text-align:center; padding:40px 20px 32px; border-bottom:1px solid var(--border); margin-bottom:28px;
+  }
+  .cover h1{font-size:26px;margin:0 0 8px;letter-spacing:.5px;}
+  .cover .meta{color:var(--muted);font-size:12.5px;line-height:1.9;}
+  section{margin-bottom:40px;}
+  h2{
+    font-size:18px; margin:0 0 16px; padding-bottom:10px; border-bottom:2px solid var(--border);
+    display:flex; align-items:center; gap:8px;
+  }
+  h2 .tag{
+    font-size:11px; background:var(--panel2); color:var(--sub); padding:2px 8px; border-radius:20px; border:1px solid var(--border);
+  }
+  h3{font-size:14.5px; color:var(--blue); margin:20px 0 10px;}
+  p{margin:0 0 12px;}
+  .lead{
+    background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:16px 18px; margin-bottom:14px;
+  }
+  .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;}
+  .badge{
+    background:linear-gradient(135deg,#2a1f4d,#1c2a4d); border:1px solid #3a3f6b; color:#c9d3ff;
+    padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;
+  }
+  table{width:100%; border-collapse:collapse; margin:12px 0 18px; font-size:13.5px;}
+  th,td{padding:9px 10px; border-bottom:1px solid var(--border); text-align:left;}
+  th{color:var(--sub); font-weight:600; font-size:12.5px; background:var(--panel2);}
+  tr:hover td{background:rgba(255,255,255,0.02);}
+  .pos{color:var(--green); font-weight:700;}
+  .neg{color:var(--red); font-weight:700;}
+  .flat{color:var(--muted); font-weight:700;}
+  .note{
+    background:var(--panel2); border-left:3px solid var(--blue); border-radius:6px;
+    padding:10px 14px; font-size:13px; color:var(--sub); margin:12px 0;
+  }
+  .note.warn{border-left-color:var(--amber);}
+  .note.risk{border-left-color:var(--red);}
+  .gap{
+    background:rgba(107,118,136,0.1); border:1px dashed var(--muted); border-radius:6px;
+    padding:8px 12px; font-size:12.5px; color:var(--muted); margin:10px 0;
+  }
+  .qa{margin:14px 0;}
+  .qa .q{color:var(--purple); font-weight:700; font-size:13.5px; margin-bottom:4px;}
+  .qa .a{font-size:13.5px; color:var(--text);}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media(max-width:680px){.grid2{grid-template-columns:1fr;}}
+  .heatgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:16px 0;}
+  @media(max-width:600px){.heatgrid{grid-template-columns:repeat(2,1fr);}}
+  .heatcell{
+    border-radius:10px; padding:16px 12px; text-align:center; border:1px solid var(--border);
+  }
+  .heatcell .name{font-size:12px; color:rgba(255,255,255,0.75); margin-bottom:6px;}
+  .heatcell .val{font-size:20px; font-weight:800;}
+  .heatcell .px{font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px;}
+  .barrow{display:flex; align-items:center; gap:10px; margin:9px 0; font-size:13px;}
+  .barrow .label{width:150px; flex-shrink:0; color:var(--sub);}
+  .barrow .track{flex:1; background:var(--panel2); border-radius:4px; height:20px; position:relative; overflow:hidden;}
+  .barrow .fill{height:100%; border-radius:4px; position:absolute; top:0;}
+  .barrow .fill.g{background:linear-gradient(90deg,#1f8f52,var(--green)); left:50%;}
+  .barrow .fill.r{background:linear-gradient(90deg,var(--red),#8f1f1f); right:50%;}
+  .barrow .center{position:absolute; left:50%; top:0; bottom:0; width:1px; background:var(--muted);}
+  .barrow .num{width:56px; text-align:right; font-weight:700; flex-shrink:0;}
+  .risktable td:nth-child(3){font-weight:700;}
+  .lv-low{color:var(--green);} .lv-mid{color:var(--amber);} .lv-midhigh{color:#ff8f4d;} .lv-high{color:var(--red);}
+  .footer{
+    margin-top:50px; padding-top:20px; border-top:1px solid var(--border); text-align:center;
+    color:var(--muted); font-size:12px; line-height:1.9;
+  }
+  .disclaimer{
+    background:var(--panel2); border:1px solid var(--border); border-radius:8px; padding:14px 16px;
+    font-size:12px; color:var(--muted); margin-top:20px;
+  }
+  .src{font-size:11px; color:var(--muted);}
+  .conclusion-box{
+    background:linear-gradient(135deg,#161b2e,#1b1430); border:1px solid #333a5c; border-radius:12px; padding:20px;
+  }
+  ul{margin:8px 0 12px; padding-left:20px;}
+  li{margin-bottom:6px; font-size:13.5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="cover" id="s1-cover-title">
+    <h1>🇺🇸 美股收盤日報｜2026-07-16</h1>
+    <div class="meta">
+      報告生成時間：台北時間 2026-07-17 09:00｜資料來源：CNBC、Bloomberg、Reuters、TheStreet、Yahoo Finance、SEC 6-K、TrendForce 等<br>
+      本報告由「超中毒（@oiiax88）」製作，分享請註明出處
+    </div>
+  </div>
+
+  <section id="s1-cover">
+    <h2>S1｜今日一句話總結 <span class="tag">Overview</span></h2>
+    <div class="lead">
+      <p>美股週四（7/16）收黑，Nasdaq 領跌，主因半導體與記憶體全鏈重挫：台積電（TSM）Q2 財報優於預期，卻因大幅上修 2026 年資本支出guidance（$520-560億 → $600-640億）觸發「利多出貨」，Micron、AMD、Broadcom、SanDisk、SK Hynix ADR 全數重挫逾 5%（部分逾 10%）。Alphabet 另因 Gemini 3.5 Pro 延遲傳聞單日重挫 4.64%，拖累 Nasdaq。亞洲盤已先受美伊地緣衝突（美國空襲伊朗、Hormuz 海峽封鎖疑慮）衝擊，KOSPI 早盤暴跌 6.37% 觸發熔斷，為全日風險偏好定調。值得注意的是 VIX 全天收低至 15.67（-5%），顯示恐慌情緒尚未系統性蔓延，本輪賣壓更像是「個股/類股驅動的獲利了結」而非全面 risk-off。盤後 Netflix Q2 營收與 Q3 guidance 雙雙不如預期，股價重挫逾 8%，為明日科技股情緒再添變數。</p>
+    </div>
+    <div class="badges">
+      <span class="badge">📌 AI硬體高位震盪</span>
+      <span class="badge">📌 記憶體利好鈍化</span>
+    </div>
+  </section>
+
+  <section id="s2-index">
+    <h2>S2｜大盤表現總覽 <span class="tag">Indices</span></h2>
+    <table>
+      <tr><th>指數</th><th>收盤</th><th>漲跌幅</th><th>一句話狀態</th></tr>
+      <tr><td>Dow Jones</td><td>52,552.97</td><td class="neg">-0.20%（-105.67pt）</td><td>藍籌抗跌，Nike/IBM/Salesforce 上漲對沖</td></tr>
+      <tr><td>S&P 500</td><td>7,533.77</td><td class="neg">-0.51%</td><td>大盤溫和收黑，跌幅集中於權值科技股</td></tr>
+      <tr><td>Nasdaq Composite</td><td>25,881.95</td><td class="neg">-1.47%</td><td>半導體 + Alphabet 雙重利空重壓</td></tr>
+      <tr><td>Russell 2000</td><td>2,974.57</td><td class="flat">-0.06%</td><td>幾乎持平，小盤未跟跌</td></tr>
+      <tr><td>SOX 半導體指數</td><td colspan="2" class="gap" style="display:table-cell;">暫無可靠精確收盤數據</td><td>SMH ETF 重挫近 4%，可視為半導體代理指標領跌</td></tr>
+      <tr><td>VIX</td><td>15.67</td><td class="pos">-5%</td><td>恐慌情緒不升反降，非系統性風險</td></tr>
+    </table>
+
+    <div class="heatgrid">
+      <div class="heatcell" style="background:rgba(255,91,91,0.12); border-color:rgba(255,91,91,0.4);">
+        <div class="name">Dow Jones</div><div class="val neg">-0.20%</div><div class="px">52,552.97</div>
+      </div>
+      <div class="heatcell" style="background:rgba(255,91,91,0.20); border-color:rgba(255,91,91,0.5);">
+        <div class="name">S&P 500</div><div class="val neg">-0.51%</div><div class="px">7,533.77</div>
+      </div>
+      <div class="heatcell" style="background:rgba(255,91,91,0.35); border-color:rgba(255,91,91,0.7);">
+        <div class="name">Nasdaq</div><div class="val neg">-1.47%</div><div class="px">25,881.95</div>
+      </div>
+      <div class="heatcell" style="background:rgba(107,118,136,0.15); border-color:var(--border);">
+        <div class="name">Russell 2000</div><div class="val flat">-0.06%</div><div class="px">2,974.57</div>
+      </div>
+      <div class="heatcell" style="background:rgba(255,91,91,0.45); border-color:rgba(255,91,91,0.8);">
+        <div class="name">SMH（半導體代理）</div><div class="val neg">≈-4%</div><div class="px">領跌板塊</div>
+      </div>
+      <div class="heatcell" style="background:rgba(46,207,122,0.15); border-color:rgba(46,207,122,0.4);">
+        <div class="name">VIX</div><div class="val pos">-5%</div><div class="px">15.67</div>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Dow vs Nasdaq 相對強弱？</div>
+      <div class="a">分化明顯（-0.20% vs -1.47%）。資金並非系統性撤出美股，而是集中拋售半導體與個別科技權值股（GOOGL），Dow 成分股中 Nike（+4.04%）、IBM（+3.90%）、Salesforce（+3.36%）逆勢走強，顯示資金階段性從「AI硬體」切向「防禦消費 / 企業軟體」。</div>
+    </div>
+    <div class="qa">
+      <div class="q">小盤領漲是否延續？是否過熱？</div>
+      <div class="a">Russell 2000 幾乎持平（-0.06%），既未跟跌也未領漲，沒有過熱訊號，顯示小盤資金持穩觀望。</div>
+    </div>
+    <div class="qa">
+      <div class="q">SOX 相對 Nasdaq 是領先還是拖累？</div>
+      <div class="a">明顯拖累。SMH 重挫近 4%，遠超 Nasdaq 整體跌幅 -1.47%，半導體是今日下跌的主要引擎而非落後指標。</div>
+    </div>
+  </section>
+
+  <section id="s3-recap">
+    <h2>S3｜盤中復盤 <span class="tag">Recap</span></h2>
+    <h3>盤前（含亞洲盤連動）</h3>
+    <p>亞洲盤已先為全日風險偏好定調：KOSPI 週四盤中因美國空襲伊朗、Hormuz 海峽封鎖疑慮急殺，一度觸發賣方熔斷機制（跌幅逾 5% 時暫停交易 20 分鐘），終場暴跌 6.37% 收 6,820.60；Samsung Electronics 重挫 8.77%，SK Hynix 重挫 11.53%。地緣風險在美股開盤前已充分傳導至亞洲科技/記憶體供應鏈，為美股半導體股埋下弱勢伏筆。</p>
+    <h3>日內轉折點</h3>
+    <p>台積電（TSM）盤前公布 Q2 財報：每 ADR 盈餘 $4.31，優於分析師預期的 $3.82，營收年增 36%；但同時將 2026 全年資本支出 guidance 從 $520-560 億大幅上修至 $600-640 億。市場解讀為「利多出貨」——TSM ADR 本身僅小跌 0.22%（收 $419.48），但下游供應鏈全面遭殃：Micron、AMD 各跌逾 5%，Broadcom 跌約 5%，Arm Holdings 跌逾 5%，SanDisk 重挫逾 12%，SK Hynix 美股 ADR 暴跌逾 13%。同一時段，Alphabet 因 Bloomberg 報導其 Gemini 3.5 Pro 模型交付進度落後，股價重挫 4.64%，成為 Nasdaq 另一個主要拖累。</p>
+    <h3>尾盤與盤後</h3>
+    <p>Netflix 盤後公布 Q2 財報：EPS $0.80 小幅優於預期（$0.79），但營收 $12.56B 略低於預期的 $12.58B，且 Q3 guidance（營收 $12.86B、EPS $0.82、營業利益率 33.2%）全面低於華爾街預估，股價盤後重挫逾 8%。</p>
+    <div class="note warn"><b>核心驅動判斷：</b>今日下跌是「TSMC 利多出貨」+「Alphabet 個股利空」+「地緣風險溢價」三重疊加所致，而非系統性 risk-off——VIX 全天不升反降 5% 可作為佐證。本質上更接近類股/個股驅動的獲利了結，而非資金全面撤出風險資產。</div>
+  </section>
+
+  <section id="s4-macro">
+    <h2>S4｜宏觀環境 <span class="tag">Macro</span></h2>
+    <h3>4.1 美債收益率</h3>
+    <table>
+      <tr><th>項目</th><th>最新</th><th>含義</th></tr>
+      <tr><td>2Y</td><td>4.16%</td><td>短端持穩，未明顯反映降息預期</td></tr>
+      <tr><td>10Y</td><td>4.57%</td><td>維持相對高檔，對成長股估值構成壓力</td></tr>
+      <tr><td>2Y-10Y 利差</td><td>+0.41%</td><td>持續正斜率，未倒掛，衰退訊號尚不明顯</td></tr>
+    </table>
+    <h3>4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+    <div class="note warn">
+      CME FedWatch 顯示 7/29 FOMC 會議：<b>維持不變機率約 53.5%，升息機率約 46.5%</b>，接近五五波，屬於近期少見的「升息風險明顯升溫」格局（而非市場慣性預期的降息路徑），主因是地緣衝突推升油價、加大通膨疑慮。相對地，前一交易日（7/15）公布的 PPI 意外下滑，一度令九月升息機率從約 50% 回落至約 44%——兩者呈現拉鋸，顯示油價與通膨數據正在互相角力，是近期最大的宏觀不確定性來源。
+    </div>
+    <h3>4.3 油價與地緣（獨立追蹤）</h3>
+    <p>WTI 突破 $79/桶，本週漲幅逾 11%；Brent 收在 $84 附近。美國對伊朗目標發動打擊，美伊衝突自 6 月脆弱停火後再度升溫；美國重啟對伊朗海軍封鎖後，Hormuz 海峽（承載全球約五分之一原油/LNG貿易）週三僅 7 艘船隻通行，較前一日的 13 艘大幅減少。另有報導指伊朗政府要求青年運動（Houthis）待命，準備在美軍若進一步打擊伊朗基礎設施時封鎖紅海航線。地緣風險已是本輪油價與市場風險偏好的核心變數。</p>
+    <h3>4.4 其他宏觀資產</h3>
+    <table>
+      <tr><th>資產</th><th>價格</th><th>漲跌幅</th></tr>
+      <tr><td>DXY 美元指數</td><td>100.73</td><td class="pos">+0.24%</td></tr>
+      <tr><td>黃金</td><td>$3,998.05/oz</td><td class="neg">-1.53%</td></tr>
+      <tr><td>比特幣</td><td>約 $64,700</td><td class="flat">當日持平偏震盪（週漲幅溫和）</td></tr>
+    </table>
+    <div class="note">值得留意的背離：儘管地緣風險升溫、股市承壓，黃金卻同步下跌，顯示「升息風險 + 美元走強」目前壓過了避險買盤，避險邏輯尚未完全主導市場定價。</div>
+    <h3>4.5 當日經濟數據</h3>
+    <div class="gap">7/16 當日無重大經濟數據公布。前一交易日（7/15）PPI 數據意外下滑，為近期通膨降溫的少數訊號之一，但影響已被地緣風險推升的油價部分抵銷。</div>
+  </section>
+
+  <section id="s5-sector">
+    <h2>S5｜板塊表現 <span class="tag">Sectors</span></h2>
+    <p>11 大板塊當日呈現 5 升 5 跌 1 平盤的分歧格局，但多數板塊精確漲跌幅缺乏可靠來源標注，以下僅列出可查證的板塊數據，其餘暫不列出精確數字：</p>
+    <table>
+      <tr><th>板塊</th><th>ETF</th><th>當日漲跌幅</th><th>主要驅動</th></tr>
+      <tr><td>非必需消費</td><td>XLY</td><td class="pos">+1.4%</td><td>Nike 大漲 4% 帶動</td></tr>
+      <tr><td>通訊服務</td><td>XLC</td><td class="pos">+1.3%</td><td>與 Alphabet -4.64%、Meta -2.6% 同時存在，板塊內部分化明顯</td></tr>
+      <tr><td>金融</td><td>XLF</td><td class="pos">+0.7%</td><td>財報季開局，但 Goldman Sachs 逆勢跌 5.02%</td></tr>
+      <tr><td>公用事業</td><td>XLU</td><td class="neg">-1.0%</td><td>防禦性資金流出，利率風險上升壓抑估值</td></tr>
+    </table>
+    <div class="barrow">
+      <div class="label">非必需消費 (XLY)</div>
+      <div class="track"><div class="center"></div><div class="fill g" style="width:14%;"></div></div>
+      <div class="num pos">+1.4%</div>
+    </div>
+    <div class="barrow">
+      <div class="label">通訊服務 (XLC)</div>
+      <div class="track"><div class="center"></div><div class="fill g" style="width:13%;"></div></div>
+      <div class="num pos">+1.3%</div>
+    </div>
+    <div class="barrow">
+      <div class="label">金融 (XLF)</div>
+      <div class="track"><div class="center"></div><div class="fill g" style="width:7%;"></div></div>
+      <div class="num pos">+0.7%</div>
+    </div>
+    <div class="barrow">
+      <div class="label">公用事業 (XLU)</div>
+      <div class="track"><div class="center"></div><div class="fill r" style="width:10%;"></div></div>
+      <div class="num neg">-1.0%</div>
+    </div>
+    <div class="barrow">
+      <div class="label">科技/半導體（質性）</div>
+      <div class="track"><div class="center"></div><div class="fill r" style="width:38%;"></div></div>
+      <div class="num neg">明顯領跌</div>
+    </div>
+    <div class="gap">上圖科技/半導體為質性標注（非精確 ETF 數字），依據為 SMH -4%、Micron/AMD/Broadcom 均跌逾 5%、SK Hynix ADR 跌逾 13% 等個股/ETF 證據。</div>
+    <p><b>判斷：</b>今日板塊輪動呈現「科技/半導體重傷、消費與通訊服務逆勢走強」的格局，屬於類股內部的資金再平衡，而非全面性 risk-off；金融板塊雖 ETF 收漲，但龍頭股 Goldman Sachs 逆勢重挫，顯示財報季個股分化正在加劇。</p>
+  </section>
+
+  <section id="s6-style">
+    <h2>S6｜風格與市場寬度 <span class="tag">Breadth</span></h2>
+    <table>
+      <tr><th>ETF</th><th>當日漲跌幅</th><th>回答的問題</th></tr>
+      <tr><td>SMH</td><td class="neg">≈-4%</td><td>半導體今日明顯不是主線動能，反而是壓力來源</td></tr>
+      <tr><td>IGV</td><td class="flat">暫無可靠數據</td><td>軟體是否補漲需明日確認，但 IBM/Salesforce 個股走強釋出正向訊號</td></tr>
+      <tr><td>RSP</td><td class="flat">未查詢精確數據（質性判斷）</td><td>跌幅集中於少數科技/半導體權值股，Dow、Russell 2000 相對抗跌，研判 RSP 今日可能小幅跑贏 SPY，寬度尚未全面惡化</td></tr>
+      <tr><td>IWM</td><td class="flat">-0.06%</td><td>小盤未跟跌，参與度中性，無過熱或崩跌訊號</td></tr>
+    </table>
+    <div class="note">寬度替代判讀：今日領跌集中在少數科技/半導體權值股（NVDA、GOOGL、MU、AMD、AVGO 等），而非普遍性下跌；Dow 與 Russell 2000 相對抗跌支持「集中式賣壓」而非「全面寬度惡化」的判斷。</div>
+  </section>
+
+  <section id="s7-leaders">
+    <h2>S7｜主線股追蹤 <span class="tag">Leaders</span></h2>
+    <h3>7.1 Magnificent 7</h3>
+    <table>
+      <tr><th>股票</th><th>漲跌幅</th><th>原因</th></tr>
+      <tr><td>NVDA</td><td class="neg">≈-2%</td><td>半導體全鏈下跌氛圍拖累，TSMC capex 上修引發「賣新聞」情緒</td></tr>
+      <tr><td>MSFT</td><td class="pos">+1.3%</td><td>相對抗跌，資金階段性轉向軟體/雲端龍頭</td></tr>
+      <tr><td>AAPL</td><td class="pos">+1.8%</td><td>逆勢創收盤與盤中歷史新高</td></tr>
+      <tr><td>GOOGL</td><td class="neg">-4.64%</td><td>Bloomberg 報導 Gemini 3.5 Pro 交付進度落後</td></tr>
+      <tr><td>AMZN</td><td class="neg">-1.9%</td><td>跟隨大盤科技股回落</td></tr>
+      <tr><td>META</td><td class="neg">-2.6%</td><td>跟隨大盤科技股回落</td></tr>
+      <tr><td>TSLA</td><td class="neg">-0.9%</td><td>小幅走弱，無重大個股新聞</td></tr>
+    </table>
+    <div class="barrow"><div class="label">NVDA</div><div class="track"><div class="center"></div><div class="fill r" style="width:20%;"></div></div><div class="num neg">-2%</div></div>
+    <div class="barrow"><div class="label">MSFT</div><div class="track"><div class="center"></div><div class="fill g" style="width:13%;"></div></div><div class="num pos">+1.3%</div></div>
+    <div class="barrow"><div class="label">AAPL</div><div class="track"><div class="center"></div><div class="fill g" style="width:18%;"></div></div><div class="num pos">+1.8%</div></div>
+    <div class="barrow"><div class="label">GOOGL</div><div class="track"><div class="center"></div><div class="fill r" style="width:46%;"></div></div><div class="num neg">-4.64%</div></div>
+    <div class="barrow"><div class="label">AMZN</div><div class="track"><div class="center"></div><div class="fill r" style="width:19%;"></div></div><div class="num neg">-1.9%</div></div>
+    <div class="barrow"><div class="label">META</div><div class="track"><div class="center"></div><div class="fill r" style="width:26%;"></div></div><div class="num neg">-2.6%</div></div>
+    <div class="barrow"><div class="label">TSLA</div><div class="track"><div class="center"></div><div class="fill r" style="width:9%;"></div></div><div class="num neg">-0.9%</div></div>
+    <p><b>七巨頭是否集體行動？</b>否，明顯分化。AAPL、MSFT 逆勢走強（防禦性資金流入），GOOGL 因個股利空重挫成為最大拖累，NVDA/AMZN/META 同步走弱但跌幅溫和，TSLA 小跌。個股驅動特徵強於板塊系統性因素。</p>
+
+    <h3>7.2 記憶體主線（當前行情引擎）</h3>
+    <p>記憶體鏈是今日跌幅最深的族群：SanDisk 重挫逾 12%，SK Hynix 美股 ADR 暴跌逾 13%，Micron 跌逾 5%；亞洲盤 Samsung Electronics -8.77%、SK Hynix（KRX）-11.53%（主因地緣風險，非單純記憶體基本面）。</p>
+    <div class="note warn"><b>鈍化監測：</b>TrendForce 最新 Q3 2026 guidance 顯示 DRAM 合約價季增 13-18%、NAND 季增 10-15%，較 Q2 的 DRAM 58-63%、NAND 70-75% 增速明顯放緩，主因終端消費性電子廠商已難以承受持續漲價，儘管 AI 伺服器需求仍支撐供給緊俏。今日記憶體股同步重挫，不排除是漲價鈍化訊號首度在股價端反映，疊加地緣風險與獲利了結，需持續觀察是否演變為趨勢反轉，或僅為短期修正。</div>
+
+    <h3>7.3 AI 硬體核心</h3>
+    <p>NVDA 跌約 2%，Broadcom（AVGO）跌約 5%，AMD 跌逾 5%，Arm Holdings 跌逾 5%；TSM ADR 僅小跌 0.22%（財報本身優於預期，抗跌）。</p>
+    <div class="note">擁擠度判斷：TSMC 上修資本支出理論上是 AI capex 持續性的利多，但市場選擇「賣新聞」，反映資金對 AI 硬體板塊的疑慮已從「capex 是否存在」轉向「capex 報酬率與自由現金流壓力」，屬於情緒轉折的早期訊號，值得後續財報季密切驗證。</div>
+
+    <h3>7.4 Rotation 代表股</h3>
+    <p>Caterpillar（CAT）跌 4.15%，GE Vernova（GEV）跌 3.53%，兩者同步走弱。</p>
+    <div class="note">Great Rotation（藍籌實體經濟 vs 科技）今日未能提供避風港，CAT、GEV 雙雙下跌顯示本輪賣壓具有一定廣度，更接近全市場性獲利了結，而非單純資金從科技切向實體經濟的板塊輪動。</div>
+  </section>
+
+  <section id="s8-movers">
+    <h2>S8｜異動股與財報 <span class="tag">Movers</span></h2>
+    <h3>8.1 當日重要異動</h3>
+    <table>
+      <tr><th>股票</th><th>漲跌幅</th><th>原因</th><th>對主線的含義</th></tr>
+      <tr><td>Goldman Sachs</td><td class="neg">-5.02%</td><td>財報季開局，個股逆勢走弱</td><td>金融板塊內部分化，非全面利多</td></tr>
+      <tr><td>Alphabet</td><td class="neg">-4.64%</td><td>Gemini 3.5 Pro 交付延遲傳聞</td><td>拖累 Nasdaq 與 Mag7 整體表現</td></tr>
+      <tr><td>Caterpillar</td><td class="neg">-4.15%</td><td>跟隨大盤走弱，無單一利空新聞</td><td>Great Rotation 今日未延續</td></tr>
+      <tr><td>SK Hynix (ADR)</td><td class="neg">-13%+</td><td>記憶體鏈全面重挫 + 亞洲盤地緣風險延續</td><td>記憶體主線最大單日拖累</td></tr>
+      <tr><td>SanDisk</td><td class="neg">-12%+</td><td>同上，記憶體鏈系統性賣壓</td><td>鈍化訊號觀察重點</td></tr>
+      <tr><td>Nike</td><td class="pos">+4.04%</td><td>逆勢走強，無重大單一新聞來源</td><td>資金階段性轉向防禦消費</td></tr>
+      <tr><td>IBM</td><td class="pos">+3.90%</td><td>逆勢走強</td><td>企業軟體相對抗跌</td></tr>
+      <tr><td>Salesforce</td><td class="pos">+3.36%</td><td>逆勢走強</td><td>企業軟體相對抗跌</td></tr>
+    </table>
+
+    <h3>8.2 昨夜財報</h3>
+    <table>
+      <tr><th>公司</th><th>是否 beat</th><th>指引</th><th>盤後反應</th><th>核心解讀</th></tr>
+      <tr><td>TSMC (TSM)</td><td class="pos">Beat（EPS $4.31 vs 預期 $3.82）</td><td>2026 資本支出上修至 $600-640 億</td><td>股價小跌 0.22%（收盤前反應，非嚴格盤後）</td><td>「利多出貨」，資金疑慮轉向 capex 報酬率</td></tr>
+      <tr><td>Netflix (NFLX)</td><td class="flat">EPS 小幅 beat，營收小幅 miss</td><td>Q3 營收/EPS/營益率 guidance 均低於預期</td><td class="neg">盤後跌逾 8%</td><td>訂閱成長放緩疑慮再起，Q3 展望是主要失望點</td></tr>
+    </table>
+
+    <h3>8.3 未來 1–3 日重要財報與事件</h3>
+    <table>
+      <tr><th>日期</th><th>公司/事件</th><th>關注點</th><th>可能影響板塊</th></tr>
+      <tr><td>7/17（週五）</td><td>亞洲盤開盤（KOSPI/Samsung/SK Hynix）</td><td>週四熔斷後的修復力度，是判斷地緣風險是否降溫的先行指標</td><td>記憶體、半導體</td></tr>
+      <tr><td>7/29</td><td>FOMC 利率決議</td><td>升息機率已升至 46.5%，接近五五波，為近期最大宏觀變數</td><td>全市場，尤其高估值成長股</td></tr>
+      <tr><td>7/29 前後</td><td>大型科技財報集中公布期</td><td>市場預期該區間 implied volatility 明顯上升</td><td>Mag7、AI 硬體/軟體</td></tr>
+    </table>
+  </section>
+
+  <section id="s9-playbook">
+    <h2>S9｜輪動判斷與明日 Playbook <span class="tag">Playbook</span></h2>
+    <h3>9.1 明確回答</h3>
+    <ul>
+      <li><b>資金主要流入：</b>防禦性消費（Nike）、企業軟體（IBM、Salesforce）、部分 Mag7 防禦端（AAPL、MSFT）</li>
+      <li><b>資金主要流出：</b>半導體/記憶體全鏈（MU、AMD、AVGO、SNDK、SK Hynix、ARM）、Alphabet（個股利空）、黃金（利率/美元壓過避險）</li>
+      <li><b>AI 主線（硬體+記憶體）是否健康：</b>健康度存疑。記憶體端首度出現漲價鈍化訊號，硬體端因 capex guidance 上修反而遭「賣新聞」，短期進入高位震盪階段</li>
+      <li><b>半導體 vs 軟體相對強弱：</b>疑似轉向軟體（IBM、Salesforce 走強 vs 硬體全面重挫），但缺乏 IGV 精確數據驗證，需觀察明日是否延續</li>
+      <li><b>小盤與實體經濟股：</b>Great Rotation 今日未能提供避風港，CAT、GEV 同步下跌，回流跡象不明顯，更接近全市場性獲利了結</li>
+      <li><b>當前更像趨勢延續還是階段性頂部震盪：</b>傾向<b>階段性頂部震盪</b>——AI 硬體與記憶體同步浮現鈍化/賣新聞訊號，疊加地緣風險溢價，但 VIX 未同步走高，尚未確認為趨勢反轉</li>
+    </ul>
+    <h3>9.2 明日觀察清單</h3>
+    <p><b>宏觀：</b>10Y 殖利率是否守住 4.5% 上下、WTI 是否延續漲勢挑戰 $80 關鍵位、FOMC（7/29）升息機率是否持續攀升、Fed 官員發言動向。</p>
+    <p><b>亞洲盤先行指標：</b>KOSPI / Samsung / SK Hynix 週五開盤反彈力度，是判斷週四地緣風險熔斷是否延續的關鍵先行訊號。</p>
+    <p><b>大盤：</b>SMH 是否持續弱於 QQQ（半導體是否確立轉弱）；具體支撐壓力位缺乏新聞明確引用，暫不列出數字。</p>
+    <p><b>個股觀察清單：</b></p>
+    <ul>
+      <li><b>NVDA</b> — AI 硬體風向球，觀察是否止跌企穩</li>
+      <li><b>MU / SNDK</b> — 記憶體鈍化訊號是否延續，Q3 DRAM 漲價放緩是否進一步反映到股價</li>
+      <li><b>SK Hynix / Samsung（KRX）</b> — 週五亞洲盤修復力度，判斷地緣風險是否降溫</li>
+      <li><b>GOOGL</b> — Gemini 3.5 Pro 延遲消息後續發展、分析師評級是否調整</li>
+      <li><b>NFLX</b> — 盤後大跌後市場消化情形，是否有分析師下修目標價</li>
+      <li><b>TSM</b> — 資本支出上修後續解讀，是否有更多分析師報告跟進</li>
+      <li><b>CAT / GEV</b> — Great Rotation 是否重啟，或今日僅為一次性獲利了結</li>
+      <li><b>VIX</b> — 是否維持 15-16 低檔，或跟隨地緣風險升溫回升至 18 以上</li>
+    </ul>
+  </section>
+
+  <section id="s10-risk">
+    <h2>S10｜風險提示與最終結論 <span class="tag">Risk</span></h2>
+    <table class="risktable">
+      <tr><th>風險維度</th><th>當前狀態</th><th>等級</th></tr>
+      <tr><td>宏觀利率（升息風險）</td><td>FedWatch 顯示 7/29 升息機率已升至 46.5%，罕見接近五五波</td><td class="lv-midhigh">中高</td></tr>
+      <tr><td>記憶體循環反轉</td><td>Q3 DRAM/NAND 漲價速度明顯放緩，鈍化訊號初現，尚未確認反轉</td><td class="lv-mid">中</td></tr>
+      <tr><td>AI capex 持續性</td><td>TSMC 上修 capex 本身為利多，但市場對報酬率/自由現金流產生疑慮</td><td class="lv-mid">中</td></tr>
+      <tr><td>地緣/油價</td><td>美伊衝突持續升溫，Hormuz 封鎖、紅海航線威脅未解除</td><td class="lv-high">高</td></tr>
+      <tr><td>中美科技戰</td><td>今日無新增相關消息</td><td class="lv-low">低</td></tr>
+      <tr><td>市場寬度惡化</td><td>Dow、Russell 2000 相對抗跌，尚未全面惡化，但科技集中度風險升高</td><td class="lv-mid">中</td></tr>
+      <tr><td>財報風險</td><td>Netflix 前車之鑑，7/29 前後大型科技財報集中，implied vol 預期上升</td><td class="lv-midhigh">中高</td></tr>
+    </table>
+    <div class="note risk"><b>當前最需警惕的前 3 項風險：</b>① 地緣/油價（高）② 宏觀利率升息風險（中高）③ 財報風險（中高）</div>
+
+    <h3>10.2 最終結論</h3>
+    <div class="conclusion-box">
+      <p>美股週四收黑，Nasdaq 領跌因半導體全鏈重挫，觸發點是台積電財報優於預期卻因上修資本支出 guidance 引發「利多出貨」，疊加 Alphabet 個股利空（Gemini 延遲）拖累大盤。亞洲盤已先因美伊地緣風險大幅修正，為全日市場定調風險偏好下降的基調，但 VIX 不升反降顯示恐慌情緒尚未系統性蔓延。記憶體鏈（SK Hynix、SanDisk、Micron）重挫幅度最大，TrendForce 最新 Q3 合約價預測顯示漲價速度較 Q2 明顯放緩，鈍化跡象值得高度關注。Great Rotation 今日未能提供避風港，CAT、GEV 同步下跌，顯示賣壓具有一定廣度而非單純板塊輪動。</p>
+      <p><b>當前市場階段：</b>高位震盪（傾向階段性頂部震盪，需觀察明日亞洲盤修復力度確認方向）</p>
+      <p><b>操作傾向（中性觀察，不構成投資建議）：</b>半導體/記憶體鏈短線宜降低追高意願，等待鈍化訊號進一步確認或明確反轉訊號再定方向；企業軟體、防禦性消費類股相對抗跌，可留意輪動機會；地緣風險未解除前，避險部位配置仍需謹慎（金價逆勢下跌顯示避險邏輯尚未完全主導）；整體建議控制倉位，等待 FOMC（7/29）與財報密集期進一步明朗化。</p>
+      <p><b>最值得關注的 5 個信號：</b></p>
+      <ul>
+        <li>週五亞洲盤開盤：KOSPI / Samsung / SK Hynix 能否收復週四跌幅</li>
+        <li>WTI 是否突破 $80 關鍵位，Hormuz 海峽航運數據是否持續惡化</li>
+        <li>VIX 是否維持 15-16 低檔，或跳升至 18 以上（恐慌情緒是否擴散的分水嶺）</li>
+        <li>NVDA / AMD 盤中是否出現止跌訊號</li>
+        <li>CME FedWatch 7/29 升息機率是否進一步攀升突破 50%</li>
+      </ul>
+    </div>
+
+    <div class="disclaimer">
+      本報告為中性市場觀察與資訊整理，所有數據均來自公開新聞與財經資料來源並標注出處，不構成任何投資建議。無法查證的數據項目已明確標示「暫無可靠數據」，不做推測性填補。市場有風險，投資請自行判斷並審慎評估。
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="src">
+      資料來源：CNBC (stock-market-today-live-updates)、Bloomberg (oil market news)、TheStreet、Yahoo Finance、Deadline (Netflix earnings)、Korea JoongAng Daily (Kospi)、SEC 6-K (TSMC Q2 2026)、Tom's Hardware (TrendForce DRAM/NAND)、TradingEconomics (Gold, Treasury)、FRED (T10Y2Y)、CME FedWatch 相關報導
+    </div>
+    <div>© 2026 超中毒（@oiiax88）美股收盤日報 · 分享請註明出處</div>
+  </div>
+
+</div>
+</body>
+</html>
