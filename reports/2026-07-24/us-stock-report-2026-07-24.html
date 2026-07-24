@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>美股收盤日報｜2026-07-23</title>
+<style>
+  :root{
+    --bg:#0b0e14; --panel:#131722; --panel2:#171c28; --border:#232838;
+    --text:#e6e9f0; --muted:#8b93a7; --green:#25c685; --red:#ff5c5c;
+    --amber:#f5b942; --blue:#5b9dff; --accent:#7c9cff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--text); margin:0; padding:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;
+    line-height:1.65; font-size:15px;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:28px 20px 80px;}
+  section{
+    background:var(--panel); border:1px solid var(--border); border-radius:14px;
+    padding:24px 22px; margin-bottom:22px;
+  }
+  h1{font-size:26px; margin:0 0 6px;}
+  h2{font-size:19px; margin:0 0 14px; color:var(--accent); border-left:4px solid var(--accent); padding-left:10px;}
+  h3{font-size:16px; margin:20px 0 10px; color:#c7cee0;}
+  .meta{color:var(--muted); font-size:13px; margin:4px 0;}
+  .tldr{font-size:15.5px;}
+  .tags{margin-top:14px; display:flex; flex-wrap:wrap; gap:8px;}
+  .tag{background:rgba(124,156,255,.15); color:var(--accent); border:1px solid rgba(124,156,255,.4); padding:5px 12px; border-radius:20px; font-size:13px; font-weight:600;}
+  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:13.5px;}
+  th,td{border-bottom:1px solid var(--border); padding:9px 8px; text-align:left; vertical-align:top;}
+  th{color:var(--muted); font-weight:600; font-size:12.5px; text-transform:uppercase; letter-spacing:.03em;}
+  td.pos{color:var(--green); font-weight:700;}
+  td.neg{color:var(--red); font-weight:700;}
+  .callout{background:var(--panel2); border-left:3px solid var(--accent); padding:12px 14px; border-radius:8px; margin:14px 0; font-size:14px;}
+  .callout b{color:var(--accent);}
+  .qa{margin:10px 0; font-size:14px;}
+  .qa b{color:#c7cee0;}
+  .source{color:var(--muted); font-size:12px; margin-top:4px;}
+  .footer-note{color:var(--muted); font-size:12.5px; text-align:center; margin-top:10px; line-height:1.8;}
+  .divider{border:none; border-top:1px solid var(--border); margin:20px 0;}
+  /* heatmap */
+  .heatmap{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:16px 0;}
+  .heat-cell{border-radius:10px; padding:14px 10px; text-align:center;}
+  .heat-cell .name{font-size:12.5px; color:rgba(255,255,255,.85); margin-bottom:6px;}
+  .heat-cell .val{font-size:19px; font-weight:800;}
+  /* bar chart */
+  .barchart{margin:16px 0;}
+  .bar-row{display:flex; align-items:center; gap:10px; margin:7px 0;}
+  .bar-label{width:150px; font-size:12.5px; color:var(--muted); flex-shrink:0; text-align:right;}
+  .bar-track{flex:1; background:var(--panel2); border-radius:5px; height:22px; position:relative; overflow:hidden;}
+  .bar-fill{height:100%; border-radius:5px; display:flex; align-items:center;}
+  .bar-fill.g{background:linear-gradient(90deg,#1a8f5f,var(--green));}
+  .bar-fill.r{background:linear-gradient(90deg,#b23a3a,var(--red));}
+  .bar-val{width:64px; font-size:12.5px; font-weight:700; text-align:left;}
+  .bar-val.pos{color:var(--green);} .bar-val.neg{color:var(--red);}
+  .risk-low{color:var(--green);} .risk-mid{color:var(--amber);} .risk-high{color:var(--red);} .risk-midhigh{color:#ff9d5c;}
+  ul{margin:8px 0; padding-left:20px;}
+  li{margin:4px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section id="s1-cover">
+  <h1>🇺🇸 美股收盤日報｜2026-07-23</h1>
+  <p class="meta">報告生成時間：台北時間 2026-07-24 08:00｜資料來源：CNBC、Reuters、Bloomberg、TheStreet、Yahoo Finance、TrendForce 等</p>
+  <p class="meta">本報告由 超中毒（@oiiax88）製作，分享請註明出處</p>
+  <hr class="divider">
+  <p class="tldr">
+  週四美股在「Mag7財報 capex 疑慮」與「中東地緣衝突推升油價」雙重衝擊下全面收黑：S&amp;P 500 -1.21%、Nasdaq -2.15%、Dow -0.97%，10年期公債殖利率彈升至 4.7%（2025年1月以來新高），VIX 大漲 12.38% 至 18.70。但盤面內部並未全面崩壞——等權指數 RSP 幾乎持平（-0.03%），跌幅高度集中在 Alphabet（-6~7%，上調資本支出至 2,050 億美元）與 Tesla（-13~15%，獲利遠不如預期）；記憶體（MU +3~4%）、防禦股（Utilities +2.3%）、AI 電力／核能（CEG +4.84%、GEV +4.69%）逆勢走強，尾盤 Intel 財報大幅優於預期並帶動盤後 AMD 同步上漲。今日資金風格是「戰術性撤出 capex 敘事核心、轉向 capex 受惠端與防禦資產」，而非全面 risk-off。
+  </p>
+  <div class="tags">
+    <span class="tag">📌 內部強科技弱</span>
+    <span class="tag">📌 AI硬體高位震盪</span>
+    <span class="tag">📌 記憶體主線延續</span>
+    <span class="tag">📌 Great Rotation</span>
+  </div>
+</section>
+
+<section id="s2-index">
+  <h2>S2｜大盤表現總覽</h2>
+  <table>
+    <tr><th>指數</th><th>收盤</th><th>漲跌幅</th><th>日內高低點</th><th>一句話狀態</th></tr>
+    <tr><td>Dow Jones</td><td>51,711.65</td><td class="neg">-506.93（-0.97%）</td><td>暫無可靠數據</td><td>三大指數中跌幅最小，傳產/防禦相對抗跌</td></tr>
+    <tr><td>S&amp;P 500</td><td>7,408.30</td><td class="neg">-90.66（-1.21%）</td><td>暫無可靠數據</td><td>大盤級 risk-off，但非普跌</td></tr>
+    <tr><td>Nasdaq Composite</td><td>25,137.69</td><td class="neg">-553.21（-2.15%）</td><td>暫無可靠數據</td><td>三指數中跌幅最深，Mag7拖累主因</td></tr>
+    <tr><td>Russell 2000</td><td>2,940.16</td><td class="neg">-19.78（-0.67%）</td><td>暫無可靠數據</td><td>小盤明顯抗跌，跌幅遠低於大盤</td></tr>
+    <tr><td>SOX 半導體指數</td><td>暫無可靠數據</td><td>暫無可靠數據（代理指標 SMH -1.54%）</td><td>暫無可靠數據</td><td>半導體跌幅小於 Nasdaq，非本次拋售主因</td></tr>
+    <tr><td>VIX</td><td>18.70</td><td class="pos">+2.06（+12.38%）</td><td>暫無可靠數據</td><td>恐慌情緒明顯升溫，惟仍遠低於極端水位</td></tr>
+  </table>
+
+  <div class="heatmap">
+    <div class="heat-cell" style="background:rgba(255,92,92,.35);"><div class="name">Dow Jones</div><div class="val" style="color:var(--red);">-0.97%</div></div>
+    <div class="heat-cell" style="background:rgba(255,92,92,.45);"><div class="name">S&amp;P 500</div><div class="val" style="color:var(--red);">-1.21%</div></div>
+    <div class="heat-cell" style="background:rgba(255,92,92,.7);"><div class="name">Nasdaq</div><div class="val" style="color:var(--red);">-2.15%</div></div>
+    <div class="heat-cell" style="background:rgba(255,92,92,.3);"><div class="name">Russell 2000</div><div class="val" style="color:var(--red);">-0.67%</div></div>
+    <div class="heat-cell" style="background:rgba(255,92,92,.5);"><div class="name">SMH（半導體代理）</div><div class="val" style="color:var(--red);">-1.54%</div></div>
+    <div class="heat-cell" style="background:rgba(37,198,133,.5);"><div class="name">VIX</div><div class="val" style="color:var(--green);">+12.38%</div></div>
+  </div>
+
+  <div class="callout">
+    <div class="qa"><b>Dow vs Nasdaq 相對強弱：</b>Nasdaq 跌幅（-2.15%）是 Dow（-0.97%）的兩倍以上，資金明確從高估值科技股撤出，轉向傳產/防禦，符合 rotation 而非全面回流科技的格局。</div>
+    <div class="qa"><b>小盤是否過熱：</b>Russell 2000 僅 -0.67%，跌幅遠小於大盤三指數，小盤資金並未同步撤出，暫無過熱訊號。</div>
+    <div class="qa"><b>SOX 相對 Nasdaq：</b>以 SMH（-1.54%）為代理指標，半導體跌幅小於 Nasdaq（-2.15%），顯示半導體是抗跌力量而非拖累主因；本次拋售主要來自 Alphabet、Tesla 兩檔財報股，而非晶片股本身。
+    </div>
+  </div>
+  <p class="source">來源：<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-23-2026" style="color:var(--blue);">TheStreet</a>、<a href="https://www.washingtonpost.com/business/2026/07/23/wall-street-dow-nasdaq-stocks/70df2dda-86d3-11f1-9cec-0fb26676f07e_story.html" style="color:var(--blue);">Washington Post</a>、<a href="https://www.cnbc.com/2026/07/23/the-10-year-treasury-yield-could-test-5percent-after-its-latest-spike.html" style="color:var(--blue);">CNBC</a></p>
+</section>
+
+<section id="s3-recap">
+  <h2>S3｜盤中復盤</h2>
+  <h3>盤前（含亞洲盤連動）</h3>
+  <p>亞股當地時間 7/23 走勢與美股後續明顯分歧：KOSPI 大漲 3.72% 收 7,050.45、KOSDAQ +3.89%，三星、SK 海力士領漲，主因 Google 上調全年資本支出指引至 1,950-2,050 億美元，亞股解讀為記憶體需求的直接利多。但同一份財報在美股夜盤被解讀為「capex 負擔加重」的利空，兩地市場對同一則新聞給出相反定價，是本輪傳導斷裂的關鍵。</p>
+  <h3>日內轉折點</h3>
+  <p>核心導火線是 7/22 盤後公布的 Alphabet 與 Tesla 財報：Alphabet 獲利優於預期但上調 2026 資本支出至最高 2,050 億美元，觸發 capex 疑慮；Tesla 獲利遠低於預期，Musk 稱 2026 年將是「massive capex 年」。財報公布後美股期貨轉弱，7/23 開盤即走跌。盤中油價因中東衝突升級（胡塞武裝襲擊兩艘沙烏地油輪）突破每桶 100 美元，10年期公債殖利率彈升至 4.7%，進一步加劇拋壓。全日單邊下跌，無明顯反彈轉折。</p>
+  <h3>尾盤與盤後</h3>
+  <p>Intel 公布 Q2 財報大幅優於預期（營收 161.3 億美元、YoY +25%，為 15 年來最強成長；AI／資料中心部門 YoY +59%），正常盤收跌 2.46% 至 $100.10，但盤後暴漲近 9.5% 至 $109.76；AMD 雖非當日財報主角，也在盤後同步上漲 2.93% 至 $555.49。</p>
+  <div class="callout"><b>核心驅動判斷：</b>本質是「Mag7 財報引發的 sell the news」疊加「地緣驅動的油價/殖利率外部衝擊」，並非全面性 risk-off——盤後 Intel／AMD 走強顯示 AI 硬體端信心未崩，為次日情緒留有支撐。</div>
+  <p class="source">來源：<a href="https://finance.yahoo.com/markets/stocks/articles/p-500-dow-nasdaq-end-223400729.html" style="color:var(--blue);">Yahoo Finance</a>、<a href="https://www.tradingkey.com/analysis/stocks/more/262048268-japan-south-korea-stocks-open-higher-kospi-tradingkey" style="color:var(--blue);">TradingKey</a>、<a href="https://www.fxleaders.com/news/2026/07/23/intel-intc-stock-jumps-to-110-but-reverses-as-q2-earnings-beat-and-revenue-surges-25-to-16-1-billion/" style="color:var(--blue);">FX Leaders</a></p>
+</section>
+
+<section id="s4-macro">
+  <h2>S4｜宏觀環境</h2>
+  <h3>4.1 美債收益率</h3>
+  <table>
+    <tr><th>項目</th><th>最新</th><th>日變化</th><th>含義</th></tr>
+    <tr><td>2Y</td><td>暫無可靠數據</td><td>暫無可靠數據</td><td>—</td></tr>
+    <tr><td>10Y</td><td>4.7%</td><td class="neg">彈升，創2025/1以來新高</td><td>油價驅動通膨疑慮定價</td></tr>
+    <tr><td>2Y-10Y 利差</td><td>暫無可靠數據</td><td>暫無可靠數據</td><td>—</td></tr>
+  </table>
+  <p>10Y 殖利率已被 CNBC 點名可能進一步測試 5% 關鍵位，一旦觸及，對高估值成長股（尤其未獲利/高本益比科技股）的估值壓力將立即顯現，也是今日 Nasdaq 跌幅遠大於 Dow 的原因之一。</p>
+
+  <h3>4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+  <ul>
+    <li>CME FedWatch（7/23）：下次 FOMC（7/29）維持利率不變機率 63.5%，意味有約 36.5% 機率定價「升息」——這在近期屬於罕見的鷹派轉向，反映油價飆升引發的通膨疑慮已實質影響利率路徑預期。</li>
+    <li>前次 FOMC（6/17）維持聯邦基金利率於 3.50%–3.75% 不變。</li>
+    <li>觸發因素：中東地緣衝突推升油價是本輪升息機率上升的主因，而非傳統的就業/通膨數據驅動。</li>
+  </ul>
+
+  <h3>4.3 油價與地緣（獨立追蹤）</h3>
+  <ul>
+    <li>Brent：結算 $100.69/桶，約 +7%，為 5/22 以來最高收盤，日內一度突破 $100 大關。</li>
+    <li>WTI：結算 $92.19/桶，+6.17%，為 6/4 以來最高收盤。</li>
+    <li>地緣事件：伊朗支持的胡塞武裝宣稱在紅海攻擊兩艘沙烏地阿拉伯油輪，中東衝突擴大，市場憂慮荷莫茲海峽與曼德海峽航運安全，是油價連續第五日走高的直接導火線。</li>
+    <li>傳導：能源類股（XLE +0.2%）漲幅明顯落後油價漲幅，顯示市場對地緣溢價的可持續性仍存疑；整體風險偏好轉向 risk-off，是本次殖利率飆升與科技股拋售的共同外部觸發點。</li>
+  </ul>
+
+  <h3>4.4 其他宏觀資產</h3>
+  <table>
+    <tr><th>資產</th><th>價格</th><th>漲跌幅</th></tr>
+    <tr><td>DXY</td><td>暫無可靠一致數據</td><td>來源分歧（不同數據源相差達3點），質性判斷為當日波動不大</td></tr>
+    <tr><td>黃金</td><td>現貨約 $4,048.87</td><td class="neg">期貨開盤較前一日約 -1.9%，殖利率飆升下避險買盤降溫</td></tr>
+    <tr><td>比特幣</td><td>約 $65,775</td><td>於 $64,000–$66,800 區間盤整，未跟隨股市重挫，也未見明顯避險買盤</td></tr>
+  </table>
+
+  <h3>4.5 當日經濟數據</h3>
+  <p>暫無可靠數據。</p>
+  <p class="source">來源：<a href="https://www.cnbc.com/2026/07/23/the-10-year-treasury-yield-could-test-5percent-after-its-latest-spike.html" style="color:var(--blue);">CNBC</a>、<a href="https://www.cnn.com/2026/07/23/world/live-news/iran-war-trump" style="color:var(--blue);">CNN</a>、<a href="https://www.fxleaders.com/news/2026/07/23/wti-and-brent-crude-oil-prices-accelerate-toward-100-as-us-senate-votes-to-continue-war-on-iran-conflict/" style="color:var(--blue);">FX Leaders</a></p>
+</section>
+
+<section id="s5-sector">
+  <h2>S5｜板塊表現</h2>
+  <table>
+    <tr><th>排名</th><th>板塊</th><th>ETF</th><th>當日漲跌幅</th><th>主要驅動</th></tr>
+    <tr><td>1</td><td>公用事業</td><td>XLU</td><td class="pos">+2.3%</td><td>避險資金＋AI資料中心用電需求雙重敘事</td></tr>
+    <tr><td>2</td><td>能源</td><td>XLE</td><td class="pos">+0.2%</td><td>油價飆升，惟漲幅落後油價本身，顯示信心保留</td></tr>
+    <tr><td>—</td><td colspan="4" style="color:var(--muted);">其餘板塊（科技、金融、工業、原物料、地產、必需消費）暫無可靠當日精確數據</td></tr>
+    <tr><td>9</td><td>醫療保健</td><td>XLV</td><td class="neg">-0.6%</td><td>暫無可靠數據</td></tr>
+    <tr><td>10</td><td>非必需消費</td><td>XLY</td><td class="neg">-0.8%</td><td>暫無可靠數據</td></tr>
+    <tr><td>11</td><td>通訊服務</td><td>XLC</td><td class="neg">-1.3%</td><td>Alphabet 財報重挫直接拖累</td></tr>
+  </table>
+
+  <div class="barchart">
+    <div class="bar-row"><div class="bar-label">公用事業 XLU</div><div class="bar-track"><div class="bar-fill g" style="width:76%;"></div></div><div class="bar-val pos">+2.3%</div></div>
+    <div class="bar-row"><div class="bar-label">能源 XLE</div><div class="bar-track"><div class="bar-fill g" style="width:20%;"></div></div><div class="bar-val pos">+0.2%</div></div>
+    <div class="bar-row"><div class="bar-label">醫療保健 XLV</div><div class="bar-track"><div class="bar-fill r" style="width:20%; margin-left:auto;"></div></div><div class="bar-val neg">-0.6%</div></div>
+    <div class="bar-row"><div class="bar-label">非必需消費 XLY</div><div class="bar-track"><div class="bar-fill r" style="width:27%; margin-left:auto;"></div></div><div class="bar-val neg">-0.8%</div></div>
+    <div class="bar-row"><div class="bar-label">通訊服務 XLC</div><div class="bar-track"><div class="bar-fill r" style="width:43%; margin-left:auto;"></div></div><div class="bar-val neg">-1.3%</div></div>
+  </div>
+
+  <div class="callout">最強板塊為防禦性的公用事業，最弱為受 Alphabet 拖累的通訊服務。今日格局是典型的 risk-off + 防禦輪動，而非成長股全面補跌；能源股漲幅落後油價本身，顯示市場對地緣溢價能否延續仍持保留態度。</div>
+  <p class="source">來源：<a href="https://www.stl.news/stock-market-today-thursday-july-23-2026/" style="color:var(--blue);">STL.News</a>、Barchart（XLE）</p>
+</section>
+
+<section id="s6-style">
+  <h2>S6｜風格與市場寬度</h2>
+  <table>
+    <tr><th>ETF</th><th>當日漲跌幅</th><th>回答的問題</th></tr>
+    <tr><td>SMH</td><td class="neg">-1.54%</td><td>半導體跌幅小於 Nasdaq，仍是相對抗跌力量，非本次拋售主因</td></tr>
+    <tr><td>IGV</td><td class="pos">+0.13%</td><td>軟體逆勢收紅，暫難斷言「補漲」啟動，需再觀察1-2日確認</td></tr>
+    <tr><td>RSP</td><td class="neg">-0.03%（幾乎持平）</td><td>與 SPY（-1.21%）大幅背離，跌幅高度集中在少數大型股，非普遍性下跌</td></tr>
+    <tr><td>IWM</td><td class="neg">約 -0.67%（以 Russell 2000 指數為代理）</td><td>小盤持續參與，未見資金撤出小盤跡象</td></tr>
+  </table>
+  <div class="callout">
+    <b>寬度判斷：</b>RSP 與 SPY 出現顯著背離（-0.03% vs -1.21%），代表今日跌幅高度集中在 Alphabet、Tesla 等少數超大型股，而非全市場性拋售。這與 IGV 逆勢收紅、Utilities 領漲、記憶體股逆勢走高相互印證——資金並未全面撤出風險資產，而是從「AI capex 敘事核心承擔者」戰術性轉向「capex 受惠端與防禦資產」。
+  </div>
+  <p class="source">來源：綜合 STL.News、TheStreet、Yahoo Finance 收盤數據</p>
+</section>
+
+<section id="s7-leaders">
+  <h2>S7｜主線股追蹤</h2>
+  <h3>7.1 Magnificent 7</h3>
+  <table>
+    <tr><th>股票</th><th>漲跌幅</th><th>原因</th></tr>
+    <tr><td>NVDA</td><td class="neg">-1.56%</td><td>七巨頭中跌幅最小之一，未直接涉入本輪 capex 財報爭議</td></tr>
+    <tr><td>MSFT</td><td class="neg">約 -2.2%~-3.1%</td><td>大盤系統性下跌拖累，非個股獨立利空</td></tr>
+    <tr><td>AAPL</td><td>相對持平/跌幅極小</td><td>未參與 AI 資本支出軍備賽，本月已上漲11%，資金近期青睞防禦性科技</td></tr>
+    <tr><td>GOOGL</td><td class="neg">-6%~-7%</td><td>財報優於預期，但上調2026資本支出至最高2,050億美元，觸發capex疑慮</td></tr>
+    <tr><td>AMZN</td><td class="neg">-5%</td><td>Mag7 系統性拋售，capex疑慮外溢</td></tr>
+    <tr><td>META</td><td class="neg">-4.7%</td><td>同上</td></tr>
+    <tr><td>TSLA</td><td class="neg">-13%~-15%</td><td>Q2獲利遠低於預期，Musk稱2026為「massive capex年」</td></tr>
+  </table>
+  <div class="barchart">
+    <div class="bar-row"><div class="bar-label">NVDA</div><div class="bar-track"><div class="bar-fill r" style="width:10%; margin-left:auto;"></div></div><div class="bar-val neg">-1.6%</div></div>
+    <div class="bar-row"><div class="bar-label">MSFT</div><div class="bar-track"><div class="bar-fill r" style="width:20%; margin-left:auto;"></div></div><div class="bar-val neg">~-2.6%</div></div>
+    <div class="bar-row"><div class="bar-label">AAPL</div><div class="bar-track"><div class="bar-fill r" style="width:3%; margin-left:auto;"></div></div><div class="bar-val neg">~持平</div></div>
+    <div class="bar-row"><div class="bar-label">GOOGL</div><div class="bar-track"><div class="bar-fill r" style="width:45%; margin-left:auto;"></div></div><div class="bar-val neg">-6~7%</div></div>
+    <div class="bar-row"><div class="bar-label">AMZN</div><div class="bar-track"><div class="bar-fill r" style="width:33%; margin-left:auto;"></div></div><div class="bar-val neg">-5%</div></div>
+    <div class="bar-row"><div class="bar-label">META</div><div class="bar-track"><div class="bar-fill r" style="width:31%; margin-left:auto;"></div></div><div class="bar-val neg">-4.7%</div></div>
+    <div class="bar-row"><div class="bar-label">TSLA</div><div class="bar-track"><div class="bar-fill r" style="width:95%; margin-left:auto;"></div></div><div class="bar-val neg">-13~15%</div></div>
+  </div>
+  <p>七巨頭全數收黑，Bloomberg Mag7 指數盤中一度重挫達 4.8%，單日蒸發市值最高估近 7,970 億美元，為 2025 年 4 月關稅拋售以來最大單日跌幅。GOOGL、TSLA 財報是直接導火線，NVDA、AAPL 因未涉入本輪 capex 爭議而相對抗跌。</p>
+
+  <h3>7.2 記憶體主線（當前行情引擎，2026-07起設立）</h3>
+  <ul>
+    <li>MU：+3.28%~4%，重回 $1,000（去年低點以來累計 +240%），催化劑為 Google/Tesla capex 確認記憶體需求、Nvidia Vera Rubin 拉升 HBM 需求、TrendForce 示警 NAND 短缺。</li>
+    <li>SNDK：今年迄今累計漲幅高達 +570%，漲勢極端。</li>
+    <li>SK Hynix：Q2 營益率創歷史新高，據 Korea Investment 估算 DRAM ASP 約 +30% QoQ、NAND ASP 約 +50% QoQ，HBM 需求與價格續揚。</li>
+    <li><b>鈍化監測：</b>今日大盤重挫，MU 逆勢收紅，尚未見鈍化訊號；但 MU 全年 +240%、SNDK +570% 的漲幅已相當極端，市場已出現分歧——The Motley Fool 一篇評論甚至提出 MU/SNDK 在下次財報（7/30後）可能重挫的看法，估值/情緒過熱風險值得留意。</li>
+  </ul>
+
+  <h3>7.3 AI 硬體核心</h3>
+  <p>NVDA -1.56%（相對抗跌）。Intel（非本清單固定成分，但為當日核心事件）Q2 財報大幅優於預期，AI/資料中心部門 YoY +59%，帶動 AMD 盤後 +2.93%、ARM 同步走高。AVGO、TSM 暫無可靠當日數據。</p>
+  <div class="callout"><b>擁擠度判斷：</b>Intel 財報意外強勁顯示 AI 硬體執行端資金尚未撤出，資金呈現「從純軟體/廣告巨頭的資本支出敘事，切向硬體執行端（Intel/AMD）與記憶體」的跡象，而非全面棄守 AI 硬體。</div>
+
+  <h3>7.4 Rotation 代表股</h3>
+  <ul>
+    <li>GEV：+4.69%，Q2 EPS $2.47（去年同期$1.86）優於預期，並上調全年營收財測至 $455-465億。</li>
+    <li>CEG：+4.84%，受惠美國-沙烏地核能協議與美國政府加速部署新核反應爐以供電 AI 資料中心的政策利多。</li>
+  </ul>
+  <div class="callout"><b>Great Rotation 判斷：</b>延續中。實體經濟/電力基礎設施股在大盤重挫日逆勢大漲，與 Mag7 尤其 Alphabet、Tesla 的重挫形成鮮明對比，顯示部分資金正從「AI 軟體/模型端」轉向「AI 電力與硬體執行端」。</div>
+  <p class="source">來源：<a href="https://finance.yahoo.com/markets/article/magnificent-7-stocks-erase-767-billion-in-market-value-201930579.html" style="color:var(--blue);">Yahoo Finance</a>、<a href="https://www.tradingkey.com/news/market-movers/262050366-market-movers-mu-20260723" style="color:var(--blue);">TradingKey</a>、<a href="https://www.trendforce.com/news/2026/07/22/news-sk-hynix-set-to-post-record-operating-margin-in-q2-as-hbm-mix-weighs-on-asp-growth-and-ltas-gain-focus/" style="color:var(--blue);">TrendForce</a>、<a href="https://www.foreignpolicyjournal.com/2026/07/23/nuclear-stocks-ceg-oklo-and-gev-surge-on-landmark-u-s-saudi-deal-and-ai-data-center-reactor-push/" style="color:var(--blue);">Foreign Policy Journal</a></p>
+</section>
+
+<section id="s8-movers">
+  <h2>S8｜異動股與財報</h2>
+  <h3>8.1 當日重要異動</h3>
+  <table>
+    <tr><th>股票</th><th>漲跌幅</th><th>原因</th><th>對主線的含義</th></tr>
+    <tr><td>TSLA</td><td class="neg">-13%~-15%</td><td>Q2獲利遠低於預期，Musk稱2026年capex大增</td><td>Mag7內部分化加劇</td></tr>
+    <tr><td>GOOGL</td><td class="neg">-6%~-7%</td><td>財報優於預期但capex指引上調至2,050億美元</td><td>AI支出敘事由利多轉為短線利空</td></tr>
+    <tr><td>MU</td><td class="pos">+3.28%~4%</td><td>capex確認記憶體需求＋Vera Rubin拉升HBM＋NAND短缺示警</td><td>記憶體主線逆勢走強</td></tr>
+    <tr><td>CEG</td><td class="pos">+4.84%</td><td>美國-沙烏地核能協議利多</td><td>AI電力/核能敘事升溫</td></tr>
+    <tr><td>GEV</td><td class="pos">+4.69%</td><td>Q2財報優於預期並上調全年財測</td><td>Great Rotation延續</td></tr>
+    <tr><td>INTC</td><td>盤中-2.46%／盤後+9.5%</td><td>Q2營收+25% YoY，AI/資料中心部門+59%，財測優於預期</td><td>AI硬體執行端信心回升</td></tr>
+    <tr><td>AMD</td><td>盤後+2.93%</td><td>受Intel財報激勵（非自身財報）</td><td>半導體情緒轉正面</td></tr>
+    <tr><td>XOM / CVX</td><td>本月累計+15%／+18%</td><td>油價飆升至$92-100+</td><td>能源股受惠地緣溢價，中國原油進口趨緩是後續變數</td></tr>
+  </table>
+
+  <h3>8.2 昨夜財報（7/22盤後公布）</h3>
+  <table>
+    <tr><th>公司</th><th>是否beat</th><th>指引</th><th>盤後/隔日反應</th><th>核心解讀</th></tr>
+    <tr><td>Alphabet</td><td>Beat</td><td>2026資本支出上調至最高2,050億美元</td><td>-6%~-7%</td><td>市場解讀capex為短期利空，非成長不如預期</td></tr>
+    <tr><td>Tesla</td><td>Miss</td><td>Musk稱2026為massive capex年</td><td>-13%~-15%</td><td>獲利與資本支出雙重利空</td></tr>
+    <tr><td>Intel（7/23盤後）</td><td>大幅Beat</td><td>Q3財測優於預期（EPS $0.38 vs估$0.24）</td><td>盤後+9.5%</td><td>AI/資料中心部門強勁增長重燃硬體信心</td></tr>
+  </table>
+
+  <h3>8.3 未來1-3日重要財報與事件</h3>
+  <table>
+    <tr><th>日期</th><th>公司/事件</th><th>關注點</th><th>可能影響板塊</th></tr>
+    <tr><td>7/29</td><td>FOMC利率決議</td><td>升息機率約36.5% vs 維持不變63.5%，油價驅動通膨疑慮是變數</td><td>全市場，尤其高估值成長股</td></tr>
+    <tr><td>7/29（盤後）</td><td>Microsoft、Meta財報</td><td>是否延續Alphabet的capex疑慮敘事</td><td>Mag7/科技股</td></tr>
+    <tr><td>7/30（盤後）</td><td>Apple、Amazon財報</td><td>Apple能否延續本月+11%的相對抗跌地位</td><td>Mag7</td></tr>
+    <tr><td>8/4</td><td>AMD財報</td><td>能否延續Intel財報帶動的AI硬體樂觀情緒</td><td>半導體</td></tr>
+  </table>
+  <p class="source">來源：<a href="https://www.fxleaders.com/news/2026/07/23/intel-intc-stock-jumps-to-110-but-reverses-as-q2-earnings-beat-and-revenue-surges-25-to-16-1-billion/" style="color:var(--blue);">FX Leaders</a>、<a href="https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks" style="color:var(--blue);">Kiplinger</a></p>
+</section>
+
+<section id="s9-playbook">
+  <h2>S9｜輪動判斷與明日 Playbook</h2>
+  <h3>9.1 明確回答</h3>
+  <div class="qa"><b>資金主要流入：</b>防禦股（Utilities）、AI電力/核能（CEG、GEV）、記憶體（MU）、AI硬體執行端（INTC/AMD盤後）</div>
+  <div class="qa"><b>資金主要流出：</b>Mag7中資本支出敘事直接受質疑者（GOOGL、TSLA、AMZN、META）</div>
+  <div class="qa"><b>AI主線（硬體+記憶體）是否健康：</b>健康。記憶體與Intel財報顯示基本面持續強勁，本次拋售屬於Mag7獲利了結與capex疑慮，並非AI主線基本面轉弱。</div>
+  <div class="qa"><b>半導體 vs 軟體：</b>半導體（SMH -1.54%）跌幅小於整體大盤，軟體（IGV +0.13%）今日逆勢收紅，但尚不足以斷言軟體補漲已啟動，需再觀察1-2日確認。</div>
+  <div class="qa"><b>小盤與實體經濟股：</b>Russell 2000 僅 -0.67%，GEV/CEG大漲，Great Rotation延續中。</div>
+  <div class="qa"><b>當前更像：</b>階段性頂部震盪（Mag7集中拋售+油價與利率雙重外部衝擊），尚未確認為趨勢反轉；但若10Y殖利率真測試5%，可能是更大回檔的觸發點。</div>
+
+  <h3>9.2 明日觀察清單</h3>
+  <ul>
+    <li><b>宏觀：</b>10Y殖利率是否測試5%關鍵位；油價地緣（胡塞武裝/荷莫茲海峽）是否進一步升級；7/29 FOMC前的Fed官員談話</li>
+    <li><b>亞洲盤先行指標：</b>KOSPI/三星/SK海力士週五開盤是否延續7/23的+3.72%強彈，或回吐美股跌幅</li>
+    <li><b>大盤：</b>SPY/QQQ具體支撐壓力位暫無分析師明確引用數字，略過；持續觀察SMH是否強於/弱於QQQ</li>
+    <li><b>個股觀察清單：</b>
+      <ul>
+        <li>MU — 記憶體主線是否延續逆勢上漲，鈍化訊號觀察</li>
+        <li>GOOGL — 財報後續解讀是否分化，capex疑慮是否持續發酵</li>
+        <li>TSLA — 獲利大幅不如預期後的後續評級調整</li>
+        <li>INTC — 盤後大漲9.5%後能否延續，AI/資料中心部門增長是否可持續</li>
+        <li>AMD — 8/4財報前市場預期是否升溫</li>
+        <li>CEG／GEV — AI電力/核能敘事是否持續帶動實體經濟股</li>
+        <li>AAPL — 能否延續本月+11%的相對抗跌地位</li>
+      </ul>
+    </li>
+  </ul>
+  <p class="source">來源：綜合本報告 S2-S8 各項數據</p>
+</section>
+
+<section id="s10-risk">
+  <h2>S10｜風險提示與最終結論</h2>
+  <h3>10.1 風險等級表</h3>
+  <table>
+    <tr><th>風險維度</th><th>當前狀態</th><th>等級</th></tr>
+    <tr><td>宏觀利率（升息風險）</td><td>10Y殖利率彈升至4.7%創2025/1新高，FedWatch顯示約36.5%機率下次FOMC升息</td><td class="risk-midhigh">中高</td></tr>
+    <tr><td>記憶體循環反轉</td><td>MU/SNDK全年漲幅達240%/570%，估值已相當極端，惟當日鈍化訊號尚未出現</td><td class="risk-mid">中</td></tr>
+    <tr><td>AI capex持續性</td><td>GOOGL上調capex至2,050億美元觸發股價重挫，市場對超大規模資本支出的耐心下降</td><td class="risk-midhigh">中高</td></tr>
+    <tr><td>地緣/油價</td><td>Brent突破$100，胡塞武裝襲擊沙國油輪，中東衝突持續擴大</td><td class="risk-high">高</td></tr>
+    <tr><td>中美科技戰</td><td>暫無當日可靠相關新增數據</td><td class="risk-low">低-中</td></tr>
+    <tr><td>市場寬度惡化</td><td>尚未惡化，RSP/IWM相對抗跌，拋售集中於Mag7少數個股</td><td class="risk-low">低-中</td></tr>
+    <tr><td>財報風險</td><td>未來一週MSFT/META/AAPL/AMZN將公布財報，capex疑慮是否延燒是關鍵</td><td class="risk-midhigh">中高</td></tr>
+  </table>
+  <div class="callout"><b>當前最需警惕的前3項風險：</b>① 地緣/油價驅動的殖利率與通膨風險　② AI capex持續性疑慮（下週MSFT/META/AAPL/AMZN財報將是試金石）　③ 記憶體超級循環的估值/情緒過熱風險</div>
+
+  <h3>10.2 最終結論</h3>
+  <p>今日是一次由「Mag7財報capex疑慮」與「中東地緣驅動的油價/殖利率衝擊」雙重外部因素共振引發的risk-off，但市場內部並未全面崩壞——記憶體、AI電力/核能、防禦性板塊逆勢走強，顯示資金是「戰術性從capex敘事核心撤出，轉向capex受惠端與防禦資產」，而非對AI主線基本面失去信心。Intel財報意外強勁與盤後AMD同步走高，為次日情緒提供一定支撐。10Y殖利率能否守住4.7%附近、油價地緣風險是否持續升溫，將是接下來1-2週最關鍵的外部變數。</p>
+  <p><b>當前市場階段：</b>高位震盪</p>
+  <p><b>操作傾向（中性觀察，不構成投資建議）：</b>追高Mag7核心科技股（尤其GOOGL/TSLA）風險提高，建議等待下週MSFT/META/AAPL/AMZN財報驗證capex疑慮是否擴散；記憶體與AI電力/核能主題可逢低關注，惟需留意漲幅已偏大、估值偏高；油價與10Y殖利率是接下來最需緊盯的外部風險，若10Y測試5%恐引發更大幅度的成長股估值修正；建議適度控制部位曝險，尤其對capex敏感的軟體/雲端巨頭。</p>
+  <p><b>最值得關注的5個信號（明天盤中可驗證）：</b></p>
+  <ul>
+    <li>10Y公債殖利率是否突破/測試5%</li>
+    <li>Brent原油是否維持在$100上方或繼續攀升</li>
+    <li>MU股價能否維持在$1,000上方（鈍化訊號觀察）</li>
+    <li>KOSPI/三星/SK海力士週五（7/24）開盤是否延續強彈</li>
+    <li>7/29 FOMC前，CME FedWatch升息機率是否進一步上升</li>
+  </ul>
+
+  <hr class="divider">
+  <p class="footer-note">
+    本報告為中性市場觀察，基於公開新聞與數據來源整理，不構成投資建議，亦不保證所有數據之即時性與精確性。<br>
+    本報告由「超中毒（@oiiax88）」製作，分享請註明出處。
+  </p>
+</section>
+
+</div>
+</body>
+</html>
