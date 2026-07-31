@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>美股收盤日報｜2026-07-30</title>
+<style>
+  :root{
+    --bg:#0b0e14; --bg2:#12161f; --card:#161b26; --border:#262c3a;
+    --text:#e6e9f0; --sub:#9aa4b8; --green:#3ecf8e; --red:#ff5c6c;
+    --amber:#f5b942; --blue:#5b9cff; --accent:#8b7dff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",-apple-system,BlinkMacSystemFont,sans-serif;
+    margin:0; padding:0; line-height:1.7;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:32px 20px 80px;}
+  header.top{text-align:center; padding-bottom:24px; border-bottom:1px solid var(--border); margin-bottom:28px;}
+  header.top h1{font-size:26px; margin:0 0 8px; letter-spacing:.5px;}
+  header.top .meta{color:var(--sub); font-size:13px; margin:2px 0;}
+  section{margin-bottom:40px;}
+  h2.sec-title{
+    font-size:18px; color:var(--text); background:linear-gradient(90deg,var(--accent),transparent);
+    padding:8px 14px; border-radius:6px; margin:0 0 16px; display:inline-block;
+  }
+  h3.sub-title{font-size:15px; color:var(--blue); margin:20px 0 8px; border-left:3px solid var(--blue); padding-left:8px;}
+  .card{background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px 20px; margin-bottom:16px;}
+  .tldr{font-size:15px; color:var(--text);}
+  .tags{margin-top:14px; display:flex; flex-wrap:wrap; gap:8px;}
+  .tag{background:rgba(139,125,255,.15); color:var(--accent); border:1px solid rgba(139,125,255,.4); padding:5px 12px; border-radius:20px; font-size:12.5px;}
+  table{width:100%; border-collapse:collapse; margin:10px 0 14px; font-size:13.5px;}
+  th,td{border:1px solid var(--border); padding:8px 10px; text-align:left;}
+  th{background:var(--bg2); color:var(--sub); font-weight:600; font-size:12.5px;}
+  td.num{text-align:right; font-variant-numeric:tabular-nums;}
+  .pos{color:var(--green); font-weight:600;}
+  .neg{color:var(--red); font-weight:600;}
+  .flat{color:var(--sub);}
+  .na{color:var(--sub); font-style:italic;}
+  .qa{background:var(--bg2); border-left:3px solid var(--amber); padding:10px 14px; border-radius:4px; margin:10px 0; font-size:13.5px;}
+  .qa b{color:var(--amber);}
+  .judge{background:rgba(62,207,142,.08); border-left:3px solid var(--green); padding:10px 14px; border-radius:4px; margin:10px 0; font-size:13.5px;}
+  .judge b{color:var(--green);}
+  p.narr{font-size:13.5px; margin:8px 0;}
+  .src{color:var(--sub); font-size:11.5px;}
+  /* heatmap */
+  .heatgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:8px; margin:14px 0;}
+  .heatcell{border-radius:8px; padding:12px 10px; text-align:center;}
+  .heatcell .n{font-size:12px; color:rgba(255,255,255,.85);}
+  .heatcell .v{font-size:18px; font-weight:700; margin-top:4px;}
+  /* bar chart */
+  .barlist{margin:14px 0;}
+  .barrow{display:flex; align-items:center; gap:10px; margin:7px 0; font-size:13px;}
+  .barrow .label{width:130px; flex-shrink:0; color:var(--sub);}
+  .barrow .track{flex:1; background:var(--bg2); border-radius:4px; height:20px; position:relative; overflow:hidden;}
+  .barrow .fill{height:100%; border-radius:4px;}
+  .barrow .val{width:64px; text-align:right; flex-shrink:0; font-variant-numeric:tabular-nums;}
+  footer{margin-top:50px; padding-top:20px; border-top:1px solid var(--border); text-align:center; color:var(--sub); font-size:12px;}
+  .disclaimer{background:var(--bg2); border:1px dashed var(--border); border-radius:8px; padding:14px 16px; font-size:12.5px; color:var(--sub); margin-top:16px;}
+  ul{margin:6px 0; padding-left:20px; font-size:13.5px;}
+  li{margin:4px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>🇺🇸 美股收盤日報｜2026-07-30</h1>
+  <div class="meta">報告生成時間：台北時間 2026-07-31 08:00｜資料來源：CNBC、Reuters、TradingKey、TipRanks、24/7 Wall St.、TrendForce 等</div>
+  <div class="meta">本報告由 超中毒（@oiiax88）製作，分享請註明出處</div>
+</header>
+
+<section id="s1-cover">
+  <h2 class="sec-title">S1｜今日一句話總結</h2>
+  <div class="card">
+    <p class="tldr">
+      美股在週三（7/29）FOMC 鷹派異議引發重挫後強勁反彈，S&amp;P 500 +1.66%、Nasdaq +2.78%，VIX 單日暴跌 17% 顯示恐慌快速降溫。
+      驅動力來自 MSFT、AMZN 財報優於預期，以及 Samsung 示警記憶體供給緊缺，引爆 MU、WDC、STX 等儲存晶片股雙位數暴漲。
+      但指數表面強勢下暗藏分化：META 財報後重挫 9%，NVDA、AVGO 相對牛皮甚至下跌，資金明顯從 GPU 轉向記憶體與雲端資本支出敘事。
+      7/31 亞股 Kospi、Samsung、SK Hynix 單日暴漲 13～27% 觸發熔斷機制，為記憶體主線提供最新且極強力的佐證，同時也墊高短線過熱風險。
+    </p>
+    <div class="tags">
+      <span class="tag">記憶體主線延續</span>
+      <span class="tag">AI硬體高位震盪</span>
+      <span class="tag">指數強內部弱</span>
+      <span class="tag">超跌反彈</span>
+    </div>
+  </div>
+</section>
+
+<section id="s2-index">
+  <h2 class="sec-title">S2｜大盤表現總覽</h2>
+  <div class="card">
+    <table>
+      <tr><th>指數</th><th>收盤</th><th>漲跌幅</th><th>日內高低點</th><th>一句話狀態</th></tr>
+      <tr><td>Dow Jones</td><td class="num">52,208.06</td><td class="num pos">+1.19%</td><td class="na">暫無可靠數據</td><td>反彈但落後科技，資金未回流藍籌</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,437.63</td><td class="num pos">+1.66%</td><td class="na">暫無可靠數據</td><td>修復性強勢反彈</td></tr>
+      <tr><td>Nasdaq Composite</td><td class="num">25,122.18</td><td class="num pos">+2.78%</td><td class="na">暫無可靠數據</td><td>財報驅動全面反彈，個股分化明顯</td></tr>
+      <tr><td>Russell 2000</td><td class="num">2,946.10</td><td class="num pos">+1.37%</td><td class="na">暫無可靠數據</td><td>跟漲但未領漲，參與度中等</td></tr>
+      <tr><td>SOX 半導體指數</td><td class="na">暫無可靠數據</td><td class="num pos">SMH +6.75%*</td><td class="na">暫無可靠數據</td><td>記憶體帶動全面噴出，明顯領先大盤</td></tr>
+      <tr><td>VIX</td><td class="num">17.09</td><td class="num neg">-17.28%</td><td class="na">暫無可靠數據</td><td>恐慌快速降溫，波動率坍縮</td></tr>
+    </table>
+    <p class="src">*SOX 指數當日精確收盤未查得可靠來源，以 VanEck 半導體 ETF（SMH，538.21，前收 504.22）作為代理指標。</p>
+
+    <div class="heatgrid">
+      <div class="heatcell" style="background:#1d5c3f;"><div class="n">Dow</div><div class="v">+1.19%</div></div>
+      <div class="heatcell" style="background:#1d6b47;"><div class="n">S&amp;P 500</div><div class="v">+1.66%</div></div>
+      <div class="heatcell" style="background:#178a55;"><div class="n">Nasdaq</div><div class="v">+2.78%</div></div>
+      <div class="heatcell" style="background:#1d5c3f;"><div class="n">Russell 2000</div><div class="v">+1.37%</div></div>
+      <div class="heatcell" style="background:#0f9e5e;"><div class="n">SMH（SOX代理）</div><div class="v">+6.75%</div></div>
+      <div class="heatcell" style="background:#7a1f2b;"><div class="n">VIX</div><div class="v">-17.28%</div></div>
+    </div>
+
+    <div class="qa"><b>Dow vs Nasdaq 相對強弱：</b>Nasdaq（+2.78%）遠強於 Dow（+1.19%），資金明顯回流科技/半導體，而非流出科技的 rotation；惟這是財報驅動的個股行情（MSFT、AMZN），並非普遍性資金轉向。</div>
+    <div class="qa"><b>小盤是否過熱：</b>Russell 2000 +1.37%，介於 Dow 與 Nasdaq 之間，屬於「跟漲」而非「領漲」，加上 VIX 同步大跌顯示這是修復性反彈而非投機噴出，暫無過熱訊號。</div>
+    <div class="qa"><b>SOX 相對 Nasdaq：</b>以 SMH 代理，+6.75% 遠超 Nasdaq 的 +2.78%，半導體（尤其記憶體子族群）今日是領先指標，而非拖累。</div>
+  </div>
+</section>
+
+<section id="s3-recap">
+  <h2 class="sec-title">S3｜盤中復盤</h2>
+  <div class="card">
+    <h3 class="sub-title">盤前（含亞洲盤連動）</h3>
+    <p class="narr">前一交易日（7/29 週三）為 FOMC 決策日，Fed 維持利率 3.50–3.75% 不變，但票委 9-3 表決、三位委員（Hammack、Kashkari、Logan）主張應升息 1 碼，鷹派雜音導致 10 年期殖利率一度衝上 4.67% 上方，道瓊重挫 2.2%、S&amp;P 重挫 1.5%。7/30 美股開盤即上漲（道瓊開高約 0.6%、S&amp;P +0.9%、Nasdaq +1.5%），主因是 Micron 在 Samsung 示警記憶體供給吃緊後率先噴出，帶動整個儲存供應鏈走高，同時市場消化週三盤後 MSFT（+16%）與 META（-9%）的分歧財報反應。</p>
+    <h3 class="sub-title">日內轉折點</h3>
+    <p class="narr">全日多頭主導，未見明顯逆轉。記憶體 supercycle 敘事再加溫，加上 AWS 雲端加速成長預期支撐科技權值股，是日內主要推力。尾盤市場並傳出 Citadel 接手對沖基金 Situational Awareness 的 AI 重倉股部位，緩解「AI 重倉基金被迫平倉」疑慮，帶動 CRWV、NBIS、IREN 等 neocloud 股單日暴漲近 30%。</p>
+    <h3 class="sub-title">尾盤與盤後</h3>
+    <p class="narr">Apple 與 Amazon 於收盤後公布財報：Amazon 淨銷售年增 20% 至 2,006 億美元、AWS 雲端年增 37%（創 18 季來最快），盤後一度大漲逾 8%；Apple 營收年增 16%、EPS 年增 27% 均優於預期，但盤後股價下跌逾 4% 至 319.09 美元（Tim Cook 任內最後一份季報）。Reddit 盤後重挫逾 7%，因 Google 搜尋導流流量疑慮。</p>
+    <div class="judge"><b>核心驅動判斷：</b>今日是典型的 buy the dip（週三 Fed 鷹派恐慌後的修復性反彈）疊加「記憶體 supercycle」敘事加溫的雙重驅動。META 呈現明顯的 sell the news（財報優於預期仍遭拋售，因展望轉弱）；MU/WDC/STX 與 AMZN 則是 buy the beat；CRWV/NBIS/IREN 的暴漲屬流動性消息驅動的 short squeeze 性質，需留意延續性。</div>
+  </div>
+</section>
+
+<section id="s4-macro">
+  <h2 class="sec-title">S4｜宏觀環境</h2>
+  <div class="card">
+    <h3 class="sub-title">4.1 美債收益率</h3>
+    <table>
+      <tr><th>項目</th><th>最新</th><th>日變化</th><th>含義</th></tr>
+      <tr><td>2Y</td><td class="num">4.22%（7/29）</td><td class="na">暫無 7/30 更新數據</td><td>反映市場仍預期年底前有降息空間</td></tr>
+      <tr><td>10Y</td><td class="num">4.66%（7/30）</td><td class="num flat">較 7/29 高點 4.67% 小幅回落</td><td>鷹派恐慌略降溫，仍處近期高檔</td></tr>
+      <tr><td>2Y-10Y 利差</td><td class="num">約 +44bp</td><td class="na">非同日精確值，僅供參考</td><td>利差持續為正，尚未出現倒掛疑慮</td></tr>
+    </table>
+    <p class="narr">10Y 若重新站上 4.67% 前高，恐重新打擊成長股估值；目前小幅回落緩解此壓力，是明日觀察重點之一。</p>
+
+    <h3 class="sub-title">4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+    <ul>
+      <li>7/29 FOMC：維持 3.50–3.75% 不變，9-3 表決，三位委員（Hammack、Kashkari、Logan）主張升息 1 碼——罕見的「鷹派異議」，反映聯準會內部對抗通膨的分歧擴大。新任 Fed 主席 Kevin Warsh 稱此決策為「嚴謹的經濟情勢審查」而非暫停。</li>
+      <li>CME FedWatch（9月 FOMC）：截至 7/28，市場定價 9 月降息 1 碼機率約 54.4%，顯示市場仍押注年底前恢復降息路徑，與 7 月的鷹派異議形成拉鋸。</li>
+      <li>與前日變化：7 月會議前市場一度定價 46.5% 升息機率（7/13 數據），最終結果為維持不變，符合主流預期，但鷹派票數超乎預期，是觸發 7/29 賣壓的主因。</li>
+    </ul>
+
+    <h3 class="sub-title">4.3 油價與地緣（獨立追蹤）</h3>
+    <p class="narr">WTI 約 85.98 美元，Brent 於 91～92.65 美元區間（早盤觸及 92.65，日內回落至 91 以下）。美國近日對伊朗採取軍事行動，川普誓言報復伊朗對約旦美軍基地的攻擊，荷莫茲海峽緊張局勢反覆；裡海管道財團（CPC）因兩艘相關油輪遭攻擊而暫停黑海碼頭裝載作業。Brent 週三單日一度飆漲 7.9%，週四回落但仍維持地緣風險溢價。值得注意的是，地緣衝突升溫但股市仍全面 risk-on，呈現罕見背離，若地緣情勢進一步惡化可能反噬風險偏好。</p>
+
+    <h3 class="sub-title">4.4 其他宏觀資產</h3>
+    <table>
+      <tr><th>資產</th><th>價格</th><th>漲跌幅</th></tr>
+      <tr><td>DXY</td><td class="num">100.98</td><td class="num pos">+0.09%</td></tr>
+      <tr><td>黃金</td><td class="na">暫無精確收盤價</td><td class="num pos">約 +1%</td></tr>
+      <tr><td>比特幣</td><td class="na">暫無可靠收盤數據</td><td class="na">日內區間震盪，無明確方向</td></tr>
+    </table>
+    <p class="src">黃金上漲受惠美元走弱與避險需求（地緣衝突+日圓干預疑慮）雙重支撐。</p>
+
+    <h3 class="sub-title">4.5 當日經濟數據</h3>
+    <table>
+      <tr><th>數據</th><th>實際</th><th>預期</th><th>市場解讀</th></tr>
+      <tr><td>Q2 GDP（年化）</td><td class="num neg">1.5%</td><td class="num">1.8%</td><td>低於預期，較 Q1 的 2.1% 明顯放緩</td></tr>
+      <tr><td>Core PCE（YoY）</td><td class="num">3.3%</td><td class="num">3.3%</td><td>符合預期，較前值 3.4% 小幅降溫</td></tr>
+    </table>
+    <p class="narr">「成長放緩＋通膨溫和降溫」的組合強化了「Fed 下半年有降息空間」的敘事，是支撐當日 risk-on 反彈的宏觀背景之一，儘管與週三鷹派 FOMC 調性略有矛盾。</p>
+  </div>
+</section>
+
+<section id="s5-sector">
+  <h2 class="sec-title">S5｜板塊表現</h2>
+  <div class="card">
+    <table>
+      <tr><th>排名</th><th>板塊</th><th>ETF</th><th>當日漲跌幅</th><th>主要驅動</th></tr>
+      <tr><td>1</td><td>資訊科技</td><td>XLK</td><td class="num pos">+3.07%</td><td>MSFT 財報噴出、記憶體 supercycle 帶動</td></tr>
+      <tr><td>2</td><td>非必需消費</td><td>XLY</td><td class="num pos">+1.3%</td><td>Amazon 財報後預期強勁</td></tr>
+      <tr><td>3</td><td>工業</td><td>XLI</td><td class="num pos">+0.98%</td><td>從週三重挫 3.2% 中反彈</td></tr>
+      <tr><td>4</td><td>金融</td><td>XLF</td><td class="num flat">+0.05%</td><td>近乎持平</td></tr>
+      <tr><td colspan="5" class="na">能源／原物料／公用事業／醫療保健／必需消費／房地產／通訊服務：當日精確漲跌幅暫無可靠數據</td></tr>
+    </table>
+    <div class="barlist">
+      <div class="barrow"><div class="label">資訊科技 XLK</div><div class="track"><div class="fill" style="width:61%;background:var(--green);"></div></div><div class="val pos">+3.07%</div></div>
+      <div class="barrow"><div class="label">非必需消費 XLY</div><div class="track"><div class="fill" style="width:26%;background:var(--green);"></div></div><div class="val pos">+1.3%</div></div>
+      <div class="barrow"><div class="label">工業 XLI</div><div class="track"><div class="fill" style="width:19%;background:var(--green);"></div></div><div class="val pos">+0.98%</div></div>
+      <div class="barrow"><div class="label">金融 XLF</div><div class="track"><div class="fill" style="width:1%;background:var(--sub);"></div></div><div class="val flat">+0.05%</div></div>
+    </div>
+    <div class="judge"><b>判斷：</b>科技與成長股（XLK、XLY）明顯跑贏週期與防禦板塊，今日屬於「科技重新取得主導」，而非「高切低」，與前一日（7/29）工業重挫、能源上漲的 Rotation 走勢形成鮮明對比——顯示板塊輪動尚未形成穩定趨勢，仍處於日內劇烈波動階段。</div>
+  </div>
+</section>
+
+<section id="s6-style">
+  <h2 class="sec-title">S6｜風格與市場寬度</h2>
+  <div class="card">
+    <table>
+      <tr><th>ETF</th><th>當日漲跌幅</th><th>回答的問題</th></tr>
+      <tr><td>SMH</td><td class="num pos">+6.75%</td><td>半導體（尤其記憶體）仍是最強主線</td></tr>
+      <tr><td>IGV</td><td class="na">暫無可靠當日數據</td><td>軟體是否補漲，暫無法判斷</td></tr>
+      <tr><td>RSP</td><td class="na">暫無可靠當日數據</td><td>等權相對強弱暫無法直接判斷</td></tr>
+      <tr><td>IWM（以 Russell 2000 代理）</td><td class="num pos">+1.37%</td><td>小盤跟漲但未過熱，參與度中等</td></tr>
+    </table>
+    <p class="narr"><b>寬度替代指標（質性判讀）：</b>Russell 2000（+1.37%）明顯落後 Nasdaq（+2.78%），顯示本次反彈仍偏「少數股主導」而非全面擴散；MSFT +16%、MU +15%、WDC +18%、CRWV 系列 +30% 等個股漲幅集中且巨大，而 META、NVDA（僅 +0.92%）、AVGO（-2.78%）等權值股表現疲弱，屬於「內部分化下的指數反彈」，寬度尚未真正擴散。</p>
+  </div>
+</section>
+
+<section id="s7-leaders">
+  <h2 class="sec-title">S7｜主線股追蹤</h2>
+  <div class="card">
+    <h3 class="sub-title">7.1 Magnificent 7</h3>
+    <table>
+      <tr><th>股票</th><th>漲跌幅</th><th>原因</th></tr>
+      <tr><td>NVDA</td><td class="num pos">+0.92%</td><td>財報季前觀望，資金明顯轉向記憶體，相對落後</td></tr>
+      <tr><td>MSFT</td><td class="num pos">約 +16%</td><td>Azure 雲端成長 43% 優於預期，單日市值增加約 4,500 億美元，為單日最大市值增幅個股</td></tr>
+      <tr><td>AAPL</td><td class="num neg">盤後約 -4%</td><td>營收/EPS 均優於預期，但市場關注中國與服務業展望；為 Tim Cook 任內最後一份季報</td></tr>
+      <tr><td>GOOGL</td><td class="na">暫無 7/30 精確收盤數據</td><td>財報後股價一度跌至 4 月以來低點</td></tr>
+      <tr><td>AMZN</td><td class="num pos">盤後約 +7～9%</td><td>淨銷售 +20% YoY、AWS +37% YoY 創 18 季來最快成長</td></tr>
+      <tr><td>META</td><td class="num neg">約 -9%</td><td>營收展望疲弱、現金流不如預期，財報優於預期仍遭拋售</td></tr>
+      <tr><td>TSLA</td><td class="num pos">+3.53%</td><td>隨大盤反彈</td></tr>
+    </table>
+    <div class="barlist">
+      <div class="barrow"><div class="label">MSFT</div><div class="track"><div class="fill" style="width:100%;background:var(--green);"></div></div><div class="val pos">+16%</div></div>
+      <div class="barrow"><div class="label">AMZN</div><div class="track"><div class="fill" style="width:52%;background:var(--green);"></div></div><div class="val pos">+8%</div></div>
+      <div class="barrow"><div class="label">TSLA</div><div class="track"><div class="fill" style="width:22%;background:var(--green);"></div></div><div class="val pos">+3.53%</div></div>
+      <div class="barrow"><div class="label">NVDA</div><div class="track"><div class="fill" style="width:6%;background:var(--green);"></div></div><div class="val pos">+0.92%</div></div>
+      <div class="barrow"><div class="label">AAPL</div><div class="track"><div class="fill" style="width:25%;background:var(--red);margin-left:auto;"></div></div><div class="val neg">-4%</div></div>
+      <div class="barrow"><div class="label">META</div><div class="track"><div class="fill" style="width:56%;background:var(--red);margin-left:auto;"></div></div><div class="val neg">-9%</div></div>
+    </div>
+    <div class="judge"><b>七巨頭是否集體行動：</b>否，分化明顯——MSFT、AMZN 財報後大漲，META 重挫，NVDA、GOOGL 相對牛皮，顯示「財報決定股價」而非「Mag7 共振」，AI 敘事內部正分裂為明確的贏家與輸家。</div>
+
+    <h3 class="sub-title">7.2 記憶體主線（當前行情引擎）</h3>
+    <p class="narr">MU +15% 至 851.56 美元，收復過去四日跌幅，Wall Street 目標價上調至 1,500～1,700 美元區間（共識約 1,568～1,581 美元）；SNDK、WDC（+18%）、STX（+16%）同步雙位數大漲，DRAM Roundhill ETF +13%，SK Hynix ADS 與 Samsung（亞股）同步噴出。催化為 Samsung 公布創紀錄 Q2 營運利潤與營收，並警示晶片短缺將延續至 2028 年。TrendForce 最新展望：Q3 2026 DRAM 合約價預估 QoQ +13～18%、NAND +10～15%，較上半年 63～95% 的漲幅已明顯放緩（消費端需求走弱），但 AI 伺服器需求仍支撐緊缺格局。</p>
+    <div class="judge"><b>鈍化監測：</b>尚未見到「利多不漲」訊號——MU 單日噴出 15% 且分析師同步上修目標價，情緒仍在加速而非鈍化；但目標價（$1,500+）與現價（$851）已存在巨大預期差，且 TrendForce 預估的合約價漲幅已從 95% 降至 13～18%，供給緊張的「速度」正在放緩，這是後續判斷鈍化訊號的關鍵觀察指標。</div>
+
+    <h3 class="sub-title">7.3 AI 硬體核心</h3>
+    <table>
+      <tr><th>股票</th><th>漲跌幅</th><th>備註</th></tr>
+      <tr><td>AVGO</td><td class="num neg">-2.78%</td><td>收 370.32 美元</td></tr>
+      <tr><td>AMD</td><td class="na">數據來源分歧，暫不採用單一數字</td><td>CNBC 報導晶片股全面走高、AMD 走揚；另一數據源顯示收跌 5.51%，方向不一致</td></tr>
+      <tr><td>TSM</td><td class="na">暫無可靠當日數據</td><td>-</td></tr>
+    </table>
+    <div class="judge"><b>擁擠度判斷：</b>資金今日明顯從 GPU 運算（NVDA 持平偏強、AVGO 走弱）轉向記憶體與 neocloud（MU/WDC/STX/CRWV 系列 +15～30%），是典型的 AI 主線內部 rotation，而非資金整體撤出 AI，需觀察 NVDA 財報前是否持續跑輸大盤與記憶體股。</div>
+
+    <h3 class="sub-title">7.4 Rotation 代表股</h3>
+    <p class="narr">CAT／GEV 當日精確漲跌幅暫無可靠數據。已知工業類股 ETF（XLI）當日 +0.98%，自週三重挫 3.2% 中溫和反彈，顯示實體經濟股當日並未延續強勢領漲，Great Rotation 出現階段性降溫，資金重新流向科技優於工業。</p>
+  </div>
+</section>
+
+<section id="s8-movers">
+  <h2 class="sec-title">S8｜異動股與財報</h2>
+  <div class="card">
+    <h3 class="sub-title">8.1 當日重要異動</h3>
+    <table>
+      <tr><th>股票</th><th>漲跌幅</th><th>原因</th><th>對主線的含義</th></tr>
+      <tr><td>CRWV／NBIS／IREN</td><td class="num pos">約 +30%</td><td>Citadel 接手對沖基金 Situational Awareness 的 AI 持股，緩解被迫平倉疑慮</td><td>AI 基建拋壓恐慌暫時解除，資金迅速回補超跌 neocloud 股</td></tr>
+      <tr><td>MU／WDC／STX</td><td class="num pos">+15～18%</td><td>Samsung 示警記憶體供給緊缺延續至 2028</td><td>記憶體 supercycle 敘事再加溫，為今日最強主線</td></tr>
+      <tr><td>Reddit</td><td class="num neg">盤後 -7%+</td><td>Google 搜尋導流流量疑慮</td><td>個股利空，非板塊性訊號</td></tr>
+      <tr><td>First Solar</td><td class="num pos">+3%+</td><td>Q2 財報優於預期</td><td>太陽能個股利多</td></tr>
+      <tr><td>Rivian</td><td class="num pos">約 +2%</td><td>下修 2026 資本支出計畫、虧損略收斂</td><td>電動車個股利多但幅度有限</td></tr>
+    </table>
+
+    <h3 class="sub-title">8.2 昨夜財報（7/29～7/30 盤後）</h3>
+    <table>
+      <tr><th>公司</th><th>是否 Beat</th><th>指引</th><th>盤後反應</th><th>核心解讀</th></tr>
+      <tr><td>MSFT</td><td class="pos">Beat</td><td>Azure 成長 43%，指引強勁</td><td class="num pos">+16%</td><td>AI 資本支出開始轉化為雲端營收成長</td></tr>
+      <tr><td>META</td><td class="flat">EPS Beat，但展望不如預期</td><td>營收展望疲弱、現金流不如預期</td><td class="num neg">-9%</td><td>AI capex 持續性疑慮浮現，sell the news</td></tr>
+      <tr><td>AMZN</td><td class="pos">Beat</td><td>未見具體下季指引細節</td><td class="num pos">+7～9%</td><td>AWS 成長創 18 季來最快，雲端動能強勁</td></tr>
+      <tr><td>AAPL</td><td class="pos">Beat（營收+16%、EPS+27%）</td><td>未見具體指引細節</td><td class="num neg">-4%</td><td>財報優於預期仍遭拋售，市場聚焦中國/服務業表現與交接後展望</td></tr>
+    </table>
+
+    <h3 class="sub-title">8.3 未來 1–3 日重要財報與事件</h3>
+    <table>
+      <tr><th>日期</th><th>公司/事件</th><th>關注點</th><th>可能影響板塊</th></tr>
+      <tr><td>2026-07-31（五，亞股盤中）</td><td>Kospi／Samsung／SK Hynix 觸發熔斷</td><td>單日暴漲 13～27%，是否延續或獲利了結</td><td>記憶體、半導體供應鏈</td></tr>
+      <tr><td>2026-08-03（一）</td><td>Palantir（PLTR）Q2 財報</td><td>市場預期營收年增 81% 至 18.1 億美元、EPS $0.34</td><td>AI 軟體、國防科技</td></tr>
+      <tr><td colspan="4" class="na">其餘個股財報與事件暫無可靠數據</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="s9-playbook">
+  <h2 class="sec-title">S9｜輪動判斷與明日 Playbook</h2>
+  <div class="card">
+    <h3 class="sub-title">9.1 明確回答</h3>
+    <ul>
+      <li><b>資金主要流入：</b>記憶體/儲存供應鏈（MU/WDC/STX/SNDK）、雲端運算權值股（MSFT/AMZN）、neocloud（CRWV/NBIS/IREN）</li>
+      <li><b>資金主要流出：</b>傳統 GPU 運算龍頭（NVDA 持平、AVGO 下跌）、META（展望疑慮）、GOOGL（財報後偏弱）</li>
+      <li><b>AI 主線是否健康：</b>硬體端出現內部分化（GPU 相對落後、記憶體強勢），但整體 AI 敘事未破——MSFT/AMZN 雲端財報證明 AI 資本支出開始轉化為實際營收成長，屬於「敘事升級」而非退潮</li>
+      <li><b>半導體 vs 軟體：</b>半導體（SMH +6.75%）明顯強於軟體（IGV 當日數據暫缺，但年初至 7 月中 IGV 已下跌逾 11%，補漲跡象仍不明顯）</li>
+      <li><b>小盤與實體經濟：</b>Russell 2000（+1.37%）、XLI（+0.98%）皆為溫和跟漲，未見 Great Rotation 加速跡象，反而更像週三工業重挫後的技術性反彈</li>
+      <li><b>當前更像趨勢延續：</b>記憶體 supercycle + AI 雲端資本支出兌現支撐「趨勢延續」，但 NVDA/AVGO 走弱、META 重挫等「內部裂縫」提醒這是「健康分化中的趨勢延續」，而非全面性頂部震盪</li>
+    </ul>
+
+    <h3 class="sub-title">9.2 明日觀察清單</h3>
+    <ul>
+      <li><b>宏觀：</b>10Y 是否重新測試 4.67% 高點；WTI/Brent 地緣溢價（伊朗、荷莫茲海峽）是否延續；Fed 官員談話排程暫無可靠數據</li>
+      <li><b>亞洲盤先行指標：</b>7/31 Kospi／Samsung／SK Hynix 觸發熔斷後單日暴漲 13～27%，須觀察漲勢延續性或獲利了結賣壓，為週五/下週一美股記憶體股走勢的重要先行訊號</li>
+      <li><b>大盤：</b>SPY/QQQ 具體支撐壓力位暫無可靠一致數據來源，暫不列出；SMH 是否延續強於 QQQ 的態勢值得持續觀察</li>
+      <li><b>個股觀察清單：</b>
+        <ul>
+          <li>MU — 記憶體 supercycle 領頭羊，留意目標價與股價乖離是否收斂或擴大</li>
+          <li>CRWV／NBIS／IREN — Citadel 接手消息後續，觀察是否持續反彈或獲利了結</li>
+          <li>PLTR — 8/3 公布財報，市場預期營收 +81%，AI 軟體股風向指標</li>
+          <li>NVDA — 財報季前持續落後，觀察能否收復記憶體/雲端股帶動的漲勢</li>
+          <li>META — 財報後重挫，觀察是否有進一步下修或止穩訊號</li>
+          <li>SK Hynix／Samsung（海外） — 7/31 亞股單日暴漲後續效應</li>
+          <li>AVGO — GPU/客製化晶片股走弱，留意是否止穩</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="s10-risk">
+  <h2 class="sec-title">S10｜風險提示與最終結論</h2>
+  <div class="card">
+    <h3 class="sub-title">10.1 風險等級表</h3>
+    <table>
+      <tr><th>風險維度</th><th>當前狀態</th><th>等級</th></tr>
+      <tr><td>宏觀利率（升息風險）</td><td>7/29 FOMC 出現罕見鷹派異議 3 票，10Y 維持 4.66% 高檔</td><td class="neg">中高</td></tr>
+      <tr><td>記憶體循環反轉</td><td>目前加速中，惟 TrendForce Q3 合約價漲幅已從 63～95% 放緩至 13～18%</td><td class="flat">中</td></tr>
+      <tr><td>AI capex 持續性</td><td>MSFT/AMZN 財報證實 capex 轉化營收，但 NVDA/AVGO 走弱顯示市場對 GPU 端效益有疑慮</td><td class="flat">中</td></tr>
+      <tr><td>地緣/油價</td><td>美伊軍事行動持續、荷莫茲海峽風險、CPC 黑海碼頭遭攻擊暫停裝載</td><td class="neg">中高</td></tr>
+      <tr><td>中美科技戰</td><td>暫無當日可靠數據</td><td class="na">維持觀察</td></tr>
+      <tr><td>市場寬度惡化</td><td>今日上漲集中在特定個股，META/NVDA/AVGO 走弱顯示內部分化</td><td class="flat">中</td></tr>
+      <tr><td>財報風險</td><td>本週為 Mag7 財報密集期，META 已顯示「優於預期仍下跌」的敏感度，8/3 PLTR 財報為下一觀察點</td><td class="neg">中高</td></tr>
+    </table>
+    <p class="narr"><b>當前最需警惕的前 3 項風險：</b>① 財報後個股劇烈分化，sell the news 風險擴大　② 地緣政治（伊朗/荷莫茲海峽）推升油價與通膨的二次衝擊　③ 記憶體 supercycle 分析師目標價與股價乖離持續擴大</p>
+
+    <h3 class="sub-title">10.2 最終結論</h3>
+    <p class="narr">美股在週三 FOMC 鷹派異議引發重挫後迅速修復性反彈，S&amp;P 500 +1.66%、Nasdaq +2.78%，VIX 單日暴跌 17% 顯示恐慌情緒快速降溫。驅動力主要來自 MSFT/AMZN 財報優於預期，以及 Samsung 示警記憶體供給緊缺引爆的儲存晶片全面噴出。但指數表面強勢下暗藏分化：META 財報後重挫 9%、NVDA/AVGO 相對牛皮，顯示 AI 主線內部正從「GPU 一枝獨秀」轉向「記憶體＋雲端資本支出」的新敘事。7/31 亞股 Kospi/Samsung/SK Hynix 單日暴漲 13～27% 觸發熔斷機制，為記憶體主線提供最新強力佐證，惟漲幅之大也墊高短線過熱風險。</p>
+    <p class="narr"><b>當前市場階段：</b>板塊輪動（記憶體 supercycle 接棒 GPU，尚未見明確頂部訊號）</p>
+    <p class="narr"><b>操作傾向（中性觀察，不構成投資建議）：</b>記憶體/儲存供應鏈短線動能仍強，但目標價與現價乖離已大，追高風險上升；NVDA/AVGO 等 GPU 龍頭走弱後可留意逢低承接訊號是否浮現（需搭配財報確認）；META 中期需觀察 AI capex 效益是否進一步遭市場質疑；整體建議控制部位、避免對單一敘事（記憶體或 GPU）過度集中曝險。</p>
+    <p class="narr"><b>最值得關注的 5 個信號：</b></p>
+    <ul>
+      <li>MU/WDC/STX 股價是否出現「放量滯漲」（成交量放大但股價不再創高）</li>
+      <li>10Y 殖利率是否重新站上 4.67% 前高</li>
+      <li>Kospi/Samsung/SK Hynix 週五亞股開盤是否延續暴漲或出現獲利了結賣壓</li>
+      <li>NVDA 能否收復失地、重新跟上 SMH 的漲幅</li>
+      <li>PLTR 8/3 財報後 AI 軟體股是否重演 META 式的「優於預期仍遭拋售」</li>
+    </ul>
+    <div class="disclaimer">本報告內容為中性市場觀察與資訊整理，不構成任何投資建議。所有數據均標註來源，若無法取得可靠來源則明確標示「暫無可靠數據」，請讀者自行查證後做出投資決策。</div>
+  </div>
+</section>
+
+<footer>
+  🇺🇸 美股收盤日報｜2026-07-30　|　本報告由 超中毒（@oiiax88）製作，分享請註明出處
+</footer>
+
+</div>
+</body>
+</html>
