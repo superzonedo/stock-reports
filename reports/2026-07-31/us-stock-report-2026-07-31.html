@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美股收盤日報｜2026-07-31</title>
+<style>
+  :root{
+    --bg:#0b0e14;
+    --bg-card:#131720;
+    --bg-card2:#171c27;
+    --border:#242b3a;
+    --text:#e6e9ef;
+    --text-dim:#9aa4b8;
+    --text-faint:#6b7488;
+    --green:#3ddc84;
+    --red:#ff5c5c;
+    --amber:#f5b942;
+    --blue:#5b8def;
+    --purple:#b892f5;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.7;
+    margin:0;
+    padding:0;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:28px 20px 80px;}
+  .masthead{
+    text-align:center;
+    padding:32px 16px 24px;
+    border-bottom:1px solid var(--border);
+    margin-bottom:28px;
+  }
+  .masthead h1{
+    font-size:1.9em;
+    margin:0 0 10px;
+    background:linear-gradient(90deg,#5b8def,#b892f5);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .masthead .meta{color:var(--text-faint);font-size:0.85em;}
+  section{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:24px 24px 26px;
+    margin-bottom:20px;
+  }
+  h2{
+    font-size:1.15em;
+    margin:0 0 16px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--border);
+    color:var(--text);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  h2 .num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:26px;height:26px;border-radius:7px;
+    background:linear-gradient(135deg,#5b8def,#b892f5);
+    color:#0b0e14;font-weight:700;font-size:0.7em;
+  }
+  h3{font-size:1em;color:var(--text-dim);margin:20px 0 10px;}
+  p{margin:0 0 12px;color:var(--text);}
+  .tldr{
+    font-size:1.02em;
+    background:var(--bg-card2);
+    border-left:3px solid var(--blue);
+    padding:14px 16px;
+    border-radius:8px;
+    margin-bottom:16px;
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+  .tag{
+    background:rgba(91,141,239,0.15);
+    border:1px solid rgba(91,141,239,0.4);
+    color:#8fb3ff;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:0.82em;
+  }
+  table{width:100%;border-collapse:collapse;margin:10px 0 18px;font-size:0.92em;}
+  th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--border);}
+  th{color:var(--text-faint);font-weight:600;font-size:0.85em;}
+  td.num{font-variant-numeric:tabular-nums;}
+  .up{color:var(--green);font-weight:600;}
+  .down{color:var(--red);font-weight:600;}
+  .flat{color:var(--text-dim);}
+  .na{color:var(--text-faint);font-style:italic;}
+  .callout{
+    background:var(--bg-card2);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:14px 16px;
+    margin:14px 0;
+  }
+  .callout.q strong{color:#8fb3ff;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr;}}
+  .heatmap{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px;}
+  .hcell{
+    flex:1 1 140px;
+    border-radius:10px;
+    padding:12px 14px;
+    border:1px solid var(--border);
+  }
+  .hcell .name{font-size:0.82em;color:var(--text-dim);margin-bottom:4px;}
+  .hcell .pct{font-size:1.25em;font-weight:700;}
+  .barrow{display:flex;align-items:center;gap:10px;margin:8px 0;}
+  .barrow .label{width:110px;font-size:0.85em;color:var(--text-dim);flex-shrink:0;}
+  .barrow .track{flex:1;background:var(--bg);border-radius:6px;overflow:hidden;height:20px;position:relative;border:1px solid var(--border);}
+  .barrow .fill{height:100%;border-radius:6px;}
+  .barrow .val{width:64px;text-align:right;font-size:0.85em;font-variant-numeric:tabular-nums;flex-shrink:0;}
+  .source-note{font-size:0.78em;color:var(--text-faint);margin-top:6px;}
+  .disclaimer{
+    text-align:center;color:var(--text-faint);font-size:0.8em;
+    padding:20px 10px 0;border-top:1px solid var(--border);margin-top:10px;
+  }
+  ul{margin:8px 0 14px;padding-left:22px;}
+  li{margin-bottom:6px;}
+  .badge{display:inline-block;padding:2px 9px;border-radius:6px;font-size:0.75em;font-weight:600;}
+  .badge.low{background:rgba(61,220,132,0.15);color:var(--green);}
+  .badge.mid{background:rgba(245,185,66,0.15);color:var(--amber);}
+  .badge.midhigh{background:rgba(255,150,80,0.15);color:#ff9650;}
+  .badge.high{background:rgba(255,92,92,0.15);color:var(--red);}
+  .footer-credit{text-align:center;color:var(--text-faint);font-size:0.82em;margin-top:26px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <h1>🇺🇸 美股收盤日報｜2026-07-31</h1>
+    <div class="meta">報告生成時間：台北時間 08:00　|　資料來源：CNBC、Yahoo Finance、24/7 Wall St.、Washington Post、TradingKey 等<br>
+    本報告由 超中毒（@oiiax88）製作，分享請註明出處</div>
+  </div>
+
+  <section id="s1-cover">
+    <h2><span class="num">1</span>今日一句話總結</h2>
+    <div class="tldr">
+      7/31（週五）美股三大指數同步收紅，Nasdaq 領漲 +1.0%，主因是 Microsoft（+15.5%）、Amazon（+15%）財報大超預期並上修 AI 資本支出（四大雲廠 2026 年合計資本支出上看 720–745 億美元），帶動亞股（南韓 KOSPI 單日暴漲近 14–18%，創史上最大單日漲幅）強力回補上週的科技拋售。但內部結構並不健康：等權重 ETF（RSP）逆勢下跌 -0.17%、SOX 半導體指數幾乎持平（+0.07%）、Apple 財報後重挫近 8%，顯示這波是「少數巨頭撐盤」而非全面性風險偏好回升；記憶體股（MU +18%、SNDK +22%）在單週內經歷暴跌又暴力反彈，波動劇烈，鈍化風險升溫。VIX 大幅回落至 17.09，油價受伊朗與荷莫茲海峽緊張情勢支撐續處高檔。
+    </div>
+    <div class="tags">
+      <span class="tag">指數強內部弱</span>
+      <span class="tag">內部強科技弱（半導體落後大型股）</span>
+      <span class="tag">AI硬體高位震盪</span>
+      <span class="tag">記憶體利好鈍化風險升溫</span>
+      <span class="tag">超跌反彈（亞股領軍）</span>
+    </div>
+  </section>
+
+  <section id="s2-index">
+    <h2><span class="num">2</span>大盤表現總覽</h2>
+    <table>
+      <tr><th>指數</th><th>收盤</th><th>漲跌幅</th><th>一句話狀態</th></tr>
+      <tr><td>Dow Jones</td><td class="num">52,485.03</td><td class="num up">+0.53%（+276.97）</td><td>穩健跟漲，落後 Nasdaq</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,489.72</td><td class="num up">+0.70%（+52.09）</td><td>創近期反彈新高</td></tr>
+      <tr><td>Nasdaq Composite</td><td class="num">25,373.85</td><td class="num up">+1.00%（+251.68）</td><td>三大指數最強，Big Tech 財報行情</td></tr>
+      <tr><td>Russell 2000</td><td class="num">約 2,953.80</td><td class="num up">約 +0.2%</td><td>小盤僅溫和跟漲，未過熱</td></tr>
+      <tr><td>SOX 半導體指數</td><td class="num">11,311.08</td><td class="num flat">+0.07%（+8.09）</td><td>幾乎持平，明顯落後 Nasdaq</td></tr>
+      <tr><td>VIX</td><td class="num">17.09</td><td class="num down">單日 -17.3%</td><td>恐慌急速降溫，波動壓縮</td></tr>
+    </table>
+    <div class="heatmap">
+      <div class="hcell" style="background:rgba(61,220,132,0.10);border-color:rgba(61,220,132,0.35);"><div class="name">Nasdaq</div><div class="pct up">+1.00%</div></div>
+      <div class="hcell" style="background:rgba(61,220,132,0.07);border-color:rgba(61,220,132,0.25);"><div class="name">S&P 500</div><div class="pct up">+0.70%</div></div>
+      <div class="hcell" style="background:rgba(61,220,132,0.05);border-color:rgba(61,220,132,0.2);"><div class="name">Dow</div><div class="pct up">+0.53%</div></div>
+      <div class="hcell" style="background:rgba(61,220,132,0.04);border-color:rgba(61,220,132,0.15);"><div class="name">Russell 2000</div><div class="pct up">≈+0.2%</div></div>
+      <div class="hcell" style="background:rgba(154,164,184,0.06);border-color:var(--border);"><div class="name">SOX</div><div class="pct flat">+0.07%</div></div>
+    </div>
+    <div class="source-note">來源：Washington Post／Barchart「How major US indexes fared Friday 7/31/2026」、247wallst 即時報價 widget（SOX／Russell 2000 為 247wallst 站內即時報價，與 Barchart 數值略有差異，以區間呈現）</div>
+
+    <div class="callout q"><strong>Dow vs Nasdaq 相對強弱：</strong>資金明確回流大型科技股，而非板塊輪動至傳統藍籌——Nasdaq +1.0% 大幅領先 Dow +0.53%，主因 MSFT／AMZN 財報行情。</div>
+    <div class="callout q"><strong>小盤是否過熱：</strong>否。Russell 2000 僅溫和上漲約 +0.2%，明顯落後大型科技股，顯示這波反彈仍集中在少數權值股，小盤未見資金追價跡象。</div>
+    <div class="callout q"><strong>SOX 相對 Nasdaq：</strong>SOX 幾乎持平（+0.07%）大幅落後 Nasdaq（+1.0%），半導體是「拖累」而非「領先」——當日漲幅主要由 MSFT、AMZN 等大型雲端／電商巨頭貢獻，而非晶片股。</div>
+  </section>
+
+  <section id="s3-recap">
+    <h2><span class="num">3</span>盤中復盤</h2>
+    <h3>盤前（含亞洲盤連動）</h3>
+    <p>南韓 KOSPI 單日狂飆，多家外媒引用數字在 +14%～+17.9% 之間（TradingKey 引述為 17.9%，收在 6,695.45 點，官方報導多稱「史上最大單日漲幅」），三星電子暴漲近 28%、SK Hynix 飆升約 30%，觸發買盤熔斷機制。這波反彈直接因為美股 Big Tech 盤後財報（MSFT、AMZN）優於預期，激勵全球 AI 供應鏈信心，並回補南韓股市過去三個交易日逾 17% 的重挫。美股期貨同步走高：道瓊期貨 +0.6%、標普期貨 +0.4%、Nasdaq-100 期貨受南韓帶動大漲 +1.2%。</p>
+    <h3>日內轉折點</h3>
+    <p>全日呈現單邊上漲格局，無明顯反轉時刻；主要分歧在個股層面——MSFT、AMZN 財報後強力上攻，AAPL 財報後同步下殺，形成指數內部「贏家全拿」的分化走勢。油價因伊朗傳出攻擊荷莫茲海峽油輪（美英海事安全機構尚未證實）而日內走高，但未引發全面 risk-off。</p>
+    <h3>尾盤與盤後</h3>
+    <p>美股以接近全日高點作收。盤後聚焦下週初的財報與總經數據，暫無查得其他重大盤後個股新聞。</p>
+    <div class="callout"><strong>核心驅動判斷：</strong>典型的 <strong>buy-the-dip + 財報驅動的軋空式反彈</strong>——南韓科技股在暴跌後因美股財報利多出現史詩級空頭回補，帶動全球 AI 供應鏈情緒同步升溫；但美股內部呈現「巨頭 sell-the-news／buy-the-news 分化」（AAPL 被 sell the news，MSFT/AMZN 被 buy the news），而非全面性 risk-on。</div>
+  </section>
+
+  <section id="s4-macro">
+    <h2><span class="num">4</span>宏觀環境</h2>
+
+    <h3>4.1 美債收益率</h3>
+    <table>
+      <tr><th>項目</th><th>最新</th><th>含義</th></tr>
+      <tr><td>2Y</td><td class="num">4.28%</td><td>反映市場對近端利率路徑的定價</td></tr>
+      <tr><td>10Y</td><td class="num">4.75%</td><td>殖利率處於相對高檔，反映油價推升的通膨疑慮</td></tr>
+      <tr><td>2Y-10Y 利差</td><td class="num up">+0.47%</td><td>維持正值（非倒掛），非典型衰退前兆訊號</td></tr>
+    </table>
+    <p>10Y 站上 4.75% 屬於近期相對高檔，若持續走高將對高本益比科技股估值構成壓力；今日科技股逆勢上漲，顯示財報利多暫時蓋過利率壓力，但這是脆弱平衡。</p>
+
+    <h3>4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+    <p>7/29 FOMC 會議前 CME FedWatch 顯示約 36% 機率升息 1 碼，最終 Fed 選擇維持利率於 3.50%–3.75% 區間不變。針對 9/16 下次會議，不同來源出現明顯分歧：centralbank.watch（直接引用 CME FedWatch，7/28 資料）顯示降息 1 碼機率約 <strong>54.4%</strong>；但另有市場評論指出，受油價推升通膨疑慮影響，<strong>升息</strong>機率的討論也在升溫。由於兩者引用時間點與方法論不同，本報告不作單一結論，僅如實呈現「降息與升息機率同時存在、市場尚未形成共識」的雙向不確定狀態——這本身就是需要留意的訊號。</p>
+
+    <h3>4.3 油價與地緣（獨立追蹤）</h3>
+    <table>
+      <tr><th>項目</th><th>價格</th><th>當日變化</th></tr>
+      <tr><td>WTI</td><td class="num">$84.67</td><td class="num up">+1%以上</td></tr>
+      <tr><td>Brent</td><td class="num">$90.12</td><td class="num up">+1%以上</td></tr>
+    </table>
+    <p>伊朗傳出攻擊荷莫茲海峽兩艘油輪，惟美英海事安全機構尚未證實；美伊緊張情勢持續，荷莫茲海峽通行大致受阻，Brent 七月單月漲幅接近 24–27%，為今年以來最大單月漲幅，能源與整體風險偏好之間的傳導風險仍在累積。</p>
+
+    <h3>4.4 其他宏觀資產</h3>
+    <table>
+      <tr><th>資產</th><th>價格</th><th>漲跌幅</th></tr>
+      <tr><td>DXY 美元指數</td><td class="num">99.864</td><td class="num down">-1.01%</td></tr>
+      <tr><td>黃金</td><td class="num">$4,042.97/oz</td><td class="num down">-1.47%</td></tr>
+      <tr><td>比特幣</td><td class="num">約 $63,870</td><td class="num down">-1.31%</td></tr>
+    </table>
+    <p>美元走弱、黃金與比特幣同步回落——資金明顯從避險資產轉向風險資產（股市），與當日 risk-on 的財報行情相符。</p>
+
+    <h3>4.5 當日經濟數據</h3>
+    <p class="na">密西根大學消費者信心指數（7/31 上午 10:00 ET 公布）搜尋未取得確切數值，暫無可靠數據；已知背景是油價與汽油價格走高持續壓抑消費者信心。</p>
+  </section>
+
+  <section id="s5-sector">
+    <h2><span class="num">5</span>板塊表現</h2>
+    <p class="na">搜尋未能取得 7/31 當日 11 大板塊 ETF 完整且可靠的收盤漲跌幅數據（多數來源僅提供 YTD 或非當日區間數據），依核心原則寧缺勿濫，故不呈現完整排名表與板塊柱狀圖。以下為可確認的質性判斷：</p>
+    <ul>
+      <li><strong>科技（大型雲端／電商）：</strong>明顯最強，MSFT、AMZN 財報行情帶動指數，但半導體（SOX 持平）並未同步走強，顯示科技內部分化。</li>
+      <li><strong>能源：</strong>油價上漲（WTI/Brent 均 +1% 以上，Brent 月漲近 24–27%）對能源股構成支撐，但當日個股/板塊漲跌幅未查得可靠數字。</li>
+      <li><strong>成長 vs 價值：</strong>成長股（Nasdaq +1.0%）明顯領先價值股／藍籌（Dow +0.53%）。</li>
+    </ul>
+  </section>
+
+  <section id="s6-style">
+    <h2><span class="num">6</span>風格與市場寬度</h2>
+    <table>
+      <tr><th>ETF</th><th>當日表現</th><th>回答的問題</th></tr>
+      <tr><td>SMH</td><td class="num">收 $540.93（單日漲跌幅未查得精確數字，但同步指標 SOX 當日僅 +0.07%，研判 SMH 走勢同樣接近持平）</td><td>半導體並未延續強勢，主線可能鬆動</td></tr>
+      <tr><td>IGV</td><td class="num down">-0.37%（收 $94.23）</td><td>軟體同步走弱，未見補漲跡象</td></tr>
+      <tr><td>RSP</td><td class="num down">-0.17%（收 $215.01）</td><td>等權重 ETF 逆勢下跌，而 SPY（市值加權）上漲 +0.70%——<strong>明確的「少數股拉指數」訊號，寬度不佳</strong></td></tr>
+      <tr><td>IWM</td><td class="num">收 $291.24（對應 Russell 2000 指數約 +0.2%）</td><td>小盤僅溫和參與，未見全面性追價</td></tr>
+    </table>
+    <div class="callout"><strong>寬度判斷：</strong>RSP 與 SPY 出現罕見的反向背離（RSP 跌、SPY 漲），加上 IGV 同步走弱、SOX 持平，指向今日漲勢高度集中在 MSFT、AMZN 兩檔財報巨頭身上，而非全面性 risk-on。新聞未提及 52 週新高/新低家數等寬度數據，暫無可靠數據可引用。</div>
+  </section>
+
+  <section id="s7-leaders">
+    <h2><span class="num">7</span>主線股追蹤</h2>
+
+    <h3>7.1 Magnificent 7</h3>
+    <table>
+      <tr><th>股票</th><th>當日漲跌幅</th><th>原因</th></tr>
+      <tr><td>MSFT</td><td class="num up">+15.51%</td><td>Q4 營收 900.1 億美元大超預期（預期 876.2 億），雲端業務單季突破 1,000 億美元</td></tr>
+      <tr><td>AMZN</td><td class="num up">約 +15%</td><td>財報優於預期，AI 晶片業務年化營收達 250 億美元，上修 2026 資本支出至 2,200 億美元</td></tr>
+      <tr><td>AAPL</td><td class="num down">約 -8%</td><td>Q3 財報 iPhone 銷售穩健但 Services、中國營收不如預期</td></tr>
+      <tr><td>NVDA</td><td class="num up">+3.46%</td><td>AI 硬體情緒回溫的受惠者</td></tr>
+      <tr><td>GOOGL</td><td class="na">暫無可靠當日數據</td><td>—</td></tr>
+      <tr><td>META</td><td class="na">暫無可靠當日（7/31）數據；註：7/30 財報後因營收展望疲弱、現金流不如預期重挫約 -9%</td><td>—</td></tr>
+      <tr><td>TSLA</td><td class="na">暫無可靠當日漲跌幅數據（收盤價約 $309–311 區間，來源略有出入）</td><td>—</td></tr>
+    </table>
+    <div class="barrow"><div class="label">MSFT</div><div class="track"><div class="fill" style="width:100%;background:var(--green);"></div></div><div class="val up">+15.5%</div></div>
+    <div class="barrow"><div class="label">AMZN</div><div class="track"><div class="fill" style="width:97%;background:var(--green);"></div></div><div class="val up">≈+15%</div></div>
+    <div class="barrow"><div class="label">NVDA</div><div class="track"><div class="fill" style="width:22%;background:var(--green);"></div></div><div class="val up">+3.5%</div></div>
+    <div class="barrow"><div class="label">AAPL</div><div class="track"><div class="fill" style="width:52%;background:var(--red);margin-left:auto;"></div></div><div class="val down">≈-8%</div></div>
+    <div class="callout"><strong>七巨頭是否集體行動：</strong>否，呈現極端分化——MSFT、AMZN 財報行情帶動大漲，AAPL 財報後重挫，NVDA 溫和跟漲，GOOGL／META／TSLA 當日數據不足以判斷。指數漲幅主要由 MSFT、AMZN 兩檔貢獻，而非七巨頭全面性上攻。</div>
+
+    <h3>7.2 記憶體主線（當前行情引擎）</h3>
+    <table>
+      <tr><th>股票</th><th>當日漲跌幅</th><th>收盤價</th></tr>
+      <tr><td>MU（Micron）</td><td class="num up">+18.36%</td><td class="num">$874.66</td></tr>
+      <tr><td>SNDK（SanDisk）</td><td class="num up">約 +22%</td><td class="num">$1,239.76</td></tr>
+      <tr><td>WDC（Western Digital）</td><td class="num up">約 +18%</td><td class="num">$544.26</td></tr>
+      <tr><td>STX（Seagate）</td><td class="num up">約 +16%</td><td class="num">$889.38</td></tr>
+      <tr><td>SK Hynix（ADS）</td><td class="num up">約 +16%</td><td class="num">$147.10</td></tr>
+    </table>
+    <p>記憶體股在單週內經歷「重挫 6–9%→暴力反彈 15–22%」的劇烈震盪，SanDisk 一個月內曾一度重挫 45%，如今單日反彈超過 20%。反彈主因 Amazon 上修資本支出至 2,200 億美元，重新確認雲端廠商對記憶體的採購力道；DRAM/NAND 合約價與現貨價動態本次搜尋未查得 TrendForce 最新更新，暫無可靠數據。</p>
+    <div class="callout"><strong>鈍化監測：</strong>需高度警惕。本週記憶體股出現「單日雙位數暴跌」與「單日雙位數暴力反彈」交替出現的極端波動型態，這種劇烈的雙向巨幅震盪，往往是超級循環頂部區域的典型特徵——市場對利多/利空的反應已經過度放大，顯示部位擁擠、槓桿資金主導，而非穩定的基本面重估。建議列為近期最需觀察的風險項目之一。</div>
+
+    <h3>7.3 AI 硬體核心</h3>
+    <table>
+      <tr><th>股票</th><th>當日／近日漲跌幅</th></tr>
+      <tr><td>AVGO（Broadcom）</td><td class="num up">+3.98%（註：為 7/30 數據，7/31 當日數據未查得，暫無可靠數據）</td></tr>
+      <tr><td>AMD</td><td class="num down">-1.90%（7/31）</td></tr>
+      <tr><td>TSM</td><td class="na">暫無可靠當日數據</td></tr>
+      <tr><td>ARM</td><td class="na">暫無可靠當日數據</td></tr>
+    </table>
+    <p><strong>擁擠度判斷：</strong>AMD 當日逆勢下跌，NVDA 僅溫和上漲 +3.46%，而記憶體股（MU/SNDK/WDC/STX）暴力反彈 16–22%，顯示短線資金明顯從 GPU／邏輯晶片轉向記憶體，資金在 AI 硬體內部發生快速輪動而非全面性追價。</p>
+
+    <h3>7.4 Rotation 代表股</h3>
+    <p>CAT（Caterpillar）Q2 財報預定於 8/4（週二）盤前公布，尚未公布，7/30 股價已提前反應上漲 +3.06%；7/31 當日數據未查得，暫無可靠數據。GEV（GE Vernova）7/31 收盤價 $990.29，較 6/30 歷史高點 $1,174.86 已回落，反映 AI 電力概念股近期降溫，惟精確單日漲跌幅未查得。Great Rotation（實體經濟 vs 科技）當日訊號不明確，暫無法給出明確結論。</p>
+  </section>
+
+  <section id="s8-movers">
+    <h2><span class="num">8</span>異動股與財報</h2>
+
+    <h3>8.1 當日重要異動</h3>
+    <table>
+      <tr><th>股票</th><th>漲跌幅</th><th>原因</th></tr>
+      <tr><td>MSFT</td><td class="num up">+15.51%</td><td>財報大超預期，史詩級單日漲幅</td></tr>
+      <tr><td>MU</td><td class="num up">+18.36%</td><td>記憶體反彈龍頭，收盤創當週高點</td></tr>
+      <tr><td>LRCX（Lam Research）</td><td class="num up">+17.98%</td><td>半導體設備股同步受惠記憶體反彈情緒</td></tr>
+      <tr><td>PWR（Quanta Services）</td><td class="num up">+17.26%</td><td>AI 電力基礎建設概念股走強</td></tr>
+      <tr><td>AAPL</td><td class="num down">約 -8%</td><td>財報 Services／中國營收不如預期</td></tr>
+    </table>
+    <p class="source-note">另有多檔非科技類個股出現雙位數異動（如 FICO -17%、CHRW -15.4%、LKQ -14.4%），多屬各自基本面事件，與 AI／科技主線關聯度低，市場當日呈現高度個股分歧（dispersion），但非系統性風險訊號。</p>
+
+    <h3>8.2 昨夜財報（7/30 盤後）</h3>
+    <table>
+      <tr><th>公司</th><th>是否 beat</th><th>指引</th><th>盤後/隔日反應</th></tr>
+      <tr><td>Microsoft</td><td class="up">Beat</td><td>雲端業務單季破 1,000 億美元</td><td class="up">+15.5%</td></tr>
+      <tr><td>Amazon</td><td class="up">Beat</td><td>上修 2026 資本支出至 2,200 億美元，AI 晶片業務年化 250 億美元</td><td class="up">≈+15%</td></tr>
+      <tr><td>Apple</td><td class="up">Beat（EPS）</td><td>Services／中國營收不如預期</td><td class="down">≈-8%</td></tr>
+      <tr><td>Meta</td><td class="down">Miss（EPS 6.18，遜於預期 1.04 美元）</td><td>營收展望疲弱、現金流不如預期</td><td class="down">≈-9%</td></tr>
+      <tr><td>Fortinet</td><td class="up">Beat</td><td>Q2 訂單量強勁</td><td class="up">+12%</td></tr>
+    </table>
+
+    <h3>8.3 未來 1–3 日重要財報與事件</h3>
+    <table>
+      <tr><th>日期</th><th>公司/事件</th><th>關注點</th></tr>
+      <tr><td>8/4（二）</td><td>Caterpillar（CAT）Q2 財報</td><td>實體經濟／AI 電力交集代表股，觀察 Great Rotation 是否延續</td></tr>
+    </table>
+    <p class="na">其餘近期財報日曆（如 8/1–8/3）本次搜尋取得的資料與已知財報時序（如 AAPL 已於 7/31 前公布）互相矛盾，可信度不足，暫不列出，避免誤導。</p>
+  </section>
+
+  <section id="s9-playbook">
+    <h2><span class="num">9</span>輪動判斷與明日 Playbook</h2>
+
+    <h3>9.1 明確回答</h3>
+    <ul>
+      <li><strong>資金主要流入：</strong>MSFT、AMZN 兩大財報巨頭，以及受其資本支出上修帶動的記憶體股（MU/SNDK/WDC/STX）。</li>
+      <li><strong>資金主要流出：</strong>AAPL（財報失望）、避險資產（黃金、美元、比特幣同步走弱）。</li>
+      <li><strong>AI 主線是否仍健康：</strong>硬體/大型雲端仍健康（資本支出持續上修），但記憶體股波動已達極端水準，鈍化風險升溫；半導體（SOX）當日未跟漲，需留意主線是否正在收斂到極少數個股。</li>
+      <li><strong>半導體 vs 軟體：</strong>兩者當日皆弱於大盤（SOX +0.07%、IGV -0.37%），相對強弱無明顯變化，皆落後於大型雲端／電商巨頭。</li>
+      <li><strong>Great Rotation：</strong>當日訊號不明確，CAT 尚未公布財報，暫無法判斷是否延續。</li>
+      <li><strong>當前更像趨勢延續還是階段性頂部震盪：</strong>綜合 RSP 與 SPY 背離、記憶體股極端雙向波動、SOX 落後大盤等訊號，更接近<strong>「指數強、內部弱的階段性震盪」</strong>，而非健康的全面性趨勢延續。</li>
+    </ul>
+
+    <h3>9.2 明日觀察清單</h3>
+    <ul>
+      <li><strong>宏觀：</strong>10Y 是否持續站上 4.75%；WTI/Brent 是否因荷莫茲海峽情勢進一步走高；密西根消費者信心指數公布結果。</li>
+      <li><strong>亞洲盤先行指標：</strong>KOSPI／三星／SK Hynix 在單日暴漲 14–18% 後是否出現獲利了結賣壓（記憶體超級循環典型的「見光死」型態）。</li>
+      <li><strong>大盤：</strong>SMH 能否轉強於 QQQ，若持續落後代表半導體主線鬆動；RSP 能否轉正，是判斷寬度是否修復的關鍵指標。</li>
+      <li><strong>個股：</strong>
+        <ul>
+          <li>MU / SNDK / WDC / STX — 觀察暴力反彈後是否出現獲利了結，驗證鈍化假設</li>
+          <li>MSFT / AMZN — 財報行情能否延續至下週，或出現 sell-the-news</li>
+          <li>AAPL — 財報重挫後是否止穩，或延續賣壓</li>
+          <li>CAT — 8/4 財報前的股價定位，觀察 Great Rotation 訊號</li>
+          <li>SK Hynix / Samsung — 亞股單日史詩級反彈後的隔日走勢，作為美股半導體開盤前情緒指標</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="s10-risk">
+    <h2><span class="num">10</span>風險提示與最終結論</h2>
+
+    <h3>10.1 風險等級表</h3>
+    <table>
+      <tr><th>風險維度</th><th>當前狀態</th><th>等級</th></tr>
+      <tr><td>宏觀利率（升息風險）</td><td>9/16 FOMC 機率分歧（降息 vs 升息並存），10Y 站上 4.75% 高檔</td><td><span class="badge midhigh">中高</span></td></tr>
+      <tr><td>記憶體循環反轉</td><td>單週暴跌又暴力反彈，波動極端，鈍化跡象明顯</td><td><span class="badge high">高</span></td></tr>
+      <tr><td>AI capex 持續性</td><td>MSFT/AMZN 上修資本支出，短期無疑慮</td><td><span class="badge low">低</span></td></tr>
+      <tr><td>地緣/油價</td><td>伊朗攻擊荷莫茲海峽油輪未經證實，美伊緊張未解</td><td><span class="badge midhigh">中高</span></td></tr>
+      <tr><td>中美科技戰</td><td>本次搜尋未見當日重大消息</td><td><span class="badge mid">中</span></td></tr>
+      <tr><td>市場寬度惡化</td><td>RSP 逆勢下跌、IGV 走弱，寬度明確不佳</td><td><span class="badge midhigh">中高</span></td></tr>
+      <tr><td>財報風險</td><td>AAPL/META 已顯示財報後劇烈重挫案例，下週 CAT 待驗證</td><td><span class="badge mid">中</span></td></tr>
+    </table>
+    <p><strong>當前最需警惕的前 3 項風險：</strong>①記憶體循環的鈍化／反轉風險（波動已達極端）　②市場寬度持續惡化，反彈集中在極少數權值股　③油價與美伊地緣風險升高對通膨與 Fed 路徑的干擾</p>
+
+    <h3>10.2 最終結論</h3>
+    <p>7/31 美股三大指數同步收紅，Nasdaq 領漲，主要由 MSFT、AMZN 兩大財報巨頭驅動，並帶動亞股（KOSPI）史詩級空頭回補。然而市場內部結構偏弱：等權重 ETF 逆勢收黑、半導體指數幾乎持平、AAPL 財報後重挫，顯示這是一場「集中度極高」的反彈，而非全面性風險偏好回升。記憶體股在單週內經歷暴跌與暴力反彈的劇烈雙向波動，是本輪循環中最值得警惕的訊號。整體而言，市場處於財報密集期的高波動階段，趨勢的健康度仍待下週數據驗證。</p>
+    <p><strong>當前市場階段：</strong>高位震盪（指數強、內部弱）</p>
+    <p><strong>操作傾向（中性觀察，不構成投資建議）：</strong>不宜單純追高大盤指數，因漲勢集中度高、寬度不佳；記憶體股經歷單週雙向巨幅波動後，追價風險偏高，適合觀望或嚴格控制部位；AI 資本支出仍是最具確定性的主線，MSFT/AMZN 財報行情可持續關注，但需留意 sell-the-news 風險；整體建議控制槓桿與部位大小，等待寬度指標（RSP、SMH）確認修復後再提高部位。</p>
+    <p><strong>最值得關注的 5 個信號（明天盤中可驗證）：</strong></p>
+    <ul>
+      <li>RSP 是否由跌轉漲，驗證市場寬度是否修復</li>
+      <li>MU/SNDK/WDC/STX 是否出現獲利了結賣壓（單日跌幅是否超過 5%）</li>
+      <li>SMH 相對 QQQ 的強弱是否反轉，驗證半導體主線是否回歸</li>
+      <li>KOSPI／三星／SK Hynix 隔夜走勢，驗證亞股反彈的延續性</li>
+      <li>10Y 殖利率是否突破 4.80%，觀察利率對科技股估值的壓力</li>
+    </ul>
+  </section>
+
+  <div class="disclaimer">本報告為中性市場觀察，基於公開資料整理分析，不構成任何投資建議。市場有風險，投資決策請自行判斷並承擔相應風險。</div>
+  <div class="footer-credit">超中毒（@oiiax88）製作　|　分享請註明出處</div>
+
+</div>
+</body>
+</html>
