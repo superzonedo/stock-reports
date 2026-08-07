@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美股收盤日報｜2026-08-06</title>
+<style>
+  :root{
+    --bg:#0b0e14;
+    --card:#131822;
+    --card2:#161d29;
+    --border:#232b3a;
+    --text:#e6edf3;
+    --sub:#8b96a5;
+    --muted:#5b6472;
+    --green:#3fb950;
+    --red:#f85149;
+    --gold:#d4a72c;
+    --blue:#58a6ff;
+    --purple:#bc8cff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:linear-gradient(180deg,#090c11,#0b0e14 300px);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;
+    line-height:1.7;
+    padding:0 0 60px 0;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px;}
+  header.masthead{
+    text-align:center;
+    padding:40px 20px 28px;
+    border-bottom:1px solid var(--border);
+    margin-bottom:28px;
+    background:radial-gradient(ellipse at top, rgba(212,167,44,0.08), transparent 60%);
+  }
+  header.masthead h1{
+    font-size:28px;margin:0 0 10px;color:var(--gold);letter-spacing:0.5px;
+  }
+  header.masthead .meta{color:var(--sub);font-size:13px;}
+  header.masthead .brand{color:var(--muted);font-size:12px;margin-top:6px;}
+  section{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:24px 26px;
+    margin-bottom:22px;
+  }
+  section h2{
+    font-size:19px;margin:0 0 16px;color:var(--gold);
+    display:flex;align-items:center;gap:8px;
+    border-bottom:1px solid var(--border);padding-bottom:12px;
+  }
+  section h3{font-size:15px;color:var(--blue);margin:22px 0 10px;}
+  p{margin:8px 0;color:var(--text);}
+  .sub{color:var(--sub);font-size:13.5px;}
+  .tldr{
+    background:var(--card2);border-left:3px solid var(--gold);
+    padding:14px 18px;border-radius:8px;font-size:15px;margin-bottom:14px;
+  }
+  .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{
+    background:rgba(212,167,44,0.12);border:1px solid rgba(212,167,44,0.4);
+    color:var(--gold);padding:5px 12px;border-radius:20px;font-size:12.5px;font-weight:600;
+  }
+  table{width:100%;border-collapse:collapse;margin:12px 0 6px;font-size:13.5px;}
+  th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--border);}
+  th{color:var(--sub);font-weight:600;font-size:12.5px;text-transform:uppercase;letter-spacing:0.3px;}
+  td.num{font-variant-numeric:tabular-nums;}
+  .up{color:var(--green);font-weight:700;}
+  .down{color:var(--red);font-weight:700;}
+  .flat{color:var(--sub);}
+  .qa{background:var(--card2);border-radius:10px;padding:14px 18px;margin:12px 0;}
+  .qa b{color:var(--blue);}
+  .na{color:var(--muted);font-style:italic;}
+  .callout{
+    background:rgba(88,166,255,0.08);border:1px solid rgba(88,166,255,0.25);
+    border-radius:10px;padding:14px 18px;margin:14px 0;font-size:14px;
+  }
+  .callout.warn{background:rgba(248,81,73,0.08);border-color:rgba(248,81,73,0.3);}
+  .callout.good{background:rgba(63,185,80,0.08);border-color:rgba(63,185,80,0.3);}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media (max-width:640px){.grid2{grid-template-columns:1fr;}}
+
+  /* heatmap */
+  .heatgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0;}
+  @media (max-width:640px){.heatgrid{grid-template-columns:repeat(2,1fr);}}
+  .heatcell{
+    border-radius:10px;padding:14px 10px;text-align:center;border:1px solid var(--border);
+  }
+  .heatcell .name{font-size:12px;color:rgba(255,255,255,0.75);margin-bottom:6px;}
+  .heatcell .pct{font-size:20px;font-weight:800;}
+  .heatcell .px{font-size:11px;color:rgba(255,255,255,0.6);margin-top:4px;}
+
+  /* bar chart */
+  .barchart{margin:16px 0;}
+  .barrow{display:flex;align-items:center;gap:10px;margin:9px 0;}
+  .barrow .label{width:120px;font-size:13px;color:var(--sub);flex-shrink:0;}
+  .barrow .track{flex:1;background:#0d1219;border-radius:6px;height:22px;position:relative;overflow:hidden;}
+  .barrow .fill{height:100%;border-radius:6px;display:flex;align-items:center;}
+  .barrow .fill.negative{background:linear-gradient(90deg,#f85149,#c0392b);justify-content:flex-start;}
+  .barrow .fill.positive{background:linear-gradient(90deg,#2ea043,#3fb950);justify-content:flex-start;}
+  .barrow .val{width:64px;text-align:right;font-size:13px;font-weight:700;flex-shrink:0;}
+
+  .risktable td:nth-child(3){font-weight:700;}
+  .risk-low{color:var(--green);}
+  .risk-mid{color:#e3b341;}
+  .risk-midhigh{color:#f0883e;}
+  .risk-high{color:var(--red);}
+
+  footer{
+    text-align:center;color:var(--muted);font-size:12px;margin-top:30px;padding:0 20px;
+  }
+  .disclaimer{
+    text-align:center;color:var(--sub);font-size:12.5px;margin:26px 20px;
+    border-top:1px solid var(--border);padding-top:18px;
+  }
+  ul{margin:8px 0;padding-left:22px;}
+  li{margin:4px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1>🇺🇸 美股收盤日報｜2026-08-06</h1>
+  <div class="meta">報告生成時間：台北時間 2026-08-07 08:00　|　資料來源：CNBC、Reuters、TheStreet、Yahoo Finance、24/7 Wall St.、STL.News 等</div>
+  <div class="brand">本報告由「超中毒（@oiiax88）」製作，分享請註明出處</div>
+</header>
+
+<!-- S1 -->
+<section id="s1-cover">
+  <h2>S1｜今日一句話總結</h2>
+  <div class="tldr">
+    美股在創下本週歷史高點後溫和拉回：Dow -0.85%、S&amp;P 500 -0.18%、Nasdaq 近乎持平（-0.06%），跌勢主因是記憶體／儲存股閃崩（WDC -16%、SanDisk -11%、Micron -6%）——SanDisk 財報優於預期但下季指引不如共識，觸發亞洲盤 KOSPI 重挫 4.59%、SK Hynix -10%、三星 -6.3%，隔夜情緒回灌美股。同時 Brent 原油因荷莫茲海峽局勢生變單日大漲近 4%，10 年期殖利率彈升至 4.67%，對成長股估值形成雙重壓力。但 VIX 不升反降至 15.15（-4.17%），加上 Airbnb、Cloudflare 財報後盤後分別大漲 11%、14.9%，顯示這是「主題性拋售」而非系統性 risk-off。市場現正等待週五非農就業報告作為下一個方向性訊號。
+  </div>
+  <div class="tags">
+    <span class="tag">📌 記憶體利好鈍化</span>
+    <span class="tag">📌 內部強科技弱</span>
+  </div>
+</section>
+
+<!-- S2 -->
+<section id="s2-index">
+  <h2>S2｜大盤表現總覽</h2>
+  <div class="heatgrid">
+    <div class="heatcell" style="background:rgba(248,81,73,0.16);border-color:rgba(248,81,73,0.4);">
+      <div class="name">Dow Jones</div><div class="pct down">-0.85%</div><div class="px">53,885.10（-464.02）</div>
+    </div>
+    <div class="heatcell" style="background:rgba(248,81,73,0.08);border-color:rgba(248,81,73,0.25);">
+      <div class="name">S&amp;P 500</div><div class="pct down">-0.18%</div><div class="px">7,709.96（-13.59）</div>
+    </div>
+    <div class="heatcell" style="background:rgba(139,150,165,0.08);">
+      <div class="name">Nasdaq Composite</div><div class="pct down">-0.06%</div><div class="px">26,348.35（-15.09）</div>
+    </div>
+    <div class="heatcell" style="background:rgba(248,81,73,0.10);border-color:rgba(248,81,73,0.3);">
+      <div class="name">Russell 2000</div><div class="pct down">-0.60%</div><div class="px">3,001.55</div>
+    </div>
+    <div class="heatcell" style="background:rgba(139,150,165,0.06);">
+      <div class="name">SOX 半導體指數</div><div class="pct na">暫無可靠數據</div><div class="px">記憶體拖累，方向判斷為收黑</div>
+    </div>
+    <div class="heatcell" style="background:rgba(63,185,80,0.10);border-color:rgba(63,185,80,0.3);">
+      <div class="name">VIX</div><div class="pct up">-4.17%</div><div class="px">收 15.15（恐慌情緒下降）</div>
+    </div>
+  </div>
+  <p class="sub">日內高低點：暫無可靠數據來源，本表僅呈現收盤數值。</p>
+
+  <div class="qa">
+    <p><b>Dow vs Nasdaq 相對強弱：</b>Dow 跌幅最深（-0.85%），Nasdaq 幾乎持平（-0.06%），但這並非典型「科技→價值」輪動——Dow 成分股中 Honeywell Aerospace 財報不佳、Fiserv 大幅下修財測（-12%）是主要拖累，而 Nasdaq 內部則是記憶體股與部分 SaaS（HubSpot、Datadog）財測不佳所致。資金並未系統性棄科技，而是集中拋售特定財報「利多出盡」個股。</p>
+    <p><b>小盤是否領漲：</b>Russell 2000 -0.6%，與大盤同步走弱，並未展現獨立走強，無過熱訊號。</p>
+    <p><b>SOX 相對 Nasdaq：</b>記憶體閃崩（WDC、SanDisk、Micron、Seagate 全面重挫）拖累半導體類股，賣壓同情性外溢至 Intel、AMD、Marvell（同步走弱），SOX 對 Nasdaq 呈現拖累角色。</p>
+  </div>
+</section>
+
+<!-- S3 -->
+<section id="s3-recap">
+  <h2>S3｜盤中復盤</h2>
+  <h3>盤前（含亞洲盤連動）</h3>
+  <p>週三（8/5）美股盤後，SanDisk（SNDK）與 Western Digital（WDC）公布 Q4 財報：營收與獲利均優於預期（SanDisk 非 GAAP EPS $39.25、營收 $8.97B，數據中心營收季增 103%），但 SanDisk 對 FY27 Q1 的營收指引中值（約 $10.55B）低於市場共識（$10.8B），觸發拋售。此訊息隔夜直接衝擊亞股記憶體鏈：KOSPI 重挫 4.59% 收 6,295.44，SK Hynix -10.37%，三星電子 -6.30%，日本 Kioxia -10.24%，Nikkei 225 下跌 0.93% 收 65,683.26。美股期貨開盤時 Nasdaq 期貨走弱（約 -0.45%），Dow／S&amp;P 期貨僅微幅上漲，顯示賣壓從一開始就集中在記憶體／科技，而非全面性。</p>
+
+  <h3>日內轉折點</h3>
+  <p>記憶體與儲存股（WDC -16%、SanDisk -11%、Micron -6%、Seagate -6%、Roundhill 記憶體 ETF「DRAM」-7%）開盤即重挫並全天維持跌勢；由於該 ETF 前三大持股（三星、SK Hynix、Micron）合計占比達 72%，賣壓被高度放大並外溢至 Intel、AMD、Marvell 等半導體同業（「同情性賣壓」，幅度較溫和）。與此同時，Brent 原油因荷莫茲海峽協議樂觀情緒逆轉、地緣風險重燃，全天上漲近 4% 至 $82.88（WTI 同步上漲約 3.3% 至 $77.7~78.0），推升 10 年期公債殖利率至 4.67%（前一日 4.63%），對成長股估值形成額外壓力。個股財報面，AppLovin（-18.4%）、Fiserv（下修財測，-12%）、HubSpot（盤前 -24%）、Datadog（盤前 -16%）因財測不如預期同步重挫，是指數內部走弱的另一主因。</p>
+
+  <h3>尾盤與盤後</h3>
+  <p>標普 500 全天呈現「開低走穩」，收盤僅小跌 0.18%，顯示賣壓集中而非全面性；VIX 不升反降 4.17% 至 15.15，反映市場並未進入恐慌模式。盤後財報密集公布：Airbnb（ABNB）Q2 淨利 8.16 億美元優於預期並上修全年展望，盤後大漲 11%；Cloudflare（NET）Q2 營收逾 6.96 億美元優於預期，盤後大漲 14.9%；Lyft 同場公布財報，惟市場反應暫無可靠數據。</p>
+
+  <div class="callout">
+    <b>核心驅動判斷：</b>屬於「記憶體主線利多出盡（sell the news）」＋「地緣風險重燃推升油價／殖利率」的雙重壓力，而非全面性 risk-off；軟體股同時呈現財報選股分化（Airbnb、Cloudflare 強 vs HubSpot、Datadog 弱），市場對「財測不如預期」的容錯率明顯降低。
+  </div>
+</section>
+
+<!-- S4 -->
+<section id="s4-macro">
+  <h2>S4｜宏觀環境</h2>
+
+  <h3>4.1 美債殖利率</h3>
+  <table>
+    <tr><th>項目</th><th>最新</th><th>日變化</th><th>含義</th></tr>
+    <tr><td>2Y</td><td class="na" colspan="3">暫無可靠數據（8/4 約 4.21%，8/6 精確收盤值未能取得可靠來源）</td></tr>
+    <tr><td>10Y</td><td class="num">4.67%</td><td class="num down">+0.04pp（前值 4.63%）</td><td>投資人為週五非農就業報告布局，殖利率走升</td></tr>
+    <tr><td>2Y-10Y 利差</td><td class="na" colspan="3">暫無可靠數據</td></tr>
+  </table>
+  <p class="sub">10Y 殖利率已彈升至近期高點附近，若持續走高，將對記憶體／AI 等高估值成長股的估值形成進一步壓力。</p>
+
+  <h3>4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+  <p>CME FedWatch（9/16 FOMC）：降息 25bp 機率 <b>93.6%</b>，維持不變機率 <b>6.4%</b>，升息機率趨近於 0%——市場幾乎完全押注降息，未定價任何升息可能。此預期主要受週三夜盤偏弱的私人部門就業與服務業數據推動；惟週四油價與殖利率同步走高，顯示市場正在「降息預期」與「油價驅動的通膨黏性疑慮」之間拉扯，屬於觀察重點而非明確結論。</p>
+
+  <h3>4.3 油價與地緣（獨立追蹤）</h3>
+  <p>WTI $77.70~77.97（+3.3%），Brent $82.88（+近 4%）。市場原先敘事（週三）為美國與伊朗即將就荷莫茲海峽航運通道達成臨時協議，但週四不確定性重燃——據報導紅海／亞丁灣一帶傳出新的海上攻擊事件，加上斡旋能否成局仍有變數，推升油價並利多能源股，但對運輸、製造等燃料敏感產業形成逆風，同時強化通膨黏性疑慮，複雜化 Fed 政策路徑。</p>
+
+  <h3>4.4 其他宏觀資產</h3>
+  <table>
+    <tr><th>資產</th><th>價格</th><th>漲跌幅</th></tr>
+    <tr><td>DXY 美元指數</td><td class="num">99.76</td><td class="num up">+0.09%</td></tr>
+    <tr><td>黃金</td><td class="num">$4,242.15（收盤，來源：TradingEconomics）</td><td class="num down">-0.12%</td></tr>
+    <tr><td>比特幣</td><td class="num">約 $64,500</td><td class="num flat">全天窄幅盤整，變化不大</td></tr>
+  </table>
+  <p class="sub">⚠️ 資料差異說明：CNBC 盤前報價顯示黃金因避險買盤（地緣風險＋降息預期升溫）上漲至 $4,342（+0.86%），但 TradingEconomics 官方收盤數據顯示黃金收於 $4,242.15，較前一日下跌 0.12%——早盤漲勢尾盤幾乎完全回吐。本報告採用較貼近正式收盤的 TradingEconomics 數據，惟提醒讀者留意黃金日內波動劇烈。</p>
+
+  <h3>4.5 當日經濟數據</h3>
+  <table>
+    <tr><th>數據</th><th>實際</th><th>預期</th><th>市場解讀</th></tr>
+    <tr>
+      <td>Challenger 7月企業裁員報告</td>
+      <td class="num">33,429 人</td>
+      <td class="num">較 6 月 45,849 人 -27%</td>
+      <td>兩年來最低月度裁員數，支持「軟著陸」敘事，強化 9 月降息預期；真正重磅的 7 月非農就業報告將於週五公布</td>
+    </tr>
+  </table>
+</section>
+
+<!-- S5 -->
+<section id="s5-sector">
+  <h2>S5｜板塊表現（質化排序）</h2>
+  <div class="callout warn">
+    ⚠️ 說明：本日各板塊 ETF 精確漲跌幅暫無可靠即時數據來源，以下依新聞質化描述排序方向與強弱，長度僅代表相對強弱程度，非精確百分比。
+  </div>
+  <div class="barchart">
+    <div class="barrow"><div class="label">能源 Energy</div><div class="track"><div class="fill positive" style="width:85%"></div></div><div class="val up">領漲</div></div>
+    <div class="barrow"><div class="label">金融 Financials</div><div class="track"><div class="fill positive" style="width:40%"></div></div><div class="val flat">持平偏強</div></div>
+    <div class="barrow"><div class="label">大盤整體</div><div class="track"><div class="fill negative" style="width:20%"></div></div><div class="val down">溫和下跌</div></div>
+    <div class="barrow"><div class="label">工業 Industrials</div><div class="track"><div class="fill negative" style="width:30%"></div></div><div class="val down">承壓</div></div>
+    <div class="barrow"><div class="label">非核心消費</div><div class="track"><div class="fill negative" style="width:30%"></div></div><div class="val down">承壓</div></div>
+    <div class="barrow"><div class="label">科技（記憶體拖累）</div><div class="track"><div class="fill negative" style="width:75%"></div></div><div class="val down">領跌</div></div>
+  </div>
+  <div class="qa">
+    <p><b>最強／最弱：</b>能源受惠油價大漲明顯領先；科技板塊因記憶體閃崩（WDC、SanDisk、Micron）成為最大拖累。</p>
+    <p><b>成長 vs 價值 / 週期 vs 防禦：</b>金融股受惠殖利率走升改善放貸利差，但也反映對未來借貸成本的疑慮，呈現中性偏強；工業與非核心消費因油價上漲的燃料成本敏感度而承壓，屬於典型的「油價衝擊」板塊分佈，而非成長轉防禦的系統性輪動。</p>
+    <p><b>是否高切低：</b>否，未見資金從高位科技股系統性切換至低位價值股，本次更像是記憶體「主題性」拋售疊加油價衝擊的複合結果。</p>
+  </div>
+</section>
+
+<!-- S6 -->
+<section id="s6-style">
+  <h2>S6｜風格與市場寬度</h2>
+  <table>
+    <tr><th>ETF</th><th>當日漲跌幅</th><th>回答的問題</th></tr>
+    <tr><td>SMH</td><td class="na">精確數據暫無，惟半導體類股全天普遍走弱（記憶體 -6%~-16%、Intel/AMD/Marvell 同步走低）</td><td>半導體主線鈍化訊號明確，判斷 SMH 收黑</td></tr>
+    <tr><td>IGV</td><td class="na">暫無可靠數據</td><td>軟體股呈現財報分化（Airbnb、Cloudflare 大漲 vs HubSpot、Datadog 重挫），尚未見全面補漲</td></tr>
+    <tr><td>RSP</td><td class="na">暫無可靠數據</td><td>下跌集中在特定主題股，非全面普跌，方向上可能優於 SPY，惟缺乏數據驗證</td></tr>
+    <tr><td>IWM</td><td class="num down">-0.6%（即 Russell 2000）</td><td>小盤與大盤同步走弱，未展現獨立參與或抗跌</td></tr>
+  </table>
+  <div class="qa">
+    <p><b>寬度替代判讀：</b>依 recap 新聞判斷，今日下跌集中在記憶體／儲存與少數財測不佳的個股（HubSpot、Datadog、AppLovin、Fiserv），能源與部分工業股偏強，屬於「主題性下跌」而非普遍性下跌；惟 VIX 走低也支持此判斷。52 週新高／新低家數、漲跌家數等寬度數據暫無可靠來源，故不列入。</p>
+  </div>
+</section>
+
+<!-- S7 -->
+<section id="s7-leaders">
+  <h2>S7｜主線股追蹤</h2>
+
+  <h3>7.1 Magnificent 7</h3>
+  <table>
+    <tr><th>股票</th><th>漲跌幅</th><th>原因</th></tr>
+    <tr><td>NVDA / MSFT / AAPL / GOOGL / AMZN / META / TSLA</td><td class="na">個股當日精確漲跌幅暫無可靠數據</td><td>週三 NVDA 曾因 SpaceX 宣布獨家採用其晶片上漲逾 3%，週四未見同等催化，七巨頭整體無重大單一新聞</td></tr>
+  </table>
+  <div class="barchart">
+    <div class="barrow"><div class="label">MAGS 等權ETF</div><div class="track"><div class="fill negative" style="width:15%"></div></div><div class="val flat">$68.29–69.13 區間</div></div>
+  </div>
+  <p class="sub">七巨頭是否集體行動：否。追蹤七巨頭等權表現的 Roundhill MAGS ETF 全天僅在 $68.29–69.13 窄幅區間震盪（較盤前 $68.60 走弱），顯示七巨頭當日僅溫和整理，指數下跌主因來自記憶體與部分財報個股，而非七巨頭集體拖累或領漲。</p>
+
+  <h3>7.2 記憶體主線（當前行情引擎）</h3>
+  <div class="barchart">
+    <div class="barrow"><div class="label">Western Digital</div><div class="track"><div class="fill negative" style="width:80%"></div></div><div class="val down">-16%</div></div>
+    <div class="barrow"><div class="label">SanDisk</div><div class="track"><div class="fill negative" style="width:55%"></div></div><div class="val down">-11%</div></div>
+    <div class="barrow"><div class="label">DRAM ETF</div><div class="track"><div class="fill negative" style="width:35%"></div></div><div class="val down">-7%</div></div>
+    <div class="barrow"><div class="label">Micron</div><div class="track"><div class="fill negative" style="width:30%"></div></div><div class="val down">-6%</div></div>
+    <div class="barrow"><div class="label">Seagate</div><div class="track"><div class="fill negative" style="width:30%"></div></div><div class="val down">-6%</div></div>
+    <div class="barrow"><div class="label">SK Hynix（韓股）</div><div class="track"><div class="fill negative" style="width:50%"></div></div><div class="val down">-10.4%</div></div>
+    <div class="barrow"><div class="label">三星電子（韓股）</div><div class="track"><div class="fill negative" style="width:31%"></div></div><div class="val down">-6.3%</div></div>
+    <div class="barrow"><div class="label">Kioxia（日股）</div><div class="track"><div class="fill negative" style="width:51%"></div></div><div class="val down">-10.2%</div></div>
+  </div>
+  <p><b>關鍵新聞：</b>WDC、SanDisk 週三盤後公布 Q4 財報均優於預期（SanDisk 數據中心營收季增 103% 至 $2.98B，全年營收 $20.2B vs 去年 $7.4B；並簽下 5 筆總值 940 億美元的長約），但 SanDisk 對 FY27 Q1 的營收指引中值低於市場共識，觸發拋售。UBS 將 WDC 目標價下修至 $525（原 $560）但維持中性評級；Citi、Barclays 仍看好逢低布局；RBC 則示警利潤率可能已近頂峰。Yahoo Finance 分析師 Brian Sozzi 稱這次賣壓「看起來不合理」。</p>
+  <div class="callout warn">
+    <b>🔍 鈍化監測：</b>訊號明確浮現——儘管財報實質面強勁（SanDisk 簽下巨額長約訂單），股價仍重挫，反映此前 SanDisk 年初至今 +469%、Western Digital +202%、Micron +213% 的天量漲幅已計入過高預期，「beat」不再足以推動股價，是典型的鈍化（deceleration）警訊。Polymarket 預測市場仍給予 Micron 月底站上 $700 機率 85.5%，顯示市場尚未全面看空，但賣壓已擴散至 SK Hynix、三星、Kioxia 等亞洲同業，需觀察這是短期預期重置，還是記憶體超級循環見頂的前兆。
+  </div>
+
+  <h3>7.3 AI 硬體核心</h3>
+  <p>AVGO、AMD、TSM、ARM 當日精確漲跌幅暫無可靠數據；報導指出記憶體賣壓「同情性外溢」（sympathy selling）至半導體大盤，Intel、AMD、Marvell 同步「溫和走弱」。擁擠度判斷：資金似從記憶體／儲存流向現金與防禦，而非單純轉向其他 AI 硬體次族群；AI 硬體核心股呈現跟跌，但幅度明顯較記憶體溫和，尚未見系統性 sell the news。</p>
+
+  <h3>7.4 Rotation 代表股</h3>
+  <p class="na">CAT、GE Vernova（GEV）當日精確表現暫無可靠數據，故 Great Rotation 是否延續無法在今日做出明確判斷。</p>
+</section>
+
+<!-- S8 -->
+<section id="s8-movers">
+  <h2>S8｜異動股與財報</h2>
+
+  <h3>8.1 當日重要異動</h3>
+  <table>
+    <tr><th>股票</th><th>漲跌幅</th><th>原因</th><th>對主線的含義</th></tr>
+    <tr><td>Western Digital (WDC)</td><td class="down num">-16%</td><td>Q4 財報優於預期但下季指引不如共識</td><td>記憶體鈍化訊號確立</td></tr>
+    <tr><td>SanDisk (SNDK)</td><td class="down num">-11%</td><td>FY27 Q1 營收指引中值低於共識</td><td>同上</td></tr>
+    <tr><td>AppLovin (APP)</td><td class="down num">-18.4%</td><td>財報好壞參半，高估值容忍度下降</td><td>AI 廣告／軟體股估值修正風險</td></tr>
+    <tr><td>Fiserv (FI)</td><td class="down num">-12%</td><td>下修全年獲利與營收展望，商戶/金融解決方案營收下滑</td><td>傳統金融科技承壓</td></tr>
+    <tr><td>HubSpot (HUBS)</td><td class="down num">-24%（盤前）</td><td>下修全年營收展望、Q3 指引疲弱</td><td>SaaS 成長股財測風險升溫</td></tr>
+    <tr><td>Datadog (DDOG)</td><td class="down num">-16%（盤前）</td><td>展望疲弱疊加內部人賣股壓力</td><td>軟體監控股同步承壓</td></tr>
+    <tr><td>Airbnb (ABNB)</td><td class="up num">+11%（盤後）</td><td>Q2 淨利 8.16 億美元優於預期並上修全年展望</td><td>消費／旅遊需求穩健</td></tr>
+    <tr><td>Cloudflare (NET)</td><td class="up num">+14.9%（盤後）</td><td>Q2 營收逾 6.96 億美元優於預期</td><td>雲端安全股財報強勢</td></tr>
+    <tr><td>SpaceX (SPCX)</td><td class="up num">上漲（盤前+2.84%）</td><td>逾 9.11 億股解禁但股價逆勢上漲</td><td>IPO 解禁賣壓被市場消化</td></tr>
+  </table>
+
+  <h3>8.2 昨夜財報</h3>
+  <table>
+    <tr><th>公司</th><th>是否 Beat</th><th>指引</th><th>盤後/盤中反應</th><th>核心解讀</th></tr>
+    <tr><td>SanDisk (SNDK)</td><td class="up">Beat</td><td>FY27 Q1 營收指引中值低於共識</td><td>盤中重挫 -11%</td><td>利多出盡，鈍化訊號首現</td></tr>
+    <tr><td>Western Digital (WDC)</td><td class="up">Beat</td><td>Q1 營收指引 $41億 ± $1億</td><td>盤中重挫 -16%</td><td>賣壓被 Yahoo 分析師形容為「不合理」</td></tr>
+    <tr><td>Warner Bros. Discovery (WBD)</td><td class="up">Beat</td><td>暫無可靠數據</td><td>上漲</td><td>傳媒業務優於預期</td></tr>
+    <tr><td>Honeywell Aerospace</td><td class="down">Miss</td><td>暫無可靠數據</td><td>下跌</td><td>航太需求疑慮</td></tr>
+    <tr><td>Peloton (PTON)</td><td class="up">Beat（EPS）</td><td>訂閱用戶預期下滑 9.8%，FY27 營收 $23-24億低於預期</td><td>盤前重挫近 -15%</td><td>硬體轉訂閱模式動能放緩</td></tr>
+    <tr><td>Paycom (PAYC)</td><td class="up">Beat</td><td>暫無可靠數據</td><td>盤前 +15%</td><td>人資科技需求強勁</td></tr>
+    <tr><td>Unity (U)</td><td class="up">Beat</td><td>暫無可靠數據</td><td>盤前 +13.3%</td><td>遊戲引擎業務回穩</td></tr>
+    <tr><td>Hertz (HTZ)</td><td class="up">Beat</td><td>暫無可靠數據</td><td>盤前 +11.5%</td><td>租車業務改善</td></tr>
+    <tr><td>UWM Holdings (UWMC)</td><td class="down">Miss</td><td>停發季度股息</td><td>暴跌近 -25%</td><td>房貸批發業務承壓</td></tr>
+    <tr><td>Fiserv (FI)</td><td class="down">下修財測</td><td>全年 EPS 展望下修至 $7.20-7.40（原 $8.00-8.30）</td><td>重挫 -12%</td><td>支付業務成長放緩，遭 Jana Partners 施壓要求策略檢討</td></tr>
+  </table>
+
+  <h3>8.3 未來 1–3 日重要財報與事件</h3>
+  <table>
+    <tr><th>日期</th><th>公司/事件</th><th>關注點</th><th>可能影響板塊</th></tr>
+    <tr><td>8/7（五）</td><td>美國 7 月非農就業報告</td><td>就業增幅、失業率、平均時薪年增率，將左右 9/16 FOMC 降息定價</td><td>全市場，尤其利率敏感成長股與記憶體</td></tr>
+    <tr><td>8/7（五）</td><td>Lyft (LYFT) 財報反應驗證</td><td>網約車需求趨勢</td><td>消費／零工經濟</td></tr>
+    <tr><td>近期待公布</td><td>Micron (MU) FY2026 Q4 財報</td><td>記憶體循環是否延續的下一個關鍵驗證點</td><td>記憶體／半導體全鏈</td></tr>
+  </table>
+</section>
+
+<!-- S9 -->
+<section id="s9-playbook">
+  <h2>S9｜輪動判斷與明日 Playbook</h2>
+  <h3>9.1 明確回答</h3>
+  <div class="qa">
+    <p><b>資金主要流入：</b>能源（受惠油價上漲）、部分強財報消費／雲端股（Airbnb、Cloudflare、Paycom、Unity、Hertz）。</p>
+    <p><b>資金主要流出：</b>記憶體／儲存（WDC、SanDisk、Micron、Seagate）、部分 SaaS（HubSpot、Datadog）、AppLovin、Fiserv 等財測不如預期個股。</p>
+    <p><b>AI 主線（硬體＋記憶體）是否仍健康：</b>硬體端（NVDA 等）當日無重大負面消息，AI 資本支出敘事未見鬆動；但記憶體主線出現本輪首次明確鈍化訊號（強勁財報仍遭拋售），需觀察這是短期預期重置還是主線見頂前兆。</p>
+    <p><b>半導體 vs 軟體：</b>兩者當日皆偏弱，但成因不同——半導體受記憶體同情性賣壓拖累，軟體則是個股財測分化（Airbnb／Cloudflare 強 vs HubSpot／Datadog 弱），尚非板塊性趨勢轉弱。</p>
+    <p><b>小盤與實體經濟股：</b>Russell 2000 跟隨大盤下跌 0.6%，未展現 Great Rotation 持續跡象；CAT／GEV 當日數據不足以判斷。</p>
+    <p><b>趨勢延續 vs 階段性頂部震盪：</b>更像是<b>趨勢延續中的健康回調</b>，而非頂部反轉——VIX 不升反降是關鍵佐證。</p>
+  </div>
+
+  <h3>9.2 明日觀察清單</h3>
+  <p><b>宏觀：</b>週五 7 月非農就業報告是本週最大催化劑，關注平均時薪年增率是否引發通膨疑慮；10Y 殖利率能否守住 4.6~4.7% 關卡；Brent／WTI 是否延續漲勢（取決於伊朗／荷莫茲海峽談判進展）。</p>
+  <p><b>亞洲盤先行指標：</b>KOSPI、三星、SK Hynix、Kioxia 能否止跌企穩，是判斷記憶體賣壓是否延續的第一手訊號。</p>
+  <p><b>大盤：</b>SPY／QQQ 距本週稍早創下的歷史高點僅一步之遙，能否重新收復將決定短線是延續多頭還是進入更深回調；SMH 相對 QQQ 強弱需持續觀察半導體是否止穩（具體支撐壓力位暫無可靠數據來源，故不列點位）。</p>
+  <p><b>個股觀察清單：</b></p>
+  <ul>
+    <li><b>Micron (MU)</b> — 記憶體鈍化訊號是否擴散的指標股，市場關注能否守穩、為即將公布的 FY26 Q4 財報定調。</li>
+    <li><b>Western Digital (WDC)</b> — 分析師稱「賣壓不合理」，留意明日是否出現逢低承接。</li>
+    <li><b>Lyft (LYFT)</b> — 財報反應待驗證，補上網約車板塊訊號。</li>
+    <li><b>SK Hynix／三星電子（亞洲盤）</b> — 隔夜若止穩，可視為記憶體賣壓見底的早期訊號。</li>
+    <li><b>Datadog (DDOG)、HubSpot (HUBS)</b> — SaaS 財測疑慮是否蔓延至其他雲端股的觀察指標。</li>
+    <li><b>能源股（XLE 成分）</b> — 若油價延續漲勢，留意是否吸引增量資金。</li>
+    <li><b>AppLovin (APP)</b> — 高估值 AI 廣告股回檔後是否出現反彈訊號。</li>
+  </ul>
+</section>
+
+<!-- S10 -->
+<section id="s10-risk">
+  <h2>S10｜風險提示與最終結論</h2>
+  <h3>10.1 風險等級表</h3>
+  <table class="risktable">
+    <tr><th>風險維度</th><th>當前狀態</th><th>等級</th></tr>
+    <tr><td>宏觀利率（升息風險）</td><td>CME 定價幾乎排除升息，9月降息機率 93.6%</td><td class="risk-low">低</td></tr>
+    <tr><td>記憶體循環反轉</td><td>強勁財報仍遭拋售，本輪首次明確出現鈍化訊號</td><td class="risk-midhigh">中高</td></tr>
+    <tr><td>AI capex 持續性</td><td>當日無負面消息，SanDisk 簽下 940 億長約訂單反顯示需求仍在</td><td class="risk-mid">中</td></tr>
+    <tr><td>地緣／油價</td><td>荷莫茲海峽協議樂觀情緒逆轉，Brent 單日 +4%</td><td class="risk-midhigh">中高</td></tr>
+    <tr><td>中美科技戰</td><td>當日無重大新聞，暫無可靠數據判斷變化</td><td class="risk-low">低（資訊不足）</td></tr>
+    <tr><td>市場寬度惡化</td><td>下跌集中在特定主題股，非普遍性，惟需持續觀察</td><td class="risk-mid">中</td></tr>
+    <tr><td>財報風險</td><td>HubSpot、Datadog、Fiserv、AppLovin 接連因財測不佳重挫，市場對「差指引」容錯率降低</td><td class="risk-midhigh">中高</td></tr>
+  </table>
+  <div class="callout warn">
+    <b>當前最需警惕的前 3 項風險：</b>① 記憶體循環反轉（鈍化訊號首現）　② 地緣／油價（荷莫茲海峽不確定性）　③ 財報風險（財測容錯率降低，波動放大）
+  </div>
+
+  <h3>10.2 最終結論</h3>
+  <p>8/6 美股在創下本週歷史高點後溫和拉回：Dow 跌 0.85%、S&amp;P 500 僅跌 0.18%、Nasdaq 近乎持平，跌勢主要由記憶體／儲存股閃崩（WDC -16%、SanDisk -11%、Micron -6%）所驅動，源自 SanDisk 財測「利多出盡」並經亞洲盤（KOSPI -4.59%）放大。同時 Brent 原油因荷莫茲海峽局勢生變單日大漲近 4%，10 年期殖利率彈升至 4.67%，形成「油價＋殖利率」雙重壓力。但 VIX 不升反降至 15.15，加上 Airbnb、Cloudflare 等財報後大漲，顯示這是個股／主題性風險重置，而非系統性 risk-off。市場現正等待週五非農就業報告作為下一個方向性訊號。</p>
+
+  <div class="grid2">
+    <div class="callout good">
+      <b>當前市場階段：</b>板塊輪動（伴隨健康回調）
+    </div>
+    <div class="callout">
+      <b>操作傾向（中性觀察，不構成投資建議）：</b>記憶體／儲存類股鈍化訊號需 1–2 個交易日確認是否止穩，不宜貿然抄底；能源股受地緣溢價支撐可留意但需注意波動風險；財報密集期市場對財測極度敏感，持有高估值成長股者宜控制部位並嚴設停損；大盤指數本身仍處本週高點附近的健康整理，尚未見轉空證據。
+    </div>
+  </div>
+
+  <h3>最值得關注的 5 個信號（明日盤中可驗證）</h3>
+  <ul>
+    <li>週五非農就業數據公布後，10 年期殖利率是否突破 4.7% 關卡。</li>
+    <li>週五亞洲盤 KOSPI、SK Hynix、三星是否止跌反彈，驗證記憶體賣壓是否見底。</li>
+    <li>Micron (MU) 股價能否守穩、避免跌破 $800 心理關卡。</li>
+    <li>Brent 原油是否延續漲勢並突破 $83，牽動能源股與通膨預期。</li>
+    <li>SMH 半導體 ETF 相對 QQQ 的當日相對強弱，判斷半導體是否止穩或持續拖累大盤。</li>
+  </ul>
+</section>
+
+<div class="disclaimer">
+  本報告為中性市場觀察與資訊整理，所有數據均標註來源；無法取得可靠來源之數據一律標示「暫無可靠數據」，不進行推測或編造。本報告不構成投資建議，投資人應自行判斷並承擔投資風險。
+</div>
+
+<footer>
+  © 2026 超中毒（@oiiax88）｜美股收盤日報 · 資料涵蓋 2026-08-06（週四）美股收盤<br>
+  主要參考來源：STL.News, TheStreet, Yahoo Finance, CNBC/via search, 24/7 Wall St., MarketScreener (Reuters), tradingeconomics.com, KED Global / Seoul Economic Daily / TradingKey（亞股）
+</footer>
+
+</div>
+</body>
+</html>
