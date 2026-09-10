@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>美股收盤日報 2026-09-10</title>
+<style>
+  :root{
+    --bg:#0b0d12; --panel:#12151c; --panel2:#171b24; --border:#262b36;
+    --text:#e7e9ee; --sub:#9aa3b2; --green:#3ddc84; --red:#ff5c5c;
+    --amber:#f5b942; --accent:#5b8cff;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang TC","Noto Sans TC",sans-serif;margin:0;padding:0;line-height:1.6;}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 18px 60px;}
+  header.top{text-align:center;padding:20px 0 28px;border-bottom:1px solid var(--border);margin-bottom:24px;}
+  header.top h1{font-size:1.5rem;margin:0 0 8px;}
+  header.top p{color:var(--sub);font-size:0.82rem;margin:2px 0;}
+  section{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:20px 20px 22px;margin-bottom:20px;}
+  h2{font-size:1.05rem;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--border);color:#fff;}
+  h3{font-size:0.92rem;color:var(--accent);margin:18px 0 8px;}
+  p{margin:8px 0;font-size:0.9rem;}
+  table{width:100%;border-collapse:collapse;margin:10px 0 6px;font-size:0.84rem;}
+  th,td{padding:7px 8px;text-align:left;border-bottom:1px solid var(--border);}
+  th{color:var(--sub);font-weight:600;font-size:0.78rem;}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .up{color:var(--green);} .down{color:var(--red);} .flat{color:var(--sub);}
+  .tag{display:inline-block;background:var(--panel2);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:0.8rem;margin:3px 4px 3px 0;color:var(--amber);}
+  .callout{background:var(--panel2);border-left:3px solid var(--accent);border-radius:8px;padding:12px 14px;margin:12px 0;font-size:0.87rem;}
+  .callout b{color:#fff;}
+  .qa{margin:6px 0;font-size:0.87rem;}
+  .qa b{color:#fff;}
+  .note{color:var(--sub);font-size:0.78rem;font-style:normal;}
+  .card{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-top:12px;}
+  .heatgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px;}
+  .heatcell{border-radius:10px;padding:12px 10px;text-align:center;}
+  .heatcell .name{font-size:0.78rem;color:rgba(255,255,255,0.85);margin-bottom:4px;}
+  .heatcell .pct{font-size:1.15rem;font-weight:700;}
+  .barrow{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:0.82rem;}
+  .barrow .lbl{width:150px;flex-shrink:0;color:var(--sub);}
+  .barrow .track{flex:1;background:#0d0f14;border-radius:6px;height:18px;position:relative;overflow:hidden;}
+  .barrow .fill{position:absolute;top:0;bottom:0;border-radius:6px;}
+  .barrow .val{width:56px;text-align:right;flex-shrink:0;font-variant-numeric:tabular-nums;}
+  .mag7grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px;}
+  @media (max-width:520px){.mag7grid{grid-template-columns:repeat(3,1fr);} .heatgrid{grid-template-columns:repeat(2,1fr);}}
+  .mag7cell{background:#0d0f14;border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center;}
+  .mag7cell .t{font-weight:700;font-size:0.88rem;}
+  .mag7cell .p{font-size:0.95rem;margin-top:4px;font-weight:700;}
+  .risktable td.level-低{color:var(--green);} .risktable td.level-中{color:var(--amber);}
+  .risktable td.level-中高{color:#ff8a5c;} .risktable td.level-高{color:var(--red);}
+  footer.disclaimer{text-align:center;color:var(--sub);font-size:0.76rem;margin-top:10px;padding:16px 0;border-top:1px solid var(--border);}
+  ul{margin:8px 0;padding-left:20px;font-size:0.87rem;}
+  li{margin:4px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>🇺🇸 美股收盤日報｜2026-09-10</h1>
+  <p>報告生成時間：台北時間 17:00　|　資料來源：CNBC、TheStreet、Bloomberg、Al Jazeera、Korea JoongAng Daily、Yahoo Finance 等</p>
+  <p>本報告由 超中毒（@oiiax88）製作，分享請註明出處</p>
+  <p class="note">涵蓋交易日：2026-09-09（週三）</p>
+</header>
+
+<section id="s1-cover">
+  <h2>S1｜今日一句話總結</h2>
+  <p>週三美股三大指數與羅素 2000 同步收黑，導火線是布蘭特原油重返 100 美元大關（美伊在荷莫茲海峽周邊互相攻擊，美軍週二摧毀 5 艘伊朗油輪）、加上 10 年期公債殖利率衝上 52 週新高 4.85%，Fed 9/16 FOMC 升息（而非降息）機率逾五成，雙重宏觀利空觸發全面性風險趨避。羅素 2000 跌幅最深（-1.30%），顯示這是防禦性資金收縮而非板塊輪動；VIX 溫和上揚 4.58% 至 16.44，尚未達恐慌水準。值得留意的是，半導體/記憶體供應鏈在亞洲盤逆勢走強（SK Hynix ADR、費城半導體指數、南韓半導體 ETF 同步上漲），顯示 AI 硬體主線資金韌性尚未被總經雜訊打斷；但美光（MU）盤中一度衝高至 1,041 美元後拉回收在約 1,001 美元、較高點回落近 3.8%，是記憶體主線可能出現鈍化的早期訊號，需持續觀察。</p>
+  <p><b>📌 今日市場狀態標籤：</b></p>
+  <span class="tag">防禦性risk-off</span>
+  <span class="tag">記憶體利好鈍化</span>
+</section>
+
+<section id="s2-index">
+  <h2>S2｜大盤表現總覽</h2>
+  <table>
+    <tr><th>指數</th><th class="num">收盤</th><th class="num">漲跌幅</th><th>一句話狀態</th></tr>
+    <tr><td>Dow Jones</td><td class="num">52,380.66</td><td class="num down">-0.77%（-405.41）</td><td>四大指數中跌幅最大，傳統藍籌對利率/油價衝擊最敏感</td></tr>
+    <tr><td>S&P 500</td><td class="num">7,636.36</td><td class="num down">-0.48%（-37.16）</td><td>跌幅居中</td></tr>
+    <tr><td>Nasdaq Composite</td><td class="num">26,253.34</td><td class="num down">-0.64%（-168.07）</td><td>跌幅略小於道瓊，科技股受累於總經但未領跌</td></tr>
+    <tr><td>Russell 2000</td><td class="num">2,921.72</td><td class="num down">-1.30%（-38.48）</td><td>全場跌幅最深，小盤股對利率最敏感、資金收縮最明顯</td></tr>
+    <tr><td>SOX 半導體指數</td><td class="num note">暫無精確數字</td><td class="num note">質性：偏強</td><td>亞洲盤 SK Hynix ADR／南韓半導體 ETF／費城半導體指數同步走高，與大盤跌勢背離</td></tr>
+    <tr><td>VIX</td><td class="num">16.44</td><td class="num up">+4.58%（+0.72）</td><td>溫和升溫，反映理性風險重定價而非恐慌性拋售</td></tr>
+  </table>
+
+  <p class="qa"><b>Dow vs Nasdaq 相對強弱：</b>道瓊跌幅（-0.77%）略大於那斯達克（-0.64%），但差距不大，非典型「資金大幅回流科技」訊號；今日下跌更像是全面性的總經/地緣衝擊，各指數僅因成分股利率敏感度不同而出現小幅跌幅差異，而非資金明確的風格輪動。</p>
+  <p class="qa"><b>小盤是否過熱／領漲：</b>否，羅素 2000 是當日跌幅最深的指數（-1.30%），顯示小盤股正承受最大的利率與風險趨避壓力，並無領漲或過熱訊號，反而是市場寬度轉弱的警訊。</p>
+  <p class="qa"><b>SOX 相對 Nasdaq 領先或拖累：</b>雖無精確當日漲跌幅，但南韓交易所 ETF、費城半導體指數與 SK Hynix ADR 於亞洲盤逆勢走高，與美股大盤跌勢形成鮮明分化，顯示半導體/晶片供應鏈是當日相對抗跌、甚至逆勢的族群，並非拖累來源。</p>
+
+  <div class="card">
+    <p style="margin:0 0 6px;color:var(--sub);font-size:0.8rem;">各指數／VIX 當日漲跌幅熱力圖</p>
+    <div class="heatgrid">
+      <div class="heatcell" style="background:rgba(255,92,92,0.22)"><div class="name">Dow Jones</div><div class="pct down">-0.77%</div></div>
+      <div class="heatcell" style="background:rgba(255,92,92,0.14)"><div class="name">S&amp;P 500</div><div class="pct down">-0.48%</div></div>
+      <div class="heatcell" style="background:rgba(255,92,92,0.18)"><div class="name">Nasdaq</div><div class="pct down">-0.64%</div></div>
+      <div class="heatcell" style="background:rgba(255,92,92,0.34)"><div class="name">Russell 2000</div><div class="pct down">-1.30%</div></div>
+      <div class="heatcell" style="background:rgba(61,220,132,0.20)"><div class="name">半導體供應鏈（質性）</div><div class="pct up">偏強</div></div>
+      <div class="heatcell" style="background:rgba(245,185,66,0.22)"><div class="name">VIX</div><div class="pct" style="color:var(--amber)">+4.58%</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="s3-recap">
+  <h2>S3｜盤中復盤</h2>
+  <p><b>盤前（含亞洲盤連動）：</b>KOSPI 於 9/8 收 6,954.52 點（-0.58%），但南韓半導體權值股在 9/9 亞洲盤前逆勢走揚：三星電子 +0.37%、SK Hynix +1.12%、三星電機 +1.68%。與此同時，中東地緣風險重回市場焦點，拖累前一夜美股期貨；然而南韓半導體 ETF、費城半導體指數與 SK Hynix ADR 當時仍逆勢上漲，形成晶片板塊內部明顯分化——半導體供應鏈的強弱與大盤總經敘事脫鉤。</p>
+  <p><b>日內轉折點：</b>布蘭特原油盤中一度上漲逾 2.8%、重返 100 美元大關（100.71 美元），為 7 月以來首見；WTI（10月期貨）同步上漲 3.93% 至 96.69 美元。導火線是美伊在荷莫茲海峽周邊的軍事衝突再升級——美軍週二摧毀 5 艘伊朗油輪，以反制伊朗企圖攻擊美國軍艦的行動，市場對荷莫茲海峽能源運輸中斷的擔憂急速升溫。與此同時，10 年期公債殖利率同步衝上 52 週新高（約 4.85%），主因是財政部宣布擴大短債標售、以資金回購長債（duration risk 升溫）。雙重衝擊下，美股在尾盤前出現明顯賣壓，並無單一「意外轉折」，而是全日隨油價與殖利率同步走高而持續走弱。</p>
+  <p><b>尾盤與盤後：</b>零售與消費類股財報疲弱進一步壓抑尾盤情緒：Chewy、American Eagle Outfitters、Cooper Companies 皆因財報中的毛利率疑慮而收黑。戴爾（DELL）逆勢小漲 0.26%，市場消息指其正尋求發行 40 億美元債券以再融資 AI 基礎建設投資。</p>
+  <div class="callout"><b>核心驅動判斷：</b>今日下跌屬於典型的「總經雙重利空」型 risk-off——地緣政治（伊朗/荷莫茲海峽衝突推升油價）與利率（殖利率衝上 52 週高點、Fed 升息機率上升）同時發酵，並非單一板塊敘事破裂，也非 sell the news；半導體供應鏈在此背景下仍逆勢走強，顯示 AI 硬體主線的資金認同度尚未被總經雜訊打斷，但需持續觀察是否僅是亞洲盤的暫時性分化。</div>
+</section>
+
+<section id="s4-macro">
+  <h2>S4｜宏觀環境</h2>
+  <h3>4.1 美債收益率</h3>
+  <table>
+    <tr><th>項目</th><th class="num">最新</th><th class="num">日變化</th><th>含義</th></tr>
+    <tr><td>2Y</td><td class="num">4.42%</td><td class="num up">+2bp</td><td>短端同步走高，反映升息機率升溫</td></tr>
+    <tr><td>10Y</td><td class="num">4.85%</td><td class="num up">+6bp</td><td>衝上 52 週新高，直接壓抑高估值成長股估值</td></tr>
+    <tr><td>2Y-10Y 利差</td><td class="num">約 +43bp</td><td class="num flat">—</td><td>曲線維持正斜率，未見倒掛</td></tr>
+  </table>
+  <p>10Y 殖利率已突破市場先前緊盯的 4.8% 心理關卡、創 52 週新高，是今日全市場下跌最直接的傳導路徑之一；財政部同步宣布擴大短債標售以回購長債，加劇存續期風險（duration risk）疑慮。</p>
+
+  <h3>4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+  <ul>
+    <li>CME FedWatch：9/16 FOMC 會議<strong>升息 25bp</strong>機率約 58.7%–60%以上（各機構測算略有落差，Yahoo/cryptonews 引用逾六成，Forbes 稍早引用約 58.7%）——今年少見的「升息機率明顯高於降息」情形。</li>
+    <li>年內利率淨變化預期：目前定價方向偏向升息而非降息，與市場慣性預期的路徑相反。</li>
+    <li>觸發原因：Fed 主席 Kevin Warsh 於 Jackson Hole 的鷹派談話後，市場對 9/16 決議的定價轉向偏鷹，加上油價衝擊帶來的通膨疑慮進一步強化升息押注；本週稍晚（9/11）CPI 數據將是關鍵驗證點。</li>
+  </ul>
+
+  <h3>4.3 油價與地緣（獨立追蹤）</h3>
+  <ul>
+    <li>Brent：100.71 美元／桶，+2.85%，為 7 月以來首度重返 100 美元大關</li>
+    <li>WTI（10月期貨）：96.69 美元／桶，+3.93%；汽油價格達 4.22 美元／加侖，創今年 9 月初以來新高</li>
+    <li>地緣事件：美伊在荷莫茲海峽周邊軍事緊張再度升級，美軍週二摧毀 5 艘伊朗油輪以反制伊朗對美國軍艦的攻擊企圖；市場高度關注荷莫茲海峽能源運輸是否遭進一步干擾。此外，美加關稅爭端（美方對最高 700 項加拿大商品課徵最高 50% 報復性關稅）亦同步升溫供應鏈與貿易不確定性，但傳導力道遜於中東油價衝擊。</li>
+  </ul>
+
+  <h3>4.4 其他宏觀資產</h3>
+  <table>
+    <tr><th>資產</th><th class="num">價格</th><th class="num">漲跌幅</th></tr>
+    <tr><td>DXY 美元指數</td><td class="num note">約 99.2 附近</td><td class="num note">暫無精確單日漲跌幅數據</td></tr>
+    <tr><td>黃金</td><td class="num">4,442.30 美元/oz</td><td class="num up">+0.07%</td></tr>
+    <tr><td>比特幣</td><td class="num">78,275.53 美元</td><td class="num down">-0.26%</td></tr>
+  </table>
+
+  <h3>4.5 當日經濟數據</h3>
+  <p class="note">暫無可靠數據 — 9/9 當日無重大排定經濟數據公布；市場正等待 9/11（週五）公布的 CPI，為 9/16 FOMC 前最後一組關鍵通膨數據。</p>
+</section>
+
+<section id="s5-sector">
+  <h2>S5｜板塊表現</h2>
+  <table>
+    <tr><th>排名</th><th>板塊</th><th>ETF</th><th>當日漲跌幅</th><th>主要驅動</th></tr>
+    <tr><td>1</td><td>Energy</td><td class="note">暫無ETF精確%</td><td class="num note">質性：偏強</td><td>油價因荷莫茲海峽衝突急升，Chevron +2.47% 領漲道瓊成分股</td></tr>
+    <tr><td>2-8</td><td>Financials / Industrials / Utilities / Materials / Real Estate / Health Care / Communication Services</td><td class="note">—</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>9</td><td>Consumer Discretionary</td><td class="note">暫無ETF精確%</td><td class="num note">質性：偏弱</td><td>Nike -2.15%；Chewy、American Eagle Outfitters財報毛利率疑慮同步下修</td></tr>
+    <tr><td>10-11</td><td>Technology / Consumer Staples</td><td class="note">—</td><td class="num note">暫無可靠數據</td><td>Alphabet -3.18%、Salesforce -3.01% 拖累科技權值股，惟半導體供應鏈相對抗跌（見S6/S7）</td></tr>
+  </table>
+  <p class="note">說明：今日搜尋來源未提供完整 11 大板塊當日精確漲跌幅百分比，僅能以道瓊成分股個股表現（Chevron +2.47%／IBM +0.80%／Boeing +0.41% 領漲；Alphabet -3.18%／Salesforce -3.01%／Nike -2.15% 領跌）與零售財報反應間接推論方向。板塊排序為質性判斷，非精確漲跌幅排名。</p>
+
+  <div class="card">
+    <p style="margin:0 0 10px;color:var(--sub);font-size:0.8rem;">板塊質性方向（可得數據，綠強紅弱）</p>
+    <div class="barrow"><div class="lbl">Energy</div><div class="track"><div class="fill" style="background:var(--green);left:50%;width:16%;"></div></div><div class="val up">偏強</div></div>
+    <div class="barrow"><div class="lbl">半導體供應鏈（質性）</div><div class="track"><div class="fill" style="background:var(--green);left:50%;width:10%;"></div></div><div class="val up">偏強</div></div>
+    <div class="barrow"><div class="lbl">Consumer Discretionary</div><div class="track"><div class="fill" style="background:var(--red);left:38%;width:12%;"></div></div><div class="val down">偏弱</div></div>
+    <div class="barrow"><div class="lbl">Comm. Services（個股）</div><div class="track"><div class="fill" style="background:var(--red);left:33%;width:17%;"></div></div><div class="val down">Alphabet-3.18%</div></div>
+  </div>
+
+  <p><b>判斷：</b>能源是當日相對最強板塊（油價衝擊直接受惠），消費性支出敏感類股（Nike、Chewy、American Eagle）偏弱；成長 vs 價值、週期 vs 防禦的完整板塊排序因數據不足無法精確判斷，惟從個股與供應鏈跡象看，今日更接近「地緣/利率驅動的全面性風險趨避」，而非清晰的板塊輪動或高切低。</p>
+</section>
+
+<section id="s6-style">
+  <h2>S6｜風格與市場寬度</h2>
+  <table>
+    <tr><th>ETF</th><th class="num">當日漲跌幅</th><th>回答的問題</th></tr>
+    <tr><td>SMH</td><td class="num note">暫無可靠數據（惟半導體供應鏈個股/ADR於亞洲盤逆勢走強，方向判斷偏多）</td><td>半導體仍是主線</td></tr>
+    <tr><td>IGV</td><td class="num note">暫無可靠數據</td><td>軟體當日表現暫無可靠數據</td></tr>
+    <tr><td>RSP</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>IWM</td><td class="num down">-1.30%（以Russell 2000代理）</td><td>小盤不僅未參與，反而是當日跌幅最深族群，領漲不延續</td></tr>
+  </table>
+  <p><b>寬度替代指標：</b>羅素 2000 跌幅（-1.30%）明顯大於三大指數，是市場寬度轉弱的明確訊號——資金並未擴散至中小型股，反而向防禦性大型股集中。新聞來源未提供 52 週新高/新低家數或漲跌家數比等具體寬度數據，故此處僅作質性判斷；今日領跌並非集中於少數個股，而是偏向全面性、風險敏感度較高的資產（小盤、消費循環股）同步走弱。</p>
+</section>
+
+<section id="s7-leaders">
+  <h2>S7｜主線股追蹤</h2>
+  <h3>7.1 Magnificent 7</h3>
+  <table>
+    <tr><th>股票</th><th class="num">漲跌幅</th><th>原因</th></tr>
+    <tr><td>NVDA</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>MSFT</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>AAPL</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>GOOGL</td><td class="num down">-3.18%</td><td>七巨頭中確認跌幅最大者，當日大型科技股領跌之一，未見單一明確觸發消息</td></tr>
+    <tr><td>AMZN</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>META</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>TSLA</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+  </table>
+  <p>今日僅能確認 Alphabet 大跌 3.18%，為當日大型科技股中最明確的拖累者；其餘六檔七巨頭當日精確漲跌幅暫無可靠數據，無法判斷是否集體同步行動，僅能從大盤跌幅（Nasdaq -0.64%）推論科技股整體隨大盤走弱。</p>
+
+  <h3>7.2 記憶體主線（當前行情引擎）</h3>
+  <p>美光（MU）9/9 盤中在 997.64–1,041.07 美元區間震盪，收盤約 1,001.20 美元，較盤中高點回落約 3.8%，較盤中低點僅高出 0.4%——高檔震盪後拉回收在區間低檔。亞洲盤方面，SK Hynix、三星電子、三星電機於 9/9 亞洲盤前逆勢上漲（SK Hynix +1.12%），南韓半導體 ETF 與費城半導體指數同步走高，與美股大盤跌勢分化。<b>鈍化監測：</b>美光盤中高點到收盤回落近 3.8%，是本輪記憶體超級循環少見的「高檔賣壓」訊號，雖尚不足以判定利多已鈍化，但值得列入觀察名單；美光下一次財報排定 9/22 公布，分析師預估 EPS 達 31.29 美元（去年同期僅 3.03 美元）、營收 508.2 億美元，市場預期仍極高，需留意實際數字能否消化如此激進的預期。另外，美光 CHIPS 法案相關限制將於 12/9 到期，屆時據報將全額回饋自由現金流予股東，屬中期催化劑。</p>
+
+  <h3>7.3 AI硬體核心</h3>
+  <p>當日（9/9）AVGO、TSM、ARM、AMD 精確漲跌幅暫無可靠數據；惟延續 9/8 動能可供參考：Broadcom 因上修全年 AI 半導體營收展望，9/8 大漲 3.78%；AMD 因 Qualcomm 與 Amazon Web Services 宣布多世代客製 AI 資料中心晶片合作，9/8 大漲 5.9%（盤中一度 +3.04%）。此兩則利多消息延續至 9/9 亞洲盤，可能是南韓半導體供應鏈逆勢走強的部分背景，惟 9/9 當日美股本身的 AI 硬體核心股表現暫缺具體數據，無法確認是否出現 sell the news。</p>
+
+  <h3>7.4 Rotation 代表股</h3>
+  <p>CAT、GEV 當日精確漲跌幅暫無可靠數據，無法判斷 Great Rotation 當日方向。整體觀察：羅素 2000（實體經濟/小型股代理）大跌 1.30%，明顯弱於大盤，顯示今日資金並未流向景氣循環/實體經濟主題，反而是全面性風險趨避，Great Rotation 敘事在今日暫時停滯。</p>
+</section>
+
+<section id="s8-movers">
+  <h2>S8｜異動股與財報</h2>
+  <h3>8.1 當日重要異動</h3>
+  <table>
+    <tr><th>股票</th><th class="num">漲跌幅</th><th>原因</th><th>對主線的含義</th></tr>
+    <tr><td>Chevron (CVX)</td><td class="num up">+2.47%</td><td>油價因荷莫茲海峽衝突急升</td><td>能源類股直接受惠地緣風險溢價</td></tr>
+    <tr><td>IBM</td><td class="num up">+0.80%</td><td>道瓊成分股中逆勢收紅</td><td>個股表現，無明確產業性驅動</td></tr>
+    <tr><td>Boeing (BA)</td><td class="num up">+0.41%</td><td>道瓊成分股中逆勢收紅</td><td>個股表現，無明確產業性驅動</td></tr>
+    <tr><td>Alphabet (GOOGL)</td><td class="num down">-3.18%</td><td>當日大型科技股跌幅最大，無單一明確觸發消息</td><td>拖累科技/通訊服務板塊</td></tr>
+    <tr><td>Salesforce (CRM)</td><td class="num down">-3.01%</td><td>隨大盤下跌，未見單一確認消息</td><td>軟體股情緒偏弱</td></tr>
+    <tr><td>Nike (NKE)</td><td class="num down">-2.15%</td><td>隨大盤下跌及消費支出疑慮</td><td>消費性支出敏感類股承壓</td></tr>
+    <tr><td>Dell (DELL)</td><td class="num up">+0.26%</td><td>市場消息指其尋求發行40億美元債券，用於AI基礎建設投資再融資</td><td>AI基礎建設資本支出敘事延續</td></tr>
+    <tr><td>Chewy / American Eagle Outfitters / Cooper Companies</td><td class="num down">下跌</td><td>財報顯示毛利率承壓，市場對成本結構疑慮升溫</td><td>消費類股財報風險升溫</td></tr>
+  </table>
+
+  <h3>8.2 昨夜財報</h3>
+  <p class="note">暫無可靠數據 — 9/9 當日雖有約37家公司排定公布財報，惟除上表 Chewy／American Eagle Outfitters／Cooper Companies 因毛利率疑慮下跌外，未能取得其他具體公司名稱與盤後市場反應細節，故不另列表。</p>
+
+  <h3>8.3 未來 1–3 日重要財報與事件</h3>
+  <table>
+    <tr><th>日期</th><th>公司/事件</th><th>關注點</th><th>可能影響板塊</th></tr>
+    <tr><td>2026-09-10（週四，盤後）</td><td>Oracle（ORCL）Q1 FY2027 財報</td><td>訂單積壓已達前一財年營收近9.5倍，惟股價已較高點回落逾五成，市場關注AI雲端需求能否兌現訂單能見度</td><td>雲端/AI基礎建設，軟體板塊情緒指標</td></tr>
+    <tr><td>2026-09-11（週五）</td><td>美國 CPI 消費者物價指數</td><td>9/16 FOMC 前最後一組關鍵通膨數據，將決定升息機率是否進一步上修</td><td>全市場，尤其利率敏感成長股</td></tr>
+    <tr><td>2026-09-16</td><td>FOMC 利率決議</td><td>升息機率現約58.7%–60%以上，結果尚膠著</td><td>全市場</td></tr>
+    <tr><td>2026-09-22</td><td>Micron（MU）財報</td><td>分析師預估EPS 31.29美元、營收508.2億美元，預期極高，觀察記憶體主線能否延續</td><td>半導體/記憶體</td></tr>
+  </table>
+</section>
+
+<section id="s9-playbook">
+  <h2>S9｜輪動判斷與明日 Playbook</h2>
+  <h3>9.1 明確回答</h3>
+  <ul>
+    <li><b>資金主要流入：</b>能源（油價地緣溢價受惠，Chevron+2.47%）；半導體/記憶體供應鏈（亞洲盤逆勢走強，惟證據仍屬質性）</li>
+    <li><b>資金主要流出：</b>小型股（羅素2000-1.30%）、消費性支出敏感類股（Nike、Chewy、American Eagle）、部分大型科技/通訊服務（Alphabet、Salesforce）</li>
+    <li><b>AI主線（硬體+記憶體）是否仍然健康：</b>大致健康，但美光高檔拉回近3.8%是需要留意的早期鈍化訊號，尚不足以判定趨勢反轉</li>
+    <li><b>半導體 vs 軟體：</b>今日精確數據不足，僅能從供應鏈個股/ADR方向質性判斷半導體相對抗跌，軟體（Salesforce大跌）方向偏弱</li>
+    <li><b>小盤與實體經濟股：</b>羅素2000跌幅最深，Great Rotation敘事今日明顯停滯，資金反而向防禦性/確定性資產收縮</li>
+    <li><b>當前更像：</b>總經/地緣驅動的健康回調（風險偏好下降），而非AI敘事本身結構性破裂——但美光高檔拉回值得列入下週觀察重點</li>
+  </ul>
+  <h3>9.2 明日觀察清單</h3>
+  <ul>
+    <li><b>宏觀：</b>10Y殖利率能否守住4.85%關鍵位、布蘭特原油是否延續衝高或因供應疑慮緩解而回落、9/11 CPI數據公布前市場情緒是否進一步緊縮</li>
+    <li><b>亞洲盤先行指標：</b>KOSPI／三星／SK Hynix開盤是否延續9/9的逆勢強勢，確認半導體供應鏈與美股大盤的分化是否持續</li>
+    <li><b>大盤：</b>SPY/QQQ具體支撐壓力位新聞中未提及，暫無可靠數據；觀察半導體供應鏈是否持續強於大盤</li>
+    <li><b>個股觀察清單：</b>
+      <ul>
+        <li>Oracle（ORCL）— 9/10盤後財報，AI雲端訂單能否兌現為實際營收成長</li>
+        <li>Micron（MU）— 高檔拉回近3.8%後是否進一步走弱，留意鈍化訊號是否擴大</li>
+        <li>Alphabet（GOOGL）— 當日跌幅最大的大型科技股，留意是否有延續性利空</li>
+        <li>Chevron（CVX）及能源股 — 油價地緣溢價能否延續</li>
+        <li>SK Hynix / 三星電子 — 半導體供應鏈逆勢強勢是否傳導至美股本土晶片股</li>
+        <li>Chewy / American Eagle Outfitters — 財報毛利率疑慮是否引發同業連動賣壓</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="s10-risk">
+  <h2>S10｜風險提示與最終結論</h2>
+  <h3>10.1 風險等級表</h3>
+  <table class="risktable">
+    <tr><th>風險維度</th><th>當前狀態</th><th>等級</th></tr>
+    <tr><td>宏觀利率（升息風險）</td><td>Fed 9/16升息機率逾58%，10Y殖利率創52週新高，9/11 CPI為關鍵驗證點</td><td class="level-高">高</td></tr>
+    <tr><td>記憶體循環反轉</td><td>美光盤中高點回落近3.8%，早期鈍化訊號浮現，惟尚未確認趨勢</td><td class="level-中">中</td></tr>
+    <tr><td>AI capex 持續性</td><td>Broadcom/AMD延續9/8利多動能，Dell尋求發債投資AI基建，敘事仍完整</td><td class="level-低">低</td></tr>
+    <tr><td>地緣/油價</td><td>美伊荷莫茲海峽衝突升級，布蘭特重返100美元，美軍已直接摧毀伊朗油輪，風險持續升溫</td><td class="level-高">高</td></tr>
+    <tr><td>中美科技戰</td><td>本日無新增消息，惟需留意美加關稅爭端外溢效應</td><td class="level-中">中</td></tr>
+    <tr><td>市場寬度惡化</td><td>羅素2000跌幅最深（-1.30%），寬度明顯轉弱</td><td class="level-中高">中高</td></tr>
+    <tr><td>財報風險</td><td>Chewy/American Eagle/Cooper毛利率疑慮同日爆發，9/10 Oracle財報為下一個關鍵測試</td><td class="level-中">中</td></tr>
+  </table>
+  <p><b>當前最需警惕的前 3 項風險：</b>①荷莫茲海峽地緣衝突與油價（美軍已直接介入交火，情勢仍在升級）②10Y殖利率突破52週新高後的利率路徑（9/11 CPI是關鍵）③市場寬度轉弱（羅素2000領跌，資金收縮至防禦性資產）。</p>
+
+  <h3>10.2 最終結論</h3>
+  <p>今日美股在地緣政治（美伊荷莫茲海峽衝突升級、布蘭特重返100美元）與利率（10Y殖利率創52週新高、Fed升息機率逾58%）雙重宏觀衝擊下全面收黑，羅素2000領跌顯示這是防禦性資金收縮而非板塊輪動。半導體/記憶體供應鏈在亞洲盤逆勢走強，顯示AI硬體主線資金韌性尚未被打斷，但美光高檔拉回近3.8%是值得留意的早期鈍化訊號。展望後市，9/11 CPI數據與10Y殖利率能否守住4.85%關鍵位，將是決定市場能否穩定的核心變數；9/10盤後Oracle財報則是檢驗AI雲端需求能否兌現的下一個關鍵測試。</p>
+  <p><b>當前市場階段：</b>風險偏好下降</p>
+  <p><b>操作傾向（中性觀察，不構成投資建議）：</b>在荷莫茲海峽衝突與9/11 CPI數據公布前，指數層面傾向控制倉位、觀望為主；半導體/記憶體主線在鈍化訊號明確擴大前仍值得留意，惟美光高檔拉回值得保持警覺；消費性支出敏感類股短線需留意是否有更多同業財報連動下修；能源股受惠地緣溢價但屬事件驅動，非結構性趨勢。</p>
+  <p><b>最值得關注的 5 個信號：</b></p>
+  <ul>
+    <li>10Y 美債殖利率是否守住 4.85%（若持續突破，將對成長股估值構成新一輪壓力）</li>
+    <li>布蘭特原油是否延續站穩100美元上方，荷莫茲海峽衝突是否進一步升級</li>
+    <li>9/11（週五）CPI數據是否強化或緩解9/16升息機率押注</li>
+    <li>9/10盤後Oracle財報：AI雲端訂單能否兌現為實際營收與利潤成長</li>
+    <li>美光（MU）能否止穩，或延續高檔拉回走勢，確認記憶體主線是否進入鈍化階段</li>
+  </ul>
+
+  <p class="note">本報告為中性市場觀察，僅供參考，不構成投資建議。</p>
+</section>
+
+<footer class="disclaimer">
+  🇺🇸 美股收盤日報｜2026-09-10　|　超中毒（@oiiax88）製作，分享請註明出處
+</footer>
+
+</div>
+</body>
+</html>
