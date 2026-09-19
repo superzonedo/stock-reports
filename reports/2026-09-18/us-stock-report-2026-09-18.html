@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>美股收盤日報 2026-09-18</title>
+<style>
+  :root{
+    --bg:#0b0d12; --panel:#12151c; --panel2:#171b24; --border:#262b36;
+    --text:#e7e9ee; --sub:#9aa3b2; --green:#3ddc84; --red:#ff5c5c;
+    --amber:#f5b942; --accent:#5b8cff;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang TC","Noto Sans TC",sans-serif;margin:0;padding:0;line-height:1.6;}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 18px 60px;}
+  header.top{text-align:center;padding:20px 0 28px;border-bottom:1px solid var(--border);margin-bottom:24px;}
+  header.top h1{font-size:1.5rem;margin:0 0 8px;}
+  header.top p{color:var(--sub);font-size:0.82rem;margin:2px 0;}
+  section{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:20px 20px 22px;margin-bottom:20px;}
+  h2{font-size:1.05rem;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--border);color:#fff;}
+  h3{font-size:0.92rem;color:var(--accent);margin:18px 0 8px;}
+  p{margin:8px 0;font-size:0.9rem;}
+  table{width:100%;border-collapse:collapse;margin:10px 0 6px;font-size:0.84rem;}
+  th,td{padding:7px 8px;text-align:left;border-bottom:1px solid var(--border);}
+  th{color:var(--sub);font-weight:600;font-size:0.78rem;}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .up{color:var(--green);} .down{color:var(--red);} .flat{color:var(--sub);}
+  .tag{display:inline-block;background:var(--panel2);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:0.8rem;margin:3px 4px 3px 0;color:var(--amber);}
+  .callout{background:var(--panel2);border-left:3px solid var(--accent);border-radius:8px;padding:12px 14px;margin:12px 0;font-size:0.87rem;}
+  .callout b{color:#fff;}
+  .qa{margin:6px 0;font-size:0.87rem;}
+  .qa b{color:#fff;}
+  .note{color:var(--sub);font-size:0.78rem;font-style:normal;}
+  .card{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-top:12px;}
+  .heatgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px;}
+  .heatcell{border-radius:10px;padding:12px 10px;text-align:center;}
+  .heatcell .name{font-size:0.78rem;color:rgba(255,255,255,0.85);margin-bottom:4px;}
+  .heatcell .pct{font-size:1.15rem;font-weight:700;}
+  .barrow{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:0.82rem;}
+  .barrow .lbl{width:150px;flex-shrink:0;color:var(--sub);}
+  .barrow .track{flex:1;background:#0d0f14;border-radius:6px;height:18px;position:relative;overflow:hidden;}
+  .barrow .fill{position:absolute;top:0;bottom:0;border-radius:6px;}
+  .barrow .val{width:64px;text-align:right;flex-shrink:0;font-variant-numeric:tabular-nums;}
+  .mag7grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px;}
+  @media (max-width:520px){.mag7grid{grid-template-columns:repeat(3,1fr);} .heatgrid{grid-template-columns:repeat(2,1fr);}}
+  .mag7cell{background:#0d0f14;border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center;}
+  .mag7cell .t{font-weight:700;font-size:0.88rem;}
+  .mag7cell .p{font-size:0.95rem;margin-top:4px;font-weight:700;}
+  .mag7cell.na{opacity:0.5;}
+  .risktable td.level-低{color:var(--green);} .risktable td.level-中{color:var(--amber);}
+  .risktable td.level-中高{color:#ff8a5c;} .risktable td.level-高{color:var(--red);}
+  footer.disclaimer{text-align:center;color:var(--sub);font-size:0.76rem;margin-top:10px;padding:16px 0;border-top:1px solid var(--border);}
+  ul{margin:8px 0;padding-left:20px;font-size:0.87rem;}
+  li{margin:4px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>🇺🇸 美股收盤日報｜2026-09-18</h1>
+  <p>報告生成時間：台北時間 08:00　|　資料來源：Yahoo Finance、CNBC、Investrade、Benzinga、TradingEconomics、Fortune、Riotimesonline、TradingKey 等</p>
+  <p>本報告由 超中毒（@oiiax88）製作，分享請註明出處</p>
+  <p class="note">涵蓋交易日：2026-09-18（週五）</p>
+</header>
+
+<section id="s1-cover">
+  <h2>S1｜今日一句話總結</h2>
+  <p>美股週五在爭議延燒一整週後步入動能收斂的整理格局：S&amp;P 500 收漲 0.17%、那斯達克收漲 0.39%，但道瓊（-0.18%）與羅素 2000（-0.50%）同步走弱，反彈力道並未全面擴散。本週最大變數是 Fed 於 9/16 宣布三年來首次升息 25bp 至 3.75%–4.00%，且暗示年底前恐再度升息，10 年期公債殖利率逼近 5% 整數關卡；同時 Anthropic、OpenAI 與馬斯克接連呼籲放緩前沿 AI 模型開發，一度重創記憶體股（SK 海力士盤前一度重挫逾 7%），週四出現報復性反彈（那指單日 +1.7%）後，週五記憶體／儲存股轉為分化式修復：SanDisk（+5.35%）、西部數據（+3.15%）大幅領先，美光（+1%）明顯落後。VIX 延續下滑至 14.81（-4.08%），恐慌情緒持續降溫，但金融股（XLF -0.54%）與小型股同步落後，顯示這波反彈仍集中在科技與通訊服務，寬度呈現收斂而非擴散。</p>
+  <p><b>📌 今日市場狀態標籤：</b></p>
+  <span class="tag">AI硬體高位震盪</span>
+  <span class="tag">記憶體利好鈍化</span>
+</section>
+
+<section id="s2-index">
+  <h2>S2｜大盤表現總覽</h2>
+  <table>
+    <tr><th>指數</th><th class="num">收盤</th><th class="num">漲跌幅</th><th>日內高低點</th><th>一句話狀態</th></tr>
+    <tr><td>Dow Jones</td><td class="num">51,682.64</td><td class="num down">-0.18%</td><td class="num note">暫無可靠數據</td><td>四大指數中唯一收黑，反彈力道未能延續</td></tr>
+    <tr><td>S&amp;P 500</td><td class="num">7,650.50</td><td class="num up">+0.17%</td><td class="num note">暫無可靠數據</td><td>連二日收紅但漲幅明顯收斂</td></tr>
+    <tr><td>Nasdaq Composite</td><td class="num">26,522.55</td><td class="num up">+0.39%</td><td class="num note">暫無可靠數據</td><td>連二日收紅，科技/通訊股續為領漲主力但動能放緩</td></tr>
+    <tr><td>Russell 2000 / IWM</td><td class="num">2,860.40</td><td class="num down">-0.50%</td><td class="num note">暫無可靠數據</td><td>未延續週四同步反彈，領漲力道未擴散至小盤</td></tr>
+    <tr><td>SOX 半導體指數</td><td class="num">11,921.69</td><td class="num note">當日精確漲跌幅暫無可靠數據</td><td class="num note">暫無可靠數據</td><td>全週小幅收高，惟今日個股層面分化明顯（儲存股強、美光弱）</td></tr>
+    <tr><td>VIX</td><td class="num">14.81</td><td class="num down">-4.08%</td><td class="num note">暫無可靠數據</td><td>連二日下滑，恐慌情緒持續消退</td></tr>
+  </table>
+
+  <p class="qa"><b>Dow vs Nasdaq 相對強弱：</b>那斯達克（+0.39%）明顯優於道瓊（-0.18%），資金傾向留在科技／通訊服務等成長股，而非回流傳產或利率敏感類股——與週四「四大指數全面反彈」的格局不同，週五更像是資金收斂集中於特定族群，而非風險偏好全面回升。</p>
+  <p class="qa"><b>小盤是否過熱／領漲延續：</b>未延續。羅素 2000 轉為下跌（-0.50%），並未跟上大盤反彈，也未見過熱訊號，反而是本週稍早已提及「小型股、工業、非必需消費、運輸連五週落後」趨勢的延續。</p>
+  <p class="qa"><b>SOX 相對 Nasdaq 領先或拖累：</b>SOX 今日精確漲跌幅暫無可靠數據，但從個股層面觀察（SanDisk +5.35%、西部數據 +3.15% 大幅領先，美光僅 +1%），半導體／記憶體內部分化明顯，難以斷定 SOX 整體對那指是領先或拖累。</p>
+
+  <div class="card">
+    <p style="margin:0 0 6px;color:var(--sub);font-size:0.8rem;">各指數／VIX 當日漲跌幅熱力圖</p>
+    <div class="heatgrid">
+      <div class="heatcell" style="background:rgba(255,92,92,0.20)"><div class="name">Dow Jones</div><div class="pct down">-0.18%</div></div>
+      <div class="heatcell" style="background:rgba(61,220,132,0.20)"><div class="name">S&amp;P 500</div><div class="pct up">+0.17%</div></div>
+      <div class="heatcell" style="background:rgba(61,220,132,0.30)"><div class="name">Nasdaq</div><div class="pct up">+0.39%</div></div>
+      <div class="heatcell" style="background:rgba(255,92,92,0.32)"><div class="name">Russell 2000</div><div class="pct down">-0.50%</div></div>
+      <div class="heatcell" style="background:rgba(120,130,150,0.18)"><div class="name">SOX 半導體</div><div class="pct note">精確%暫無</div></div>
+      <div class="heatcell" style="background:rgba(61,220,132,0.24)"><div class="name">VIX</div><div class="pct up" style="color:var(--green)">-4.08%</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="s3-recap">
+  <h2>S3｜盤中復盤</h2>
+  <p><b>盤前（含亞洲盤連動）：</b>週四（9/17）南韓 KOSPI 幾乎收平（-0.04% 至 6,715 點），三星電子（+2.97%）、SK 海力士（+5.56%）同步走高，主因市場消化 Fed 升息之餘，傳出美方可能延後對產能過剩相關新關稅的宣布時點至美中領袖峰會後，降低南韓出口商的立即貿易風險；亞股記憶體雙雄領先美股一步止穩回升，為稍後美股記憶體股的分化式修復鋪墊。</p>
+  <p><b>日內轉折點：</b>本週真正的轉折發生在週三（Fed 升息）與週四（報復性反彈，S&amp;P 500 +1.1%、那指 +1.7%）之間；進入週五，漲勢明顯收斂，指數呈現「科技／通訊服務小漲、金融／工業／公用事業小跌」的分化格局，全日未見單一時段的劇烈逆轉，屬於反彈動能自然收斂，而非新的利空衝擊。</p>
+  <p><b>尾盤與盤後：</b>蘋果 iPhone 18 Pro 系列本週開賣，因記憶體成本上升調漲售價約 100 美元，Pro Max 需求仍強勁；今日未搜得具高可信度、明確歸屬於 9/18 盤後的重大財報公布。</p>
+  <div class="callout"><b>核心驅動判斷：</b>本質上是「buy the dip」報復性反彈後的自然收斂與獲利了結——週四的反彈已消化多數 Fed 鷹派衝擊，週五在缺乏新催化劑下資金轉趨謹慎，尤其利率敏感的金融與小型股率先回落，而科技／通訊服務與部分記憶體／儲存股仍守住漲勢，顯示反彈基礎依然集中在特定族群，而非全面性風險偏好回升。</div>
+</section>
+
+<section id="s4-macro">
+  <h2>S4｜宏觀環境</h2>
+  <h3>4.1 美債收益率</h3>
+  <table>
+    <tr><th>項目</th><th class="num">最新</th><th class="num">日變化</th><th>含義</th></tr>
+    <tr><td>2Y</td><td class="num">約 4.74%</td><td class="num note">本週創 52 週新高</td><td>反映市場對 Fed 年內再升息路徑的定價持續上修</td></tr>
+    <tr><td>10Y</td><td class="num">約 4.95%–4.99%</td><td class="num up">週五續漲約 5bp，本月迄今累計上升約 27bp</td><td>逼近 5% 整數關卡，對高估值成長股估值壓力持續存在</td></tr>
+    <tr><td>2Y-10Y 利差</td><td class="num">約 +0.21%</td><td class="num note">維持小幅正值</td><td>殖利率曲線尚未倒掛，惟整體利率水位快速墊高</td></tr>
+  </table>
+  <p class="note">10Y 殖利率不同來源報價在 4.94%–4.99% 之間略有差異，已如實以區間呈現。</p>
+
+  <h3>4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+  <ul>
+    <li>背景：Fed 已於 2026-09-16 宣布升息 25bp 至 3.75%–4.00%，為 2023 年以來首次升息；堪薩斯城聯準銀行總裁 Schmid 表態偏鷹：「Fed 在抗通膨上仍有工作要做，本週的行動只是第一步」。</li>
+    <li>CME FedWatch（截至 9/17–18，對應 10/28 下次 FOMC）：市場定價<strong>再升息 25bp 機率約 55%</strong>，尚未過半數之外的明確共識；若拉長至 12 月會議，累計再升息的機率估計上看 9 成，顯示市場正逐漸消化「年內恐不只升息一次」的可能性。</li>
+    <li>與前一日相比：隨油價回落、殖利率高檔震盪，市場對「連續升息」的疑慮未進一步升溫，惟整體仍處於鷹派敘事主導的緊繃格局，JPMorgan 執行長 Jamie Dimon 公開表示對「通膨已被馴服」持懷疑態度。</li>
+  </ul>
+
+  <h3>4.3 油價與地緣（獨立追蹤）</h3>
+  <ul>
+    <li>WTI：約 101.01 美元／桶，-0.88%。</li>
+    <li>Brent：約 103.83 美元／桶，-0.94%。</li>
+    <li>地緣事件：沙烏地阿拉伯與葉門青年運動（Houthi）本週再度爆發襲擊事件，惟市場更聚焦供給端利多——沙國正加緊修復受損的東西向管線，預計數日內恢復約半數運能；衛星影像顯示沙國經荷莫茲海峽的原油運輸量六天內從 8 月日均 70 萬桶暴增至 280 萬桶；另有報導指沙國已透過紅海拉斯坦努拉港以船對船轉運方式，售出多達 6,000 萬桶原油給 9–10 月裝載的買家、藉此繞開荷莫茲海峽風險。供給端寬鬆敘事暫時壓過地緣風險溢價，帶動油價當日走軟。</li>
+  </ul>
+
+  <h3>4.4 其他宏觀資產</h3>
+  <table>
+    <tr><th>資產</th><th class="num">價格</th><th class="num">漲跌幅</th></tr>
+    <tr><td>DXY 美元指數</td><td class="num">約 100.22</td><td class="num flat">當日近乎持平，惟本週在 Fed 鷹派升息帶動下累計上漲約 1.1%</td></tr>
+    <tr><td>黃金</td><td class="num">約 4,424.90 美元/oz</td><td class="num up">+25.20 美元（約 +0.6%）</td></tr>
+    <tr><td>比特幣</td><td class="num">約 80,881 美元</td><td class="num up">+5.94%，站上 81,000 美元上方</td></tr>
+  </table>
+  <p class="note">比特幣走高主因「CLARITY 法案」未過關後空頭遭強制回補；加密貨幣類股同步走高，惟今日未搜得個別精確漲跌幅，不臆測列出。</p>
+
+  <h3>4.5 當日經濟數據</h3>
+  <p class="note">今日未搜得具體公布、且具備明確「實際值 vs 預期值」的美國經濟數據，暫不列表臆測；9 月非農就業報告要到 2026-10-02 才公布。</p>
+</section>
+
+<section id="s5-sector">
+  <h2>S5｜板塊表現</h2>
+  <table>
+    <tr><th>排名</th><th>板塊</th><th>ETF</th><th>當日漲跌幅</th><th>主要驅動</th></tr>
+    <tr><td>1</td><td>通訊服務</td><td>XLC</td><td class="num up">+0.26%</td><td>成長股族群今日相對抗跌，資金集中於少數權值股</td></tr>
+    <tr><td>2</td><td>資訊科技</td><td>XLK</td><td class="num up">+0.11%</td><td>那斯達克連二日收紅的主要支撐，惟漲幅已明顯收斂</td></tr>
+    <tr><td>3</td><td>房地產</td><td>XLRE</td><td class="num down">-0.23%</td><td>利率逼近 5% 對高槓桿類股的壓力持續存在</td></tr>
+    <tr><td>4</td><td>工業</td><td>XLI</td><td class="num down">-0.30%</td><td>與 GE Vernova 個股逆勢上漲的走勢脫節，板塊性輪動訊號不明確</td></tr>
+    <tr><td>5</td><td>公用事業</td><td>XLU</td><td class="num down">-0.34%</td><td>利率敏感防禦類股同步走弱</td></tr>
+    <tr><td>6</td><td>必需消費</td><td>XLP</td><td class="num down">-0.38%</td><td>防禦性類股today普遍落後</td></tr>
+    <tr><td>7</td><td>金融</td><td>XLF</td><td class="num down">-0.54%</td><td>今日表現最弱，市場對升息衝擊信用與淨利差的疑慮蓋過淨利差改善預期</td></tr>
+  </table>
+  <p class="note">非必需消費（XLY）、醫療保健（XLV）、能源（XLE）、原物料（XLB）今日精確漲跌幅暫無可靠數據，未列入排名，寧可空白不臆測。</p>
+
+  <div class="card">
+    <p style="margin:0 0 6px;color:var(--sub);font-size:0.8rem;">板塊當日表現（僅列有可靠數據者，綠漲紅跌）</p>
+    <div class="barrow"><div class="lbl">通訊服務 XLC</div><div class="track"><div class="fill" style="left:50%;width:5%;background:var(--green);"></div></div><div class="val up">+0.26%</div></div>
+    <div class="barrow"><div class="lbl">資訊科技 XLK</div><div class="track"><div class="fill" style="left:50%;width:2%;background:var(--green);"></div></div><div class="val up">+0.11%</div></div>
+    <div class="barrow"><div class="lbl">房地產 XLRE</div><div class="track"><div class="fill" style="left:45.4%;width:4.6%;background:var(--red);"></div></div><div class="val down">-0.23%</div></div>
+    <div class="barrow"><div class="lbl">工業 XLI</div><div class="track"><div class="fill" style="left:44%;width:6%;background:var(--red);"></div></div><div class="val down">-0.30%</div></div>
+    <div class="barrow"><div class="lbl">公用事業 XLU</div><div class="track"><div class="fill" style="left:43.2%;width:6.8%;background:var(--red);"></div></div><div class="val down">-0.34%</div></div>
+    <div class="barrow"><div class="lbl">必需消費 XLP</div><div class="track"><div class="fill" style="left:42.4%;width:7.6%;background:var(--red);"></div></div><div class="val down">-0.38%</div></div>
+    <div class="barrow"><div class="lbl">金融 XLF</div><div class="track"><div class="fill" style="left:39.2%;width:10.8%;background:var(--red);"></div></div><div class="val down">-0.54%</div></div>
+  </div>
+  <p>最強為通訊服務與資訊科技，最弱為金融；今日並非典型的成長 vs 價值輪動，而是成長股小幅抗跌、防禦與利率敏感類股（金融、公用事業、房地產、必需消費）同步偏弱，反映市場對升息衝擊信用環境的疑慮蓋過對淨利差改善的樂觀預期，尚未看到明確的「高切低」訊號。</p>
+</section>
+
+<section id="s6-style">
+  <h2>S6｜風格與市場寬度</h2>
+  <table>
+    <tr><th>ETF</th><th class="num">當日漲跌幅</th><th>回答的問題</th></tr>
+    <tr><td>SMH</td><td class="num note">暫無可靠數據</td><td>半導體是否仍是主線？——精確 ETF 數據缺乏，惟從記憶體個股（SanDisk +5.35%、西部數據 +3.15%、美光 +1%）看，半導體／儲存股呈溫和至強勁反彈但內部分化明顯</td></tr>
+    <tr><td>IGV</td><td class="num note">暫無可靠數據</td><td>軟體是否開始補漲？——今日無可靠數據，無法判斷</td></tr>
+    <tr><td>RSP</td><td class="num note">暫無可靠數據</td><td>等權 vs 市值加權——無精確數據；惟金融（-0.54%）與羅素 2000（-0.50%）同步落後，推估等權指數今日大機率跑輸市值加權的 S&amp;P 500，寬度偏向集中而非擴散</td></tr>
+    <tr><td>IWM</td><td class="num down">-0.50%（同 Russell 2000）</td><td>小盤是否參與？——未參與，領漲力道未擴散至小盤，延續近期小型股相對落後的趨勢</td></tr>
+  </table>
+  <p><b>寬度替代指標（質性判斷）：</b>今日領漲的通訊服務／資訊科技與領跌的金融／公用事業／房地產／必需消費呈現典型「防禦與利率敏感類股跑輸成長股」格局，加上小型股與（推估的）等權指數同步落後，寬度呈現收斂而非擴散的訊號。新聞來源未提供 52 週新高/新低家數或漲跌家數等具體寬度數據，暫不引用。</p>
+</section>
+
+<section id="s7-leaders">
+  <h2>S7｜主線股追蹤</h2>
+  <h3>7.1 Magnificent 7</h3>
+  <table>
+    <tr><th>股票</th><th class="num">漲跌幅</th><th>原因（有事才寫）</th></tr>
+    <tr><td>NVDA</td><td class="num up">+0.15%</td><td>—</td></tr>
+    <tr><td>MSFT</td><td class="num down">-0.87%</td><td>—</td></tr>
+    <tr><td>AAPL</td><td class="num down">-0.67%</td><td>iPhone 18 Pro 開賣，因記憶體成本上升調漲售價約 100 美元，市場消化漲價對需求的潛在影響</td></tr>
+    <tr><td>GOOGL</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>AMZN</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>META</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+    <tr><td>TSLA</td><td class="num note">暫無可靠數據</td><td>—</td></tr>
+  </table>
+  <p class="qa">今日僅 NVDA／MSFT／AAPL 三檔取得可靠數據，互有漲跌、非集體性行動：NVDA 小漲守穩，MSFT 與 AAPL 同步走弱；由於其餘四檔數據缺乏，尚不能判斷七巨頭對指數的整體貢獻方向，惟那斯達克仍收紅（+0.39%），推估其餘成分股或非科技權值股對指數形成一定支撐。</p>
+
+  <div class="card">
+    <p style="margin:0 0 6px;color:var(--sub);font-size:0.8rem;">七巨頭當日漲跌對比（僅列有可靠數據者）</p>
+    <div class="mag7grid">
+      <div class="mag7cell"><div class="t">NVDA</div><div class="p up">+0.15%</div></div>
+      <div class="mag7cell"><div class="t">MSFT</div><div class="p down">-0.87%</div></div>
+      <div class="mag7cell"><div class="t">AAPL</div><div class="p down">-0.67%</div></div>
+      <div class="mag7cell na"><div class="t">GOOGL</div><div class="p note">N/A</div></div>
+      <div class="mag7cell na"><div class="t">AMZN</div><div class="p note">N/A</div></div>
+      <div class="mag7cell na"><div class="t">META</div><div class="p note">N/A</div></div>
+      <div class="mag7cell na"><div class="t">TSLA</div><div class="p note">N/A</div></div>
+    </div>
+  </div>
+
+  <h3>7.2 記憶體主線（當前行情引擎，2026-07 起設立）</h3>
+  <p>今日焦點在儲存／快閃記憶體股的分化式反彈：SanDisk（SNDK）大漲 5.35% 至約 1,713 美元，漲勢明顯超前同業，惟報導指出並無對應的公司公告或研究報告支撐這波買盤集中，性質上更像籌碼／技術性行情；西部數據（WDC）上漲 3.15% 至 435.19 美元，受惠於 AI 基礎設施需求回穩敘事與企業級儲存容量需求強勁；美光（MU）僅上漲約 1% 至 991.43 美元，重新站回 1,000 美元關卡附近，漲幅明顯落後 SanDisk 與西部數據，市場正等待其 2026 財年第四季財報（9/30）以驗證記憶體需求是否真的健康。SK 海力士、三星電子今日（週五）美股盤中對應時段的亞股數據暫無，僅知週四三星（+2.97%）、SK 海力士（+5.56%）同步走高。</p>
+  <p><b>鈍化監測：</b>本週記憶體股經歷了從「Anthropic／OpenAI／馬斯克呼籲放緩前沿 AI 模型開發」引發的重挫（SK 海力士盤前一度重挫 7.4%、美光／SanDisk 一度跌逾 5%），到週四報復性反彈，再到週五 SanDisk／西部數據領漲、美光相對落後的分化走勢——這種「暴跌—暴漲—分化」的劇烈來回震盪，加上 SanDisk 本身缺乏明確消息面支撐的異常拉抬，都是需要留意的警訊：市場對記憶體超級循環利多的反應開始出現「逢高減碼、逢低搶反彈」的雙向操作特徵，而非單純的趨勢性買盤，鈍化風險正在累積。</p>
+
+  <h3>7.3 AI 硬體核心</h3>
+  <p>NVDA 今日 +0.15%，漲勢持穩但動能有限；AVGO、AMD、TSM 今日精確漲跌幅暫無可靠數據。整體而言，AI 硬體股本週經歷「AI 開發放緩疑慮→Fed 鷹派升息→報復性反彈」的三重考驗後，週五呈現動能收斂、個股分化（儲存股強於運算／邏輯晶片）的格局。</p>
+  <p><b>擁擠度判斷：</b>今日未搜得明確的「sell the news」個股案例；資金是否從 GPU 切向記憶體／電力／軟體，因缺乏 SMH／IGV 精確數據，暫無法給出明確結論。</p>
+
+  <h3>7.4 Rotation 代表股</h3>
+  <p>GE Vernova（GEV）週五上漲 1.6%，延續其 2026 年迄今逾 65% 的強勁漲勢，AI 電力／資料中心投資敘事持續獲得市場青睞；Caterpillar（CAT）今日精確漲跌幅暫無可靠數據，惟其 2026 年迄今漲幅近 48%–53%，與 GEV 同屬「實體經濟 × AI 電力」代表股。Great Rotation 今日未見與 AI 硬體股資金互斥的訊號，惟工業類股 ETF（XLI）本身收跌 0.30%，顯示「實體經濟股全面走強」的敘事尚未擴散至整個工業板塊，GEV 的強勢更偏個股題材而非板塊性輪動。</p>
+</section>
+
+<section id="s8-movers">
+  <h2>S8｜異動股與財報</h2>
+  <h3>8.1 當日重要異動</h3>
+  <table>
+    <tr><th>股票</th><th class="num">漲跌幅</th><th>原因</th><th>對主線的含義</th></tr>
+    <tr><td>SanDisk（SNDK）</td><td class="num up">+5.35%</td><td>無明確消息面支撐的異常買盤集中</td><td>儲存股籌碼／技術性反彈訊號，需留意是否為短線過熱</td></tr>
+    <tr><td>Western Digital（WDC）</td><td class="num up">+3.15%</td><td>AI 基礎設施與企業級儲存需求回穩敘事</td><td>支撐記憶體主線「供需吃緊」的基本面判斷</td></tr>
+    <tr><td>Micron（MU）</td><td class="num up">+1%</td><td>分析師上調評等，惟漲幅明顯落後同業</td><td>市場靜待 9/30 財報驗證 DRAM／HBM 需求健康度</td></tr>
+    <tr><td>Marathon Petroleum（MPC）</td><td class="num note">暫無精確當日數據</td><td>本週稍早創歷史新高，17 個交易日內上漲 16 日，煉油利差持續強勁</td><td>能源板塊內部分化，煉油優於上游</td></tr>
+    <tr><td>Netflix（NFLX）</td><td class="num note">暫無精確當日數據</td><td>遭調降至「劣於大盤」評等，目標價下修至 57 美元，具體原因今日未搜得明確報導</td><td>串流媒體估值疑慮浮現</td></tr>
+    <tr><td>Cooper Companies（COO）</td><td class="num note">暫無精確當日數據</td><td>維權投資人 JANA Partners 公開要求更換經營層</td><td>個股治理事件，非板塊性驅動</td></tr>
+  </table>
+
+  <h3>8.2 昨夜財報</h3>
+  <p class="note">暫無可靠數據——今日未搜得可明確歸屬於 9/18 盤後、且具備完整「實際值 vs 預期值」的財報公布，寧可空白不臆測。</p>
+
+  <h3>8.3 未來 1–3 日重要財報與事件</h3>
+  <p class="note">今日未搜得明確排定於未來 1–3 個交易日內的重大財報或事件，寧可空白不臆測。以下為超出該範圍、但屬記憶體與利率主線關鍵驗證點的提示：</p>
+  <table>
+    <tr><th>日期</th><th>公司/事件</th><th>關注點</th><th>可能影響板塊</th></tr>
+    <tr><td>2026-09-30</td><td>美光（Micron）2026 財年第四季財報</td><td>能否驗證 DRAM／HBM 需求健康度，回應本週「AI 放緩疑慮」的市場疑問</td><td>記憶體、半導體、AI 硬體全線</td></tr>
+    <tr><td>2026-10-28</td><td>下次 FOMC 會議</td><td>CME FedWatch 目前定價再升息 25bp 機率約 55%</td><td>全市場，尤其利率敏感類股（金融、房地產、公用事業）</td></tr>
+  </table>
+</section>
+
+<section id="s9-playbook">
+  <h2>S9｜輪動判斷與明日 Playbook</h2>
+  <h3>9.1 明確回答</h3>
+  <p><b>今天資金主要流入：</b>通訊服務、資訊科技，尤其儲存／快閃記憶體股（SanDisk、西部數據）。</p>
+  <p><b>今天資金主要流出／相對落後：</b>金融、公用事業、必需消費、房地產、工業，以及羅素 2000 小型股。</p>
+  <p><b>AI 主線（硬體＋記憶體）是否仍然健康：</b>短線出現分化——儲存股（SanDisk／西部數據）反彈明顯優於美光的 DRAM／HBM 敘事，加上本週經歷「AI 開發放緩疑慮」重挫又報復性反彈的劇烈震盪，健康度尚可但波動度已明顯放大，鈍化風險正在累積。</p>
+  <p><b>半導體 vs 軟體：</b>今日 SMH／IGV 精確數據皆缺，無法直接比較，僅能從個股層面判斷半導體內部本身已現分化。</p>
+  <p><b>小盤與實體經濟股：</b>羅素 2000 轉跌（-0.50%），GE Vernova 逆勢上漲（+1.6%）但屬個股題材而非板塊性；Great Rotation 今日未見明確延續或回流科技的訊號，傾向解讀為個股分化、板塊輪動訊號不明確。</p>
+  <p><b>當前更像：</b>趨勢延續中的階段性動能收斂，而非新一輪頂部震盪的起點——本週經歷 Fed 鷹派升息與 AI 放緩疑慮的雙重考驗後，市場已展現修復能力（週四報復性反彈），週五的收斂屬於正常獲利了結，惟金融／小型股／工業股同步走弱，值得觀察是否演變為更廣泛的風險偏好降溫。</p>
+
+  <h3>9.2 明日觀察清單</h3>
+  <ul>
+    <li><b>宏觀：</b>10 年期公債殖利率能否守住 5% 整數關卡；CME FedWatch 對 10/28 FOMC 升息機率是否進一步變化；WTI／Brent 隨沙國—青年運動衝突與荷莫茲海峽運能變化；DXY 是否延續本週漲勢。</li>
+    <li><b>亞洲盤先行指標：</b>KOSPI／三星電子／SK 海力士下週一開盤是否跟隨美股週五記憶體股分化走勢調整；台積電動向。</li>
+    <li><b>大盤：</b>SPY／QQQ 具體支撐壓力位今日新聞未提供明確數字，暫不列入；SMH 是否持續強於或弱於 QQQ 需待下週數據確認。</li>
+    <li><b>個股：</b>
+      <ul>
+        <li>美光（MU）——9/30 財報前能否收復對 SanDisk／西部數據的落後幅度</li>
+        <li>SanDisk（SNDK）——本週意外拉升是否有後續消息面支撐，或屬短線過熱需留意獲利了結</li>
+        <li>主要銀行股（金融板塊 XLF 最弱）——是否有更多利率上升對信用／淨利差衝擊的評論浮現</li>
+        <li>GE Vernova（GEV）、Caterpillar（CAT）——實體經濟／電力基建股能否延續強勢</li>
+        <li>Netflix（NFLX）——遭調降評等後的股價後續反應</li>
+        <li>蘋果（AAPL）——iPhone 18 Pro 調漲售價後的實際銷售／需求數據追蹤</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="s10-risk">
+  <h2>S10｜風險提示與最終結論</h2>
+  <h3>10.1 風險等級表</h3>
+  <table class="risktable">
+    <tr><th>風險維度</th><th>當前狀態</th><th>等級（低/中/中高/高）</th></tr>
+    <tr><td>宏觀利率（升息風險）</td><td>Fed 已於 9/16 升息 25bp 至 3.75%–4.00%，10 月再升息機率約 55%，12 月累計機率上看 9 成</td><td class="level-中高">中高</td></tr>
+    <tr><td>記憶體循環反轉</td><td>本週經歷重挫又報復性反彈再分化，儲存股與美光表現脫節，波動度明顯升高</td><td class="level-中高">中高</td></tr>
+    <tr><td>AI capex 持續性</td><td>本週 AI 開發放緩疑慮（Anthropic／OpenAI／馬斯克呼籲）雖經週四反彈部分消化，但根源疑慮未完全解除</td><td class="level-中">中</td></tr>
+    <tr><td>地緣/油價</td><td>沙國—青年運動衝突未解，惟供給端寬鬆（沙國增產轉運）暫時壓過風險溢價</td><td class="level-中">中</td></tr>
+    <tr><td>中美科技戰</td><td>今日無新增具體訊息，惟報導提及美國可能延後對產能過剩相關新關稅的宣布至美中領袖峰會後，屬潛在緩和訊號</td><td class="level-中">中</td></tr>
+    <tr><td>市場寬度惡化</td><td>金融、公用事業、房地產、小型股同步落後，寬度呈收斂而非擴散</td><td class="level-中高">中高</td></tr>
+    <tr><td>財報風險</td><td>美光 9/30 財報將是記憶體敘事的下一個關鍵驗證點，目前尚未公布</td><td class="level-中">中</td></tr>
+  </table>
+  <p><b>當前最需警惕的前 3 項風險：</b>①記憶體循環反轉／波動度升高（暴跌暴漲分化明顯）②宏觀利率（10 月再升息機率過半、12 月近九成）③市場寬度收斂（金融／小型股／工業同步落後）。</p>
+
+  <h3>10.2 最終結論</h3>
+  <p>美股週五在歷經本週「AI 放緩疑慮重挫→Fed 鷹派升息→報復性反彈」三重震盪後，進入動能收斂的整理格局：那斯達克與 S&amp;P 500 小幅收紅，但道瓊與羅素 2000 同步走跌，金融與公用事業等利率敏感類股領跌，顯示反彈基礎仍集中於科技與通訊服務等少數族群。記憶體／儲存股內部出現明顯分化——SanDisk、西部數據強勢反彈，美光相對落後——反映市場對 AI 資本支出／記憶體超級循環的信心尚未完全修復。10 年期公債殖利率逼近 5% 整數關卡、CME FedWatch 顯示 10 月再升息機率過半，鷹派風險尚未解除，投資人宜對追高保持謹慎。</p>
+  <p><b>當前市場階段：</b>高位震盪</p>
+  <p><b>操作傾向（中性觀察，不構成投資建議）：</b>短線動能已見收斂，不建議追高金融／小型股等落後族群；科技／通訊服務與儲存記憶體股仍是資金焦點，但 SanDisk 式無消息面拉抬需留意是否為短線過熱；建議在 10 月 FOMC 結果明朗前控制部位規模，密切關注殖利率能否守住 5% 關卡，以及記憶體股內部分化是否收斂。</p>
+  <p><b>最值得關注的 5 個信號：</b></p>
+  <ul>
+    <li>10 年期公債殖利率是否守住 5% 整數關卡或進一步突破</li>
+    <li>美光能否在 9/30 財報前收復對 SanDisk／西部數據的落後幅度</li>
+    <li>CME FedWatch 對 10/28 FOMC 升息機率是否進一步升溫（現約 55%）</li>
+    <li>金融股（XLF）能否止穩，或持續領跌反映信用／淨利差疑慮擴大</li>
+    <li>WTI／Brent 是否隨沙國—青年運動衝突或荷莫茲海峽運能變化重新走高</li>
+  </ul>
+
+  <footer class="disclaimer">本報告為中性市場觀察，僅供參考，不構成投資建議。資料來源標註於各段落，若有數據差異已於文中說明。</footer>
+</section>
+
+</div>
+</body>
+</html>
