@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>美股收盤日報 2026-09-22</title>
+<style>
+  :root{
+    --bg:#0b0d12; --panel:#12151c; --panel2:#171b24; --border:#262b36;
+    --text:#e7e9ee; --sub:#9aa3b2; --green:#3ddc84; --red:#ff5c5c;
+    --amber:#f5b942; --accent:#5b8cff;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang TC","Noto Sans TC",sans-serif;margin:0;padding:0;line-height:1.6;}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 18px 60px;}
+  header.top{text-align:center;padding:20px 0 28px;border-bottom:1px solid var(--border);margin-bottom:24px;}
+  header.top h1{font-size:1.5rem;margin:0 0 8px;}
+  header.top p{color:var(--sub);font-size:0.82rem;margin:2px 0;}
+  section{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:20px 20px 22px;margin-bottom:20px;}
+  h2{font-size:1.05rem;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--border);color:#fff;}
+  h3{font-size:0.92rem;color:var(--accent);margin:18px 0 8px;}
+  p{margin:8px 0;font-size:0.9rem;}
+  table{width:100%;border-collapse:collapse;margin:10px 0 6px;font-size:0.84rem;}
+  th,td{padding:7px 8px;text-align:left;border-bottom:1px solid var(--border);}
+  th{color:var(--sub);font-weight:600;font-size:0.78rem;}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .up{color:var(--green);} .down{color:var(--red);} .flat{color:var(--sub);}
+  .tag{display:inline-block;background:var(--panel2);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:0.8rem;margin:3px 4px 3px 0;color:var(--amber);}
+  .callout{background:var(--panel2);border-left:3px solid var(--accent);border-radius:8px;padding:12px 14px;margin:12px 0;font-size:0.87rem;}
+  .callout b{color:#fff;}
+  .qa{margin:6px 0;font-size:0.87rem;}
+  .qa b{color:#fff;}
+  .note{color:var(--sub);font-size:0.78rem;font-style:normal;}
+  .card{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-top:12px;}
+  .heatgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px;}
+  .heatcell{border-radius:10px;padding:12px 10px;text-align:center;}
+  .heatcell .name{font-size:0.78rem;color:rgba(255,255,255,0.85);margin-bottom:4px;}
+  .heatcell .pct{font-size:1.15rem;font-weight:700;}
+  .barrow{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:0.82rem;}
+  .barrow .lbl{width:150px;flex-shrink:0;color:var(--sub);}
+  .barrow .track{flex:1;background:#0d0f14;border-radius:6px;height:18px;position:relative;overflow:hidden;}
+  .barrow .fill{position:absolute;top:0;bottom:0;border-radius:6px;}
+  .barrow .val{width:64px;text-align:right;flex-shrink:0;font-variant-numeric:tabular-nums;}
+  .mag7grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px;}
+  @media (max-width:520px){.mag7grid{grid-template-columns:repeat(3,1fr);} .heatgrid{grid-template-columns:repeat(2,1fr);}}
+  .mag7cell{background:#0d0f14;border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center;}
+  .mag7cell .t{font-weight:700;font-size:0.88rem;}
+  .mag7cell .p{font-size:0.95rem;margin-top:4px;font-weight:700;}
+  .mag7cell.na{opacity:0.5;}
+  .risktable td.level-低{color:var(--green);} .risktable td.level-中{color:var(--amber);}
+  .risktable td.level-中高{color:#ff8a5c;} .risktable td.level-高{color:var(--red);}
+  footer.disclaimer{text-align:center;color:var(--sub);font-size:0.76rem;margin-top:10px;padding:16px 0;border-top:1px solid var(--border);}
+  ul{margin:8px 0;padding-left:20px;font-size:0.87rem;}
+  li{margin:4px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>🇺🇸 美股收盤日報｜2026-09-22</h1>
+  <p>報告生成時間：台北時間 08:00　|　資料來源：CNBC、Bloomberg、Yahoo Finance、TheStreet、The Motley Fool、Washington Post、Benzinga、TradingKey、247wallst 等</p>
+  <p>本報告由 超中毒（@oiiax88）製作，分享請註明出處</p>
+  <p class="note">涵蓋交易日：2026-09-21（週一）</p>
+</header>
+
+<section id="s1-cover">
+  <h2>S1｜今日一句話總結</h2>
+  <p>美股週一強勢反彈，那斯達克創收盤新高：S&amp;P 500 收漲 1.49%、那斯達克大漲 2.26%、道瓊上漲 0.71%，通訊服務（Meta 暴漲 11.4%）與資訊科技（AMD 突破兆元市值、Intel +12%）雙引擎領漲，帶動整體風險偏好強勁回升，VIX 續處低檔 14.89。驅動力來自 Meta「Muse」AI 代理登上 App Store 下載榜首、伊朗戰事外交緩和帶動油價回落逾 1%–3%、以及市場對本週四川普—習近平峰會（聚焦 AI／貿易）的樂觀情緒。惟需留意：Fed 才剛於 9/16 升息 25bp 至 3.75%–4.00%，10 年期公債殖利率仍逼近 4.96%–5% 關卡，且 CME FedWatch 顯示下次（10/28）FOMC 再升息機率仍近六成——這是一波「升息週期中的 AI risk-on」，而非典型降息驅動的多頭格局；羅素 2000 僅溫和上漲 0.52%，寬度尚未全面擴散至小型股。</p>
+  <p><b>📌 今日市場狀態標籤：</b></p>
+  <span class="tag">AI硬體主升浪</span>
+  <span class="tag">記憶體主線延續</span>
+  <span class="tag">全面 risk-on</span>
+</section>
+
+<section id="s2-index">
+  <h2>S2｜大盤表現總覽</h2>
+  <table>
+    <tr><th>指數</th><th class="num">收盤</th><th class="num">漲跌幅</th><th>日內高低點</th><th>一句話狀態</th></tr>
+    <tr><td>Dow Jones</td><td class="num">52,048.83</td><td class="num up">+0.71%</td><td class="num note">暫無可靠數據</td><td>四大指數中漲幅最小，惟仍收紅，未拖累整體風險偏好</td></tr>
+    <tr><td>S&amp;P 500</td><td class="num">7,764.70</td><td class="num up">+1.49%</td><td class="num note">暫無可靠數據</td><td>創本月以來最佳單日表現之一，通訊服務與科技雙引擎帶動</td></tr>
+    <tr><td>Nasdaq Composite</td><td class="num">27,122.09</td><td class="num up">+2.26%</td><td class="num note">暫無可靠數據</td><td>創收盤歷史新高，Meta、AMD 帶動漲勢</td></tr>
+    <tr><td>Russell 2000 / IWM</td><td class="num">2,875.36</td><td class="num up">+0.52%</td><td class="num note">暫無可靠數據</td><td>溫和上漲但明顯落後大型科技股，寬度尚未擴散</td></tr>
+    <tr><td>SOX 半導體指數</td><td class="num note">精確收盤點位暫無可靠數據</td><td class="num up">大漲逾 3%</td><td class="num note">暫無可靠數據</td><td>領漲那斯達克，AMD／Intel／記憶體股全面走強</td></tr>
+    <tr><td>VIX</td><td class="num">14.89</td><td class="num flat">+0.13%</td><td class="num note">暫無可靠數據</td><td>維持低檔，恐慌情緒未因升息升溫</td></tr>
+  </table>
+
+  <p class="qa"><b>Dow vs Nasdaq 相對強弱：</b>那斯達克（+2.26%）大幅領先道瓊（+0.71%），資金明顯集中於科技／通訊服務成長股，而非傳產或價值股，屬於典型的成長股主導行情，而非資金回流傳產的 rotation。</p>
+  <p class="qa"><b>小盤是否過熱／領漲延續：</b>羅素 2000 今日上漲 0.52%，惟報導指出小型股目前仍較近期高點回落逾 5%，顯示小盤參與程度遠不及大型科技股，未見過熱訊號，領漲力道也尚未擴散至小盤。</p>
+  <p class="qa"><b>SOX 相對 Nasdaq 領先或拖累：</b>SOX 當日大漲逾 3%，優於那斯達克的 +2.26%，半導體是今日領漲的核心引擎而非拖累，AMD 突破兆元市值、Intel 大漲逾 12% 是主要貢獻。</p>
+
+  <div class="card">
+    <p style="margin:0 0 6px;color:var(--sub);font-size:0.8rem;">各指數／VIX 當日漲跌幅熱力圖</p>
+    <div class="heatgrid">
+      <div class="heatcell" style="background:rgba(61,220,132,0.20)"><div class="name">Dow Jones</div><div class="pct up">+0.71%</div></div>
+      <div class="heatcell" style="background:rgba(61,220,132,0.25)"><div class="name">S&amp;P 500</div><div class="pct up">+1.49%</div></div>
+      <div class="heatcell" style="background:rgba(61,220,132,0.30)"><div class="name">Nasdaq</div><div class="pct up">+2.26%</div></div>
+      <div class="heatcell" style="background:rgba(61,220,132,0.18)"><div class="name">Russell 2000</div><div class="pct up">+0.52%</div></div>
+      <div class="heatcell" style="background:rgba(61,220,132,0.35)"><div class="name">SOX 半導體</div><div class="pct up">＞+3%</div></div>
+      <div class="heatcell" style="background:rgba(120,130,150,0.18)"><div class="name">VIX</div><div class="pct flat">+0.13%</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="s3-recap">
+  <h2>S3｜盤中復盤</h2>
+  <p><b>盤前（含亞洲盤連動）：</b>週一南韓 KOSPI 收漲 1.65% 至 7,007.72 點，三星電子（+2.68%）、SK 海力士（+1.13%）同步走高，市場消化中東緊張情勢與油價百元上方之餘，仍優先反映 AI 記憶體需求樂觀情緒，為稍後美股半導體／記憶體股走強鋪墊。台積電當日亞股表現今日未搜得明確數據。</p>
+  <p><b>日內轉折點：</b>全日多頭走勢，未見明顯逆轉。早盤即受惠於 Meta「Muse」AI 代理登上 App Store 下載榜首、Wells Fargo 上調目標價，帶動通訊服務／科技股全面走強；AMD 盤中一度大漲近 10% 並突破兆元市值，Intel 同步大漲逾 12%，油價走弱（Brent 一度重挫逾 3%）進一步降低整體市場的風險溢價，全日呈單邊上漲格局。</p>
+  <p><b>尾盤與盤後：</b>比特幣尾盤延續強勢，站上 87,000 美元、創逾八個月新高；今日未搜得具高可信度、明確歸屬於 9/21 盤後的重大財報公布，惟市場已聚焦次日（9/22）美光財報。</p>
+  <div class="callout"><b>核心驅動判斷：</b>屬於「buy the dip」後的 AI 硬體＋記憶體同步走強的趨勢延續行情，而非 sell the news 或軋空——Meta 產品面利多、AMD 突破兆元市值、油價回落降低總體風險溢價、以及本週四川習會前的樂觀氣氛，多重利多同步發酵，帶動那斯達克創收盤新高，惟漲勢仍集中於少數權值股與半導體族群，小型股與傳產僅溫和參與。</div>
+</section>
+
+<section id="s4-macro">
+  <h2>S4｜宏觀環境</h2>
+  <h3>4.1 美債收益率</h3>
+  <table>
+    <tr><th>項目</th><th class="num">最新</th><th class="num">日變化</th><th>含義</th></tr>
+    <tr><td>2Y</td><td class="num">約 4.74%</td><td class="num note">當日精確變化暫無可靠數據</td><td>反映市場對 Fed 後續升息路徑的定價持續偏鷹</td></tr>
+    <tr><td>10Y</td><td class="num">4.96%</td><td class="num down">-0.04 個百分點</td><td>續處 5% 關卡下方，對成長股估值壓力略為緩解</td></tr>
+    <tr><td>2Y-10Y 利差</td><td class="num">約 +0.22%</td><td class="num note">維持小幅正值</td><td>殖利率曲線尚未倒掛</td></tr>
+  </table>
+
+  <h3>4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+  <ul>
+    <li>背景：Fed 已於 2026-09-16 宣布升息 25bp 至 3.75%–4.00%，為近三年來首次升息，反映油價衝擊下的通膨壓力升溫。</li>
+    <li>CME FedWatch（截至 9/20，對應 10/28 下次 FOMC）：市場定價<strong>再升息 25bp 機率約 59.7%</strong>，顯示市場仍高度預期年內恐不只升息一次；惟不同時點的估計略有差異（8 月底 Forbes 報導曾一度顯示逾 6 成機率對應 9 月會議），已如實標註差異，不強行統一。</li>
+    <li>與前一日相比：隨油價走軟、地緣風險情緒緩和，市場對「連續升息」的疑慮未進一步升溫，惟整體仍處於鷹派敘事主導的緊繃格局。</li>
+  </ul>
+
+  <h3>4.3 油價與地緣（獨立追蹤）</h3>
+  <ul>
+    <li>WTI（11 月合約）：約 91.25 美元／桶，-1.21%。</li>
+    <li>Brent（11 月合約）：100.34 美元／桶，-3.4%（-3.53 美元），創 12 個交易日以來新低。</li>
+    <li>地緣事件：伊朗戰爭與荷莫茲海峽運輸中斷的風險仍未解除，惟市場聚焦本週聯合國大會期間美伊外交進展——川普表示願與伊朗總統佩澤希齊揚會晤；加上沙國東西向管線部分修復、出口回升，供給端寬鬆敘事壓過地緣風險溢價，帶動油價當日走軟，並降低整體市場的風險溢價，支撐股市風險偏好回升。</li>
+  </ul>
+
+  <h3>4.4 其他宏觀資產</h3>
+  <table>
+    <tr><th>資產</th><th class="num">價格</th><th class="num">漲跌幅</th></tr>
+    <tr><td>DXY 美元指數</td><td class="num">約 100.44</td><td class="num up">+0.2%</td></tr>
+    <tr><td>黃金</td><td class="num">約 4,340.51 美元/oz</td><td class="num down">-0.9%</td></tr>
+    <tr><td>比特幣</td><td class="num">約 87,000+ 美元</td><td class="num up">創逾八個月新高</td></tr>
+  </table>
+
+  <h3>4.5 當日經濟數據</h3>
+  <p class="note">今日未搜得具體公布、且具備明確「實際值 vs 預期值」的美國經濟數據，暫不列表臆測。</p>
+</section>
+
+<section id="s5-sector">
+  <h2>S5｜板塊表現</h2>
+  <table>
+    <tr><th>排名</th><th>板塊</th><th>ETF</th><th>當日漲跌幅</th><th>主要驅動</th></tr>
+    <tr><td>1</td><td>通訊服務</td><td>XLC</td><td class="num up">+3.84%</td><td>Meta 暴漲 11.4%（AI 代理利多＋分析師上調目標價），Paramount／Warner Bros. Discovery 併購和解傳聞助攻</td></tr>
+    <tr><td>2</td><td>資訊科技</td><td>XLK</td><td class="num up">+2.83%</td><td>AMD 突破兆元市值、Intel 大漲逾 12%，半導體全面走強</td></tr>
+    <tr><td>11</td><td>能源</td><td>XLE</td><td class="num down">-1.89%</td><td>油價回落（Brent -3.4%）拖累能源股表現</td></tr>
+  </table>
+  <p class="note">醫療保健（XLV）、金融（XLF）、工業（XLI）、非必需消費（XLY）、必需消費（XLP）、公用事業（XLU）、房地產（XLRE）、原物料（XLB）今日精確漲跌幅暫無可靠數據，未列入排名，寧可空白不臆測。</p>
+
+  <div class="card">
+    <p style="margin:0 0 6px;color:var(--sub);font-size:0.8rem;">板塊當日表現（僅列有可靠數據者，綠漲紅跌）</p>
+    <div class="barrow"><div class="lbl">通訊服務 XLC</div><div class="track"><div class="fill" style="left:37.5%;width:48%;background:var(--green);"></div></div><div class="val up">+3.84%</div></div>
+    <div class="barrow"><div class="lbl">資訊科技 XLK</div><div class="track"><div class="fill" style="left:37.5%;width:35.4%;background:var(--green);"></div></div><div class="val up">+2.83%</div></div>
+    <div class="barrow"><div class="lbl">能源 XLE</div><div class="track"><div class="fill" style="left:13.9%;width:23.6%;background:var(--red);"></div></div><div class="val down">-1.89%</div></div>
+  </div>
+  <p>最強為通訊服務與資訊科技，兩者漲幅皆逾 2.8%，屬明確的成長股主導行情；最弱為能源，隨油價回落而承壓。今日並非「高切低」的價值股輪動，而是資金持續集中於 AI／半導體／通訊服務等成長題材，能源則因油價走弱獨自落後。</p>
+</section>
+
+<section id="s6-style">
+  <h2>S6｜風格與市場寬度</h2>
+  <table>
+    <tr><th>ETF</th><th class="num">當日漲跌幅</th><th>回答的問題</th></tr>
+    <tr><td>SMH</td><td class="num note">精確數據暫無</td><td>半導體是否仍是主線？——精確 ETF 數據缺乏，惟代理指標 SOX 當日大漲逾 3%，顯示半導體仍是今日最強主線</td></tr>
+    <tr><td>IGV</td><td class="num note">當日精確數據暫無</td><td>軟體是否開始補漲？——今日無精確數據，惟 IGV 2026 年迄今報酬僅 -13.97%，遠遜於 SMH 同期 +52.32%，顯示軟體全年嚴重落後半導體，尚無補漲跡象</td></tr>
+    <tr><td>RSP</td><td class="num note">暫無可靠數據</td><td>等權 vs 市值加權——無精確數據，無法判斷寬度是否擴散</td></tr>
+    <tr><td>IWM</td><td class="num up">+0.52%（同 Russell 2000）</td><td>小盤是否參與？——溫和參與但明顯落後大型科技股，領漲力道未全面擴散至小盤</td></tr>
+  </table>
+  <p><b>寬度替代指標（質性判斷）：</b>今日領漲的通訊服務／資訊科技與領跌的能源呈現典型「成長股主導、傳產承壓」格局，小型股（羅素 2000 +0.52%）僅溫和參與，加上軟體（IGV）全年大幅落後半導體，顯示這波反彈仍集中在少數 AI／半導體權值股與題材股，寬度尚未全面擴散。新聞來源未提供 52 週新高/新低家數或漲跌家數等具體寬度數據，暫不引用。</p>
+</section>
+
+<section id="s7-leaders">
+  <h2>S7｜主線股追蹤</h2>
+  <h3>7.1 Magnificent 7</h3>
+  <table>
+    <tr><th>股票</th><th class="num">漲跌幅</th><th>原因（有事才寫）</th></tr>
+    <tr><td>NVDA</td><td class="num up">+2.30%</td><td>半導體全面上漲的一環</td></tr>
+    <tr><td>MSFT</td><td class="num down">-0.80%</td><td>七巨頭中唯一收黑，具體原因今日未搜得明確報導</td></tr>
+    <tr><td>AAPL</td><td class="num up">+0.85%</td><td>—</td></tr>
+    <tr><td>GOOGL</td><td class="num up">+1.88%</td><td>—</td></tr>
+    <tr><td>AMZN</td><td class="num up">+1.00%</td><td>—</td></tr>
+    <tr><td>META</td><td class="num up">+11.43%</td><td>「Muse」AI 代理登上 App Store 下載榜首，Wells Fargo 上調目標價</td></tr>
+    <tr><td>TSLA</td><td class="num up">+3.03%</td><td>市場提前反映其 Roadster 發表活動</td></tr>
+  </table>
+  <p class="qa">七巨頭六漲一跌，非純粹集體性行動：Meta 以逾 11% 漲幅一枝獨秀拉動指數，特斯拉、Alphabet 跟漲力道也不小，唯獨微軟逆勢收黑；整體而言七巨頭對那斯達克創收盤新高貢獻顯著，惟漲勢分佈並不平均，高度集中在 Meta 單一利多事件。</p>
+
+  <div class="card">
+    <p style="margin:0 0 6px;color:var(--sub);font-size:0.8rem;">七巨頭當日漲跌對比</p>
+    <div class="mag7grid">
+      <div class="mag7cell"><div class="t">NVDA</div><div class="p up">+2.30%</div></div>
+      <div class="mag7cell"><div class="t">MSFT</div><div class="p down">-0.80%</div></div>
+      <div class="mag7cell"><div class="t">AAPL</div><div class="p up">+0.85%</div></div>
+      <div class="mag7cell"><div class="t">GOOGL</div><div class="p up">+1.88%</div></div>
+      <div class="mag7cell"><div class="t">AMZN</div><div class="p up">+1.00%</div></div>
+      <div class="mag7cell"><div class="t">META</div><div class="p up">+11.43%</div></div>
+      <div class="mag7cell"><div class="t">TSLA</div><div class="p up">+3.03%</div></div>
+    </div>
+  </div>
+
+  <h3>7.2 記憶體主線（當前行情引擎，2026-07 起設立）</h3>
+  <p>美光（MU）今日上漲約 3%–4%（盤中一度上看 +4.24%），持續受惠於 AI／HBM 記憶體需求緊俏、供給吃緊的敘事支撐；SanDisk（SNDK）逆勢下跌約 2%，西部數據（WDC）小幅收高；南韓盤三星電子（+2.68%）、SK 海力士（+1.13%）同步走高。美光將於明日（9/22）公布 2026 財年第四季財報，惟不同來源對其 EPS 預估差異極大：Benzinga 估 EPS 24.30 美元／營收 41.57 億美元，TradingKey 估 EPS 高達 31.29 美元／營收 50.82 億美元，兩者落差顯著，已如實呈現差異，不強行取一。</p>
+  <p><b>鈍化監測：</b>今日未見明顯鈍化訊號——記憶體股與半導體股同步走強，並非單一族群獨漲；惟市場對美光財報的預期分歧極大（EPS 估值區間跨度逾 7 美元），若明日財報／展望不及市場較高端的預期，不排除引發獲利了結賣壓，這是記憶體超級循環接下來最大的驗證點。</p>
+
+  <h3>7.3 AI 硬體核心</h3>
+  <p>AMD 大漲近 10%（+9.95%），盤中突破兆元市值，成為繼 NVDA、AVGO、TSM、MU 之後第五家市值破兆的半導體公司；Intel 同步大漲逾 12%。AVGO、TSM、ARM 今日精確漲跌幅暫無可靠數據。</p>
+  <p><b>擁擠度判斷：</b>今日未見「sell the news」訊號，資金呈現同時流入 GPU／邏輯晶片（AMD、Intel）與記憶體（美光、三星、SK 海力士）的態勢，屬於 AI 硬體全線走強，而非資金從 GPU 切向記憶體的排擠效應。</p>
+
+  <h3>7.4 Rotation 代表股</h3>
+  <p>Caterpillar（CAT）、GE Vernova（GEV）今日精確漲跌幅暫無可靠數據，惟同日有報導（The Motley Fool）以「利率上升對 CAT／GEV／Vertiv 的影響」為題，將兩者定位為受惠於 AI 電力基建、但同時對利率敏感的實體經濟代表股。由於今日漲勢主要集中在通訊服務與半導體，且今日未搜得 CAT／GEV 明確走勢，Great Rotation 是否延續今日無法給出明確結論。</p>
+</section>
+
+<section id="s8-movers">
+  <h2>S8｜異動股與財報</h2>
+  <h3>8.1 當日重要異動</h3>
+  <table>
+    <tr><th>股票</th><th class="num">漲跌幅</th><th>原因</th><th>對主線的含義</th></tr>
+    <tr><td>Meta（META）</td><td class="num up">+11.43%</td><td>「Muse」AI 代理登上 App Store 下載榜首，Wells Fargo 上調目標價</td><td>通訊服務領漲的核心驅動，AI 應用端變現敘事獲得驗證</td></tr>
+    <tr><td>AMD</td><td class="num up">+9.95%</td><td>AI／半導體需求加速，市值突破兆元</td><td>AI 硬體主升浪延續，晶片股信心強化</td></tr>
+    <tr><td>Intel（INTC）</td><td class="num up">+12.17%</td><td>隨半導體全面上漲，具體個股消息今日未搜得明確報導</td><td>晶片股全面走強的一環</td></tr>
+    <tr><td>Micron（MU）</td><td class="num up">約 +3%–4%</td><td>AI／HBM 記憶體供需吃緊敘事延續，市場靜待明日財報</td><td>記憶體主線是否健康的下一個關鍵驗證點</td></tr>
+    <tr><td>HP</td><td class="num down">-4.75%</td><td>警告 2027 年全球 PC 出貨量恐現中個位數萎縮</td><td>PC／硬體需求前景疑慮浮現，與 AI 硬體熱潮形成對比</td></tr>
+    <tr><td>Novo Nordisk</td><td class="num down">-4.35%</td><td>長期策略與減重藥物布局未能安撫投資人疑慮</td><td>醫療保健個股層級事件，非板塊性驅動</td></tr>
+    <tr><td>Hasbro</td><td class="num down">-3.60%</td><td>總體經濟壓力與升息環境衝擊非必需消費類股</td><td>反映升息週期對消費性支出的潛在壓力</td></tr>
+  </table>
+
+  <h3>8.2 昨夜財報</h3>
+  <p class="note">今日未搜得可明確歸屬於 9/21 盤後、且具備完整「實際值 vs 預期值」的重大財報公布，寧可空白不臆測。</p>
+
+  <h3>8.3 未來 1–3 日重要財報與事件</h3>
+  <table>
+    <tr><th>日期</th><th>公司/事件</th><th>關注點</th><th>可能影響板塊</th></tr>
+    <tr><td>2026-09-22</td><td>美光（Micron）2026 財年第四季財報</td><td>DRAM／HBM 需求與展望能否滿足市場分歧極大的高預期（EPS 估值介於 24.30～31.29 美元）</td><td>記憶體、半導體、AI 硬體全線</td></tr>
+    <tr><td>2026-09-24</td><td>川普—習近平華盛頓峰會</td><td>聚焦貿易、AI、台灣與稀有金屬議題；Bezos、Pichai、Altman、Cook、Musk、Huang 等科技執行長預計出席晚宴</td><td>AI／科技股全線、中國供應鏈相關個股</td></tr>
+  </table>
+</section>
+
+<section id="s9-playbook">
+  <h2>S9｜輪動判斷與明日 Playbook</h2>
+  <h3>9.1 明確回答</h3>
+  <p><b>今天資金主要流入：</b>通訊服務（Meta）、資訊科技／半導體（AMD、Intel），以及記憶體股（美光、三星、SK 海力士）。</p>
+  <p><b>今天資金主要流出／相對落後：</b>能源（隨油價回落），小型股（羅素 2000）僅溫和參與，明顯落後大型科技股。</p>
+  <p><b>AI 主線（硬體＋記憶體）是否仍然健康：</b>健康，且呈現硬體與記憶體同步走強的態勢，惟明日美光財報是接下來最重要的驗證點，市場預期分歧極大，需留意結果不及最高端預期的獲利了結風險。</p>
+  <p><b>半導體 vs 軟體：</b>半導體（SOX 當日大漲逾 3%）明顯強於軟體，IGV 2026 年迄今報酬僅 -13.97%，遠遜於 SMH 同期 +52.32%，軟體全年持續嚴重落後。</p>
+  <p><b>小盤與實體經濟股：</b>羅素 2000 溫和上漲 0.52% 但仍較近期高點回落逾 5%，CAT／GEV 今日數據缺乏，Great Rotation 是否延續今日無法給出明確結論，惟資金明顯以大型科技／半導體為主要焦點。</p>
+  <p><b>當前更像：</b>趨勢延續——Meta AI 應用利多、AMD 突破兆元市值、Kospi 亞股同步走強，強化了今年以來的 AI 硬體／記憶體超級週期敘事，而非階段性頂部震盪的訊號；惟 Fed 升息週期未歇、10Y 殖利率逼近 5%，是持續需要留意的估值風險。</p>
+
+  <h3>9.2 明日觀察清單</h3>
+  <ul>
+    <li><b>宏觀：</b>10 年期公債殖利率能否維持在 5% 下方；CME FedWatch 對 10/28 FOMC 升息機率（現約 59.7%）是否進一步變化；WTI／Brent 隨伊朗外交進展與荷莫茲海峽情勢波動；DXY 走勢。</li>
+    <li><b>亞洲盤先行指標：</b>週二（9/22）KOSPI 開盤已跳空大漲逾 2.2%，三星電子、SK 海力士同步上漲逾 3%，須觀察此強勢是否延續至美股開盤。</li>
+    <li><b>大盤：</b>SPY／QQQ 具體支撐壓力位新聞未提供明確數字，暫不列入；SMH 是否持續強於 QQQ 待後續數據確認。</li>
+    <li><b>個股：</b>
+      <ul>
+        <li>美光（MU）——9/22 財報，DRAM／HBM 展望能否滿足市場分歧極大的高預期</li>
+        <li>Meta（META）——本週稍後 Connect 大會前瞻，AI 代理動能能否延續</li>
+        <li>AMD——突破兆元市值後是否出現獲利了結賣壓</li>
+        <li>川普—習近平峰會（9/24）——AI／貿易談判前瞻進展與科技執行長晚宴相關報導</li>
+        <li>三星電子、SK 海力士——韓股記憶體雙雄能否延續今日跳空大漲</li>
+        <li>能源類股——油價持續回落是否延續拖累表現</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="s10-risk">
+  <h2>S10｜風險提示與最終結論</h2>
+  <h3>10.1 風險等級表</h3>
+  <table class="risktable">
+    <tr><th>風險維度</th><th>當前狀態</th><th>等級（低/中/中高/高）</th></tr>
+    <tr><td>宏觀利率（升息風險）</td><td>Fed 已於 9/16 升息 25bp 至 3.75%–4.00%，CME FedWatch 對 10/28 再升息機率約 59.7%，屬罕見的「升息週期中 risk-on」格局</td><td class="level-中高">中高</td></tr>
+    <tr><td>記憶體循環反轉</td><td>明日美光財報是關鍵驗證點，市場 EPS 預期分歧極大（24.30～31.29 美元），落差顯著</td><td class="level-中高">中高</td></tr>
+    <tr><td>AI capex 持續性</td><td>AMD、Intel、Meta 今日同步走強，支撐 AI 硬體與應用端敘事，惟估值已明顯墊高</td><td class="level-中">中</td></tr>
+    <tr><td>地緣/油價</td><td>伊朗戰爭與荷莫茲海峽風險未解除，惟外交樂觀情緒與沙國增產暫時壓低油價</td><td class="level-中">中</td></tr>
+    <tr><td>中美科技戰</td><td>川習會（9/24）聚焦 AI／貿易／台灣議題，目前談判氣氛偏正面，惟結果具高度不確定性</td><td class="level-中">中</td></tr>
+    <tr><td>市場寬度惡化</td><td>漲勢集中於通訊服務與半導體權值股，小型股（羅素 2000 +0.52%）與軟體（IGV YTD -13.97%）明顯落後</td><td class="level-中">中</td></tr>
+    <tr><td>財報風險</td><td>美光明日（9/22）財報是接下來最重要的個股層級財報風險</td><td class="level-中高">中高</td></tr>
+  </table>
+  <p><b>當前最需警惕的前 3 項風險：</b>①美光財報（明日）結果與市場高度分歧預期之間的落差 ②Fed 持續升息週期下的估值壓力（10Y 逼近 5%）③川習會（9/24）的地緣政治不確定性。</p>
+
+  <h3>10.2 最終結論</h3>
+  <p>美股週一在 Meta AI 應用利多、AMD 突破兆元市值、伊朗地緣風險緩解帶動油價回落、以及本週四川習會前氣氛正面等多重利多推動下強勢反彈，那斯達克創收盤歷史新高，S&amp;P 500 與道瓊同步走高，VIX 維持低檔（14.89），顯示風險偏好強勁回升。惟這波反彈仍集中於通訊服務與半導體少數權值股，小型股與軟體股參與有限，加上 Fed 才剛於 9/16 升息、10 年期殖利率逼近 5% 整數關卡，市場正處於「升息環境下的 AI 敘事」中尋求平衡。明日美光財報與週四川習會，將是接下來最重要的兩大驗證點。</p>
+  <p><b>當前市場階段：</b>強趨勢上漲</p>
+  <p><b>操作傾向（中性觀察，不構成投資建議）：</b>AI 硬體／記憶體／通訊服務科技巨頭仍是資金焦點，惟美光財報前市場預期分歧極大，若結果不及最高端預期需留意獲利了結風險；小型股、軟體、能源類股尚未顯示補漲跡象，不建議貿然追高落後族群；宜控制部位規模，密切關注 10Y 殖利率能否守在 5% 下方，以及 10/28 FOMC 升息定價變化。</p>
+  <p><b>最值得關注的 5 個信號：</b></p>
+  <ul>
+    <li>美光（MU）9/22 財報後股價反應，以及 DRAM／HBM 展望是否符合市場較高端預期（EPS 約 31 美元）</li>
+    <li>10 年期公債殖利率能否守在 5% 下方</li>
+    <li>CME FedWatch 對 10/28 FOMC 升息機率是否進一步上修（現約 59.7%）</li>
+    <li>川習會（9/24）前瞻談判進展與科技執行長晚宴相關報導</li>
+    <li>WTI／Brent 油價是否隨伊朗外交進展持續回落或反彈</li>
+  </ul>
+
+  <footer class="disclaimer">本報告為中性市場觀察，僅供參考，不構成投資建議。資料來源標註於各段落，若有數據差異已於文中說明。</footer>
+</section>
+
+</div>
+</body>
+</html>
