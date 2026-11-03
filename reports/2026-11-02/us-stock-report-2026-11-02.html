@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美股收盤日報 2026-11-02</title>
+<style>
+  :root {
+    --bg: #0b0f14;
+    --bg-card: #141a21;
+    --bg-card2: #1a222b;
+    --border: #2a333d;
+    --text: #e6edf3;
+    --text-dim: #9aa7b2;
+    --green: #26d07c;
+    --red: #ff5c5c;
+    --yellow: #f5c542;
+    --blue: #5aa9ff;
+    --accent: #f5c542;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 24px 16px 60px; }
+  header.top {
+    text-align: center;
+    padding: 28px 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+  header.top h1 { font-size: 1.6em; margin: 0 0 8px; color: var(--accent); }
+  header.top .meta { color: var(--text-dim); font-size: 0.85em; }
+  section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 1.15em;
+    color: var(--accent);
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+    margin-top: 0;
+  }
+  h3 { font-size: 1em; color: var(--blue); margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.92em; }
+  th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; }
+  th { background: var(--bg-card2); color: var(--text-dim); font-weight: 600; }
+  td.pos, span.pos { color: var(--green); font-weight: 600; }
+  td.neg, span.neg { color: var(--red); font-weight: 600; }
+  td.na { color: var(--text-dim); font-style: italic; }
+  .tag-box {
+    display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0;
+  }
+  .tag {
+    background: rgba(245,197,66,0.12);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.85em;
+    font-weight: 600;
+  }
+  .callout {
+    background: var(--bg-card2);
+    border-left: 3px solid var(--blue);
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin: 10px 0;
+    font-size: 0.92em;
+  }
+  .callout.warn { border-left-color: var(--red); }
+  .callout.good { border-left-color: var(--green); }
+  .note { color: var(--text-dim); font-size: 0.82em; }
+  .card { margin-top: 14px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 0.85em; }
+  .bar-label { width: 130px; flex-shrink: 0; color: var(--text-dim); }
+  .bar-track { flex: 1; background: var(--bg-card2); border-radius: 4px; height: 20px; position: relative; overflow: visible; }
+  .bar-fill { height: 100%; border-radius: 4px; position: absolute; top: 0; }
+  .bar-fill.pos { background: var(--green); left: 50%; }
+  .bar-fill.neg { background: var(--red); right: 50%; }
+  .bar-val { width: 70px; text-align: right; font-weight: 600; font-size: 0.9em; }
+  .bar-mid { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--border); }
+  .risk-low { color: var(--green); }
+  .risk-mid { color: var(--yellow); }
+  .risk-midhigh { color: #ff9a4d; }
+  .risk-high { color: var(--red); }
+  footer { text-align: center; color: var(--text-dim); font-size: 0.8em; padding: 20px 0; }
+  ul { padding-left: 20px; }
+  .disclaimer { font-size: 0.8em; color: var(--text-dim); border-top: 1px dashed var(--border); margin-top: 16px; padding-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>🇺🇸 美股收盤日報｜2026-11-02</h1>
+  <div class="meta">報告生成時間：台北時間 2026-11-03｜資料來源：CNBC、Reuters、Yahoo Finance、TradingKey、StockTitan 等<br>
+  本報告由 超中毒（@oiiax88）製作，分享請註明出處</div>
+</header>
+
+<section id="s1-cover">
+  <h2>S1｜今日一句話總結</h2>
+  <p>大盤內部明顯分化：Dow 靠消費/工業/金融股輪動上漲，S&amp;P 500 與 Nasdaq 則因 Oracle 大規模舉債、Marvell／Lumentum 併購案震撼半導體族群而續跌，延續上週五因 Amazon、Alphabet 財報與 Intel 財測重挫引發的 AI 估值疑慮。資金風格明顯 risk-off 轉向實體經濟股與現金流穩定的龍頭（Sherwin-Williams、Home Depot 領漲道瓊），科技股則持續承壓。原油因美伊和談出現進展暴跌逾 7%，連帶能源股走弱、航空股受惠油價下跌而大漲。盤後 Apple、Palantir 雙雙公布優於預期財報，但股價仍下跌，顯示市場對科技股估值的容忍度正在降低。</p>
+  <div class="tag-box">
+    <span class="tag">Great Rotation（價值與實體經濟領漲、科技整理）</span>
+    <span class="tag">AI硬體高位震盪</span>
+    <span class="tag">內部強科技弱</span>
+  </div>
+</section>
+
+<section id="s2-index">
+  <h2>S2｜大盤表現總覽</h2>
+  <table>
+    <tr><th>指數</th><th>收盤</th><th>漲跌幅</th><th>日內高低點</th><th>一句話狀態</th></tr>
+    <tr><td>Dow Jones</td><td>51,989.19</td><td class="pos">+0.41%</td><td class="na">暫無可靠數據</td><td>消費/工業/金融輪動撐盤</td></tr>
+    <tr><td>S&amp;P 500</td><td>7,541.40</td><td class="neg">-0.51%</td><td class="na">盤中一度上漲近1%，尾盤翻黑</td><td>早盤反彈力道消退</td></tr>
+    <tr><td>Nasdaq Composite</td><td>25,164.32</td><td class="neg">-1.07%</td><td class="na">盤中一度上漲逾1%</td><td>科技股尾盤遭拋售</td></tr>
+    <tr><td>Nasdaq 100（QQQ）</td><td>$681.09</td><td class="neg">-1.36%</td><td class="na">暫無可靠數據</td><td>較10/6歷史高點已回落逾9%</td></tr>
+    <tr><td>Russell 2000 / IWM</td><td class="na">暫無可靠數據</td><td class="na">尾盤近平盤</td><td class="na">暫無可靠數據</td><td>小盤未明顯參與輪動</td></tr>
+    <tr><td>VIX</td><td class="na">暫無正式收盤數據</td><td class="na">前一交易日(10/30)收19.42，+12.91%；本日盤中快照約21附近</td><td class="na">—</td><td>恐慌指數維持偏高</td></tr>
+  </table>
+  <p><strong>Dow vs Nasdaq 相對強弱：</strong>資金明顯從高估值科技股流向消費/工業/金融等實體經濟類股，呈現典型 rotation，而非回流科技。</p>
+  <p><strong>小盤領漲是否延續：</strong>Russell 2000/IWM 本日尾盤僅近平盤，並未跟上 Dow 的輪動漲勢，顯示 rotation 仍集中在特定龍頭股（如 Sherwin-Williams、Home Depot），尚未全面擴散至小型股。</p>
+  <p><strong>SOX 相對 Nasdaq：</strong>暫無可靠 SOX 收盤數據，但以 Micron（-5.78%）、Marvell（-12.72%）、Lumentum（-18.59%）等權值股的跌幅觀察，半導體族群明顯是拖累 Nasdaq 的主因。</p>
+
+  <div class="card">
+    <h3>大盤表現熱力圖</h3>
+    <div class="bar-row"><div class="bar-label">Dow Jones</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill pos" style="width:8.2%"></div></div><div class="bar-val pos">+0.41%</div></div>
+    <div class="bar-row"><div class="bar-label">S&amp;P 500</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill neg" style="width:10.2%"></div></div><div class="bar-val neg">-0.51%</div></div>
+    <div class="bar-row"><div class="bar-label">Nasdaq Composite</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill neg" style="width:21.4%"></div></div><div class="bar-val neg">-1.07%</div></div>
+    <div class="bar-row"><div class="bar-label">Nasdaq 100</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill neg" style="width:27.2%"></div></div><div class="bar-val neg">-1.36%</div></div>
+  </div>
+</section>
+
+<section id="s3-recap">
+  <h2>S3｜盤中復盤</h2>
+  <p><strong>盤前（含亞洲盤連動）：</strong>Kospi／Samsung／SK Hynix／TSMC 當日隔夜表現暫無可靠數據，無法確認是否有亞洲盤連動訊號。</p>
+  <p><strong>日內轉折點：</strong>S&amp;P 500 與 Nasdaq 早盤一度分別上漲約1%與逾1%，但午後 Oracle 宣布將發行合計 200 億美元的新股與公司債以支應 AI 資料中心建設，引爆市場對科技業舉債擴產的疑慮，科技股（XLK 盤中跌約2.4%）持續走弱，指數尾盤翻黑收低；道瓊則因消費/工業/金融類股輪動走強而逆勢收漲。</p>
+  <p><strong>尾盤與盤後：</strong>原油因美伊和談出現進展，Brent、WTI 雙雙重挫逾7%，能源股（Occidental -5.13%、Exxon -4.05%）走弱，航空股（United +4.80%、Delta +4.08%、American +3.81%）則受惠油價下跌大漲。盤後 Apple 公布 FY2026 Q4 財報，營收 1,145 億美元年增12%、EPS 2.10 美元優於預期，但因毛利率展望疲弱及 iPad 銷售不如預期，股價盤後再跌約3%；Palantir Q3 營收年增96%至23.13億美元並上調全年財測，股價盤後仍下跌（約3%上下，不同來源估計略有差異）。</p>
+  <div class="callout">
+    <strong>核心驅動判斷：</strong>今日下跌主因是 Oracle 舉債消息重燃「AI資本支出靠債務堆疊」的疑慮，疊加上週五 Amazon／Alphabet 財報失望、Intel 財測重挫延續的科技股賣壓（過去三週AI相關個股市值蒸發約5兆美元）。盤中一度強勁反彈但午後翻黑，屬於典型「buy the dip 失敗、賣壓延續」格局，而非 sell the news；同時資金明顯轉向實體經濟與價值股避險。
+  </div>
+</section>
+
+<section id="s4-macro">
+  <h2>S4｜宏觀環境</h2>
+  <h3>4.1 美債收益率</h3>
+  <table>
+    <tr><th>項目</th><th>最新</th><th>日變化</th><th>含義</th></tr>
+    <tr><td>10Y</td><td>約4.89%</td><td class="na">小幅下滑（約-3~4bp，非正式收盤數據）</td><td>殖利率仍處相對高檔，對科技股估值形成壓力</td></tr>
+    <tr><td>2Y</td><td class="na">暫無可靠數據</td><td class="na">—</td><td class="na">—</td></tr>
+    <tr><td>2Y-10Y 利差</td><td class="na">暫無可靠數據</td><td class="na">—</td><td class="na">—</td></tr>
+  </table>
+  <p>10Y 殖利率維持在接近4.9%的相對高位，對高本益比的科技股估值持續構成壓力，是今日 Nasdaq 相對弱勢的背景因素之一。</p>
+
+  <h3>4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+  <p>Fed 於 10/28 FOMC 會議維持利率不變。值得注意的是，部分利率期貨數據顯示市場對 12月會議的預期出現「鷹派」轉向：有報導指出 Fed Funds 期貨一度反映約76%機率為「升息」25個基點（而非降息），Apollo 首席經濟學家 Torsten Sløk 更主張 Fed 可能需升息達275個基點以壓制通膨。惟此一數據與部分其他來源的「降息」預期互相矛盾，且未能找到 CME FedWatch 官方頁面的即時數據加以驗證，<strong>方向性結論暫不下定論，僅供參考，請留意後續數據是否收斂</strong>。</p>
+
+  <h3>4.3 油價與地緣（獨立追蹤）</h3>
+  <table>
+    <tr><th>資產</th><th>價格</th><th>日變化</th></tr>
+    <tr><td>Brent 原油</td><td>約$104.3–104.8</td><td class="neg">約-7.6%~-8.0%</td></tr>
+    <tr><td>WTI 原油</td><td>約$96.25</td><td class="neg">約-6.5%~-7.5%</td></tr>
+  </table>
+  <p>美國與伊朗之間已持續約8個月的中東戰事傳出外交斡旋進展——卡達、巴基斯坦居間協調，伊朗最高領袖據報授權政府與美方展開談判，川普亦表態願意再給談判機會。市場解讀為衝突降溫機率上升，原油應聲重挫逾7%，為今日最大宏觀驅動之一，直接衝擊能源股（Occidental -5.13%、Exxon -4.05%），同時利多航空等油價敏感產業。惟尚未達成正式停火協議，地緣風險仍未解除。</p>
+
+  <h3>4.4 其他宏觀資產</h3>
+  <table>
+    <tr><th>資產</th><th>價格</th><th>漲跌幅</th></tr>
+    <tr><td>黃金</td><td>約$3,915–3,947/oz</td><td class="na">來源方向不一（+1.8%～-1.4%），採較完整之收盤報導：+1.8%</td></tr>
+    <tr><td>比特幣</td><td>約$76,800–77,100</td><td class="neg">約-1%~-2%，跌破8萬美元</td></tr>
+    <tr><td>DXY</td><td class="na">暫無可靠數據</td><td class="na">—</td></tr>
+  </table>
+  <p class="note">註：比特幣走弱部分報導與幣安（Binance）遭傳出63億美元駭客事件有關，惟此消息未經多方交叉驗證，僅供參考。</p>
+
+  <h3>4.5 當日經濟數據</h3>
+  <table>
+    <tr><th>數據</th><th>實際</th><th>預期</th><th>市場解讀</th></tr>
+    <tr><td>ISM 製造業 PMI（10月）</td><td>55.5</td><td>54.5</td><td>優於預期，製造業維持擴張</td></tr>
+    <tr><td>S&amp;P Global 製造業 PMI（10月）</td><td>54.9</td><td class="na">前值55.9</td><td>較前月走弱</td></tr>
+    <tr><td>營建支出（9月，月增）</td><td>-1.9%</td><td>+0.4%</td><td>明顯不如預期，住宅類下滑5.5%拖累</td></tr>
+    <tr><td>中國10月官方製造業PMI</td><td>49.3</td><td class="na">前值約50.1</td><td>跌破榮枯線，顯示中國製造業轉為收縮</td></tr>
+  </table>
+</section>
+
+<section id="s5-sector">
+  <h2>S5｜板塊表現</h2>
+  <p class="note">註：以下為當日盤中（約尾盤前）觀察數據，非正式11大類股收盤統計，僅列出有明確異動或新聞的板塊。</p>
+  <table>
+    <tr><th>排名</th><th>板塊</th><th>ETF</th><th>當日表現</th><th>主要驅動</th></tr>
+    <tr><td>1</td><td>非必需消費</td><td>XLY</td><td class="pos">盤中一度+3%~+4%</td><td>Sherwin-Williams、Home Depot等權值股領漲，資金轉向實體消費</td></tr>
+    <tr><td>2</td><td>原物料</td><td>XLB</td><td class="pos">盤中+2%</td><td>輪動受惠股</td></tr>
+    <tr><td>3</td><td>金融</td><td>XLF</td><td class="pos">盤中+1%以上</td><td>利率高檔環境下相對受惠</td></tr>
+    <tr><td>4</td><td>工業</td><td>XLI</td><td class="pos">盤中+1%以上</td><td>與消費/原物料同步輪動</td></tr>
+    <tr><td>5</td><td>能源</td><td>XLE</td><td class="neg">預期下跌（無確切收盤%）</td><td>原油重挫逾7%，Occidental -5.13%、Exxon -4.05%拖累</td></tr>
+    <tr><td>6</td><td>科技</td><td>XLK</td><td class="neg">-2.4%（盤中約2:40pm數據）</td><td>Oracle舉債疑慮+Marvell/Lumentum併購震撼半導體供應鏈</td></tr>
+  </table>
+  <p><strong>判斷：</strong>典型價值/實體經濟股領漲、成長/科技股整理的 rotation 格局。健康照護、公用事業表現落後但無確切跌幅數據。</p>
+
+  <p><strong>主題群聚檢查：</strong>半導體/光通訊供應鏈（Marvell -12.72%、Lumentum -18.59%、Micron -5.78%）同向重挫，但此波動主要由 Marvell 併購 Lumentum 的個股事件（而非板塊系統性利空）觸發，加上 Oracle 舉債消息連帶壓抑科技情緒，屬於<strong>個股催化+主題情緒擴散</strong>的混合型態，而非單純板塊輪動。</p>
+
+  <div class="card">
+    <h3>板塊當日表現（橫向柱狀圖，概略區間）</h3>
+    <div class="bar-row"><div class="bar-label">非必需消費 XLY</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill pos" style="width:35%"></div></div><div class="bar-val pos">~+3.5%</div></div>
+    <div class="bar-row"><div class="bar-label">原物料 XLB</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill pos" style="width:20%"></div></div><div class="bar-val pos">~+2.0%</div></div>
+    <div class="bar-row"><div class="bar-label">金融 XLF</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill pos" style="width:12%"></div></div><div class="bar-val pos">~+1.2%</div></div>
+    <div class="bar-row"><div class="bar-label">工業 XLI</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill pos" style="width:12%"></div></div><div class="bar-val pos">~+1.2%</div></div>
+    <div class="bar-row"><div class="bar-label">科技 XLK</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill neg" style="width:24%"></div></div><div class="bar-val neg">-2.4%</div></div>
+  </div>
+</section>
+
+<section id="s6-style">
+  <h2>S6｜風格與市場寬度</h2>
+  <table>
+    <tr><th>ETF</th><th>當日表現</th><th>回答的問題</th></tr>
+    <tr><td>SMH</td><td class="na">暫無可靠數據</td><td>半導體是否仍是主線？以成分股Micron(-5.78%)、Marvell(-12.72%)觀察，半導體今日明顯是拖累而非主線</td></tr>
+    <tr><td>IGV</td><td class="na">暫無可靠數據</td><td>軟體是否補漲，數據不足無法判斷</td></tr>
+    <tr><td>RSP</td><td class="na">暫無可靠數據</td><td>由Dow上漲、Nasdaq下跌的背離觀察，傾向判斷為「指數強內部分化」而非全面擴散</td></tr>
+    <tr><td>IWM</td><td class="na">尾盤近平盤</td><td>小盤未參與今日輪動，領漲集中在特定道瓊權值股</td></tr>
+  </table>
+  <p><strong>寬度質性判斷：</strong>今日領漲集中在 Sherwin-Williams、Home Depot 等少數道瓊權值股及消費/工業/金融板塊，而非全面普漲；科技與半導體相關個股（Oracle、Marvell、Lumentum、Micron）則大幅拖累。整體偏向「指數表現分化、內部輪動明顯」，而非健康的全面擴散行情。新高/新低家數等寬度數據暫無可靠來源。</p>
+</section>
+
+<section id="s7-leaders">
+  <h2>S7｜主線股追蹤</h2>
+  <h3>7.1 Magnificent 7</h3>
+  <table>
+    <tr><th>股票</th><th>漲跌幅</th><th>原因（有事才寫）</th></tr>
+    <tr><td>NVDA</td><td class="neg">約-1.3%（不同來源落在-1.3%~+1.5%區間，方向不一）</td><td>半導體族群受Marvell/Lumentum併購案及Oracle舉債消息拖累</td></tr>
+    <tr><td>MSFT</td><td class="na">暫無可靠數據</td><td>當日宣布250億美元優先票據發行，用於融資AI支出，惟股價反應未查得</td></tr>
+    <tr><td>AAPL</td><td class="neg">盤中約-1.8%，盤後財報公布後再跌約-2.8%~-4%（來源不一）</td><td>FY26 Q4營收1,145億美元(+12%)、EPS 2.10美元優於預期，但毛利率展望疲弱、iPad銷售不如預期</td></tr>
+    <tr><td>GOOGL</td><td class="na">暫無可靠數據</td><td>當日宣布60億歐元公司債發行，用於融資AI相關支出</td></tr>
+    <tr><td>AMZN</td><td class="pos">+2.20%</td><td>延續上週五Q3 EPS未達預期後的反彈</td></tr>
+    <tr><td>META</td><td class="na">暫無可靠數據</td><td class="na">—</td></tr>
+    <tr><td>TSLA</td><td class="na">暫無可靠數據</td><td class="na">—</td></tr>
+  </table>
+  <p><strong>七巨頭是否集體行動：</strong>未集體行動，呈現明顯分化——AMZN反彈、NVDA與AAPL走弱，且Microsoft、Alphabet同日皆宣布大規模舉債融資AI建設，顯示「用債務堆疊資本支出」已成為大型科技股的共通疑慮來源。</p>
+
+  <div class="card">
+    <h3>七巨頭漲跌對比（僅列有可靠數據者）</h3>
+    <div class="bar-row"><div class="bar-label">AMZN</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill pos" style="width:22%"></div></div><div class="bar-val pos">+2.20%</div></div>
+    <div class="bar-row"><div class="bar-label">NVDA</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill neg" style="width:13%"></div></div><div class="bar-val neg">~-1.3%</div></div>
+    <div class="bar-row"><div class="bar-label">AAPL（盤中）</div><div class="bar-track"><div class="bar-mid"></div><div class="bar-fill neg" style="width:18%"></div></div><div class="bar-val neg">~-1.8%</div></div>
+  </div>
+
+  <h3>7.2 記憶體主線</h3>
+  <p>Micron（MU）今日下跌5.78%，在Marvell/Lumentum併購案及Oracle舉債消息雙重衝擊下隨半導體族群走弱。SK Hynix、Samsung、WDC、STX、DRAM現貨/合約價動態暫無可靠數據。<strong>鈍化監測：</strong>今日Micron走弱更多是受同業事件拖累，而非記憶體基本面本身出現利空，惟仍需留意是否為record-high後獲利了結訊號的開端，目前證據不足以下定論。</p>
+
+  <h3>7.3 AI 硬體核心</h3>
+  <p>Oracle（-8.76%）因宣布發行100億美元普通股及100億美元公司債以支應AI資料中心建設，引發市場對「AI資本支出過度依賴舉債」的疑慮，是今日科技股下跌的主要導火線。Marvell（-12.72%）與Lumentum（-18.59%）因前者宣布以全股票方式收購後者（每股Lumentum換4.5股Marvell，交易隱含Lumentum企業價值約1,150億美元，Marvell原股東將持有合併後公司約67%股權）而雙雙重挫，市場對合併條款與稀釋疑慮反應負面。AVGO、AMD、ARM當日表現暫無可靠數據。<strong>擁擠度判斷：</strong>今日資金明確由AI硬體/半導體流出至消費、工業、金融等實體經濟類股，顯示「sell the news」疑慮正在升溫，過去三週AI相關個股市值已蒸發約5兆美元。</p>
+
+  <h3>7.4 Rotation 代表股</h3>
+  <p>CAT、GEV當日表現暫無可靠數據。但從Sherwin-Williams、Home Depot等實體經濟/消費權值股領漲道瓊的現象觀察，Great Rotation（資金自科技轉向實體經濟）今日明顯延續。</p>
+</section>
+
+<section id="s8-movers">
+  <h2>S8｜異動股與財報</h2>
+
+  <h3>8.1 當日重要異動</h3>
+  <table>
+    <tr><th>股票</th><th>漲跌幅</th><th>原因</th><th>對主線的含義</th></tr>
+    <tr><td>Lumentum (LITE)</td><td class="neg">-18.59%</td><td>遭Marvell以全股票方式收購，市場對交易條款存疑</td><td>光通訊/互連主題承壓</td></tr>
+    <tr><td>Marvell (MRVL)</td><td class="neg">-12.72%</td><td>宣布收購Lumentum，稀釋疑慮</td><td>半導體併購整合風險浮現</td></tr>
+    <tr><td>Oracle (ORCL)</td><td class="neg">-8.76%</td><td>宣布發行200億美元股票+公司債以支應AI資本支出</td><td>AI資本支出舉債疑慮的代表性事件</td></tr>
+    <tr><td>Micron (MU)</td><td class="neg">-5.78%</td><td>隨半導體族群同步走弱</td><td>記憶體主線短期承壓</td></tr>
+    <tr><td>Occidental (OXY)</td><td class="neg">-5.13%</td><td>原油重挫逾7%</td><td>能源股連動油價地緣風險</td></tr>
+    <tr><td>Exxon Mobil (XOM)</td><td class="neg">-4.05%</td><td>原油重挫逾7%</td><td>能源股連動油價地緣風險</td></tr>
+    <tr><td>United Airlines (UAL)</td><td class="pos">+4.80%</td><td>油價重挫降低燃料成本</td><td>航空股受惠油價下跌</td></tr>
+    <tr><td>Delta (DAL)</td><td class="pos">+4.08%</td><td>油價重挫降低燃料成本</td><td>航空股受惠油價下跌</td></tr>
+    <tr><td>Amazon (AMZN)</td><td class="pos">+2.20%</td><td>延續財報後反彈</td><td>Mag7內部分化</td></tr>
+    <tr><td>EVgo (EVGO)</td><td class="pos">+46.83%</td><td>LS Power提出每股2.00美元現金收購提案</td><td>個股併購事件</td></tr>
+    <tr><td>Perion (PERI)</td><td class="pos">+31.15%</td><td>Affle以每股11.70美元收購</td><td>個股併購事件</td></tr>
+    <tr><td>IDEXX (IDXX)</td><td class="pos">+21.85%</td><td>上調2026財測</td><td>個股財測利多</td></tr>
+  </table>
+
+  <h3>8.2 昨夜/盤後財報</h3>
+  <table>
+    <tr><th>公司</th><th>是否beat</th><th>指引</th><th>盤後反應</th><th>核心解讀</th></tr>
+    <tr><td>Apple</td><td>Beat（營收$114.5B +12%、EPS $2.10）</td><td>毛利率展望疲弱</td><td class="neg">盤後再跌約3%~4%（來源不一）</td><td>財報雖優但guidance不佳，顯示市場對科技股容錯度降低</td></tr>
+    <tr><td>Palantir</td><td>Beat（營收$2.313B +96% YoY，上調全年財測）</td><td>Q4營收財測$2.649B–$2.653B</td><td class="neg">盤後下跌約3%~7%（來源不一）</td><td>Beat-and-raise仍遭獲利了結，反映高估值股籌碼鬆動</td></tr>
+  </table>
+
+  <h3>8.3 未來1–3日重要財報與事件</h3>
+  <table>
+    <tr><th>日期</th><th>公司/事件</th><th>關注點</th><th>可能影響板塊</th></tr>
+    <tr><td>11/3（二）</td><td>美國期中選舉</td><td>選舉結果對政策與市場風險偏好的影響</td><td>全市場</td></tr>
+    <tr><td>11/3（二）盤後</td><td>AMD Q3財報</td><td>AI/資料中心需求是否持續強勁，guidance方向</td><td>半導體</td></tr>
+    <tr><td>11/4（三）</td><td>9月JOLTS職缺數據、工廠訂單</td><td>勞動市場是否持續降溫</td><td>全市場、利率預期</td></tr>
+    <tr><td>11/6（五）</td><td>10月非農就業報告</td><td>市場預期新增約5.5萬人，將牽動Fed利率路徑預期</td><td>全市場、利率敏感股</td></tr>
+  </table>
+
+  <h3>8.4 異常資金雷達</h3>
+  <table>
+    <tr><th>主題/群聚</th><th>代表股與漲跌幅</th><th>子產業ETF表現</th><th>類型</th><th>解讀</th></tr>
+    <tr><td>光通訊/半導體併購</td><td>Marvell -12.72%、Lumentum -18.59%</td><td class="na">暫無可靠數據</td><td>個股催化</td><td>單一併購交易觸發，非板塊系統性利空，但情緒外溢壓抑Micron等同業</td></tr>
+    <tr><td>大型科技舉債融資AI</td><td>Oracle -8.76%、Microsoft(發債$25B)、Alphabet(發債€6B)</td><td class="na">—</td><td>主題投機/情緒擴散</td><td>市場開始對「AI資本支出靠舉債堆疊」的永續性提出質疑，是今日科技股整體承壓的核心敘事</td></tr>
+  </table>
+</section>
+
+<section id="s9-playbook">
+  <h2>S9｜輪動判斷與明日 Playbook</h2>
+  <h3>9.1 明確回答</h3>
+  <ul>
+    <li><strong>今天資金主要流入：</strong>非必需消費、原物料、金融、工業等實體經濟類股，以及受惠油價下跌的航空股。</li>
+    <li><strong>今天資金主要流出：</strong>科技/半導體（Oracle、Marvell、Lumentum、Micron）、能源股（受油價崩跌拖累）。</li>
+    <li><strong>AI主線（硬體+記憶體）是否仍然健康：</strong>短期承壓，Oracle舉債事件重燃「AI資本支出可持續性」疑慮，過去三週AI相關個股市值蒸發約5兆美元，健康度下降。</li>
+    <li><strong>半導體vs軟體：</strong>半導體今日明顯轉弱（Micron、Marvell、Lumentum），軟體相對強弱暫無可靠數據可供比較。</li>
+    <li><strong>小盤與實體經濟股：</strong>Great Rotation延續，但以道瓊權值股及特定板塊為主，小盤股（Russell 2000）尚未明顯參與。</li>
+    <li><strong>當前更像：</strong>趨勢延續中的階段性頂部震盪——Nasdaq已連續第二個交易日承壓，且距10/6高點回落逾9%，AI相關估值疑慮尚未緩解。</li>
+  </ul>
+
+  <h3>9.2 明日觀察清單</h3>
+  <ul>
+    <li><strong>宏觀：</strong>10Y殖利率是否持續高於4.85%關鍵區間；美國期中選舉結果；原油在美伊和談進展下是否持續破底；12月FOMC升降息預期方向是否收斂（目前數據矛盾，需密切關注官方CME FedWatch更新）。</li>
+    <li><strong>亞洲盤先行指標：</strong>Kospi、Samsung、SK Hynix、TSMC開盤方向暫無可靠數據可供預判，建議盤前另行確認。</li>
+    <li><strong>大盤：</strong>SPY/QQQ關鍵支撐壓力位暫無可靠分析師數據可引用；觀察SMH是否持續弱於QQQ。</li>
+    <li><strong>個股：</strong>
+      <ul>
+        <li>AMD（11/3盤後財報）——AI資料中心需求是否撐住半導體信心</li>
+        <li>Oracle（ORCL）——後續融資進展與債券市場反應，確認是否為一次性事件或系統性疑慮起點</li>
+        <li>Marvell（MRVL）/Lumentum（LITE）——併購案後續股東與分析師反應，股價是否止穩</li>
+        <li>Apple（AAPL）——財報後法說會評論及分析師目標價調整，確認毛利率疑慮是否擴大</li>
+        <li>Palantir（PLTR）——beat-and-raise後股價能否止穩，觀察高估值AI應用股的籌碼結構</li>
+        <li>Micron（MU）——是否隨同業事件止穩或進一步破底</li>
+        <li>能源股（XOM、OXY）——原油走勢是否持續探底</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="s10-risk">
+  <h2>S10｜風險提示與最終結論</h2>
+  <h3>10.1 風險等級表</h3>
+  <table>
+    <tr><th>風險維度</th><th>當前狀態</th><th>等級</th></tr>
+    <tr><td>宏觀利率</td><td>10Y維持高檔近4.9%，升降息預期數據矛盾、方向不明</td><td class="risk-midhigh">中高</td></tr>
+    <tr><td>AI capex持續性</td><td>Oracle、Microsoft、Alphabet同日大規模舉債融資AI建設，市場信心轉趨謹慎</td><td class="risk-high">高</td></tr>
+    <tr><td>記憶體循環反轉</td><td>Micron受同業事件拖累下跌，基本面訊號尚不明確</td><td class="risk-mid">中</td></tr>
+    <tr><td>地緣/油價</td><td>原油單日重挫逾7%，美伊和談僅為進展、未達停火，波動風險仍高</td><td class="risk-midhigh">中高</td></tr>
+    <tr><td>中美科技戰</td><td>中國10月PMI跌破榮枯線，顯示中國製造業轉弱，暫無新增科技戰相關消息</td><td class="risk-mid">中</td></tr>
+    <tr><td>市場寬度惡化</td><td>漲勢集中在少數道瓊權值股與特定板塊，小盤未參與</td><td class="risk-mid">中</td></tr>
+    <tr><td>財報風險</td><td>Apple、Palantir beat仍遭拋售，顯示市場對財報容錯度降低，AMD財報(11/3)為下一觀察點</td><td class="risk-midhigh">中高</td></tr>
+  </table>
+  <p><strong>當前最需警惕的前3項風險：</strong>① AI資本支出舉債疑慮持續擴散；② 地緣政治（美伊局勢）與原油價格劇烈波動；③ 利率路徑預期不明朗，10Y殖利率維持高檔壓制科技股估值。</p>
+
+  <h3>10.2 最終結論</h3>
+  <p>美股今日呈現明顯內部分化：道瓊靠消費/工業/金融輪動收漲，S&amp;P 500與Nasdaq則因Oracle舉債消息與Marvell/Lumentum併購案衝擊半導體族群而收跌，延續上週五因大型科技財報與Intel財測重挫引發的AI估值疑慮。原油因美伊和談進展單日重挫逾7%，是本日最大宏觀變數，同時帶動能源股走弱、航空股走強。盤後Apple與Palantir雖財報優於預期，股價仍雙雙下跌，顯示市場對高估值成長股的容忍度持續收斂。</p>
+  <p><strong>當前市場階段：</strong>板塊輪動（伴隨科技股高位震盪疑慮）</p>
+  <p><strong>操作傾向（中性觀察，不構成投資建議）：</strong>科技/半導體短期追高風險偏高，建議觀察Oracle後續融資進展與AMD財報反應再判斷方向；消費、工業、金融等實體經濟類股輪動行情可留意是否延續；能源股在原油單日重挫後短線或有超跌反彈機會，但地緣風險未解除前宜控制倉位。</p>
+  <p><strong>最值得關注的5個信號：</strong></p>
+  <ul>
+    <li>AMD 11/3盤後財報是否維持AI資料中心需求強勁的敘事</li>
+    <li>Oracle後續是否有更多分析師下調評等或債券發行定價不佳的消息</li>
+    <li>10Y殖利率是否跌破4.85%或進一步走高至4.95%以上</li>
+    <li>原油是否持續破底或因地緣消息反彈，確認美伊局勢方向</li>
+    <li>Nasdaq是否跌破25,000整數關卡，確認是否形成系統性risk-off</li>
+  </ul>
+  <div class="disclaimer">本報告為中性市場觀察，所有數據均來自公開新聞與財經媒體報導，部分項目因可靠數據不足而標註「暫無可靠數據」或呈現來源差異，不構成投資建議。</div>
+</section>
+
+<footer>
+  🇺🇸 美股收盤日報｜2026-11-02｜由 超中毒（@oiiax88）製作，分享請註明出處
+</footer>
+
+</div>
+</body>
+</html>
