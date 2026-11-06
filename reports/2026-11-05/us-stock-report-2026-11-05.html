@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美股收盤日報｜2026-11-05</title>
+<style>
+  :root{
+    --bg:#0b0e14;
+    --bg-card:#131722;
+    --bg-card2:#171c28;
+    --border:#262c3b;
+    --text:#e6e9f0;
+    --text-dim:#9aa3b8;
+    --text-faint:#6b7280;
+    --red:#ff5c5c;
+    --red-dim:#7a2e2e;
+    --green:#34d399;
+    --green-dim:#1f5c45;
+    --yellow:#fbbf24;
+    --accent:#60a5fa;
+    --accent2:#a78bfa;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang TC","Microsoft JhengHei",sans-serif;
+    margin:0;
+    padding:0;
+    line-height:1.65;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:24px 18px 60px;}
+  header.top{text-align:center;padding:28px 18px 20px;border-bottom:1px solid var(--border);}
+  header.top h1{font-size:1.5rem;margin:0 0 8px;color:#fff;}
+  header.top p{margin:4px 0;color:var(--text-dim);font-size:0.85rem;}
+  section{margin:34px 0;padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;}
+  section h2{font-size:1.15rem;margin:0 0 14px;color:#fff;border-left:4px solid var(--accent);padding-left:10px;}
+  section h3{font-size:0.98rem;margin:18px 0 8px;color:var(--accent);}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:0.85rem;}
+  th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;}
+  th{color:var(--text-dim);font-weight:600;background:var(--bg-card2);}
+  tr:last-child td{border-bottom:none;}
+  .pos{color:var(--green);font-weight:700;}
+  .neg{color:var(--red);font-weight:700;}
+  .neutral{color:var(--yellow);font-weight:700;}
+  .na{color:var(--text-faint);font-style:italic;}
+  .tag{display:inline-block;background:var(--bg-card2);border:1px solid var(--border);color:var(--accent);border-radius:999px;padding:3px 12px;margin:3px 4px 3px 0;font-size:0.8rem;}
+  .callout{background:var(--bg-card2);border-left:3px solid var(--accent2);padding:10px 14px;border-radius:6px;margin:12px 0;font-size:0.88rem;color:var(--text-dim);}
+  .qa{margin:6px 0;font-size:0.88rem;}
+  .qa b{color:#fff;}
+  .card{background:var(--bg-card2);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0;}
+  .footer-note{text-align:center;color:var(--text-faint);font-size:0.78rem;margin-top:30px;padding-top:16px;border-top:1px solid var(--border);}
+  .disclaimer{text-align:center;color:var(--text-faint);font-size:0.78rem;margin:10px 0 0;}
+  /* heatmap */
+  .heatgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:14px;}
+  .heattile{border-radius:10px;padding:14px 10px;text-align:center;border:1px solid var(--border);}
+  .heattile .name{font-size:0.78rem;color:rgba(255,255,255,0.85);margin-bottom:6px;}
+  .heattile .chg{font-size:1.25rem;font-weight:800;color:#fff;}
+  .heat-red3{background:linear-gradient(145deg,#7a1d1d,#4a1212);}
+  .heat-red2{background:linear-gradient(145deg,#8c2b2b,#5c1c1c);}
+  .heat-red1{background:linear-gradient(145deg,#6b2222,#3d1414);}
+  .heat-yellow{background:linear-gradient(145deg,#5c4a1c,#3d3012);}
+  /* horizontal bar chart */
+  .barrow{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:0.82rem;}
+  .barlabel{width:110px;flex-shrink:0;color:var(--text-dim);}
+  .bartrack{flex:1;background:var(--bg);border-radius:4px;height:20px;position:relative;overflow:hidden;}
+  .barfill{height:100%;border-radius:4px;background:linear-gradient(90deg,#7a1d1d,var(--red));}
+  .barval{width:60px;flex-shrink:0;text-align:right;color:var(--red);font-weight:700;}
+  /* mag7 vertical bars */
+  .vbars{display:flex;align-items:flex-end;justify-content:space-around;height:180px;margin-top:16px;border-bottom:1px solid var(--border);padding-bottom:4px;}
+  .vbar-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;width:12%;}
+  .vbar{width:60%;border-radius:4px 4px 0 0;background:linear-gradient(180deg,var(--red),#7a1d1d);}
+  .vbar-pct{font-size:0.72rem;color:var(--red);font-weight:700;margin-bottom:4px;}
+  .vbar-name{font-size:0.72rem;color:var(--text-dim);margin-top:6px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>🇺🇸 美股收盤日報｜2026-11-05</h1>
+  <p>報告生成時間：台北時間 2026-11-06 08:00　|　資料來源：CNBC、Reuters、Yahoo Finance、Bloomberg、Investing.com 等</p>
+  <p>本報告由 超中毒（@oiiax88）製作，分享請註明出處</p>
+</header>
+
+<section id="s1-cover">
+<h2>S1｜今日一句話總結</h2>
+<p>美股 11/5 遭遇近兩年最慘烈的單日重挫：道瓊暴跌 1,833.06 點（-3.44%）收 51,523.06，標普 500 跌 4.36% 收 7,353.73，那斯達克綜合指數崩跌 5.52% 收 24,315.00 正式跌入修正區，費城半導體指數（SOX）更重挫 12.2%，一口氣抹去週三（11/4）選後反彈的全部漲幅。驅動主因是期中選舉民主黨在德州、喬治亞等州拿下州長與國會席位後，市場擔憂新政府將限縮 AI 資料中心建設，資金從輝達（NVDA -9%）、超微（AMD -17%）、美光（MU -17%）等 AI／半導體重倉股全面撤出，轉向必需消費、公用事業等防禦板塊；S&amp;P 500 成分股下跌家數高達 431 檔、僅 71 檔上漲，顯示賣壓具高度系統性而非個股事件，VIX 單日飆升至近七個月高點，恐慌情緒急遽升溫。</p>
+<p><strong>📌 今日市場狀態標籤：</strong></p>
+<div>
+  <span class="tag">普跌恐慌</span>
+  <span class="tag">防禦性 risk-off</span>
+  <span class="tag">AI硬體高位震盪</span>
+  <span class="tag">市場寬度惡化</span>
+</div>
+</section>
+
+<section id="s2-index">
+<h2>S2｜大盤表現總覽</h2>
+<table>
+<thead><tr><th>指數</th><th>收盤</th><th>漲跌幅</th><th>日內高低點</th><th>一句話狀態</th></tr></thead>
+<tbody>
+<tr><td>Dow Jones</td><td>51,523.06</td><td class="neg">-3.44%（-1,833.06pt）</td><td class="na">暫無可靠數據</td><td>抹去週三選後反彈，單日跌點創近年前段班</td></tr>
+<tr><td>S&amp;P 500</td><td>7,353.73</td><td class="neg">-4.36%</td><td class="na">暫無可靠數據</td><td>11 大板塊全面收黑，結構性破位</td></tr>
+<tr><td>Nasdaq Composite</td><td>24,315.00</td><td class="neg">-5.52%</td><td class="na">暫無可靠數據</td><td>正式跌入修正區（較高點回落逾10%），近19個月最差單日之一</td></tr>
+<tr><td>Russell 2000 / IWM</td><td class="na">暫無可靠數據</td><td class="na">暫無可靠數據</td><td class="na">暫無可靠數據</td><td>無精確數據，惟成分股跌多漲少比例顯示小盤同步重挫</td></tr>
+<tr><td>SOX 半導體指數</td><td class="na">暫無可靠數據（絕對點位）</td><td class="neg">-12.2%</td><td class="na">暫無可靠數據</td><td>較一個月前高點回落逾32%，本輪下殺震央</td></tr>
+<tr><td>VIX</td><td class="na">暫無可靠精確收盤值</td><td class="neutral">單日大幅跳升（各家估計 +39%~+70% 不等，數據差異大）</td><td class="na">暫無可靠數據</td><td>來到近七個月最高水位，恐慌情緒急遽升溫</td></tr>
+</tbody>
+</table>
+
+<div class="heatgrid">
+  <div class="heattile heat-red2"><div class="name">Dow Jones</div><div class="chg">-3.44%</div></div>
+  <div class="heattile heat-red3"><div class="name">S&amp;P 500</div><div class="chg">-4.36%</div></div>
+  <div class="heattile heat-red3"><div class="name">Nasdaq</div><div class="chg">-5.52%</div></div>
+  <div class="heattile heat-red3"><div class="name">SOX 半導體</div><div class="chg">-12.2%</div></div>
+  <div class="heattile heat-yellow"><div class="name">VIX</div><div class="chg">+39%~70%</div></div>
+</div>
+
+<div class="qa"><b>Dow vs Nasdaq 相對強弱：</b>Nasdaq 跌幅（-5.52%）遠甚於 Dow（-3.44%），資金明確由科技／成長股流出，而非單純回流價值股的正向輪動，而是全面 risk-off 下科技首當其衝。</div>
+<div class="qa"><b>小盤領漲是否延續：</b>無精確 Russell 2000 數據，但 S&amp;P 成分股跌多漲少比例高達 431:71，顯示下跌具高度普遍性，小盤料同步重挫而非獨立抗跌，過熱訊號無從判斷。</div>
+<div class="qa"><b>SOX 相對 Nasdaq：</b>SOX（-12.2%）跌幅是 Nasdaq（-5.52%）的逾兩倍，半導體明確是本次下殺的領跌震央，而非單純跟跌。</div>
+</section>
+
+<section id="s3-recap">
+<h2>S3｜盤中復盤</h2>
+<p><strong>盤前（含亞洲盤連動）：</strong>美股期貨開盤前走勢分歧（mixed），市場仍在消化週三（11/4）期中選舉民主黨拿下國會控制權後的大幅反彈（道瓊當日狂飆逾1,500點，創2025年4月以來最佳單日表現）。隨著選舉結果細節持續發酵——尤其是德州、喬治亞州候選人在州長選戰中明確提出暫緩／限制 AI 資料中心新建案——市場對 AI 資本支出前景的疑慮逐漸升溫，開盤後賣壓迅速擴大。</p>
+<p><strong>日內轉折點：</strong>隨市場進一步消化「藍色浪潮」對資料中心建設的潛在衝擊，賣壓在盤中明顯加速，半導體類股領跌，SOX 指數重挫逾12%，拖累那斯達克由早盤的溫和跌勢轉為尾盤的全面潰堤、正式跌破修正線；輝達、AMD、美光等 AI 供應鏈核心股盤中跌幅不斷擴大，資金同步湧入必需消費、公用事業等防禦類股。Amazon、Alphabet 盤中一度上漲，尾盤同步翻黑。</p>
+<p><strong>尾盤與盤後：</strong>尾盤賣壓未見收斂，S&amp;P 500 成分股收盤跌多漲少達 431:71，顯示恐慌性去槓桿而非個股型回檔。隔夜（11/6 台北時間）亞股接力重挫，南韓 Kospi 一度觸發熔斷機制，三星、SK 海力士、台積電同步重摔，顯示賣壓尚未止歇、已蔓延至亞洲半導體供應鏈。</p>
+<div class="callout"><strong>核心驅動判斷：</strong>本次下跌並非單純的 sell the news 或獲利了結，而是對 AI 資本支出政策風險的重新定價——民主黨在多州勝選並表態將限制／審查 AI 資料中心開發，使市場重新評估整個 AI 基礎建設供應鏈（晶片、電力設備、資料中心營建）的中期成長假設，屬於結構性 risk-off，而非單日技術性拉回。</div>
+</section>
+
+<section id="s4-macro">
+<h2>S4｜宏觀環境</h2>
+
+<h3>4.1 美債收益率</h3>
+<table>
+<thead><tr><th>項目</th><th>最新</th><th>日變化</th><th>含義</th></tr></thead>
+<tbody>
+<tr><td>2Y</td><td class="na">暫無可靠數據</td><td class="na">暫無可靠數據</td><td class="na">—</td></tr>
+<tr><td>10Y</td><td>約 4.84%</td><td class="pos">約 -5bp</td><td>恐慌情緒帶動避險資金湧入公債，殖利率回落，惟降幅有限</td></tr>
+<tr><td>2Y-10Y 利差</td><td class="na">暫無可靠數據</td><td class="na">暫無可靠數據</td><td class="na">—</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85rem;color:var(--text-dim);">10Y 殖利率回落幅度有限，顯示此次賣壓主因是 AI 政策／成長疑慮而非利率急遽變化，對科技股估值的直接衝擊相對次要，主因仍是基本面與政策面的重新定價。</p>
+
+<h3>4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+<p>CME FedWatch（11/5-11/6 最新讀數）顯示，市場目前定價 12 月 FOMC <strong>升息</strong> 25 個基點的機率約 67%~69%（Yahoo Finance、TechFlow／金十數據口徑接近），維持不變機率約 31%，降息機率趨近於 0%。這代表當前市場正處於升息周期的定價環境，而非普遍預期的降息循環，為本輪美股評價面增添額外壓力——若利率路徑確實偏鷹，將進一步壓抑高估值成長股的重新評價空間。與前一日相比的確切變化暫無可靠數據可比對，惟近期多個來源方向一致指向偏鷹預期，建議留意明日（11/6）就業數據公布後機率是否進一步上修。</p>
+
+<h3>4.3 油價與地緣（獨立追蹤）</h3>
+<p>WTI／Brent 精確收盤價格暫無可靠數據，惟多個 11/6 亞股盤中報導指出，油價因伊朗外交進展樂觀情緒而下跌，地緣風險溢價緩解。若後續證實，對能源板塊及整體風險偏好應屬邊際正面，惟幅度與能源股反應暫無可靠數據可引用。</p>
+
+<h3>4.4 其他宏觀資產</h3>
+<table>
+<thead><tr><th>資產</th><th>價格</th><th>漲跌幅</th></tr></thead>
+<tbody>
+<tr><td>DXY</td><td class="na">暫無可靠數據</td><td class="na">暫無可靠數據</td></tr>
+<tr><td>黃金</td><td class="na">暫無可靠數據</td><td class="na">暫無可靠數據</td></tr>
+<tr><td>比特幣</td><td class="na">暫無可靠數據</td><td class="na">暫無可靠數據</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85rem;color:var(--text-dim);">今日未能取得可靠的黃金／比特幣／美元指數收盤數據，故留空，避免以不確定數字誤導判斷。</p>
+
+<h3>4.5 當日經濟數據</h3>
+<table>
+<thead><tr><th>數據</th><th>實際</th><th>預期</th><th>市場解讀</th></tr></thead>
+<tbody>
+<tr><td colspan="4" class="na">暫無公布重大經濟數據的可靠資訊；市場消息指出明日（11/6）將公布就業報告，市場預期新增就業約 6.5 萬人、失業率持平，可能成為下一個波動觸發點。</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="s5-sector">
+<h2>S5｜板塊表現</h2>
+<table>
+<thead><tr><th>排名</th><th>板塊</th><th>ETF</th><th>當日漲跌幅</th><th>主要驅動</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>通訊服務</td><td>XLC</td><td class="neg">-0.59%</td><td>跌幅最輕，Meta/Google 權重股跌幅相對收斂</td></tr>
+<tr><td>2</td><td>公用事業</td><td>XLU</td><td class="neg">-0.71%</td><td>防禦資金避風港，呼應資金轉向受監理電力股的預期</td></tr>
+<tr><td>3</td><td>必需消費</td><td>XLP</td><td class="neg">-0.75%</td><td>典型防禦板塊抗跌</td></tr>
+<tr><td>4</td><td>不動產</td><td>XLRE</td><td class="neg">-1.82%</td><td>殖利率回落提供支撐，跌幅優於大盤</td></tr>
+<tr><td>5</td><td>醫療保健</td><td>XLV</td><td class="neg">-2.50%</td><td>防禦屬性部分發揮，跌幅低於大盤</td></tr>
+<tr><td>6</td><td>金融</td><td>XLF</td><td class="neg">-2.87%</td><td>隨大盤下跌，但未領跌</td></tr>
+<tr><td>7</td><td>原物料</td><td>XLB</td><td class="neg">-2.91%</td><td>隨大盤同步下跌</td></tr>
+<tr><td>8</td><td>能源</td><td>XLE</td><td class="neg">-2.98%</td><td>油價走弱疊加整體 risk-off</td></tr>
+<tr><td>9</td><td>非必需消費</td><td>XLY</td><td class="neg">-3.83%</td><td>特斯拉重挫（-10.8%）拖累板塊</td></tr>
+<tr><td>10</td><td>工業</td><td>XLI</td><td class="neg">-4.12%</td><td>GE Vernova、Eaton 等 AI 電力供應鏈個股重挫拖累</td></tr>
+<tr><td>11</td><td>科技</td><td>XLK</td><td class="neg">-8.00%</td><td>本次下殺絕對震央，輝達／AMD／美光全面重挫</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.78rem;color:var(--text-faint);">資料來源為單一彙整（收盤摘要），數值僅供參考，未能與官方 SPDR 收盤數據交叉驗證，請謹慎參考。</p>
+
+<div class="card">
+  <div class="barrow"><div class="barlabel">科技 XLK</div><div class="bartrack"><div class="barfill" style="width:100%;"></div></div><div class="barval">-8.00%</div></div>
+  <div class="barrow"><div class="barlabel">工業 XLI</div><div class="bartrack"><div class="barfill" style="width:51.5%;"></div></div><div class="barval">-4.12%</div></div>
+  <div class="barrow"><div class="barlabel">非必需消費 XLY</div><div class="bartrack"><div class="barfill" style="width:47.9%;"></div></div><div class="barval">-3.83%</div></div>
+  <div class="barrow"><div class="barlabel">能源 XLE</div><div class="bartrack"><div class="barfill" style="width:37.3%;"></div></div><div class="barval">-2.98%</div></div>
+  <div class="barrow"><div class="barlabel">原物料 XLB</div><div class="bartrack"><div class="barfill" style="width:36.4%;"></div></div><div class="barval">-2.91%</div></div>
+  <div class="barrow"><div class="barlabel">金融 XLF</div><div class="bartrack"><div class="barfill" style="width:35.9%;"></div></div><div class="barval">-2.87%</div></div>
+  <div class="barrow"><div class="barlabel">醫療保健 XLV</div><div class="bartrack"><div class="barfill" style="width:31.3%;"></div></div><div class="barval">-2.50%</div></div>
+  <div class="barrow"><div class="barlabel">不動產 XLRE</div><div class="bartrack"><div class="barfill" style="width:22.8%;"></div></div><div class="barval">-1.82%</div></div>
+  <div class="barrow"><div class="barlabel">必需消費 XLP</div><div class="bartrack"><div class="barfill" style="width:9.4%;"></div></div><div class="barval">-0.75%</div></div>
+  <div class="barrow"><div class="barlabel">公用事業 XLU</div><div class="bartrack"><div class="barfill" style="width:8.9%;"></div></div><div class="barval">-0.71%</div></div>
+  <div class="barrow"><div class="barlabel">通訊服務 XLC</div><div class="bartrack"><div class="barfill" style="width:7.4%;"></div></div><div class="barval">-0.59%</div></div>
+</div>
+
+<p>最強為通訊服務／公用事業，最弱為科技（跌幅達大盤近兩倍）；本質是成長股全面挨打、資金躲入防禦板塊的典型 risk-off，而非成長轉價值的正常輪動——值得注意的是，連工業股都因 AI 資料中心電力供應鏈（GE Vernova、Eaton 等）重挫而未能倖免，顯示這波賣壓精準打擊所有「AI 資本支出受惠鏈」，而非單純的成長／價值風格輪動。</p>
+
+<h3>主題群聚檢查</h3>
+<p>AI 資料中心基礎建設股群（NVDA -9%、AMD -17%、AVGO -10%、VRT -9%、GEV 約 -8%~-11%、ETN 約 -6%~-7%）全面同步重挫，屬於明確的<strong>板塊輪動（負向）</strong>，而非單一個股事件；驅動因子為政策／監管風險重新定價，而非基本面財報利空。</p>
+</section>
+
+<section id="s6-style">
+<h2>S6｜風格與市場寬度</h2>
+<table>
+<thead><tr><th>ETF</th><th>當日漲跌幅</th><th>回答的問題</th></tr></thead>
+<tbody>
+<tr><td>SMH</td><td class="na">暫無可靠精確數據，惟 SOX 現貨指數跌 12.2%，SMH 應同步重挫</td><td>半導體顯然仍是主線，但本日是負向主線（領跌而非領漲）</td></tr>
+<tr><td>IGV</td><td class="na">暫無可靠數據</td><td>無法判斷軟體是否補漲，待次日驗證</td></tr>
+<tr><td>RSP</td><td class="na">暫無可靠數據</td><td>無精確數據，惟 S&amp;P 成分股跌多漲少達 431:71，暗示等權指數跌幅恐不亞於市值加權指數，顯示非「少數股拖累」而是全面下殺</td></tr>
+<tr><td>IWM</td><td class="na">暫無可靠數據</td><td>同上，無精確數據，惟缺乏證據顯示小盤相對抗跌</td></tr>
+</tbody>
+</table>
+<p>當日 S&amp;P 500 下跌家數高達 431 家，僅 71 家上漲，顯示本輪賣壓具高度普遍性、而非少數權值股拖累指數；這與典型「指數跌但個股抗跌」的健康回調型態明顯不同，是解讀本次賣壓性質的關鍵依據。</p>
+</section>
+
+<section id="s7-leaders">
+<h2>S7｜主線股追蹤</h2>
+
+<h3>7.1 Magnificent 7</h3>
+<table>
+<thead><tr><th>股票</th><th>漲跌幅</th><th>原因</th></tr></thead>
+<tbody>
+<tr><td>NVDA</td><td class="neg">-9%</td><td>盤中觸及七個月低點，較 10/6 高點已回落逾25%，AI 資料中心監管疑慮主因</td></tr>
+<tr><td>TSLA</td><td class="neg">-10.8%</td><td>Mag7 中跌幅最深，市場消息指向馬斯克相關個股承壓（細節原因暫無可靠數據）</td></tr>
+<tr><td>META</td><td class="neg">-3.96%（收$605.08）</td><td>相對抗跌，防禦性較佳的科技巨頭之一</td></tr>
+<tr><td>MSFT</td><td class="neg">-3.58%（收$535.93）</td><td>跌幅收斂，顯示部分資金對雲端／AI 基礎建設龍頭仍具信心</td></tr>
+<tr><td>GOOGL</td><td class="neg">-2.2%（收$282.57）</td><td>Mag7 中跌幅最小，早盤一度上漲後翻黑</td></tr>
+<tr><td>AMZN</td><td class="neg">-2.19%（收$260.21）</td><td>早盤同步上漲，尾盤遭系統性賣壓拖累轉跌</td></tr>
+<tr><td>AAPL</td><td class="neg">-1.5%（收$344.17）</td><td>Mag7 中最抗跌標的，AI 資本支出直接曝險相對較低</td></tr>
+</tbody>
+</table>
+<p>七巨頭並非一致行動——AAPL／GOOGL／AMZN 跌幅相對溫和（-1.5%~-2.2%），而 TSLA／NVDA 跌幅深達 -9%~-10.8%，顯示資金並非無差別拋售科技股，而是精準針對「AI 資本支出直接曝險」與馬斯克系個股。</p>
+
+<div class="card">
+  <div class="vbars">
+    <div class="vbar-col"><div class="vbar-pct">-1.5%</div><div class="vbar" style="height:14%;"></div><div class="vbar-name">AAPL</div></div>
+    <div class="vbar-col"><div class="vbar-pct">-2.2%</div><div class="vbar" style="height:20%;"></div><div class="vbar-name">GOOGL</div></div>
+    <div class="vbar-col"><div class="vbar-pct">-2.2%</div><div class="vbar" style="height:20%;"></div><div class="vbar-name">AMZN</div></div>
+    <div class="vbar-col"><div class="vbar-pct">-3.6%</div><div class="vbar" style="height:33%;"></div><div class="vbar-name">MSFT</div></div>
+    <div class="vbar-col"><div class="vbar-pct">-4.0%</div><div class="vbar" style="height:37%;"></div><div class="vbar-name">META</div></div>
+    <div class="vbar-col"><div class="vbar-pct">-9.0%</div><div class="vbar" style="height:83%;"></div><div class="vbar-name">NVDA</div></div>
+    <div class="vbar-col"><div class="vbar-pct">-10.8%</div><div class="vbar" style="height:100%;"></div><div class="vbar-name">TSLA</div></div>
+  </div>
+</div>
+
+<h3>7.2 記憶體主線（當前行情引擎，2026-07 起設立）</h3>
+<p><strong>MU</strong> -17%（SOX 崩跌 12.2% 帶動全面下殺，盤中一度僅 -12%，收盤跌幅擴大，非 memory 特定利空消息所致）。SNDK／WDC／STX／SK Hynix ADS 等 11/5 美股收盤數據暫無可靠數據。</p>
+<p><strong>鈍化監測：</strong>本日美光重挫主因是大盤系統性風險（AI 政策疑慮）而非記憶體基本面本身出現利空，暫無證據顯示 DRAM／NAND 合約價或現貨價出現異常，建議持續觀察明日（11/6）SK 海力士美股／韓股連動是否反映記憶體供需面獨立變化，抑或僅是系統性 risk-off 的延伸。</p>
+
+<h3>7.3 AI 硬體核心</h3>
+<p>NVDA -9%（詳見 7.1）；<strong>AVGO</strong> -10%；<strong>AMD</strong> -17%；TSM 11/5 美股盤收盤數據暫無可靠數據（台股／ADR 於隔夜 11/6 亞股同步重挫，詳見 S9.2）。</p>
+<p><strong>擁擠度判斷：</strong>AMD（-17%）跌幅遠甚於 NVDA（-9%），顯示市場對二線 AI 晶片供應鏈的政策曝險疑慮更深；本次賣壓未見資金從 GPU 切向電力／軟體的正向輪動跡象，而是 AI 資本支出鏈全面撤資，屬於防禦性去風險而非板塊內部輪動。</p>
+
+<h3>7.4 Rotation 代表股</h3>
+<p><strong>GE Vernova (GEV)</strong> -8%~-11%（各家數據略有差異）：作為「實體經濟 × AI 電力」交集個股，本日同樣重挫，顯示並非傳統「科技跌、實體經濟股漲」的 Great Rotation，而是 AI 資本支出相關的實體股（電力設備商）同步遭殃。CAT 暫無可靠數據。</p>
+<p><strong>Great Rotation 判斷：</strong>本日並非典型的 Great Rotation（資金由科技轉向傳統實體經濟），而是「AI 資本支出受益鏈全面撤資」，資金真正去處是與 AI 完全脫鉤的傳統防禦類股（必需消費、受監理公用事業），而非廣義的藍籌實體經濟股。</p>
+</section>
+
+<section id="s8-movers">
+<h2>S8｜異動股與財報</h2>
+
+<h3>8.1 當日重要異動</h3>
+<table>
+<thead><tr><th>股票</th><th>漲跌幅</th><th>原因</th><th>對主線的含義</th></tr></thead>
+<tbody>
+<tr><td>TSLA</td><td class="neg">-10.8%</td><td>馬斯克系個股承壓，細節原因暫無可靠數據</td><td>賣壓已非僅限半導體，部分非晶片類科技權值股同樣重貶</td></tr>
+<tr><td>AMD</td><td class="neg">-17%</td><td>AI 資料中心監管疑慮，二線 AI 晶片供應鏈曝險更深</td><td>市場對 AI 資本支出放緩的疑慮已蔓延至輝達以外的供應鏈</td></tr>
+<tr><td>MU</td><td class="neg">-17%</td><td>SOX 系統性重挫帶動，非 memory 基本面利空</td><td>記憶體股與其他 AI 硬體股同步挨打，顯示賣壓具高度系統性</td></tr>
+<tr><td>AVGO</td><td class="neg">-10%</td><td>AI 資料中心網通／客製化晶片供應鏈同步承壓</td><td>同上</td></tr>
+<tr><td>VRT / GEV / ETN</td><td class="neg">約 -6%~-11%</td><td>資料中心建設前景因期中選舉結果面臨政策不確定性</td><td>AI 基礎建設實體供應鏈（電力設備／資料中心營建）首當其衝，政策風險已從晶片面擴散至硬體基建面</td></tr>
+</tbody>
+</table>
+
+<h3>8.2 昨夜財報</h3>
+<p class="na">暫無可靠數據——未能取得 11/4 盤後或 11/5 盤前公布且與本日股價連動明確的財報資訊。</p>
+
+<h3>8.3 未來 1–3 日重要財報與事件</h3>
+<table>
+<thead><tr><th>日期</th><th>公司／事件</th><th>關注點</th><th>可能影響板塊</th></tr></thead>
+<tbody>
+<tr><td>11/6（週五）</td><td>美國非農就業報告</td><td>市場預期新增約 6.5 萬人，失業率持平</td><td>可能牽動 12 月 FOMC 升息機率進一步變化，影響全市場</td></tr>
+<tr><td>約 11/17（或18）</td><td>Nvidia 財報</td><td>來源對確切日期不一（Earnings Whispers 稱已確認 11/17 盤後，部分來源估 11/18），建議以官方 IR 公告為準</td><td>市場視為本輪 AI 資本支出疑慮能否解除的關鍵試金石</td></tr>
+</tbody>
+</table>
+
+<h3>8.4 異常資金雷達</h3>
+<table>
+<thead><tr><th>主題 / 群聚</th><th>代表股與漲跌幅</th><th>子產業 ETF 表現</th><th>類型</th><th>解讀</th></tr></thead>
+<tbody>
+<tr><td>AI 資料中心基礎建設</td><td>NVDA -9%、AMD -17%、AVGO -10%、VRT -9%、GEV 約-8%~-11%、ETN 約-6%~-7%</td><td class="na">暫無可靠數據（對應 SOX 現貨指數 -12.2%）</td><td>板塊輪動（負向）</td><td>資金系統性撤出整個 AI 資本支出受益鏈，而非單一個股事件，驅動因子為期中選舉後的政策監管疑慮，而非財報或產業基本面利空</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="s9-playbook">
+<h2>S9｜輪動判斷與明日 Playbook</h2>
+
+<h3>9.1 明確回答</h3>
+<div class="qa"><b>今天資金主要流入：</b>必需消費（XLP）、公用事業（XLU）、通訊服務（XLC）等防禦板塊；避險買盤同時流入美國公債（10Y 殖利率小幅回落至約 4.84%）。</div>
+<div class="qa"><b>今天資金主要流出：</b>科技（XLK，尤其半導體）與工業中具 AI 資料中心曝險的電力設備股（GEV、VRT、ETN）。</div>
+<div class="qa"><b>AI 主線（硬體+記憶體）是否仍然健康：</b>短期明顯受創——NVDA/AMD/AVGO 全面重挫，且政策面不確定性（資料中心建設限制）尚未落地明朗化，需待 NVDA 11 月財報與後續政策細節確認方向。</div>
+<div class="qa"><b>半導體 vs 軟體：</b>本日半導體（SOX -12.2%）跌幅遠甚於大盤科技類股整體（XLK -8%），顯示軟體相對抗跌，但缺乏 IGV 精確數據佐證，建議次日驗證。</div>
+<div class="qa"><b>小盤與實體經濟股：</b>Great Rotation 明顯中斷——GEV 等實體經濟／AI 電力交集股同步重挫，資金並未流向傳統藍籌實體經濟股，而是流向與 AI 完全脫鉤的純防禦類股。</div>
+<div class="qa"><b>當前更像趨勢延續還是階段性頂部震盪：</b>階段性頂部震盪轉趨勢性修正的過渡期——AI 供應鏈同步重挫、SOX 正式進入技術性修正、VIX 急遽飆升，疊加隔夜亞股接力重挫，顯示賣壓尚未止歇，建議以風險管理優先。</div>
+
+<h3>9.2 明日觀察清單</h3>
+<p><strong>宏觀：</strong>11/6 美國非農就業報告公布時間與市場反應；12 月 FOMC 升息機率是否因就業數據進一步上修；10Y 殖利率是否持續回落。</p>
+<p><strong>亞洲盤先行指標：</strong>隔夜（11/6）Kospi 一度觸發熔斷、SK 海力士／三星電子重挫逾 8%~11%，日經 225 跌入熊市，顯示亞洲半導體供應鏈賣壓尚未止歇，須留意台北時間週五美股開盤前亞股是否出現止穩訊號；另須注意中國大陸晶片股逆勢走強（受北京扶植政策激勵），是否出現資金從美股／韓股轉向中國科技股的跡象。</p>
+<p><strong>大盤：</strong>SPY／QQQ 是否在修正區間找到支撐（具體點位暫無可靠數據，須以次日分析師評論為準）；SOX 是否持續弱於大盤。</p>
+<p><strong>個股：</strong></p>
+<ol style="font-size:0.9rem;">
+<li><strong>NVDA</strong> — 約11/17（或18）財報為本輪疑慮的關鍵試金石，留意財報前股價是否持續探底</li>
+<li><strong>AMD</strong> — 本日 Mag7 外跌幅最深的 AI 晶片股（-17%），留意是否超跌反彈或持續破底</li>
+<li><strong>TSLA</strong> — 本日 Mag7 跌幅最深（-10.8%），須留意馬斯克相關消息面是否進一步發酵</li>
+<li><strong>GE Vernova／Vertiv／Eaton</strong> — AI 電力基礎建設政策風險代表股，留意後續州政府／國會具體政策動向</li>
+<li><strong>SK Hynix（ADS）／三星電子</strong> — 隔夜亞股重貶，須觀察記憶體供應鏈是否出現基本面獨立疑慮</li>
+</ol>
+</section>
+
+<section id="s10-risk">
+<h2>S10｜風險提示與最終結論</h2>
+
+<h3>10.1 風險等級表</h3>
+<table>
+<thead><tr><th>風險維度</th><th>當前狀態</th><th>等級</th></tr></thead>
+<tbody>
+<tr><td>宏觀利率（升息風險）</td><td>CME FedWatch 顯示 12 月升息機率升至近七成，升息風險由「尾部風險」轉為「主要情境」</td><td class="neg">中高</td></tr>
+<tr><td>記憶體循環反轉</td><td>本日 MU 重挫主因系統性 risk-off 而非基本面利空，惟需持續觀察</td><td class="neutral">中</td></tr>
+<tr><td>AI capex 持續性</td><td>期中選舉後政策監管疑慮升溫，資料中心建設前景面臨不確定性，為本輪賣壓核心風險</td><td class="neg">高</td></tr>
+<tr><td>地緣/油價</td><td>伊朗外交進展帶來邊際緩解，短期風險下降</td><td class="pos">低</td></tr>
+<tr><td>中美科技戰</td><td>中國晶片股逆勢走強顯示政策支持延續，暫無新增緊張跡象</td><td class="neutral">中</td></tr>
+<tr><td>市場寬度惡化</td><td>S&amp;P 500 下跌家數高達 431:71，寬度顯著惡化</td><td class="neg">高</td></tr>
+<tr><td>財報風險</td><td>NVDA 11 月財報前市場情緒已顯著惡化，財報前波動風險升高</td><td class="neg">中高</td></tr>
+</tbody>
+</table>
+<p><strong>當前最需警惕的前 3 項風險：</strong>①AI capex 政策監管不確定性（核心風險，尚未落地明朗）②市場寬度急遽惡化顯示系統性而非個股風險 ③FedWatch 升息機率攀升為高估值成長股增添額外壓力。</p>
+
+<h3>10.2 最終結論</h3>
+<p>11/5 美股遭遇近兩年最慘烈的單日系統性重挫，道瓊、標普、那斯達克全面重挫，那斯達克與 SOX 雙雙跌入修正區，驅動主因是期中選舉後市場對 AI 資料中心建設政策風險的重新定價，而非單純的估值修正或財報利空。資金全面撤出 AI 資本支出受益鏈（半導體、電力設備、資料中心營運商），轉向與 AI 完全脫鉤的防禦類股。隔夜亞股（Kospi 熔斷、日經入熊市）顯示賣壓具全球傳染性，尚未見到止穩訊號。</p>
+<p><strong>當前市場階段：</strong>普跌恐慌（傾向過渡至健康回調或進一步破位，尚待次日驗證）</p>
+<p><strong>操作傾向（中性觀察，不構成投資建議）：</strong>當前環境不適合貿然抄底 AI 供應鏈核心股，優先控制倉位、觀察隔夜亞股與明日美股開盤反應；防禦板塊（必需消費、公用事業）及抗跌科技股（AAPL、GOOGL）相對穩健；NVDA 財報前波動風險偏高，建議避免在政策不確定性落地前重倉押注方向。</p>
+<p><strong>最值得關注的 5 個信號：</strong></p>
+<ol style="font-size:0.9rem;">
+<li>11/6 美股開盤後 SOX／NVDA 是否出現止跌訊號，或延續隔夜亞股跌勢</li>
+<li>美國非農就業數據公布後，12 月 FOMC 升息機率是否進一步上修（留意 CME FedWatch 即時變化）</li>
+<li>S&amp;P 500 成分股漲跌家數比是否回升至接近 1:1（寬度是否開始修復）</li>
+<li>VIX 是否持續維持在七個月高點之上，或出現明顯回落</li>
+<li>德州、喬治亞等州新任官員是否就資料中心建設發表具體政策聲明（將決定 AI capex 疑慮是否進一步惡化或緩解）</li>
+</ol>
+<p class="disclaimer">本報告為中性市場觀察，所有數據均標註來源與可靠性，不構成任何投資建議。</p>
+</section>
+
+<div class="footer-note">
+  🇺🇸 美股收盤日報｜2026-11-05　製作：超中毒（@oiiax88）　|　分享請註明出處
+</div>
+
+</div>
+</body>
+</html>
