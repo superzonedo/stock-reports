@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美股收盤日報｜2026-11-06</title>
+<style>
+  :root{
+    --bg:#0b0e14;
+    --bg-card:#131722;
+    --bg-card2:#171c28;
+    --border:#262c3b;
+    --text:#e6e9f0;
+    --text-dim:#9aa3b8;
+    --text-faint:#6b7280;
+    --red:#ff5c5c;
+    --red-dim:#7a2e2e;
+    --green:#34d399;
+    --green-dim:#1f5c45;
+    --yellow:#fbbf24;
+    --accent:#60a5fa;
+    --accent2:#a78bfa;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang TC","Microsoft JhengHei",sans-serif;
+    margin:0;
+    padding:0;
+    line-height:1.65;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:24px 18px 60px;}
+  header.top{text-align:center;padding:28px 18px 20px;border-bottom:1px solid var(--border);}
+  header.top h1{font-size:1.5rem;margin:0 0 8px;color:#fff;}
+  header.top p{margin:4px 0;color:var(--text-dim);font-size:0.85rem;}
+  section{margin:34px 0;padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;}
+  section h2{font-size:1.15rem;margin:0 0 14px;color:#fff;border-left:4px solid var(--accent);padding-left:10px;}
+  section h3{font-size:0.98rem;margin:18px 0 8px;color:var(--accent);}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:0.85rem;}
+  th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;}
+  th{color:var(--text-dim);font-weight:600;background:var(--bg-card2);}
+  tr:last-child td{border-bottom:none;}
+  .pos{color:var(--green);font-weight:700;}
+  .neg{color:var(--red);font-weight:700;}
+  .neutral{color:var(--yellow);font-weight:700;}
+  .na{color:var(--text-faint);font-style:italic;}
+  .tag{display:inline-block;background:var(--bg-card2);border:1px solid var(--border);color:var(--accent);border-radius:999px;padding:3px 12px;margin:3px 4px 3px 0;font-size:0.8rem;}
+  .callout{background:var(--bg-card2);border-left:3px solid var(--accent2);padding:10px 14px;border-radius:6px;margin:12px 0;font-size:0.88rem;color:var(--text-dim);}
+  .qa{margin:6px 0;font-size:0.88rem;}
+  .qa b{color:#fff;}
+  .card{background:var(--bg-card2);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0;}
+  .footer-note{text-align:center;color:var(--text-faint);font-size:0.78rem;margin-top:30px;padding-top:16px;border-top:1px solid var(--border);}
+  .disclaimer{text-align:center;color:var(--text-faint);font-size:0.78rem;margin:10px 0 0;}
+  /* heatmap */
+  .heatgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:14px;}
+  .heattile{border-radius:10px;padding:14px 10px;text-align:center;border:1px solid var(--border);}
+  .heattile .name{font-size:0.78rem;color:rgba(255,255,255,0.85);margin-bottom:6px;}
+  .heattile .chg{font-size:1.25rem;font-weight:800;color:#fff;}
+  .heat-red2{background:linear-gradient(145deg,#8c2b2b,#5c1c1c);}
+  .heat-red1{background:linear-gradient(145deg,#6b2222,#3d1414);}
+  .heat-green3{background:linear-gradient(145deg,#1d7a4a,#124a30);}
+  .heat-green2{background:linear-gradient(145deg,#1f8f52,#166b3d);}
+  .heat-green1{background:linear-gradient(145deg,#1a6b42,#114a2e);}
+  .heat-yellow{background:linear-gradient(145deg,#5c4a1c,#3d3012);}
+  /* horizontal bar chart */
+  .barrow{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:0.82rem;}
+  .barlabel{width:110px;flex-shrink:0;color:var(--text-dim);}
+  .bartrack{flex:1;background:var(--bg);border-radius:4px;height:20px;position:relative;overflow:hidden;}
+  .barfill{height:100%;border-radius:4px;}
+  .barfill-pos{background:linear-gradient(90deg,#124a30,var(--green));}
+  .barfill-neg{background:linear-gradient(90deg,#7a1d1d,var(--red));}
+  .barval{width:60px;flex-shrink:0;text-align:right;font-weight:700;}
+  /* mag7 vertical bars */
+  .vbars{display:flex;align-items:flex-end;justify-content:space-around;height:180px;margin-top:16px;border-bottom:1px solid var(--border);padding-bottom:4px;}
+  .vbar-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;width:12%;}
+  .vbar{width:60%;border-radius:4px 4px 0 0;}
+  .vbar-up{background:linear-gradient(180deg,var(--green),#124a30);}
+  .vbar-down{background:linear-gradient(180deg,var(--red),#7a1d1d);}
+  .vbar-pct{font-size:0.72rem;font-weight:700;margin-bottom:4px;}
+  .vbar-name{font-size:0.72rem;color:var(--text-dim);margin-top:6px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>🇺🇸 美股收盤日報｜2026-11-06</h1>
+  <p>報告生成時間：台北時間 2026-11-07 08:00　|　資料來源：CNBC、Reuters、Fox Business、Yahoo Finance、Zacks、TheStreet、24/7 Wall St. 等</p>
+  <p>本報告由 超中毒（@oiiax88）製作，分享請註明出處</p>
+</header>
+
+<section id="s1-cover">
+<h2>S1｜今日一句話總結</h2>
+<p>在週四（11/5）那斯達克重挫5.52%跌入修正區、SOX崩跌12.2%的歷史級恐慌拋售後，美股11/6呈現「指數分化、晶片領漲」的超跌反彈格局：那斯達克（+1.09%）與Russell 2000（+0.89%）收紅，道瓊（-0.46%）則因Axon、DraftKings等非AI成分股重挫而收黑；AMD（+11.04%）、Intel（+7.71%）、美光（+5.12%）、輝達（+2.78%）等晶片股集體反彈，SOX約反彈4.2%但僅收復週四跌幅的一小部分。驅動反彈的關鍵是遠優於預期的10月非農就業報告（新增16.5萬人 vs 預期約5.9萬~7萬人，失業率降至4.1%），緩解了經濟衰退疑慮，但同時也強化12月FOMC升息預期，10年期公債殖利率小幅走高至4.86%；VIX雖較週四28.18高點回落9%至25.64，仍處於近期高檔區間，顯示恐慌情緒尚未真正解除。財報面呈現顯著分歧：Airbnb（+11.67%）因上修財測大漲，Atlassian（-16%）卻在財報優於預期下重挫，加上Axon（-18.18%）、DraftKings（-21.38%）、iRhythm（-30.44%）等多檔非科技股重貶，顯示本次反彈集中於遭錯殺的AI/半導體供應鏈股，而非全面性風險偏好回升。</p>
+<p><strong>📌 今日市場狀態標籤：</strong></p>
+<div>
+  <span class="tag">超跌反彈</span>
+  <span class="tag">AI硬體高位震盪</span>
+  <span class="tag">記憶體主線延續</span>
+  <span class="tag">指數強內部弱</span>
+</div>
+</section>
+
+<section id="s2-index">
+<h2>S2｜大盤表現總覽</h2>
+<table>
+<thead><tr><th>指數</th><th>收盤</th><th>漲跌幅</th><th>日內高低點</th><th>一句話狀態</th></tr></thead>
+<tbody>
+<tr><td>Dow Jones</td><td>51,285.70</td><td class="neg">-0.46%（-237.40pt）</td><td class="na">暫無可靠數據</td><td>非AI成分股重挫拖累，未能參與反彈</td></tr>
+<tr><td>S&amp;P 500</td><td>7,376.86</td><td class="pos">+0.31%（+23.13pt）</td><td class="na">暫無可靠數據</td><td>溫和收紅，遠不及科技股反彈力道</td></tr>
+<tr><td>Nasdaq Composite</td><td>24,579.42</td><td class="pos">+1.09%（+264.43pt）</td><td class="na">暫無可靠數據</td><td>收復部分修正跌幅，科技／半導體股主導反彈</td></tr>
+<tr><td>Russell 2000 / IWM</td><td>2,754.11</td><td class="pos">+0.89%（+24.22pt）</td><td class="na">暫無可靠數據</td><td>小盤同步參與反彈，惟力道弱於Nasdaq</td></tr>
+<tr><td>SOX 半導體指數</td><td class="na">暫無可靠數據（絕對點位）</td><td class="pos">約+4.2%</td><td class="na">暫無可靠數據</td><td>反彈領頭羊，惟僅收復週四-12.2%跌幅的一小部分</td></tr>
+<tr><td>VIX</td><td>25.64</td><td class="pos">-9.01%（-2.54）</td><td class="na">暫無可靠數據</td><td>較週四28.18高點回落，惟仍處近期高檔區間</td></tr>
+</tbody>
+</table>
+
+<div class="heatgrid">
+  <div class="heattile heat-red1"><div class="name">Dow Jones</div><div class="chg">-0.46%</div></div>
+  <div class="heattile heat-green1"><div class="name">S&amp;P 500</div><div class="chg">+0.31%</div></div>
+  <div class="heattile heat-green2"><div class="name">Nasdaq</div><div class="chg">+1.09%</div></div>
+  <div class="heattile heat-green2"><div class="name">Russell 2000</div><div class="chg">+0.89%</div></div>
+  <div class="heattile heat-green3"><div class="name">SOX 半導體</div><div class="chg">約+4.2%</div></div>
+  <div class="heattile heat-yellow"><div class="name">VIX</div><div class="chg">-9.01%</div></div>
+</div>
+
+<div class="qa"><b>Dow vs Nasdaq 相對強弱：</b>Nasdaq（+1.09%）大幅跑贏Dow（-0.46%），與週四全面潰堤後的常見修復模式相符——資金重新回流遭錯殺的科技／半導體股，而非單純由科技轉向價值的正向輪動；Dow走弱主因是非AI成分股（如Axon）重挫拖累。</div>
+<div class="qa"><b>小盤領漲是否延續：</b>Russell 2000（+0.89%）同步參與反彈但力道弱於Nasdaq，顯示本輪反彈仍以大型科技／半導體權值股為主軸，未見小盤領漲或明顯過熱訊號。</div>
+<div class="qa"><b>SOX 相對 Nasdaq：</b>SOX（約+4.2%）反彈力道約為Nasdaq（+1.09%）的近四倍，半導體明確是本次反彈的領先指標，但相較週四-12.2%的崩跌，僅收復約三分之一失土，技術面尚未確認真正反轉。</div>
+</section>
+
+<section id="s3-recap">
+<h2>S3｜盤中復盤</h2>
+<p><strong>盤前（含亞洲盤連動）：</strong>延續週四（11/5）美股歷史級重挫的餘波，亞洲股市於台北時間週五盤中同步重挫，日股與南韓股市皆明顯下跌；惟隨美股期貨午盤後轉強，加上10月非農就業數據優於預期的消息逐漸發酵，市場情緒開始由恐慌轉向逢低承接。</p>
+<p><strong>日內轉折點：</strong>美股開盤前公布的10月非農就業報告大幅優於預期（新增16.5萬人，遠高於市場預期的約5.9萬~7萬人；失業率降至4.1%，優於預期的4.2%；此前8、9月數據合計上修8.4萬人），顯示美國經濟韌性仍強。市場解讀為「經濟夠健康、足以承受較高利率」，科技與半導體股率先反彈，AMD、Intel等「非輝達」晶片股漲幅尤其顯著，帶動那斯達克由平盤附近一路拉升，盤中一度上漲逾2%，收盤時仍維持大部分漲幅。</p>
+<p><strong>尾盤與盤後：</strong>那斯達克尾盤收在接近盤中高點附近，顯示買盤延續至收盤；道瓊則因Axon（-18.18%）、DraftKings（-21.38%）等非AI成分股重挫而翻黑收場，呈現「指數分化」格局。盤後消息面上，特斯拉宣布將於2027年年中逐步停產Cybertruck，Anthropic的IPO估值預期據報由約2兆美元下修至1兆~1.3兆美元區間，顯示市場對AI相關資產的估值重新評估仍在持續。</p>
+<div class="callout"><strong>核心驅動判斷：</strong>本次反彈屬於典型的「超跌反彈」（buy the dip）——強勁就業數據緩解經濟衰退疑慮，疊加週四恐慌性拋售後的技術性買盤回補，推動遭錯殺最深的AI／半導體供應鏈股集體反彈；但反彈高度集中於晶片股本身，而非全面性風險偏好回升，多檔與AI無關的個股（Axon、DraftKings、Five9、iRhythm等）當日仍重挫逾10%~30%，顯示市場尚未真正解除對「AI政策監管疑慮」的疑慮，本次更接近技術性修正而非趨勢反轉確認。</div>
+</section>
+
+<section id="s4-macro">
+<h2>S4｜宏觀環境</h2>
+
+<h3>4.1 美債收益率</h3>
+<table>
+<thead><tr><th>項目</th><th>最新</th><th>日變化</th><th>含義</th></tr></thead>
+<tbody>
+<tr><td>2Y</td><td class="na">暫無可靠數據</td><td class="na">暫無可靠數據</td><td class="na">—</td></tr>
+<tr><td>10Y</td><td>4.859%</td><td class="neg">+0.022（+0.45%）</td><td>強勁就業數據降低近月對降息的期待，推升殖利率小幅走高</td></tr>
+<tr><td>2Y-10Y 利差</td><td class="na">暫無可靠數據</td><td class="na">暫無可靠數據</td><td class="na">—</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85rem;color:var(--text-dim);">10Y 殖利率僅小幅走高，未能阻擋科技股反彈，顯示今日市場更聚焦於「經濟數據是否支持軟著陸」而非單純的利率敏感度交易。</p>
+
+<h3>4.2 Fed 利率路徑預期（雙向追蹤）</h3>
+<p>CME FedWatch 近期讀數顯示12月9日FOMC<strong>升息</strong>機率仍是市場主要情境：10月中旬一度估計約90%，11/5當日估計回落至約67%~69%；降息機率市場定價趨近於零。本日公布的10月非農就業數據大幅優於預期（新增16.5萬人、失業率降至4.1%、薪資年增3.1%追平通膨），市場解讀偏向支持12月升息的敘事，惟截至發稿未能取得就業數據公布後CME FedWatch的最新精確機率數字，暫無可靠數據可引用，建議留意週末後機率是否進一步上修。</p>
+
+<h3>4.3 油價與地緣（獨立追蹤）</h3>
+<p>WTI原油收90.34美元，日跌0.20%；Brent原油據部分來源報價已跌破100美元整數關卡。油價走勢較週四（因荷莫茲海峽油輪遭攻擊及美伊衝突升溫，WTI單日大漲2.72%至90.52美元、Brent漲3.88%至98.29美元）明顯降溫，顯示地緣風險溢價暫時持穩未再進一步升溫，對能源板塊及整體風險偏好的邊際影響偏中性。</p>
+
+<h3>4.4 其他宏觀資產</h3>
+<table>
+<thead><tr><th>資產</th><th>價格</th><th>漲跌幅</th></tr></thead>
+<tbody>
+<tr><td>DXY</td><td class="na">暫無可靠數據</td><td class="na">暫無可靠數據</td></tr>
+<tr><td>黃金</td><td>4,079.50</td><td class="neg">-0.83%（-34.00）</td></tr>
+<tr><td>比特幣</td><td>75,753.49</td><td class="pos">+0.13%（+100.38）</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85rem;color:var(--text-dim);">黃金隨股市反彈而避險需求降溫小幅回落；比特幣窄幅震盪，未明顯跟隨股市反彈力道，顯示加密貨幣市場對本次「超跌反彈」的參與度有限。</p>
+
+<h3>4.5 當日經濟數據</h3>
+<table>
+<thead><tr><th>數據</th><th>實際</th><th>預期</th><th>市場解讀</th></tr></thead>
+<tbody>
+<tr><td>10月非農就業人數</td><td>+16.5萬人</td><td>約+5.9萬~7万人</td><td>大幅優於預期，顯示就業市場韌性仍強，是本日反彈的最主要驅動</td></tr>
+<tr><td>失業率</td><td>4.1%</td><td>4.2%</td><td>小幅優於預期，與新增就業數據共同指向經濟並未如市場擔憂般快速降溫</td></tr>
+<tr><td>8-9月數據修正</td><td>合計上修8.4萬人</td><td>—</td><td>顯示此前就業市場被低估，整體基本面較市場此前認知更健康，但也強化12月升息預期</td></tr>
+<tr><td>薪資年增率</td><td>3.1%</td><td class="na">暫無可靠數據</td><td>薪資增速追平通膨，顯示實質購買力未再惡化</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="s5-sector">
+<h2>S5｜板塊表現</h2>
+<p class="na">今日未能取得可靠的11大板塊當日（11/6）精確漲跌幅數據（SPDR板塊ETF逐日數據來源未覆蓋此日期），故本節暫無完整排序表，避免以不確定數字誤導判斷。僅能確認以下方向性訊號：科技與半導體相關個股（AMD、Intel、美光、輝達等）全面強勁反彈，帶動SOX約反彈4.2%；週四（11/5）板塊數據可供參考比對——當日科技（XLK）重挫7.3%至8.0%為領跌震央、能源（XLE）跌2.7%~2.98%、工業（XLI）跌4.1%~4.12%，必需消費與公用事業相對抗跌。今日科技股的強勢反彈方向與週四的領跌方向相反，惟缺乏逐日精確數字可支撐完整排序與橫向柱狀圖。</p>
+
+<h3>主題群聚檢查</h3>
+<p>半導體與AI硬體股（NVDA +2.78%、AMD +11.04%、MU +5.12%、INTC +7.71%、SNDK 約+4%）同步強勁上漲，疊加SOX指數約+4.2%的同步反彈，屬於明確的<strong>板塊輪動（正向）</strong>，而非單一個股事件，驅動因子為超跌後的技術性買盤回補與就業數據提振信心。另一方面，AI電力／數據中心概念股（Vistra +10.55%、NRG +9.61%）同步走強，惟缺乏對應子產業ETF當日數據可供交叉驗證，暫歸類為<strong>主題投機</strong>，詳見S8.4。</p>
+</section>
+
+<section id="s6-style">
+<h2>S6｜風格與市場寬度</h2>
+<table>
+<thead><tr><th>ETF</th><th>當日漲跌幅</th><th>回答的問題</th></tr></thead>
+<tbody>
+<tr><td>SMH</td><td class="na">暫無可靠精確數據，惟SOX現貨指數約反彈4.2%，SMH應同步走強</td><td>半導體明確是本日反彈主線，延續「記憶體／晶片」作為當前行情引擎的地位</td></tr>
+<tr><td>IGV</td><td class="na">暫無可靠數據</td><td>無法判斷軟體是否同步補漲，待次日驗證</td></tr>
+<tr><td>RSP</td><td class="na">暫無可靠數據</td><td>無精確數據，惟道瓊因非AI成分股（Axon、DraftKings等）重挫而收黑，暗示等權指數表現可能弱於市值加權的Nasdaq，顯示反彈集中於少數科技權值股而非普遍上漲</td></tr>
+<tr><td>IWM</td><td>+0.89%（Russell 2000）</td><td>小盤同步參與反彈，但漲幅（+0.89%）明顯弱於Nasdaq（+1.09%），領漲尚未擴散至全面小盤股</td></tr>
+</tbody>
+</table>
+<p>今日缺乏精確的漲跌家數比等寬度數據，惟從道瓊（-0.46%）與Nasdaq（+1.09%）的鮮明分化，以及多檔非科技股（Axon -18.18%、DraftKings -21.38%、iRhythm -30.44%）同日重挫的現象來看，本輪反彈高度集中於科技／半導體權值股，而非普遍性的風險偏好回升，市場寬度可能仍偏弱，與典型「健康反彈」（寬度同步改善）有所不同，建議次日持續驗證。</p>
+</section>
+
+<section id="s7-leaders">
+<h2>S7｜主線股追蹤</h2>
+
+<h3>7.1 Magnificent 7</h3>
+<table>
+<thead><tr><th>股票</th><th>漲跌幅</th><th>原因（有事才寫）</th></tr></thead>
+<tbody>
+<tr><td>NVDA</td><td class="pos">+2.78%（收$186.64）</td><td>隨晶片股集體反彈走高，惟漲幅在反彈隊伍中相對溫和</td></tr>
+<tr><td>TSLA</td><td class="pos">+4.2%</td><td>反彈之餘，公司同日宣布將於2027年年中逐步停產Cybertruck</td></tr>
+<tr><td>MSFT</td><td class="na">暫無可靠數據</td><td>—</td></tr>
+<tr><td>AAPL</td><td class="na">暫無可靠數據</td><td>—</td></tr>
+<tr><td>GOOGL</td><td class="na">暫無可靠數據</td><td>—</td></tr>
+<tr><td>AMZN</td><td class="na">暫無可靠數據</td><td>—</td></tr>
+<tr><td>META</td><td class="na">暫無可靠數據</td><td>—</td></tr>
+</tbody>
+</table>
+<p>七巨頭中僅NVDA、TSLA取得可靠當日數據，其餘五檔暫無可靠收盤數據可引用。值得注意的是，NVDA本日漲幅（+2.78%）反而低於非Mag7的AMD（+11.04%）與Intel（+7.71%），顯示本輪超跌反彈的資金更偏好此前跌幅更深、估值更具吸引力的「二線」晶片股，而非無差別回補權值最大的NVDA。</p>
+
+<div class="card">
+  <div class="vbars">
+    <div class="vbar-col"><div class="vbar-pct" style="color:var(--green);">+2.78%</div><div class="vbar vbar-up" style="height:25%;"></div><div class="vbar-name">NVDA</div></div>
+    <div class="vbar-col"><div class="vbar-pct" style="color:var(--green);">+4.2%</div><div class="vbar vbar-up" style="height:38%;"></div><div class="vbar-name">TSLA</div></div>
+  </div>
+  <p style="font-size:0.75rem;color:var(--text-faint);text-align:center;margin-top:6px;">MSFT／AAPL／GOOGL／AMZN／META 當日收盤數據暫無可靠來源，故未納入本圖</p>
+</div>
+
+<h3>7.2 記憶體主線（當前行情引擎，2026-07 起設立）</h3>
+<p><strong>美光 (MU)</strong> +5.12%（收$690.00），<strong>SanDisk (SNDK)</strong> 據報反彈約+4%，皆隨SOX約+4.2%的集體反彈走高；WDC、STX、SK Hynix ADS 當日美股收盤數據暫無可靠數據。</p>
+<p><strong>鈍化監測：</strong>本日記憶體股反彈主因是SOX整體超跌反彈，而非新的記憶體基本面利多消息，暫無證據顯示DRAM／NAND合約價或現貨價出現異動。鑒於週四美光才因系統性賣壓重挫17%，本日反彈僅收復部分失土，尚不足以判斷記憶體超級循環的鈍化風險是否解除，建議持續觀察下週SK海力士、三星等亞股連動是否出現獨立於美股的基本面訊號。</p>
+
+<h3>7.3 AI 硬體核心</h3>
+<p>NVDA +2.78%（詳見7.1）；<strong>Intel (INTC)</strong> +7.71%（收$56.28）表現突出；AVGO、TSM 當日美股收盤數據暫無可靠數據。</p>
+<p><strong>擁擠度判斷：</strong>AMD（+11.04%）與Intel（+7.71%）漲幅遠甚於NVDA（+2.78%），顯示本輪反彈資金偏好「超跌幅度更深、估值修復空間更大」的二三線晶片股，屬於技術性的短期回補行為，而非對AI資本支出前景重新轉為樂觀的基本面確信；資金尚未見到從晶片明確切向電力或軟體的跡象。</p>
+
+<h3>7.4 Rotation 代表股</h3>
+<p>CAT、GE Vernova (GEV) 當日收盤數據暫無可靠數據可引用。與AI電力主題相關的獨立電力生產商（IPP）<strong>Vistra (VST)</strong> 據報上漲約+10.55%、<strong>NRG Energy (NRG)</strong> 上漲約+9.61%，同步隨AI硬體股強勁反彈，惟缺乏可靠來源驗證其是否反映基本面變化。</p>
+<p><strong>Great Rotation 判斷：</strong>由於GEV、CAT數據缺口，暫無法完整評估傳統實體經濟股與科技股的資金流向對比；惟從Vistra、NRG同步走強來看，本輪反彈似乎是「AI資本支出受益鏈全面回補」，而非資金由科技轉向傳統藍籌實體經濟股的典型Great Rotation。</p>
+</section>
+
+<section id="s8-movers">
+<h2>S8｜異動股與財報</h2>
+
+<h3>8.1 當日重要異動</h3>
+<table>
+<thead><tr><th>股票</th><th>漲跌幅</th><th>原因</th><th>對主線的含義</th></tr></thead>
+<tbody>
+<tr><td>AMD</td><td class="pos">+11.04%</td><td>隨晶片股超跌反彈領漲，收復部分週四跌幅</td><td>資金偏好二線AI晶片股的超跌修復，而非僅回補NVDA</td></tr>
+<tr><td>Axon Enterprise (AXON)</td><td class="neg">-18.18%</td><td class="na">原因不明</td><td>非AI權值股重挫，顯示反彈未擴散至全市場</td></tr>
+<tr><td>DraftKings (DKNG)</td><td class="neg">-21.38%</td><td class="na">原因不明</td><td>同上，博弈類股與AI主線無關仍重貶</td></tr>
+<tr><td>iRhythm (IRTC)</td><td class="neg">-30.44%</td><td class="na">原因不明</td><td>醫療科技股劇烈重挫，個股事件風險需留意</td></tr>
+<tr><td>Five9 (FIVN)</td><td class="neg">-17.52%</td><td class="na">原因不明</td><td>雲端軟體股未受惠於本輪晶片股反彈</td></tr>
+<tr><td>Microchip Technology (MCHP)</td><td class="neg">-10.02%</td><td class="na">原因不明</td><td>同屬半導體類股卻逆勢重挫，與SOX整體反彈方向相左，需留意是否為個股特定利空</td></tr>
+<tr><td>Coterra Energy (CTRA)</td><td class="neg">-8.62%</td><td class="na">原因不明，惟同日油價小幅走弱，能源股承壓方向一致</td><td>能源股未參與本輪風險偏好回升</td></tr>
+<tr><td>Atlassian (TEAM)</td><td class="neg">約-16%</td><td>FY27第一季營收年增24%至17.72億美元、雲端營收年增31%，優於市場預期，惟股價仍重挫，推測與財測保守或獲利端疑慮有關，具體原因暫無可靠數據確認</td><td>顯示「財報優於預期仍重挫」的現象在本輪財報季並不罕見，市場對成長股的評價標準更為嚴苛</td></tr>
+<tr><td>Airbnb (ABNB)</td><td class="pos">+11.67%</td><td>第三季財報優於預期並上修全年營收成長財測</td><td>非AI消費類成長股同樣受惠於財報利多，顯示反彈並非完全排除非科技類成長股</td></tr>
+<tr><td>IREN</td><td class="pos">+20.91%</td><td class="na">原因不明，惟公司屬比特幣挖礦／AI資料中心轉型概念股</td><td>加密貨幣／AI資料中心雙重概念股同步受惠於風險偏好回升</td></tr>
+</tbody>
+</table>
+
+<h3>8.2 昨夜財報</h3>
+<table>
+<thead><tr><th>公司</th><th>是否 beat</th><th>指引</th><th>盤後反應</th><th>核心解讀</th></tr></thead>
+<tbody>
+<tr><td>Atlassian (TEAM)</td><td>是（營收與雲端營收均優於預期）</td><td class="na">暫無可靠數據</td><td>股價重挫約16%</td><td>財報優於預期卻重挫，顯示市場對成長股的評價已轉趨嚴苛，獲利了結壓力大於財報利多</td></tr>
+<tr><td>Airbnb (ABNB)</td><td>是</td><td>上修全年營收成長預期</td><td>股價大漲約11.67%~12%</td><td>財測上修優於單純財報beat，更能驅動股價正向反應</td></tr>
+</tbody>
+</table>
+
+<h3>8.3 未來 1–3 日重要財報與事件</h3>
+<table>
+<thead><tr><th>日期</th><th>公司/事件</th><th>關注點</th><th>可能影響板塊</th></tr></thead>
+<tbody>
+<tr><td>約11/17（或18）</td><td>Nvidia 財報</td><td>市場視為本輪AI資本支出疑慮能否解除的關鍵試金石，確切日期以官方IR公告為準</td><td>科技／半導體全面</td></tr>
+<tr><td>近期（日期待定）</td><td>Anthropic IPO</td><td>據報估值預期已由約2兆美元下修至1兆~1.3兆美元，掛牌時程可能延後</td><td>AI估值敘事、一級與二級市場資金流向</td></tr>
+<tr><td>下週一（11/9）</td><td>亞股開盤反應</td><td>觀察日股、南韓股市是否延續美股週五反彈，或重新轉弱</td><td>半導體／記憶體供應鏈</td></tr>
+</tbody>
+</table>
+
+<h3>8.4 異常資金雷達</h3>
+<table>
+<thead><tr><th>主題 / 群聚</th><th>代表股與漲跌幅</th><th>子產業 ETF 表現</th><th>類型</th><th>解讀</th></tr></thead>
+<tbody>
+<tr><td>半導體超跌反彈</td><td>AMD +11.04%、INTC +7.71%、MU +5.12%、NVDA +2.78%</td><td>SOX約+4.2%（同步確認）</td><td>板塊輪動</td><td>SOX指數同步反彈確認非個股事件，為週四恐慌拋售後的全面性技術性買盤回補</td></tr>
+<tr><td>AI電力／數據中心概念股</td><td>Vistra +10.55%、NRG +9.61%、IREN +20.91%</td><td class="na">暫無對應ETF當日數據可驗證</td><td>主題投機</td><td>缺乏ETF數據交叉驗證，暫歸類為主題性資金湧入，而非確認的板塊輪動，建議次日持續追蹤</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="s9-playbook">
+<h2>S9｜輪動判斷與明日 Playbook</h2>
+
+<h3>9.1 明確回答</h3>
+<div class="qa"><b>今天資金主要流入：</b>半導體／晶片股（AMD、Intel、美光、輝達），以及部分AI電力概念股（Vistra、NRG）；財報利多的Airbnb亦吸引買盤。</div>
+<div class="qa"><b>今天資金主要流出：</b>非AI相關的個股型標的（Axon、DraftKings、Five9、iRhythm），顯示資金並非全面性回流風險資產，而是精準回補超跌的AI／半導體供應鏈股。</div>
+<div class="qa"><b>AI 主線（硬體+記憶體）是否仍然健康：</b>短期出現技術性反彈，但本質仍是「超跌回補」而非基本面利多確認，資料中心建設政策疑慮尚未解除，健康度有待下週進一步驗證。</div>
+<div class="qa"><b>半導體 vs 軟體：</b>半導體（SOX約+4.2%）明確領漲，軟體股缺乏可靠數據佐證，惟Five9（雲端軟體）當日重挫17.52%，顯示軟體股本日未同步受惠於晶片股反彈。</div>
+<div class="qa"><b>小盤與實體經濟股：</b>Russell 2000（+0.89%）溫和參與反彈，惟力道弱於Nasdaq，加上道瓊受非AI成分股拖累收黑，顯示並非典型的Great Rotation，而是AI供應鏈股的局部修復。</div>
+<div class="qa"><b>當前更像趨勢延續還是階段性頂部震盪：</b>更接近階段性頂部震盪中的技術性反彈——VIX雖回落但仍處高檔（25.64），反彈集中於少數超跌股，市場寬度訊號不明確，尚不足以確認趨勢已反轉向上。</div>
+
+<h3>9.2 明日觀察清單</h3>
+<p><strong>宏觀：</strong>12月FOMC升息機率在非農數據公布後是否進一步上修（留意CME FedWatch週末後更新）；10Y殖利率是否持續走高；油價是否因地緣局勢再度升溫。</p>
+<p><strong>亞洲盤先行指標：</strong>下週一（11/9）Kospi、日經、三星、SK海力士、台積電開盤是否延續美股週五的反彈力道，或因上週整體仍重挫而維持觀望。</p>
+<p><strong>大盤：</strong>SPY／QQQ是否能延續週五反彈並站穩關鍵支撐（具體點位暫無可靠數據，須以下週分析師評論為準）；SOX能否延續反彈力道、縮小與月初高點的差距。</p>
+<p><strong>個股：</strong></p>
+<ol style="font-size:0.9rem;">
+<li><strong>AMD</strong> — 本日非Mag7晶片股中漲幅最大（+11.04%），留意反彈能否延續或僅為一次性技術性回補</li>
+<li><strong>NVDA</strong> — 約11/17（或18）財報為本輪AI資本支出疑慮的關鍵試金石，財報前股價波動值得關注</li>
+<li><strong>Atlassian (TEAM)</strong> — 財報優於預期卻重挫16%，留意下週是否有分析師進一步解讀財測保守的具體原因</li>
+<li><strong>Axon / DraftKings / Five9 / iRhythm</strong> — 當日重挫逾10%~30%且原因不明，留意是否有個股特定利空消息延後浮現</li>
+<li><strong>Vistra / NRG</strong> — AI電力概念股同步大漲，留意下週是否有對應ETF或產業數據確認是否為板塊性輪動</li>
+</ol>
+</section>
+
+<section id="s10-risk">
+<h2>S10｜風險提示與最終結論</h2>
+
+<h3>10.1 風險等級表</h3>
+<table>
+<thead><tr><th>風險維度</th><th>當前狀態</th><th>等級（低/中/中高/高）</th></tr></thead>
+<tbody>
+<tr><td>宏觀利率（升息風險）</td><td>強勁就業數據強化12月FOMC升息預期，升息已是市場主要情境而非尾部風險</td><td class="neg">中高</td></tr>
+<tr><td>記憶體循環反轉</td><td>美光、SanDisk隨大盤反彈，惟反彈主因是超跌回補而非基本面利多，鈍化風險尚未解除</td><td class="neutral">中</td></tr>
+<tr><td>AI capex 持續性</td><td>資料中心建設政策監管疑慮（週四賣壓核心）尚未落地明朗，本日僅為技術性反彈而非疑慮解除</td><td class="neg">高</td></tr>
+<tr><td>地緣/油價</td><td>油價較週四走弱趨穩，地緣風險溢價暫未進一步升溫</td><td class="pos">低</td></tr>
+<tr><td>中美科技戰</td><td class="na">暫無可靠數據顯示新增緊張跡象</td><td class="neutral">中</td></tr>
+<tr><td>市場寬度惡化</td><td>反彈集中於少數晶片股，多檔非AI個股同日重挫逾10%~30%，寬度訊號不佳</td><td class="neg">中高</td></tr>
+<tr><td>財報風險</td><td>Atlassian優於預期財報仍重挫，顯示市場對成長股評價標準嚴苛，NVDA財報前波動風險升高</td><td class="neg">中高</td></tr>
+</tbody>
+</table>
+<p><strong>當前最需警惕的前 3 項風險：</strong>①AI capex政策監管疑慮尚未解除，本日反彈僅屬技術性修復 ②市場寬度不佳，反彈高度集中於少數晶片股，非AI個股持續重挫 ③12月FOMC升息機率走高，為高估值成長股的後續評價增添壓力。</p>
+
+<h3>10.2 最終結論</h3>
+<p>11/6美股在週四歷史級重挫後出現「指數分化、晶片領漲」的超跌反彈：Nasdaq與Russell 2000收紅，道瓊則因非AI成分股重挫而收黑。驅動反彈的核心是遠優於預期的10月非農就業數據，緩解了經濟衰退疑慮，帶動遭錯殺最深的AI／半導體供應鏈股集體回補，惟VIX仍處高檔、反彈集中度高，加上強勁就業數據同步強化12月升息預期，顯示市場尚未脫離週四以來的高波動與結構性不確定性。</p>
+<p><strong>當前市場階段：</strong>超跌反彈（尚待下週驗證是否能延續為健康回調）</p>
+<p><strong>操作傾向（中性觀察，不構成投資建議）：</strong>當前環境傾向觀望而非追高，本輪反彈集中於超跌晶片股，追高前宜確認SOX與Nasdaq寬度是否持續改善；NVDA財報前波動風險偏高，建議避免在政策不確定性落地前重倉押注單一方向；防禦性配置者可持續關注12月FOMC升息機率變化對高估值成長股的影響。</p>
+<p><strong>最值得關注的 5 個信號：</strong></p>
+<ol style="font-size:0.9rem;">
+<li>下週一（11/9）亞股（Kospi、日經、三星、SK海力士）開盤是否延續美股週五反彈力道</li>
+<li>CME FedWatch週末後12月FOMC升息機率是否因強勁就業數據進一步上修</li>
+<li>SOX能否連續第二日走高，確認技術性反彈是否具延續性</li>
+<li>VIX是否持續回落至20以下，或重新彈升顯示恐慌情緒未解</li>
+<li>Axon、DraftKings、iRhythm等重挫個股是否浮現具體利空原因，或僅為孤立個股事件</li>
+</ol>
+<p class="disclaimer">本報告為中性市場觀察，所有數據均標註來源與可靠性，不構成任何投資建議。</p>
+</section>
+
+<div class="footer-note">
+  🇺🇸 美股收盤日報｜2026-11-06　製作：超中毒（@oiiax88）　|　分享請註明出處
+</div>
+
+</div>
+</body>
+</html>
